@@ -54,3 +54,46 @@ $$
 where $k_{ti}$ is the estimated read count from `kallisto` for transcript $t$ in sample $i$ and $\hat{s_i}$ is the scaling factor for sample $i$, calculated from the set of all transcripts that pass initial filtering, $T^*$.
 
 ## Bias and variance of the OLS estimator
+
+As shown in Supplementary Note 2 of [the `sleuth` paper](https://doi.org/10.1038/nmeth.4324), the OLS estimator is unbiased $\left( \mathbb{E} \left[ \hat{\beta_t}^{(MLE)} \right] = \beta_t \right)$.
+It can also be shown that $\text{Var} \left[ \hat{\beta_t}^{(MLE)} \right] = (X^TX)^{-1} \Sigma X (X^TX)^{-1}$ for a general covariance matrix $\Sigma$.
+In the case where $\Sigma = (\sigma_t^2 + \tau_t^2)I_n$ (such as in the `sleuth` model), this reduces to $\text{Var} \left[ \hat{\beta_t}^{(MLE)} \right] = (\sigma_t^2 + \tau_t^2)(X^TX)^{-1}$.
+
+Consider a simple experimental design where our only covariate of interest is the presence of a mutation.
+Then our design matrix, with the first column being the intercept and the second being the mutation status, looks like so:
+
+$$
+X =
+\begin{bmatrix}
+1 & 1 \\
+\vdots_{n_{mut}} & \vdots_{n_{mut}} \\
+1 & 1 \\
+1 & 0 \\
+\vdots_{n_{nonmut}} & \vdots_{n_{nonmut}} \\
+1 & 0
+\end{bmatrix}
+$$
+
+The variance of the OLS estimator is then
+
+$$
+\text{Var} \left[ \hat{\beta_t}^{(MLE)} \right] = \frac{(\sigma_t^2 + \tau_t^2)}{n_{mut} n_{nonmut}}
+\begin{bmatrix}
+n_{mut} & -n_{mut} \\
+- n_{mut} & n_{mut} + n_{nonmut} \\
+\end{bmatrix}
+$$
+
+Importantly, the estimate for the coefficient measuring the effect that the presence of the mutation has variance $\frac{(\sigma_t^2 + \tau_t^2)(n_{mut} + n_{nonmut})}{n_{mut} n_{nonmut}}$.
+When we only have 1 mutated sample, as per the motivation of this work, this reduces to $\frac{(\sigma_t^2 + \tau_t^2)(1 + n_{nonmut})}{n_{nonmut}}$.
+
+## Desired properties of an alternative estimator
+
+Our goal is to produce an alternative estimator whose theoretical variance is less than the value from the previous section.
+Given the unstable and uncertain nature of estimation using a single observation, reducing variance by biasing the estimators towards 0 is a conservative approach that is appropriate for this setting.
+Some shrinkage approaches like ridge and lasso regression approach this by placing a bound on the $L^1$ and $L^2$ norms of the coefficients.
+But in differential gene expression, the effect of a covariate on a single transcript is not necessarily related to that of another transcript, so fixing an upper bound on some $L^p$ norm of the effects is not desired since the magnitude of effects is not known ahead of time.
+Moreover, this type of shrinkage can increase the estimated effect of some covariates while reducing others closer to zero.
+This may lead to an over-estimation of the effect of the mutation's presence for some transcripts.
+Shrinkage methods that shrink the entire estimate towards 0 thus may be more appropriate in this setting.
+One example of a shrunk estimator with this property is the James-Stein estimator.
