@@ -11,3 +11,49 @@ $$
 is the minimax estimator for $\mu$ of the mean square error $\mathbb{E} \left[ \Vert \hat{\mu} - \mu \Vert ^2\right]$ where $\lambda_L$ is the largest eigenvalue of $\Sigma$.
 In the case that either $m < 3$ or $\text{Tr}(\Sigma) < 2 \lambda_L$, the naive estimator is then the minimax estimator.
 The most shrinkage occurs when $c = 2 \left( \frac{\text{Tr}(\Sigma)}{\lambda_L} - 2\right)$, and the naive estimator is equivalent to the James-Stein estimator with $c = 0$.
+
+## Applying the James-Stein estimator to different gene expression
+
+Let's consider the `sleuth` model with our simple experimental design:
+
+$$
+D_t | Y_t \sim N_p \left( X\beta_t, (\sigma_t^2 + \tau_t^2)I_n \right)
+$$
+
+For our $n_{nonmut}$ non-mutated samples this is equivalent to
+
+$$
+D_t | Y_t \sim N_{n_{nonmut}} \left( \beta_{t,0}, (\sigma_t^2 + \tau_t^2)I_n \right)
+$$
+
+which can be fit with the same model process that `sleuth` typically employs.
+For the single mutated sample, the model is
+
+$$
+D_t | Y_t \sim N \left( \beta_{t, 0} + \beta_{t, 1}, \sigma_t^2 + \tau_t^2 \right)
+$$
+
+The covariance matrix is the same as the mutated samples, but the mean $\beta_{t, 0} + \beta_{t, 1}$ is unknown and we have a single observation of this distribution.
+If we are interested in a subset of all transcripts, $S \subset T$ (e.g. we are only concerned with transcripts near the mutated site), then we can consider the $|S|$-dimensional normal distribution and use the mean and variance estimates from the non-mutated samples.
+Our model for the single mutated sample is then
+
+$$
+\Delta \sim N_{|S|}(\beta_0^{(S)} + \beta_1^{(S)}, \Sigma) \\
+$$
+
+where
+
+$$
+\Sigma = \text{diag} \left( \max\{ \hat{\sigma}_1^2, \tilde{\sigma}_1^2 \} + \hat{\tau}_1^2, ..., \max\{ \hat{\sigma}_{|S|}^2, \tilde{\sigma}_{|S|}^2 \} + \hat{\tau}_{|S|}^2 \right) \\
+$$
+
+With the single observation of this distribution, $\delta$, the James-Stein estimate for the unknown effect coefficient, $\beta_1^{(S)}$, is then
+
+$$
+\hat{\beta}_t^{(S)} = \left( 1 - \frac{c}{\delta \Sigma^{-1} \delta^T} \right) \delta - \hat{\beta}_0^{(S)}
+$$
+
+where $\hat{\beta}_0^{(S)}$ is the estimate obtained from the non-mutated samples for all transcripts $s \in S$.
+
+It is simple to see that $\text{Tr}(\Sigma) = \sum_{s \in S} \max\{ \hat{\sigma}_s^2, \tilde{\sigma}_s^2 \} + \hat{\tau}_s^2$ and that $\lambda_L = \max_{s \in S} \left\{ \max\{ \hat{\sigma}_s^2, \tilde{\sigma}_s^2 \} + \hat{\tau}_s^2 \right\}$.
+In the case of $\text{Tr}(\Sigma) < 2 \lambda_L$ or $|S| \le 2$, we resort to the OLS estimator, which is found through the standard `sleuth` process.
