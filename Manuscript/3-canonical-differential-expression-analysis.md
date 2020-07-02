@@ -95,5 +95,5 @@ Some shrinkage approaches like ridge and lasso regression approach this by placi
 But in differential gene expression, the effect of a covariate on a single transcript is not necessarily related to that of another transcript, so fixing an upper bound on some $L^p$ norm of the effects is not desired since the magnitude of effects is not known ahead of time.
 Moreover, this type of shrinkage can increase the estimated effect of some covariates while reducing others closer to zero.
 This may lead to an over-estimation of the effect of the mutation's presence for some transcripts.
-Shrinkage methods that shrink the entire estimate towards 0 thus may be more appropriate in this setting.
+Shrinkage methods that shrink the entire estimate towards 0 (known as "spherically symmetric" estimators) thus may be more appropriate in this setting.
 One example of a shrunk estimator with this property is the James-Stein estimator.
