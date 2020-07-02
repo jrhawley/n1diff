@@ -57,3 +57,20 @@ where $\hat{\beta}_0^{(S)}$ is the estimate obtained from the non-mutated sample
 
 It is simple to see that $\text{Tr}(\Sigma) = \sum_{s \in S} \max\{ \hat{\sigma}_s^2, \tilde{\sigma}_s^2 \} + \hat{\tau}_s^2$ and that $\lambda_L = \max_{s \in S} \left\{ \max\{ \hat{\sigma}_s^2, \tilde{\sigma}_s^2 \} + \hat{\tau}_s^2 \right\}$.
 In the case of $\text{Tr}(\Sigma) < 2 \lambda_L$ or $|S| \le 2$, we resort to the OLS estimator, which is found through the standard `sleuth` process.
+
+## Properties of the James-Stein estimator for differential expression
+
+### The James-Stein estimator is biased towards 0
+
+$$
+\mathbb{E} \left[ \hat{\beta}_1^{(S)} \right] = \mathbb{E}[\delta] - c \mathbb{E} \left[ \frac{\delta}{\delta \Sigma^{-1} \delta^T} \right] - \mathbb{E} \left[ \hat{\beta}_0^{(S)} \right] \\
+= \beta_0^{(S)} + \beta_1^{(S)} - c \mathbb{E} \left[ \frac{\delta}{\delta \Sigma^{-1} \delta^T} \right] - \beta_0^{(S)} \\
+= \beta_1^{(S)} - c \mathbb{E} \left[ \frac{\delta}{\delta \Sigma^{-1} \delta^T} \right] \\
+\overset{?}{=} \left( 1 - \frac{c \mu \mu^T}{\mu \Sigma^{-1} \mu^T} \right) \beta_1^{(S)} \\
+$$
+
+with the last step occurring by symmetry of the normal distribution about $\mu$ (and is something I still need to prove).
+Note that this is true for all transcripts.
+
+By Bock \Cref{https://projecteuclid.org/download/pdf_1/euclid.aos/1176343009}, this estimator is the minimax estimator under the mean square error.
+The mean square error, $\mathbb{E} \left[ \Vert \hat{\mu} - \mu \Vert ^2\right] = \sum_{i=1}^{|S|} \mathbb{E}\left[ (\hat{\mu}_i - \mu_i)^2 \right] = \sum_{i=1}^{|S|} \text{Var}\left[ \hat{\mu}_i \right] = \text{Var}\left[ \bar{1}^T\hat{\mu} \right]$.
