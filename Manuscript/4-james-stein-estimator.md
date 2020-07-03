@@ -47,10 +47,10 @@ $$
 \Sigma = \text{diag} \left( \max\{ \hat{\sigma}_1^2, \tilde{\sigma}_1^2 \} + \hat{\tau}_1^2, ..., \max\{ \hat{\sigma}_{|S|}^2, \tilde{\sigma}_{|S|}^2 \} + \hat{\tau}_{|S|}^2 \right) \\
 $$
 
-With the single observation of this distribution, $\delta$, the James-Stein estimate for the unknown effect coefficient, $\beta_1^{(S)}$, is then
+With the single observation of this distribution, $\delta$, we can design a James-Stein estimator for the unknown effect coefficient, $\beta_1^{(S)}$, that is shrunk towards 0.
 
 $$
-\hat{\beta}_t^{(S)} = \left( 1 - \frac{c}{\delta \Sigma^{-1} \delta^T} \right) \delta - \hat{\beta}_0^{(S)}
+\hat{\beta}_t^{(S)} = \left( 1 - \frac{c}{(\delta - \beta_0^{(S)}) \Sigma^{-1} (\delta - \beta_0^{(S)})^T} \right)(\delta - \beta_0^{(S)})
 $$
 
 where $\hat{\beta}_0^{(S)}$ is the estimate obtained from the non-mutated samples for all transcripts $s \in S$.
@@ -62,15 +62,20 @@ In the case of $\text{Tr}(\Sigma) < 2 \lambda_L$ or $|S| \le 2$, we resort to th
 
 ### The James-Stein estimator is biased towards 0
 
+We can rewrite a simpler equation by transforming $\delta$.
+If we let $\nu = \Sigma^{-1/2} \left( \delta - \beta_0^{(S)} \right)$, then $\nu \sim N_{|S|} \left( \beta_1^{(S)}, I_{|S|} \right)$ and our James-Stein estimator becomes
+
 $$
-\mathbb{E} \left[ \hat{\beta}_1^{(S)} \right] = \mathbb{E}[\delta] - c \mathbb{E} \left[ \frac{\delta}{\delta \Sigma^{-1} \delta^T} \right] - \mathbb{E} \left[ \hat{\beta}_0^{(S)} \right] \\
-= \beta_0^{(S)} + \beta_1^{(S)} - c \mathbb{E} \left[ \frac{\delta}{\delta \Sigma^{-1} \delta^T} \right] - \beta_0^{(S)} \\
-= \beta_1^{(S)} - c \mathbb{E} \left[ \frac{\delta}{\delta \Sigma^{-1} \delta^T} \right] \\
-\overset{?}{=} \left( 1 - \frac{c \mu \mu^T}{\mu \Sigma^{-1} \mu^T} \right) \beta_1^{(S)} \\
+\hat{\beta}_t^{(S)} = \left( 1 - \frac{c}{\nu \nu^T} \right) \nu
 $$
 
-with the last step occurring by symmetry of the normal distribution about $\mu$ (and is something I still need to prove).
-Note that this is true for all transcripts.
+It's clear that $\hat{\beta}_1^{(S)}$ is parallel to $\nu$, shrunk towards 0 by a factor of $1 - \frac{c}{\nu \nu^T}$.
+This produces a more conservative estimate of the effect of mutation than the naive estimate for the single mutated sample would produce.
+Notably, the larger the effect on any transcript (i.e. the larger $\hat{\beta}_{1,s}^{(S)}$ for some $s$), the smaller the shrinkage on all transcripts, and thus less biased towards 0.
+If there is little to no effect on all transcripts (i.e. $\Vert \beta_{1,s}^{(S)} \Vert^2 \approx 0$), the greater the shrinkage on all coefficients towards 0.
 
-By Bock \Cref{https://projecteuclid.org/download/pdf_1/euclid.aos/1176343009}, this estimator is the minimax estimator under the mean square error.
-The mean square error, $\mathbb{E} \left[ \Vert \hat{\mu} - \mu \Vert ^2\right] = \sum_{i=1}^{|S|} \mathbb{E}\left[ (\hat{\mu}_i - \mu_i)^2 \right] = \sum_{i=1}^{|S|} \text{Var}\left[ \hat{\mu}_i \right] = \text{Var}\left[ \bar{1}^T\hat{\mu} \right]$.
+### Variance of the James-Stein estimator
+
+This estimator is the minimax estimator under the mean square error, $\mathbb{E} \left[ \Vert \hat{\beta}_1^{(S)} - \beta_1^{(S)} \Vert ^2\right] = \sum_{s \in S} \mathbb{E}\left[ \left( \hat{\beta}_{1,s}^{(S)} - \beta_{1,s}^{(S)} \right)^2 \right] = \sum_{s \in S} \text{Var}\left[ \hat{\beta}_{1,s}^{(S)} \right]$.
+While $\mathbb{E} \left[ \Vert \hat{\beta}_1^{(S)} - \beta_1^{(S)} \Vert ^2\right] \le \mathbb{E} \left[ \Vert \hat{\beta}_1^{(OLS)} - \beta_1^{(S)} \Vert ^2\right]$, this does not imply that $\text{Var}\left[ \hat{\beta}_{1,s}^{(S)} \right] \le \text{Var}\left[ \hat{\beta}_{1,s}^{(OLS)} \right] \forall s$.
+Some transcripts may have larger variances than the naive estimator, but all transcripts in aggregate will have a smaller mean square error.
