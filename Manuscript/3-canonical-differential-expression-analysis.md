@@ -92,8 +92,10 @@ When we only have 1 mutated sample, as per the motivation of this work, this red
 Our goal is to produce an alternative estimator whose theoretical variance is less than the value from the previous section.
 Given the unstable and uncertain nature of estimation using a single observation, reducing variance by biasing the estimators towards 0 is a conservative approach that is appropriate for this setting.
 Some shrinkage approaches like ridge and lasso regression approach this by placing a bound on the $L^1$ and $L^2$ norms of the coefficients.
-But in differential gene expression, the effect of a covariate on a single transcript is not necessarily related to that of another transcript, so fixing an upper bound on some $L^p$ norm of the effects is not desired since the magnitude of effects is not known ahead of time.
+In differential gene expression, the effect of a covariate on a single transcript is not necessarily related to that of another transcript, so fixing an upper bound on some $L^p$ norm of the effects is not desired since the magnitude of effects is not known ahead of time.
+
 Moreover, this type of shrinkage can increase the estimated effect of some covariates while reducing others closer to zero.
-This may lead to an over-estimation of the effect of the mutation's presence for some transcripts.
-Shrinkage methods that shrink the entire estimate towards 0 (known as "spherically symmetric" estimators) thus may be more appropriate in this setting.
+If the design matrix $X$ is not orthogonal (which is true for our setting) then the shrunk estimate is not parallel to the OLS estimate, it is a linear transformation of it.
+This can lead to over-estimating the mutation effect for some transcripts at the cost of others.
+Shrinkage methods that shrink the entire estimate towards 0 thus may be more appropriate in this setting.
 One example of a shrunk estimator with this property is the James-Stein estimator.
