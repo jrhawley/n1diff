@@ -2,7 +2,7 @@
 
 Consider the following scenario. For an $m$-variate normal distribution $Z \sim N_m(\mu, \Sigma)$ where $\mu$ is unknown and $\Sigma$ is known, if we observe a single realization of this distribution, $z$, what is a good estimator, $\hat{\mu}$, for the unknown mean $\mu$?
 Stein \Cref{https://projecteuclid.org/euclid.bsmsp/1200501656} showed that the spherically symmetric estimator $\hat{\mu}_{JS} = \left( 1 - \frac{m - 2}{\Vert z \Vert^2} \right)z$ dominates the naive estimator $\hat{\mu}_{naive} = z$ for any mean $\mu$ in the case that $m \ge 3$ and $\Sigma = I_n$.
-Theorem 2 of Bock \Cref{https://projecteuclid.org/download/pdf_1/euclid.aos/1176343009} extended this result to the general case to show that when $m \ge 3$, $\text{Tr}(\Sigma) \ge 2 \lambda_L$, and $0 \le c \le 2 \left( \frac{\text{Tr}(\Sigma)}{\lambda_L} - 2\right)$
+Theorem 2 of Bock \Cref{https://projecteuclid.org/download/pdf_1/euclid.aos/1176343009} extended this result to the general case to show that when $m \ge 3$, $\text{Tr}(\Sigma) \ge 2 \lambda_L$, and $0 \le c \le 2 \left( \frac{\text{Tr}(\Sigma)}{\lambda_L} - 2 \right)$
 
 $$
 \hat{\mu}_{JS} = \left( 1 - \frac{c}{z^T \Sigma^{-1} z} \right) z
@@ -50,7 +50,7 @@ $$
 With the single observation of this distribution, $\delta$, we can design a James-Stein estimator for the unknown effect coefficient, $\beta_1^{(S)}$, that is shrunk towards 0.
 
 $$
-\hat{\beta}_t^{(S)} = \left( 1 - \frac{c}{(\delta - \beta_0^{(S)}) \Sigma^{-1} (\delta - \beta_0^{(S)})^T} \right)(\delta - \beta_0^{(S)})
+\hat{\beta}_t^{(S)} = \left( 1 - \frac{c}{(\delta - \beta_0^{(S)})^T \Sigma^{-1} (\delta - \beta_0^{(S)})} \right)(\delta - \beta_0^{(S)})
 $$
 
 where $\hat{\beta}_0^{(S)}$ is the estimate obtained from the non-mutated samples for all transcripts $s \in S$.
@@ -66,10 +66,10 @@ We can rewrite a simpler equation by transforming $\delta$.
 If we let $\nu = \Sigma^{-1/2} \left( \delta - \beta_0^{(S)} \right)$, then $\nu \sim N_{|S|} \left( \beta_1^{(S)}, I_{|S|} \right)$ and our James-Stein estimator becomes
 
 $$
-\hat{\beta}_t^{(S)} = \left( 1 - \frac{c}{\nu \nu^T} \right) \nu
+\hat{\beta}_t^{(S)} = \left( 1 - \frac{c}{\Vert \nu \Vert^2} \right) \Sigma^{1/2}\nu
 $$
 
-It's clear that $\hat{\beta}_1^{(S)}$ is parallel to $\nu$, shrunk towards 0 by a factor of $1 - \frac{c}{\nu \nu^T}$.
+It's clear that $\hat{\beta}_1^{(S)}$ is parallel to $\Sigma^{1/2}\nu$, shrunk towards 0 by a factor of $1 - \frac{c}{\Vert \nu \Vert^2}$.
 This produces a more conservative estimate of the effect of mutation than the naive estimate for the single mutated sample would produce.
 Notably, the larger the effect on any transcript (i.e. the larger $\hat{\beta}_{1,s}^{(S)}$ for some $s$), the smaller the shrinkage on all transcripts, and thus less biased towards 0.
 If there is little to no effect on all transcripts (i.e. $\Vert \beta_{1,s}^{(S)} \Vert^2 \approx 0$), the greater the shrinkage on all coefficients towards 0.
