@@ -97,21 +97,16 @@ $$
 
 The James-Stein estimate is parallel with the OLS estimate (which is already calculated by `sleuth`), but shrunk towards 0.
 
+### Extending to complex experimental designs
+
+For a more general experimental design, we can extend the above.
+Given an experimental design matrix, $X \in \mathbb{R}^{n \times p}$, where $n > p$, $\text{rank}(X) = p$ and $\text{rank}(X^*) = p - 1$ where $X^* \in \mathbb{R}^{(n - 1) \times p}$ is the same design matrix but with one sample removed, a James-Stein estimator for the linear coefficient uniquely specified by the one sample is given by
+
+$$
+\hat{\Beta}_i^{(JS)} = \left( 1 - \frac{c}{\left( \hat{\Beta}_i^{(OLS)} \right)^T \Sigma^{-1} \hat{\Beta}_i^{(OLS)}} \right) \hat{\Beta}_i^{(OLS)}
+$$
+
 ## Properties of the James-Stein estimator for differential expression
-
-### The James-Stein estimator is biased towards 0
-
-We can rewrite a simpler equation by transforming $\delta$.
-If we let $\nu = \Sigma^{-1/2} \left( \delta - \beta_0^{(S)} \right)$, then $\nu \sim N_{|S|} \left( \beta_1^{(S)}, I_{|S|} \right)$ and our James-Stein estimator becomes
-
-$$
-\hat{\beta}_t^{(S)} = \left( 1 - \frac{c}{\Vert \nu \Vert^2} \right) \Sigma^{1/2}\nu
-$$
-
-It's clear that $\hat{\beta}_1^{(S)}$ is parallel to $\Sigma^{1/2}\nu$, shrunk towards 0 by a factor of $1 - \frac{c}{\Vert \nu \Vert^2}$.
-This produces a more conservative estimate of the effect of mutation than the naive estimate for the single mutated sample would produce.
-Notably, the larger the effect on any transcript (i.e. the larger $\hat{\beta}_{1,s}^{(S)}$ for some $s$), the smaller the shrinkage on all transcripts, and thus less biased towards 0.
-If there is little to no effect on all transcripts (i.e. $\Vert \beta_{1,s}^{(S)} \Vert^2 \approx 0$), the greater the shrinkage on all coefficients towards 0.
 
 ### Variance of the James-Stein estimator
 
