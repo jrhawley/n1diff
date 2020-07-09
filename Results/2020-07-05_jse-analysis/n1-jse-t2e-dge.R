@@ -14,10 +14,28 @@ if (!interactive()) {
         type = "character",
         help = "Single SampleID to compare against other group"
     )
+    PARSER$add_argument(
+      "-t", "--target",
+      type = "character",
+      help = "Transcript ENSEMBL ID to test",
+      nargs = "+"
+    )
     ARGS <- PARSER$parse_args()
 } else {
     ARGS <- list(
-        sampleID = "PCa13266"
+        sampleID = "PCa13848",
+        target = c(
+          "ENST00000409312.5",
+          "ENST00000409948.1",
+          "ENST00000433917.5",
+          "ENST00000457259.5",
+          "ENST00000477296.5",
+          "ENST00000509587.1",
+          "ENST00000526421.5",
+          "ENST00000543215.5",
+          "ENST00000613154.4",
+          "ENST00000644286.1"
+        )
     )
 }
 
@@ -26,116 +44,93 @@ KALLISTO_DIR <- file.path("..", "..", "Data", "CPC-GENE")
 # ==============================================================================
 # Functions
 # ==============================================================================
-vprint <- function(msg) {
-    underline <- paste0(rep("-", nchar(msg)), collapse = "")
-    cat(msg, "\n", underline, "\n", sep = "")
-}
+'%ni%' <- Negate('%in%')
 
 jse_shrinkage <- function(obj, s_targets, which_sample, which_beta, which_fit = "full", shrinkage_coef = NULL, which_var = "obs_counts") {
-  # only keep targets within s_targets
-  fit <- so$fits[[which_fit]]
-  mes <- fit$models[names(fit$models) %in% s_targets]
-  l_smooth <- fit$summary[fit$summary$target_id %in% s_targets, ]
-  summary <- fit$summary[fit$summary$target_id %in% s_targets, ]
-  covariances <- summary$smooth_sigma_sq_pmax + summary$sigma_q_sq
-  names(covariances) <- summary$target_id
+    # only keep targets within s_targets
+    fit <- obj$fits[[which_fit]]
+    mes <- fit$models[names(fit$models) %in% s_targets]
+    summary <- fit$summary[fit$summary$target_id %in% s_targets, ]
+    covariances <- summary$smooth_sigma_sq_pmax + summary$sigma_q_sq
+    names(covariances) <- summary$target_id
+    rm(summary)
 
-  # get null design that does not include this covariate
-  X <- fit$design_matrix
-  X_null <- as.matrix(X[which(rownames(X) == which_sample), -which(colnames(X) == which_beta)])
+    # get OLS estimate (if any value is NULL, will return a list, otherwise a numeric vector)
+    ols <- sapply(
+        s_targets,
+        function(tid) {
+            mes[[tid]]$ols_fit$coefficients[[which_beta]]
+        }
+    )
 
-  # get intercept coefficients
-  mu_0 <- sapply(
-    s_targets,
-    function(tid) {
-      other_covariate_coefs <- mes[[tid]]$ols_fit$coefficients[-which(names(mes[[tid]]$ols_fit$coefficients) == which_beta)]
-      return(as.numeric(X_null %*% other_covariate_coefs))
+    # check if any coefficients are NULL, and remove them if so
+    null_counter <- sapply(ols, is.null)
+    tx_to_remove <- c()
+    if (any(null_counter)) {
+        tx_to_remove <- names(ols)[null_counter]
+        s_targets <- setdiff(s_targets, tx_to_remove)
+        mes <- mes[names(mes) %ni% tx_to_remove]
+        covariances <- covariances[names(covariances) %ni% tx_to_remove]
+        ols <- as.vector(ols[names(ols) %ni% tx_to_remove], mode = "numeric")
     }
-  )
-  names(mu_0) <- names(mes)
-  
-  naive <- sapply(
-    s_targets,
-    function(tid) {
-      mes[[tid]]$ols_fit$coefficients[names(mes[[tid]]$ols_fit$coefficients) == which_beta]
+
+    # get covariance matrix
+    sigma <- diag(covariances)
+    sigma_inv <- solve(sigma)
+    trace_sigma <- sum(covariances)
+    lambda_L <- max(covariances)
+    
+    # check that conditions for JSE are met (i.e. Trace(Sigma) <= 2 * \lambda_L )
+    if (trace_sigma <= 2 * lambda_L) {
+        stop('Conditions for James-Stein criteria are not met: Tr(Sigma) > 2 * lambda_L')
     }
-  )
-  names(naive) <- names(mes)
+    
+    # matrix multiplication creates a 1x1 matrix, not a scalar
+    denom <- as.numeric(t(ols) %*% sigma_inv %*% ols)
 
-  # get observed counts
-  which_col <- which(colnames(obj$bs_summary[[which_var]]) == which_sample)
-  delta <- obj$bs_summary[[which_var]][rownames(obj$bs_summary[[which_var]]) %in% s_targets, which_col]
-  # get covariance matrix
-  sigma <- diag(covariances)
-  sigma_inv <- solve(sigma)
-  trace_sigma <- sum(covariances)
-  lambda_L <- max(covariances)
-  
-  # check that conditions for JSE are met (i.e. Trace(Sigma) <= 2 * \lambda_L )
-  if (trace_sigma <= 2 * lambda_L) {
-    stop('Conditions for James-Stein criteria are not met: Tr(Sigma) > 2 * lambda_L')
-  }
+    # maximize shrinkage coefficient if not given
+    if (is.null(shrinkage_coef)) {
+        shrinkage_numerator <- max(0, 2 * (trace_sigma / lambda_L - 2))
+        shrinkage_coef <- (1 - shrinkage_numerator / denom)
+    } else if (shrinkage_numerator > 2 * (trace_sigma / lambda_L - 2)) {
+        warning('`shrinkage_numerator` > 2 * (Tr(Sigma) / lambda_L - 2). Capping at max value')
+        shrinkage_numerator <- 2 * (trace_sigma / lambda_L - 2)
+    }
 
-  # calculate normalized, observed value \nu
-  nu <- as.vector(sqrt(sigma_inv) %*% (delta - mu_0))
-  names(nu) <- names(mes)
+    b1 <- shrinkage_coef * ols
 
-  # maximize shrinkage coefficient
-  if (is.null(shrinkage_coef)) {
-    shrinkage_coef <- max(0, 2 * (trace_sigma / lambda_L - 2))
-  } else if (shrinkage_coef > 2 * (trace_sigma / lambda_L - 2)) {
-    warning('`shrinkage_coef` > 2 * (Tr(Sigma) / lambda_L - 2). Capping at max value')
-    shrinkage_coef <- 2 * (trace_sigma / lambda_L - 2)
-  }
-
-  b1 <- (1 - shrinkage_coef / sum(nu^2)) * (delta - mu_0)
-
-  # swap signs on the coefficient if coefficient in design is 0
-  # (this keeps the "mutated" samples with coefficient 1, non-mutated with 0)
-  if (X[rownames(X) == which_sample, which_beta] == 0) {
-    b1 <- -b1
-  }
-  return(list(
-    which_var = which_var,
-    sigma = sigma,
-    trace_sigma = trace_sigma,
-    lambda_L = lambda_L,
-    shrinkage_coef = shrinkage_coef,
-    delta = delta,
-    b0 = mu_0,
-    nu = nu,
-    b1 = b1,
-    naive = naive
-  ))
+    return(list(
+        targets = s_targets,
+        na_targets = tx_to_remove,
+        which_var = which_var,
+        sigma = sigma,
+        trace_sigma = trace_sigma,
+        lambda_L = lambda_L,
+        shrinkage_numerator = shrinkage_numerator,
+        shrinkage_coef = shrinkage_coef,
+        ols = ols,
+        b1 = b1
+    ))
 }
 
 # ==============================================================================
 # Data
-# ==============================================================================
-# load sample metadata
-metadata <- fread(
-    file.path(KALLISTO_DIR, "config.tsv"),
-    sep = "\t",
-    header = TRUE
-)
-SAMPLES <- metadata$SampleID
-
-# add kallisto paths
-metadata[, Path := file.path(KALLISTO_DIR, SampleID)]
-
-design <- metadata[, .(sample = SampleID, condition = T2E_Status, path = Path)]
-
-# ==============================================================================
-# Analysis
 # ==============================================================================
 # load naive sleuth object
 so <- readRDS(
   file.path("..", "2020-07-04_naive-analysis", "sleuth", paste0(ARGS$sampleID, ".sleuth-object.rds"))
 )
 
+# ==============================================================================
+# Analysis
+# ==============================================================================
 # calculate James-Stein estimator for single mutated sample
-s_targets <- unique(head(so$obs_norm_filt, 210)$target_id)
-jse <- jse_shrinkage(so, s_targets = s_targets, which_sample = ARGS$sampleID, which_beta = "conditionYes")
+jse <- jse_shrinkage(
+    so,
+    s_targets = ARGS$target,
+    which_sample = ARGS$sampleID,
+    which_beta = "conditionYes"
+)
 
 # ==============================================================================
 # Save results
