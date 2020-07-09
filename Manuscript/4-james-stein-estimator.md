@@ -12,9 +12,7 @@ is the minimax estimator for $\mu$ of the mean square error $\mathbb{E} \left[ \
 In the case that either $m < 3$ or $\text{Tr}(\Sigma) < 2 \lambda_L$, the naive estimator is then the minimax estimator.
 The most shrinkage occurs when $c = 2 \left( \frac{\text{Tr}(\Sigma)}{\lambda_L} - 2\right)$, and the naive estimator is equivalent to the James-Stein estimator with $c = 0$.
 
-## Applying the James-Stein estimator to differential gene expression
-
-### A simple experimental design
+## The James-Stein estimator for a simple experimental design
 
 Let's consider the `sleuth` model with our simple experimental design (`d ~ 1 + mutation`):
 
@@ -66,7 +64,7 @@ where $\hat{\Beta}_0$ is the estimate obtained from the non-mutated samples for 
 It is simple to see that $\text{Tr}(\Sigma) = \sum_{s \in S} \max\{ \hat{\sigma}_s^2, \tilde{\sigma}_s^2 \} + \hat{\tau}_s^2$ and that $\lambda_L = \max_{s \in S} \left\{ \max\{ \hat{\sigma}_s^2, \tilde{\sigma}_s^2 \} + \hat{\tau}_s^2 \right\}$.
 In the case of $\text{Tr}(\Sigma) < 2 \lambda_L$ or $|S| \le 2$, we resort to the OLS estimator, which is found through the standard `sleuth` process.
 
-### Comparison of the simple design with the OLS estimator
+## Comparison of the simple design with the OLS estimator
 
 For this simple experimental design, the OLS estimator is given by
 
@@ -97,7 +95,7 @@ $$
 
 The James-Stein estimate is parallel with the OLS estimate (which is already calculated by `sleuth`), but shrunk towards 0.
 
-### Extending to complex experimental designs
+## Extending to complex experimental designs
 
 For a more general experimental design, we can extend the above.
 Given an experimental design matrix, $X \in \mathbb{R}^{n \times p}$, where $n > p$, $\text{rank}(X) = p$ and $\text{rank}(X^*) = p - 1$ where $X^* \in \mathbb{R}^{(n - 1) \times p}$ is the same design matrix but with one sample removed, a James-Stein estimator for the linear coefficient uniquely specified by the one sample is given by
@@ -105,12 +103,3 @@ Given an experimental design matrix, $X \in \mathbb{R}^{n \times p}$, where $n >
 $$
 \hat{\Beta}_i^{(JS)} = \left( 1 - \frac{c}{\left( \hat{\Beta}_i^{(OLS)} \right)^T \Sigma^{-1} \hat{\Beta}_i^{(OLS)}} \right) \hat{\Beta}_i^{(OLS)}
 $$
-
-## Properties of the James-Stein estimator for differential expression
-
-### Variance of the James-Stein estimator
-
-This estimator is the minimax estimator under the mean square error, $\mathbb{E} \left[ \Vert \hat{\beta}_1^{(S)} - \beta_1^{(S)} \Vert ^2\right] = \sum_{s \in S} \mathbb{E}\left[ \left( \hat{\beta}_{1,s}^{(S)} - \beta_{1,s}^{(S)} \right)^2 \right] = \sum_{s \in S} \text{Var}\left[ \hat{\beta}_{1,s}^{(S)} \right]$.
-While $\mathbb{E} \left[ \Vert \hat{\beta}_1^{(S)} - \beta_1^{(S)} \Vert ^2\right] \le \mathbb{E} \left[ \Vert \hat{\beta}_1^{(OLS)} - \beta_1^{(S)} \Vert ^2\right]$, this does not imply that $\text{Var}\left[ \hat{\beta}_{1,s}^{(S)} \right] \le \text{Var}\left[ \hat{\beta}_{1,s}^{(OLS)} \right] \forall s$.
-Some transcripts may have larger variances than the naive estimator, but all transcripts in aggregate will have a smaller mean square error.
-This is still desirable if the goal is to find if there is an effect on any transcripts in the set $S$, instead of a particular one within the set.
