@@ -1,0 +1,43 @@
+# ==============================================================================
+# Configuration
+# ==============================================================================
+import pandas as pd
+import os.path as path
+
+CONFIG = pd.read_csv(
+    "config.tsv",
+    index_col=False,
+    sep="\t"
+)
+CONFIG = CONFIG.loc[CONFIG.Include == "Yes", :]
+SAMPLES = CONFIG.SampleID.tolist()
+
+DIR = {
+    "fastq": "FASTQs",
+    "align": "Aligned",
+}
+
+# ==============================================================================
+# Meta Rules
+# ==============================================================================
+rule all:
+    input:
+        expand(
+            path.join(DIR["align"], "{sample}", "run_info.json"),
+
+# ==============================================================================
+# Rules
+# ==============================================================================
+rule kallisto:
+    input:
+        fq1 = path.join(DIR["fastq"], "{sample}_1.fastq.gz"),
+        fq2 = path.join(DIR["fastq"], "{sample}_2.fastq.gz"),
+    output:
+        path.join(DIR["align"], "{sample}", "abundance.tsv"),
+        path.join(DIR["align"], "{sample}", "abundance.hd5"),
+        path.join(DIR["align"], "{sample}", "run_info.json"),
+        path.join(DIR["align"], "{sample}", "pseudoalignments.bam"),
+    params:
+        "-b 100 -t 8 --verbose --pseudobam"
+    shell:
+        "kallisto quant {params} -i {input.index} -o {wildcards.sample} {input}"
