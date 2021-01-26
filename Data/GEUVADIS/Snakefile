@@ -9,8 +9,7 @@ CONFIG = pd.read_csv(
     index_col=False,
     sep="\t"
 )
-CONFIG = CONFIG.loc[CONFIG.Include == "Yes", :]
-SAMPLES = CONFIG.SampleID.tolist()
+SAMPLES = CONFIG.loc[:, "Comment[ENA_RUN]"].tolist()
 
 DIR = {
     "fastq": "FASTQs",
@@ -24,6 +23,8 @@ rule all:
     input:
         expand(
             path.join(DIR["align"], "{sample}", "run_info.json"),
+            sample=SAMPLES
+        )
 
 # ==============================================================================
 # Rules
@@ -32,12 +33,13 @@ rule kallisto:
     input:
         fq1 = path.join(DIR["fastq"], "{sample}_1.fastq.gz"),
         fq2 = path.join(DIR["fastq"], "{sample}_2.fastq.gz"),
+        idx = path.join("..", "Kallisto_Index", "transcriptome.idx"),
     output:
         path.join(DIR["align"], "{sample}", "abundance.tsv"),
         path.join(DIR["align"], "{sample}", "abundance.hd5"),
         path.join(DIR["align"], "{sample}", "run_info.json"),
         path.join(DIR["align"], "{sample}", "pseudoalignments.bam"),
     params:
-        "-b 100 -t 8 --verbose --pseudobam"
+        "-b 100 -t 8 --verbose"
     shell:
-        "kallisto quant {params} -i {input.index} -o {wildcards.sample} {input}"
+        "kallisto quant {params} -i {input.idx} -o Aligned/{wildcards.sample} {input.fq1} {input.fq2}"

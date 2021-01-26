@@ -41,3 +41,9 @@ vignettes/*.pdf
 
 # Snakemake
 .snakemake/
+
+# Sequencing files
+*.bam
+*.fastq
+*.fastq.gz
+*.h5
