@@ -22,13 +22,20 @@ DIR = {
 rule all:
     input:
         expand(
-            path.join(DIR["align"], "{sample}", "run_info.json"),
+            path.join(DIR["align"], "{sample}", "abundance.tsv"),
             sample=SAMPLES
         )
 
 # ==============================================================================
 # Rules
 # ==============================================================================
+rule download:
+    output:
+        path.join(DIR["fastq"], "{sample}_1.fastq.gz"),
+        path.join(DIR["fastq"], "{sample}_2.fastq.gz"),
+    shell:
+        "pushd FASTQs; wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR188/{wildcards.sample}/{wildcards.sample}_{{1,2}}.fastq.gz; popd;"
+
 rule kallisto:
     input:
         fq1 = path.join(DIR["fastq"], "{sample}_1.fastq.gz"),
@@ -36,9 +43,8 @@ rule kallisto:
         idx = path.join("..", "Kallisto_Index", "transcriptome.idx"),
     output:
         path.join(DIR["align"], "{sample}", "abundance.tsv"),
-        path.join(DIR["align"], "{sample}", "abundance.hd5"),
+        path.join(DIR["align"], "{sample}", "abundance.h5"),
         path.join(DIR["align"], "{sample}", "run_info.json"),
-        path.join(DIR["align"], "{sample}", "pseudoalignments.bam"),
     params:
         "-b 100 -t 8 --verbose"
     shell:
