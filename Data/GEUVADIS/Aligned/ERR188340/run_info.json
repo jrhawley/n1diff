@@ -1,0 +1,13 @@
+{
+	"n_targets": 188753,
+	"n_bootstraps": 100,
+	"n_processed": 29466149,
+	"n_pseudoaligned": 23286269,
+	"n_unique": 5750784,
+	"p_pseudoaligned": 79.0,
+	"p_unique": 19.5,
+	"kallisto_version": "0.46.2",
+	"index_version": 10,
+	"start_time": "Tue Jan 26 12:40:24 2021",
+	"call": "kallisto quant -b 100 -t 8 --verbose -i ../Kallisto_Index/transcriptome.idx -o Aligned/ERR188340 FASTQs/ERR188340_1.fastq.gz FASTQs/ERR188340_2.fastq.gz"
+}
