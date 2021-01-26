@@ -19,17 +19,20 @@ suppressMessages(library("sleuth"))
 
 
 # ==============================================================================
-# Functions
-# ==============================================================================
-
-
-# ==============================================================================
 # Data
 # ==============================================================================
 loginfo("Loading data")
 
 # load sample metadata
 meta <- fread("config.tsv")
+
+# load transcript ID to gene ID mapping
+t2g_map <- fread(
+    "../../Data/Kallisto_Index/transcripts_to_genes.txt",
+    sep = "\t",
+    header = FALSE,
+    col.names = c("target_id", "ens_gene", "ext_gene")
+)
 
 # ==============================================================================
 # Analysis
@@ -38,7 +41,9 @@ loginfo("Preparing sleuth objects")
 so <- sleuth_prep(
     meta,
     extra_bootstrap_summary = TRUE,
-    num_cores = 8
+    num_cores = 8,
+    target_mapping = t2g_map,
+    aggregation_column = "ens_gene"
 )
 
 loginfo("Fitting model and hypothesis testing")
@@ -80,4 +85,5 @@ fwrite(
     sep = "\t",
     col.names = TRUE
 )
+saveRDS(so, "sleuth.object.rds")
 

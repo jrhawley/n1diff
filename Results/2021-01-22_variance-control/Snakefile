@@ -4,18 +4,6 @@
 import pandas as pd
 import os.path as path
 
-CONFIG = pd.read_csv(
-    "config.tsv",
-    index_col=False,
-    sep="\t"
-)
-SAMPLES = CONFIG.loc[:, "Comment[ENA_RUN]"].tolist()
-
-DIR = {
-    "fastq": "FASTQs",
-    "align": "Aligned",
-}
-
 # ==============================================================================
 # Meta Rules
 # ==============================================================================
