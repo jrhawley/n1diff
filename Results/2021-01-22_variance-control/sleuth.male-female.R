@@ -36,12 +36,12 @@ meta <- fread("config.tsv")
 # ==============================================================================
 loginfo("Preparing sleuth objects")
 so <- sleuth_prep(
-    design,
+    meta,
     extra_bootstrap_summary = TRUE,
     num_cores = 8
 )
 
-logging("Fitting model and hypothesis testing")
+loginfo("Fitting model and hypothesis testing")
 so <- sleuth_fit(so, ~condition, "full")
 
 # perform differential analysis
