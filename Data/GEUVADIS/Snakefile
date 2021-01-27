@@ -40,7 +40,7 @@ rule kallisto:
     input:
         fq1 = path.join(DIR["fastq"], "{sample}_1.fastq.gz"),
         fq2 = path.join(DIR["fastq"], "{sample}_2.fastq.gz"),
-        idx = path.join("..", "Kallisto_Index", "transcriptome.idx"),
+        idx = path.join("..", "Kallisto_GRCh38_Index", "transcriptome.idx"),
     output:
         path.join(DIR["align"], "{sample}", "abundance.tsv"),
         path.join(DIR["align"], "{sample}", "abundance.h5"),
