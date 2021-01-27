@@ -4,25 +4,20 @@
 # sleuth
 # ------------------------------------------------
 # Author: James Hawley
-# Description: Differential expression analysis with all samples
+# Description: Differential expression analysis with some samples
 
 
 # ==============================================================================
 # Environment
 # ==============================================================================
 suppressMessages(library("logging"))
-
-loginfo("Loading packages")
-suppressMessages(library("data.table"))
-suppressMessages(library("ggplot2"))
-suppressMessages(library("sleuth"))
 suppressMessages(library("argparse"))
 
 if (!interactive()) {
-    parser <- ArgumentParser(description = "description")
-    parser$add_arg(
+    parser <- ArgumentParser(description = "Differential expression analysis with some samples")
+    parser$add_argument(
         "n",
-        type = "character",
+        type = "integer",
         help = "Total number of samples to include in the comparison. Must be even"
     )
     cli_args <- parser$parse_args()
@@ -35,6 +30,11 @@ if (!interactive()) {
 if (cli_args$n %% 2 != 0) {
     stop("`n` argument must be even.")
 }
+
+loginfo("Loading packages")
+suppressMessages(library("data.table"))
+suppressMessages(library("ggplot2"))
+suppressMessages(library("sleuth"))
 
 # ==============================================================================
 # Functions
@@ -71,7 +71,7 @@ select_samples <- function(metadata, total) {
         metadata[sample %in% usf_male_ids],
         metadata[sample %in% usf_female_ids]
     ))
-    
+
     # aggregate and return entire list
     return(list(
         list(
@@ -112,9 +112,9 @@ for (i in 1:5) {
     # balanced samples
     sampled_metadata <- select_samples(meta, cli_args$n)
     for (j in 1:2) {
-        iter_idx <- (i - 1) * 5 + j
+        iter_idx <- (i - 1) * 2 + j
         for (k in c("balanced", "unbalanced")) {
-            so_bal <- sleuth_prep(
+            so <- sleuth_prep(
                 sampled_metadata[[j]][[k]],
                 extra_bootstrap_summary = TRUE,
                 num_cores = 8,
@@ -172,7 +172,7 @@ for (i in 1:5) {
                     "Iterations",
                     paste0("Total_", cli_args$n),
                     k,
-                    paste0(iter_idx, ".sleuth.object.rds")
+                    paste0(iter_idx, ".sleuth-object.rds")
                 )
             )
         }
