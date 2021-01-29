@@ -9,7 +9,8 @@ CONFIG = pd.read_csv(
     index_col=False,
     sep="\t"
 )
-SAMPLES = CONFIG.loc[:, "Comment[ENA_RUN]"].tolist()
+SAMPLES = CONFIG.loc[:, "sample"].tolist()
+LANES = list(range(1, 8))
 
 DIR = {
     "fastq": "FASTQs",
@@ -24,7 +25,11 @@ rule all:
         expand(
             path.join(DIR["align"], "{sample}", "abundance.tsv"),
             sample=SAMPLES
-        )
+        ),
+        path.join("Sleuth", "genes.tsv"),
+        path.join("Sleuth", "sleuth-object.rds"),
+        path.join("Plots", "p-values.genes.png"),
+        path.join("Plots", "volcano.png"),
 
 # ==============================================================================
 # Rules
@@ -32,8 +37,12 @@ rule all:
 rule download:
     output:
         path.join(DIR["fastq"], "{sample}_{lane}.fastq.gz"),
+    params:
+        # select the ERA Run ID that matches this sample and lane
+        run = lambda wildcards: CONFIG.loc[(CONFIG["sample"] == wildcards.sample) & (CONFIG["lane"] == int(wildcards.lane)), "run_accession"].values[0],
+        pre = lambda wildcards: CONFIG.loc[(CONFIG["sample"] == wildcards.sample) & (CONFIG["lane"] == int(wildcards.lane)), "run_accession"].values[0][0:6],
     shell:
-        "pushd FASTQs; wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR188/{wildcards.sample}/{wildcards.sample}_{wildcards.lane}.fastq.gz; popd;"
+        "wget -O {output} ftp://ftp.sra.ebi.ac.uk/vol1/fastq/{params.pre}/{params.run}/{params.run}.fastq.gz"
 
 rule kallisto:
     input:
@@ -47,6 +56,22 @@ rule kallisto:
         path.join(DIR["align"], "{sample}", "abundance.h5"),
         path.join(DIR["align"], "{sample}", "run_info.json"),
     params:
-        "-b 100 -t 8 --verbose"
+        "-b 100 -t 8 --verbose --single -l 300 -s 10"
     shell:
-        "kallisto quant {params} -i {input.idx} -o Aligned/{wildcards.sample} {input.fq1} {input.fq2}"
+        "kallisto quant {params} -i {input.idx} -o Aligned/{wildcards.sample} {input.fq}"
+
+rule sleuth:
+    input:
+        script = "sleuth.R",
+        data = expand(
+            path.join(DIR["align"], "{sample}", "abundance.tsv"),
+            sample=SAMPLES
+        ),
+    output:
+        path.join("Sleuth", "genes.tsv"),
+        path.join("Sleuth", "sleuth-object.rds"),
+        path.join("Plots", "p-values.genes.png"),
+        path.join("Plots", "volcano.png"),
+    shell:
+        "Rscript {input.script}"
+
