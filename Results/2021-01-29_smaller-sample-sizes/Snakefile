@@ -11,9 +11,9 @@ rule all:
     input:
         expand(
             "Iterations/Total_{n}/balanced/{i}.{ext}",
-            n=range(4, 49, 2),
+            n=range(4, 25, 2),
             i=range(1, 11),
-            ext=["transcripts.tsv", "genes.tsv", "sleuth-object.rds"],
+            ext=["genes.tsv", "sleuth-object.rds"],
         ),
 
 # ==============================================================================
