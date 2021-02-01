@@ -29,13 +29,6 @@ meta <- fread("experimental-design.tsv")
 # set the "wt" as "control" so that it is the baseline for comparison
 meta[condition == "wt", condition := "ctrl"]
 
-# # load transcript ID to gene ID mapping
-# t2g_map <- fread(
-#     file.path("..", "Kallisto_s-cerevisiae_Index", "transcripts_to_genes.txt"),
-#     sep = "\t",
-#     header = FALSE,
-#     col.names = c("target_id", "ens_gene", "ext_gene")
-# )
 
 # ==============================================================================
 # Analysis
@@ -45,8 +38,6 @@ so <- sleuth_prep(
     meta,
     extra_bootstrap_summary = TRUE,
     num_cores = 8
-    # TRUE are the transcripts to keep
-    #filter_fun = function(x) {length(which(x > 10)) / length(x) > 0.6}
 )
 
 loginfo("Fitting model and hypothesis testing")
@@ -54,6 +45,9 @@ so <- sleuth_fit(so, ~condition, "full")
 
 # perform differential analysis
 so <- sleuth_wt(so, "conditionmu")
+
+# save data
+saveRDS(so, file.path("Sleuth", "sleuth-object.rds"))
 
 # extract results
 so_genes <- as.data.table(sleuth_results(
@@ -94,5 +88,4 @@ fwrite(
     sep = "\t",
     col.names = TRUE
 )
-saveRDS(so, file.path("Sleuth", "sleuth-object.rds")
 
