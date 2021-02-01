@@ -22,21 +22,21 @@ rule all:
             ext=["genes.tsv", "sleuth-object.rds", "genes.jse.tsv", "jse-object.rds"],
         ),
         path.join("Comparison", "rates.tsv"),
-        expand(
-            path.join("Plots", "{plot}.png"),
-            plot=[
-                "ACC",
-                "F1",
-                "FDR",
-                "FNR",
-                "FOR",
-                "MCC",
-                "NPV",
-                "PPV",
-                "TNR",
-                "TPR",
-            ],
-        )
+        # expand(
+        #     path.join("Plots", "{plot}.png"),
+        #     plot=[
+        #         "ACC",
+        #         "F1",
+        #         "FDR",
+        #         "FNR",
+        #         "FOR",
+        #         "MCC",
+        #         "NPV",
+        #         "PPV",
+        #         "TNR",
+        #         "TPR",
+        #     ],
+        # )
 
 # ==============================================================================
 # Rules
@@ -80,7 +80,7 @@ rule calc_rates:
 rule plot_rates:
     input:
         script = "plot-sleuth.R",
-        data = path.join("Compariosn", "rates.tsv"),
+        data = path.join("Comparison", "rates.tsv"),
     output:
         path.join("Plots", "ACC.png"),
         path.join("Plots", "F1.png"),

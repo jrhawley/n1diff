@@ -224,7 +224,7 @@ meta[condition == "wt", condition := "ctrl"]
 # Analysis
 # ==============================================================================
 loginfo("Performing calculations")
-total_reps <- 10
+total_reps <- 30
 
 # randomly select groups 10 times before performing comparison
 for (i in 1:(total_reps / 2)) {
