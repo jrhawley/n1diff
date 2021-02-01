@@ -45,12 +45,14 @@ full <- fread(
 # ==============================================================================
 loginfo("Compare to full scale analyses")
 
+total_reps <- 30
+
 # load sample calculations
 tests <- rbindlist(lapply(
 	seq(4, 24, 2),
 	function(total) {
 		bal <- rbindlist(lapply(
-			1:10,
+			1:total_reps,
 			function(i) {
 				dt2 <- fread(
 					file.path("Iterations", paste0("Total_", total), "balanced", paste0(i, ".genes.tsv")),

@@ -224,9 +224,9 @@ meta[condition == "wt", condition := "ctrl"]
 # Analysis
 # ==============================================================================
 loginfo("Performing calculations")
+# randomly select groups this many times before performing comparison
 total_reps <- 30
 
-# randomly select groups 10 times before performing comparison
 for (i in 1:(total_reps / 2)) {
 	loginfo("\tPreparing sleuth objects")
 	# balanced samples
