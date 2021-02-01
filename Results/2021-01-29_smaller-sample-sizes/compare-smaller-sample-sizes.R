@@ -49,33 +49,61 @@ loginfo("Compare to full scale analyses")
 tests <- rbindlist(lapply(
 	seq(4, 24, 2),
 	function(total) {
-		dt <- rbindlist(lapply(
-			c("unbalanced", "balanced"),
-			function(bal) {
-				dt2 <- rbindlist(lapply(
-					1:10,
-					function(i) {
-						dt3 <- fread(
-							file.path("Iterations", paste0("Total_", total), bal, paste0(i, ".genes.tsv")),
-							sep = "\t",
-							header = TRUE
-						)
-						dt3[, Iteration := i]
-						return(dt3)
-					}
-				))
-				dt2[, Balanced := bal]
+		bal <- rbindlist(lapply(
+			1:10,
+			function(i) {
+				dt2 <- fread(
+					file.path("Iterations", paste0("Total_", total), "balanced", paste0(i, ".genes.tsv")),
+					sep = "\t",
+					header = TRUE
+				)
+				dt2[, Iteration := i]
 				return(dt2)
 			}
 		))
-		dt[, Total := total]
-		return(dt)
+		bal[, Test_Condition := "Balanced"]
+		unbal_naive <- rbindlist(lapply(
+			1:10,
+			function(i) {
+				dt2 <- fread(
+					file.path("Iterations", paste0("Total_", total), "unbalanced", paste0(i, ".genes.tsv")),
+					sep = "\t",
+					header = TRUE
+				)
+				dt2[, Iteration := i]
+				return(dt2)
+			}
+		))
+		unbal_naive[, Test_Condition := "Unbalanced Naive"]
+		unbal_jse <- rbindlist(lapply(
+			1:10,
+			function(i) {
+				dt2 <- fread(
+					file.path("Iterations", paste0("Total_", total), "unbalanced", paste0(i, ".genes.jse.tsv")),
+					sep = "\t",
+					header = TRUE
+				)
+				dt2[, Iteration := i]
+				return(dt2)
+			}
+		))
+		unbal_jse[, Test_Condition := "Unbalanced James-Stein"]
+		combined_dt <- rbindlist(
+			list(
+				bal,
+				unbal_naive,
+				unbal_jse
+			),
+			fill = TRUE
+		)
+		combined_dt[, Total := total]
+		return(combined_dt)
 	}
 ))
 
 # compare to the full dataset
 test_comparisons <- merge(
-	x = tests[, .SD, .SDcols = c("target_id", "b", "pval", "qval", "Total", "Iteration", "Balanced")],
+	x = tests[, .SD, .SDcols = c("target_id", "b", "pval", "qval", "Total", "Iteration", "Test_Condition")],
 	y = full[, .SD, .SDcols = c("target_id", "b", "pval", "qval")],
 	by = "target_id",
 	suffixes = c("_small", "_full")
@@ -88,21 +116,29 @@ test_comparisons[(qval_full <= qval_thresh) & (qval_small <= qval_thresh), Resul
 test_comparisons[(qval_full <= qval_thresh) & (qval_small > qval_thresh), Result := "FN"]
 test_comparisons[(qval_full > qval_thresh) & (qval_small <= qval_thresh), Result := "FP"]
 test_comparisons[(qval_full > qval_thresh) & (qval_small > qval_thresh), Result := "TN"]
-test_comparisons[, Balanced := factor(Balanced, levels = c("balanced", "unbalanced"))]
+test_comparisons[, Test_Condition := factor(Test_Condition, levels = c("Balanced", "Unbalanced Naive", "Unbalanced James-Stein"))]
 test_comparisons[, Result := factor(Result, levels = c("TP", "FN", "FP", "TN"))]
 
 # calculate confusion matrices
-confusion <- test_comparisons[, .N, by = c("Result", "Total", "Balanced", "Iteration")]
+confusion <- test_comparisons[, .N, by = c("Result", "Total", "Test_Condition", "Iteration")]
 # ensure that all 4 values (TP/FN/FP/TN) exist in the table for each combo of iteration, total, and balance
-setkey(confusion, Total, Balanced, Iteration, Result)
+setkey(confusion, Total, Test_Condition, Iteration, Result)
 ## uses a cross-join to calculate all combinations of the four columns
-confusion <- confusion[CJ(unique(Total), levels(Balanced), unique(Iteration), levels(Result)), allow.cartesian = TRUE]
+confusion <- confusion[
+	CJ(
+		unique(Total),
+		levels(Test_Condition),
+		unique(Iteration),
+		levels(Result)
+	),
+	allow.cartesian = TRUE
+]
 confusion[is.na(N), N := 0L]
 
 # calculate various rates from the confusion matrices
 rates <- dcast(
 	confusion,
-	Total + Balanced + Iteration ~ Result,
+	Total + Test_Condition + Iteration ~ Result,
 	value.var = "N"
 )
 
@@ -132,4 +168,3 @@ fwrite(
 	sep = "\t",
 	col.names = TRUE
 )
-
