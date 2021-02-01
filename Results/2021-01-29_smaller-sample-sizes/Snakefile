@@ -21,6 +21,22 @@ rule all:
             i=range(1, 11),
             ext=["genes.tsv", "sleuth-object.rds", "genes.jse.tsv", "jse-object.rds"],
         ),
+        path.join("Comparison", "rates.tsv"),
+        expand(
+            path.join("Plots", "{plot}.png"),
+            plot=[
+                "ACC",
+                "F1",
+                "FDR",
+                "FNR",
+                "FOR",
+                "MCC",
+                "NPV",
+                "PPV",
+                "TNR",
+                "TPR",
+            ],
+        )
 
 # ==============================================================================
 # Rules
@@ -46,3 +62,35 @@ rule sleuth_small_n:
         ),
     shell:
         "Rscript {input.script} {wildcards.n}"
+
+rule calc_rates:
+    input:
+        script = "compare-smaller-sample-sizes.R",
+        data = expand(
+            "Iterations/Total_{n}/unbalanced/{i}.{ext}",
+            n=range(4, 25, 2),
+            i=range(1, 11),
+            ext=["genes.tsv", "sleuth-object.rds", "genes.jse.tsv", "jse-object.rds"],
+        ),
+    output:
+        path.join("Comparison", "rates.tsv"),
+    shell:
+        "Rscript {input.script}"
+
+rule plot_rates:
+    input:
+        script = "plot-sleuth.R",
+        data = path.join("Compariosn", "rates.tsv"),
+    output:
+        path.join("Plots", "ACC.png"),
+        path.join("Plots", "F1.png"),
+        path.join("Plots", "FDR.png"),
+        path.join("Plots", "FNR.png"),
+        path.join("Plots", "FOR.png"),
+        path.join("Plots", "MCC.png"),
+        path.join("Plots", "NPV.png"),
+        path.join("Plots", "PPV.png"),
+        path.join("Plots", "TNR.png"),
+        path.join("Plots", "TPR.png"),
+    shell:
+        "Rscript {input.script}"
