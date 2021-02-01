@@ -71,12 +71,16 @@ rule multiqc:
             lane=LANES,
             ext=["html", "zip"],
         ),
+        expand(
+            path.join(DIR["rpt"], "{sample}.kallisto_report.txt"),
+            sample=SAMPLES,
+        ),
     output:
         path.join(DIR["rpt"], "multiqc_report.html"),
     params:
         outdir = DIR["rpt"]
     shell:
-        "multiqc -o {params.outdir} {params.outdir}"
+        "multiqc -f -o {params.outdir} {params.outdir}"
 
 rule kallisto:
     input:
@@ -86,13 +90,14 @@ rule kallisto:
         ),
         idx = path.join("..", "Kallisto_s-cerevisiae_Index", "transcriptome.idx"),
     output:
-        path.join(DIR["align"], "{sample}", "abundance.tsv"),
-        path.join(DIR["align"], "{sample}", "abundance.h5"),
-        path.join(DIR["align"], "{sample}", "run_info.json"),
+        rpt = path.join(DIR["rpt"], "{sample}_kallisto.txt"),
+        tsv = path.join(DIR["align"], "{sample}", "abundance.tsv"),
+        abd = path.join(DIR["align"], "{sample}", "abundance.h5"),
+        run = path.join(DIR["align"], "{sample}", "run_info.json"),
     params:
         "-b 100 -t 8 --verbose --single -l 300 -s 10"
     shell:
-        "kallisto quant {params} -i {input.idx} -o Aligned/{wildcards.sample} {input.fq}"
+        "kallisto quant {params} -i {input.idx} -o Aligned/{wildcards.sample} {input.fq} > {output.rpt}"
 
 rule sleuth:
     input:

@@ -1,5 +1,105 @@
 {
     "report_data_sources": {
+        "Kallisto": {
+            "all_sections": {
+                "SA-PE-006_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-006.kallisto_report.txt",
+                "SA-PE-002_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-002.kallisto_report.txt",
+                "SA-PE-001_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-001.kallisto_report.txt",
+                "SA-PE-084_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-084.kallisto_report.txt",
+                "SA-PE-059_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-059.kallisto_report.txt",
+                "SA-PE-051_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-051.kallisto_report.txt",
+                "SA-PE-012_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-012.kallisto_report.txt",
+                "SA-PE-011_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-011.kallisto_report.txt",
+                "SA-PE-009_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-009.kallisto_report.txt",
+                "SA-PE-081_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-081.kallisto_report.txt",
+                "SA-PE-052_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-052.kallisto_report.txt",
+                "SA-PE-089_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-089.kallisto_report.txt",
+                "SA-PE-007_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-007.kallisto_report.txt",
+                "SA-PE-069_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-069.kallisto_report.txt",
+                "SA-PE-015_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-015.kallisto_report.txt",
+                "SA-PE-033_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-033.kallisto_report.txt",
+                "SA-PE-038_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-038.kallisto_report.txt",
+                "SA-PE-045_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-045.kallisto_report.txt",
+                "SA-PE-018_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-018.kallisto_report.txt",
+                "SA-PE-028_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-028.kallisto_report.txt",
+                "SA-PE-036_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-036.kallisto_report.txt",
+                "SA-PE-027_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-027.kallisto_report.txt",
+                "SA-PE-079_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-079.kallisto_report.txt",
+                "SA-PE-057_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-057.kallisto_report.txt",
+                "SA-PE-070_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-070.kallisto_report.txt",
+                "SA-PE-071_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-071.kallisto_report.txt",
+                "SA-PE-035_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-035.kallisto_report.txt",
+                "SA-PE-073_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-073.kallisto_report.txt",
+                "SA-PE-016_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-016.kallisto_report.txt",
+                "SA-PE-062_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-062.kallisto_report.txt",
+                "SA-PE-019_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-019.kallisto_report.txt",
+                "SA-PE-053_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-053.kallisto_report.txt",
+                "SA-PE-054_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-054.kallisto_report.txt",
+                "SA-PE-020_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-020.kallisto_report.txt",
+                "SA-PE-021_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-021.kallisto_report.txt",
+                "SA-PE-078_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-078.kallisto_report.txt",
+                "SA-PE-065_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-065.kallisto_report.txt",
+                "SA-PE-039_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-039.kallisto_report.txt",
+                "SA-PE-005_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-005.kallisto_report.txt",
+                "SA-PE-046_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-046.kallisto_report.txt",
+                "SA-PE-060_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-060.kallisto_report.txt",
+                "SA-PE-017_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-017.kallisto_report.txt",
+                "SA-PE-014_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-014.kallisto_report.txt",
+                "SA-PE-037_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-037.kallisto_report.txt",
+                "SA-PE-074_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-074.kallisto_report.txt",
+                "SA-PE-066_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-066.kallisto_report.txt",
+                "SA-PE-083_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-083.kallisto_report.txt",
+                "SA-PE-088_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-088.kallisto_report.txt",
+                "SA-PE-032_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-032.kallisto_report.txt",
+                "SA-PE-058_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-058.kallisto_report.txt",
+                "SA-PE-029_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-029.kallisto_report.txt",
+                "SA-PE-067_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-067.kallisto_report.txt",
+                "SA-PE-042_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-042.kallisto_report.txt",
+                "SA-PE-091_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-091.kallisto_report.txt",
+                "SA-PE-096_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-096.kallisto_report.txt",
+                "SA-PE-087_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-087.kallisto_report.txt",
+                "SA-PE-013_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-013.kallisto_report.txt",
+                "SA-PE-072_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-072.kallisto_report.txt",
+                "SA-PE-068_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-068.kallisto_report.txt",
+                "SA-PE-093_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-093.kallisto_report.txt",
+                "SA-PE-090_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-090.kallisto_report.txt",
+                "SA-PE-022_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-022.kallisto_report.txt",
+                "SA-PE-008_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-008.kallisto_report.txt",
+                "SA-PE-085_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-085.kallisto_report.txt",
+                "SA-PE-064_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-064.kallisto_report.txt",
+                "SA-PE-041_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-041.kallisto_report.txt",
+                "SA-PE-010_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-010.kallisto_report.txt",
+                "SA-PE-049_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-049.kallisto_report.txt",
+                "SA-PE-025_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-025.kallisto_report.txt",
+                "SA-PE-034_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-034.kallisto_report.txt",
+                "SA-PE-095_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-095.kallisto_report.txt",
+                "SA-PE-050_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-050.kallisto_report.txt",
+                "SA-PE-086_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-086.kallisto_report.txt",
+                "SA-PE-080_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-080.kallisto_report.txt",
+                "SA-PE-030_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-030.kallisto_report.txt",
+                "SA-PE-024_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-024.kallisto_report.txt",
+                "SA-PE-044_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-044.kallisto_report.txt",
+                "SA-PE-048_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-048.kallisto_report.txt",
+                "SA-PE-055_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-055.kallisto_report.txt",
+                "SA-PE-063_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-063.kallisto_report.txt",
+                "SA-PE-023_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-023.kallisto_report.txt",
+                "SA-PE-043_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-043.kallisto_report.txt",
+                "SA-PE-061_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-061.kallisto_report.txt",
+                "SA-PE-026_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-026.kallisto_report.txt",
+                "SA-PE-076_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-076.kallisto_report.txt",
+                "SA-PE-047_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-047.kallisto_report.txt",
+                "SA-PE-056_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-056.kallisto_report.txt",
+                "SA-PE-077_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-077.kallisto_report.txt",
+                "SA-PE-075_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-075.kallisto_report.txt",
+                "SA-PE-094_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-094.kallisto_report.txt",
+                "SA-PE-031_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-031.kallisto_report.txt",
+                "SA-PE-003_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-003.kallisto_report.txt",
+                "SA-PE-092_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-092.kallisto_report.txt",
+                "SA-PE-082_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-082.kallisto_report.txt",
+                "SA-PE-040_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-040.kallisto_report.txt",
+                "SA-PE-004_1": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-004.kallisto_report.txt"
+            }
+        },
         "FastQC": {
             "all_sections": {
                 "SA-PE-017_2": "/mnt/work1/users/lupiengroup/People/hawleyj/n1diff/Data/Gierlinski_2015/Reports/SA-PE-017_2_fastqc.zip",
@@ -678,6 +778,584 @@
         }
     },
     "report_general_stats_data": [
+        {
+            "SA-PE-006_1": {
+                "total_reads": 9863848.0,
+                "pseudoaligned_reads": 6096380.0,
+                "not_pseudoaligned_reads": 3767468.0,
+                "percent_aligned": 61.805291403517174
+            },
+            "SA-PE-002_1": {
+                "total_reads": 8920524.0,
+                "pseudoaligned_reads": 5325046.0,
+                "not_pseudoaligned_reads": 3595478.0,
+                "percent_aligned": 59.69431840551071
+            },
+            "SA-PE-001_1": {
+                "total_reads": 11966526.0,
+                "pseudoaligned_reads": 7148374.0,
+                "not_pseudoaligned_reads": 4818152.0,
+                "percent_aligned": 59.73641807154391
+            },
+            "SA-PE-084_1": {
+                "total_reads": 8452258.0,
+                "pseudoaligned_reads": 5222358.0,
+                "not_pseudoaligned_reads": 3229900.0,
+                "percent_aligned": 61.78654272030031
+            },
+            "SA-PE-059_1": {
+                "total_reads": 8581563.0,
+                "pseudoaligned_reads": 5178745.0,
+                "not_pseudoaligned_reads": 3402818.0,
+                "percent_aligned": 60.3473399892304
+            },
+            "SA-PE-051_1": {
+                "total_reads": 7898539.0,
+                "pseudoaligned_reads": 4700100.0,
+                "not_pseudoaligned_reads": 3198439.0,
+                "percent_aligned": 59.50594154184717
+            },
+            "SA-PE-012_1": {
+                "total_reads": 10031724.0,
+                "pseudoaligned_reads": 5995900.0,
+                "not_pseudoaligned_reads": 4035824.0,
+                "percent_aligned": 59.769387594794274
+            },
+            "SA-PE-011_1": {
+                "total_reads": 12727730.0,
+                "pseudoaligned_reads": 7714069.0,
+                "not_pseudoaligned_reads": 5013661.0,
+                "percent_aligned": 60.608364570901486
+            },
+            "SA-PE-009_1": {
+                "total_reads": 8963992.0,
+                "pseudoaligned_reads": 5612993.0,
+                "not_pseudoaligned_reads": 3350999.0,
+                "percent_aligned": 62.61711300054708
+            },
+            "SA-PE-081_1": {
+                "total_reads": 10005692.0,
+                "pseudoaligned_reads": 6110426.0,
+                "not_pseudoaligned_reads": 3895266.0,
+                "percent_aligned": 61.069499241032
+            },
+            "SA-PE-052_1": {
+                "total_reads": 11482683.0,
+                "pseudoaligned_reads": 7102903.0,
+                "not_pseudoaligned_reads": 4379780.0,
+                "percent_aligned": 61.857520581209116
+            },
+            "SA-PE-089_1": {
+                "total_reads": 13056965.0,
+                "pseudoaligned_reads": 7320186.0,
+                "not_pseudoaligned_reads": 5736779.0,
+                "percent_aligned": 56.06345731952257
+            },
+            "SA-PE-007_1": {
+                "total_reads": 12778413.0,
+                "pseudoaligned_reads": 8376826.0,
+                "not_pseudoaligned_reads": 4401587.0,
+                "percent_aligned": 65.55450978145721
+            },
+            "SA-PE-069_1": {
+                "total_reads": 9328997.0,
+                "pseudoaligned_reads": 5872206.0,
+                "not_pseudoaligned_reads": 3456791.0,
+                "percent_aligned": 62.945737896582024
+            },
+            "SA-PE-015_1": {
+                "total_reads": 10848708.0,
+                "pseudoaligned_reads": 6649953.0,
+                "not_pseudoaligned_reads": 4198755.0,
+                "percent_aligned": 61.29718856844521
+            },
+            "SA-PE-033_1": {
+                "total_reads": 13047055.0,
+                "pseudoaligned_reads": 7013740.0,
+                "not_pseudoaligned_reads": 6033315.0,
+                "percent_aligned": 53.75726552850433
+            },
+            "SA-PE-038_1": {
+                "total_reads": 9996511.0,
+                "pseudoaligned_reads": 6117453.0,
+                "not_pseudoaligned_reads": 3879058.0,
+                "percent_aligned": 61.19588124296567
+            },
+            "SA-PE-045_1": {
+                "total_reads": 10814923.0,
+                "pseudoaligned_reads": 6820544.0,
+                "not_pseudoaligned_reads": 3994379.0,
+                "percent_aligned": 63.06604309619218
+            },
+            "SA-PE-018_1": {
+                "total_reads": 15247427.0,
+                "pseudoaligned_reads": 8956685.0,
+                "not_pseudoaligned_reads": 6290742.0,
+                "percent_aligned": 58.74227172886284
+            },
+            "SA-PE-028_1": {
+                "total_reads": 10267391.0,
+                "pseudoaligned_reads": 6535673.0,
+                "not_pseudoaligned_reads": 3731718.0,
+                "percent_aligned": 63.65466163702151
+            },
+            "SA-PE-036_1": {
+                "total_reads": 9253410.0,
+                "pseudoaligned_reads": 5728415.0,
+                "not_pseudoaligned_reads": 3524995.0,
+                "percent_aligned": 61.90598925152998
+            },
+            "SA-PE-027_1": {
+                "total_reads": 13650221.0,
+                "pseudoaligned_reads": 8838524.0,
+                "not_pseudoaligned_reads": 4811697.0,
+                "percent_aligned": 64.75004324105815
+            },
+            "SA-PE-079_1": {
+                "total_reads": 11860491.0,
+                "pseudoaligned_reads": 7319141.0,
+                "not_pseudoaligned_reads": 4541350.0,
+                "percent_aligned": 61.71026983621505
+            },
+            "SA-PE-057_1": {
+                "total_reads": 9385135.0,
+                "pseudoaligned_reads": 5552333.0,
+                "not_pseudoaligned_reads": 3832802.0,
+                "percent_aligned": 59.16092842564332
+            },
+            "SA-PE-070_1": {
+                "total_reads": 11242905.0,
+                "pseudoaligned_reads": 6829217.0,
+                "not_pseudoaligned_reads": 4413688.0,
+                "percent_aligned": 60.74245935547796
+            },
+            "SA-PE-071_1": {
+                "total_reads": 11760120.0,
+                "pseudoaligned_reads": 7059188.0,
+                "not_pseudoaligned_reads": 4700932.0,
+                "percent_aligned": 60.02649632826876
+            },
+            "SA-PE-035_1": {
+                "total_reads": 10451120.0,
+                "pseudoaligned_reads": 6392904.0,
+                "not_pseudoaligned_reads": 4058216.0,
+                "percent_aligned": 61.16955886067713
+            },
+            "SA-PE-073_1": {
+                "total_reads": 13179313.0,
+                "pseudoaligned_reads": 6962788.0,
+                "not_pseudoaligned_reads": 6216525.0,
+                "percent_aligned": 52.83119082155496
+            },
+            "SA-PE-016_1": {
+                "total_reads": 9008124.0,
+                "pseudoaligned_reads": 5226324.0,
+                "not_pseudoaligned_reads": 3781800.0,
+                "percent_aligned": 58.01789584601633
+            },
+            "SA-PE-062_1": {
+                "total_reads": 8462684.0,
+                "pseudoaligned_reads": 5097288.0,
+                "not_pseudoaligned_reads": 3365396.0,
+                "percent_aligned": 60.23252197529767
+            },
+            "SA-PE-019_1": {
+                "total_reads": 17978896.0,
+                "pseudoaligned_reads": 11108845.0,
+                "not_pseudoaligned_reads": 6870051.0,
+                "percent_aligned": 61.78824884464541
+            },
+            "SA-PE-053_1": {
+                "total_reads": 8116283.0,
+                "pseudoaligned_reads": 4867773.0,
+                "not_pseudoaligned_reads": 3248510.0,
+                "percent_aligned": 59.97539760503668
+            },
+            "SA-PE-054_1": {
+                "total_reads": 8132983.0,
+                "pseudoaligned_reads": 4944876.0,
+                "not_pseudoaligned_reads": 3188107.0,
+                "percent_aligned": 60.80027463478037
+            },
+            "SA-PE-020_1": {
+                "total_reads": 11378764.0,
+                "pseudoaligned_reads": 7423393.0,
+                "not_pseudoaligned_reads": 3955371.0,
+                "percent_aligned": 65.23901014205057
+            },
+            "SA-PE-021_1": {
+                "total_reads": 10201543.0,
+                "pseudoaligned_reads": 6472592.0,
+                "not_pseudoaligned_reads": 3728951.0,
+                "percent_aligned": 63.447186371708675
+            },
+            "SA-PE-078_1": {
+                "total_reads": 9777609.0,
+                "pseudoaligned_reads": 6092905.0,
+                "not_pseudoaligned_reads": 3684704.0,
+                "percent_aligned": 62.314876776111625
+            },
+            "SA-PE-065_1": {
+                "total_reads": 10510668.0,
+                "pseudoaligned_reads": 6332805.0,
+                "not_pseudoaligned_reads": 4177863.0,
+                "percent_aligned": 60.25121333867648
+            },
+            "SA-PE-039_1": {
+                "total_reads": 7014609.0,
+                "pseudoaligned_reads": 4512012.0,
+                "not_pseudoaligned_reads": 2502597.0,
+                "percent_aligned": 64.32307203437854
+            },
+            "SA-PE-005_1": {
+                "total_reads": 8514747.0,
+                "pseudoaligned_reads": 5551291.0,
+                "not_pseudoaligned_reads": 2963456.0,
+                "percent_aligned": 65.19619432027751
+            },
+            "SA-PE-046_1": {
+                "total_reads": 9418716.0,
+                "pseudoaligned_reads": 5813916.0,
+                "not_pseudoaligned_reads": 3604800.0,
+                "percent_aligned": 61.72726728356604
+            },
+            "SA-PE-060_1": {
+                "total_reads": 8641063.0,
+                "pseudoaligned_reads": 4549018.0,
+                "not_pseudoaligned_reads": 4092045.0,
+                "percent_aligned": 52.64419435432885
+            },
+            "SA-PE-017_1": {
+                "total_reads": 14659311.0,
+                "pseudoaligned_reads": 8930880.0,
+                "not_pseudoaligned_reads": 5728431.0,
+                "percent_aligned": 60.922917864284344
+            },
+            "SA-PE-014_1": {
+                "total_reads": 10598309.0,
+                "pseudoaligned_reads": 6468606.0,
+                "not_pseudoaligned_reads": 4129703.0,
+                "percent_aligned": 61.03432160734321
+            },
+            "SA-PE-037_1": {
+                "total_reads": 9387357.0,
+                "pseudoaligned_reads": 5990088.0,
+                "not_pseudoaligned_reads": 3397269.0,
+                "percent_aligned": 63.81016509758817
+            },
+            "SA-PE-074_1": {
+                "total_reads": 9582423.0,
+                "pseudoaligned_reads": 5642755.0,
+                "not_pseudoaligned_reads": 3939668.0,
+                "percent_aligned": 58.88651544604115
+            },
+            "SA-PE-066_1": {
+                "total_reads": 8676145.0,
+                "pseudoaligned_reads": 5338332.0,
+                "not_pseudoaligned_reads": 3337813.0,
+                "percent_aligned": 61.52884720114752
+            },
+            "SA-PE-083_1": {
+                "total_reads": 11232073.0,
+                "pseudoaligned_reads": 7032940.0,
+                "not_pseudoaligned_reads": 4199133.0,
+                "percent_aligned": 62.61479960110658
+            },
+            "SA-PE-088_1": {
+                "total_reads": 11291080.0,
+                "pseudoaligned_reads": 7050366.0,
+                "not_pseudoaligned_reads": 4240714.0,
+                "percent_aligned": 62.44190989701606
+            },
+            "SA-PE-032_1": {
+                "total_reads": 8183302.0,
+                "pseudoaligned_reads": 5147075.0,
+                "not_pseudoaligned_reads": 3036227.0,
+                "percent_aligned": 62.897287671895775
+            },
+            "SA-PE-058_1": {
+                "total_reads": 12447535.0,
+                "pseudoaligned_reads": 7676377.0,
+                "not_pseudoaligned_reads": 4771158.0,
+                "percent_aligned": 61.669856722636254
+            },
+            "SA-PE-029_1": {
+                "total_reads": 14003045.0,
+                "pseudoaligned_reads": 8631751.0,
+                "not_pseudoaligned_reads": 5371294.0,
+                "percent_aligned": 61.64195716003198
+            },
+            "SA-PE-067_1": {
+                "total_reads": 12366694.0,
+                "pseudoaligned_reads": 7520249.0,
+                "not_pseudoaligned_reads": 4846445.0,
+                "percent_aligned": 60.81050440804956
+            },
+            "SA-PE-042_1": {
+                "total_reads": 17345501.0,
+                "pseudoaligned_reads": 10337585.0,
+                "not_pseudoaligned_reads": 7007916.0,
+                "percent_aligned": 59.598076757771366
+            },
+            "SA-PE-091_1": {
+                "total_reads": 10590087.0,
+                "pseudoaligned_reads": 6664758.0,
+                "not_pseudoaligned_reads": 3925329.0,
+                "percent_aligned": 62.93393057110862
+            },
+            "SA-PE-096_1": {
+                "total_reads": 12121025.0,
+                "pseudoaligned_reads": 7528704.0,
+                "not_pseudoaligned_reads": 4592321.0,
+                "percent_aligned": 62.11276686583849
+            },
+            "SA-PE-087_1": {
+                "total_reads": 8501671.0,
+                "pseudoaligned_reads": 5399613.0,
+                "not_pseudoaligned_reads": 3102058.0,
+                "percent_aligned": 63.51237303819449
+            },
+            "SA-PE-013_1": {
+                "total_reads": 11796851.0,
+                "pseudoaligned_reads": 7421678.0,
+                "not_pseudoaligned_reads": 4375173.0,
+                "percent_aligned": 62.9123653422426
+            },
+            "SA-PE-072_1": {
+                "total_reads": 10699027.0,
+                "pseudoaligned_reads": 6602298.0,
+                "not_pseudoaligned_reads": 4096729.0,
+                "percent_aligned": 61.70933113824276
+            },
+            "SA-PE-068_1": {
+                "total_reads": 9652797.0,
+                "pseudoaligned_reads": 6037053.0,
+                "not_pseudoaligned_reads": 3615744.0,
+                "percent_aligned": 62.54200725447764
+            },
+            "SA-PE-093_1": {
+                "total_reads": 9699959.0,
+                "pseudoaligned_reads": 5940435.0,
+                "not_pseudoaligned_reads": 3759524.0,
+                "percent_aligned": 61.241856795477176
+            },
+            "SA-PE-090_1": {
+                "total_reads": 9278850.0,
+                "pseudoaligned_reads": 4722992.0,
+                "not_pseudoaligned_reads": 4555858.0,
+                "percent_aligned": 50.90061807228267
+            },
+            "SA-PE-022_1": {
+                "total_reads": 9723242.0,
+                "pseudoaligned_reads": 6193173.0,
+                "not_pseudoaligned_reads": 3530069.0,
+                "percent_aligned": 63.69452699007183
+            },
+            "SA-PE-008_1": {
+                "total_reads": 12142408.0,
+                "pseudoaligned_reads": 6894948.0,
+                "not_pseudoaligned_reads": 5247460.0,
+                "percent_aligned": 56.784025046761734
+            },
+            "SA-PE-085_1": {
+                "total_reads": 9611329.0,
+                "pseudoaligned_reads": 5971279.0,
+                "not_pseudoaligned_reads": 3640050.0,
+                "percent_aligned": 62.12750598798563
+            },
+            "SA-PE-064_1": {
+                "total_reads": 9514743.0,
+                "pseudoaligned_reads": 5949790.0,
+                "not_pseudoaligned_reads": 3564953.0,
+                "percent_aligned": 62.532324835258294
+            },
+            "SA-PE-041_1": {
+                "total_reads": 11421922.0,
+                "pseudoaligned_reads": 7063700.0,
+                "not_pseudoaligned_reads": 4358222.0,
+                "percent_aligned": 61.843357011193035
+            },
+            "SA-PE-010_1": {
+                "total_reads": 8699500.0,
+                "pseudoaligned_reads": 5457603.0,
+                "not_pseudoaligned_reads": 3241897.0,
+                "percent_aligned": 62.73467440657509
+            },
+            "SA-PE-049_1": {
+                "total_reads": 7963811.0,
+                "pseudoaligned_reads": 4836100.0,
+                "not_pseudoaligned_reads": 3127711.0,
+                "percent_aligned": 60.725951432046784
+            },
+            "SA-PE-025_1": {
+                "total_reads": 8840109.0,
+                "pseudoaligned_reads": 5471578.0,
+                "not_pseudoaligned_reads": 3368531.0,
+                "percent_aligned": 61.89491554911824
+            },
+            "SA-PE-034_1": {
+                "total_reads": 7888497.0,
+                "pseudoaligned_reads": 4845185.0,
+                "not_pseudoaligned_reads": 3043312.0,
+                "percent_aligned": 61.42088917572004
+            },
+            "SA-PE-095_1": {
+                "total_reads": 7836468.0,
+                "pseudoaligned_reads": 4833063.0,
+                "not_pseudoaligned_reads": 3003405.0,
+                "percent_aligned": 61.673996499443376
+            },
+            "SA-PE-050_1": {
+                "total_reads": 9415016.0,
+                "pseudoaligned_reads": 5770104.0,
+                "not_pseudoaligned_reads": 3644912.0,
+                "percent_aligned": 61.28618368784503
+            },
+            "SA-PE-086_1": {
+                "total_reads": 9785206.0,
+                "pseudoaligned_reads": 5692037.0,
+                "not_pseudoaligned_reads": 4093169.0,
+                "percent_aligned": 58.16982289386652
+            },
+            "SA-PE-080_1": {
+                "total_reads": 10217469.0,
+                "pseudoaligned_reads": 6474578.0,
+                "not_pseudoaligned_reads": 3742891.0,
+                "percent_aligned": 63.3677283483806
+            },
+            "SA-PE-030_1": {
+                "total_reads": 17412410.0,
+                "pseudoaligned_reads": 11011521.0,
+                "not_pseudoaligned_reads": 6400889.0,
+                "percent_aligned": 63.23949987394049
+            },
+            "SA-PE-024_1": {
+                "total_reads": 10349587.0,
+                "pseudoaligned_reads": 6763456.0,
+                "not_pseudoaligned_reads": 3586131.0,
+                "percent_aligned": 65.35000865251918
+            },
+            "SA-PE-044_1": {
+                "total_reads": 13410563.0,
+                "pseudoaligned_reads": 8798645.0,
+                "not_pseudoaligned_reads": 4611918.0,
+                "percent_aligned": 65.6098107141363
+            },
+            "SA-PE-048_1": {
+                "total_reads": 9951691.0,
+                "pseudoaligned_reads": 5764983.0,
+                "not_pseudoaligned_reads": 4186708.0,
+                "percent_aligned": 57.929682503204724
+            },
+            "SA-PE-055_1": {
+                "total_reads": 8849990.0,
+                "pseudoaligned_reads": 5138235.0,
+                "not_pseudoaligned_reads": 3711755.0,
+                "percent_aligned": 58.05921814600921
+            },
+            "SA-PE-063_1": {
+                "total_reads": 10016381.0,
+                "pseudoaligned_reads": 5278488.0,
+                "not_pseudoaligned_reads": 4737893.0,
+                "percent_aligned": 52.698554497877026
+            },
+            "SA-PE-023_1": {
+                "total_reads": 10593468.0,
+                "pseudoaligned_reads": 6540785.0,
+                "not_pseudoaligned_reads": 4052683.0,
+                "percent_aligned": 61.74356688480108
+            },
+            "SA-PE-043_1": {
+                "total_reads": 10019350.0,
+                "pseudoaligned_reads": 6541746.0,
+                "not_pseudoaligned_reads": 3477604.0,
+                "percent_aligned": 65.29112167955007
+            },
+            "SA-PE-061_1": {
+                "total_reads": 9825209.0,
+                "pseudoaligned_reads": 6008760.0,
+                "not_pseudoaligned_reads": 3816449.0,
+                "percent_aligned": 61.156561656856354
+            },
+            "SA-PE-026_1": {
+                "total_reads": 15084420.0,
+                "pseudoaligned_reads": 9230529.0,
+                "not_pseudoaligned_reads": 5853891.0,
+                "percent_aligned": 61.19246878567422
+            },
+            "SA-PE-076_1": {
+                "total_reads": 11040646.0,
+                "pseudoaligned_reads": 5847384.0,
+                "not_pseudoaligned_reads": 5193262.0,
+                "percent_aligned": 52.96233571839909
+            },
+            "SA-PE-047_1": {
+                "total_reads": 8174294.0,
+                "pseudoaligned_reads": 5052084.0,
+                "not_pseudoaligned_reads": 3122210.0,
+                "percent_aligned": 61.80453015269576
+            },
+            "SA-PE-056_1": {
+                "total_reads": 10602401.0,
+                "pseudoaligned_reads": 6204664.0,
+                "not_pseudoaligned_reads": 4397737.0,
+                "percent_aligned": 58.52131040884041
+            },
+            "SA-PE-077_1": {
+                "total_reads": 9010900.0,
+                "pseudoaligned_reads": 5597897.0,
+                "not_pseudoaligned_reads": 3413003.0,
+                "percent_aligned": 62.123616952801605
+            },
+            "SA-PE-075_1": {
+                "total_reads": 9890172.0,
+                "pseudoaligned_reads": 6198137.0,
+                "not_pseudoaligned_reads": 3692035.0,
+                "percent_aligned": 62.66965832343462
+            },
+            "SA-PE-094_1": {
+                "total_reads": 6790771.0,
+                "pseudoaligned_reads": 4205946.0,
+                "not_pseudoaligned_reads": 2584825.0,
+                "percent_aligned": 61.936207243625205
+            },
+            "SA-PE-031_1": {
+                "total_reads": 11356564.0,
+                "pseudoaligned_reads": 7158200.0,
+                "not_pseudoaligned_reads": 4198364.0,
+                "percent_aligned": 63.03138871933448
+            },
+            "SA-PE-003_1": {
+                "total_reads": 9542722.0,
+                "pseudoaligned_reads": 6078908.0,
+                "not_pseudoaligned_reads": 3463814.0,
+                "percent_aligned": 63.70203386413227
+            },
+            "SA-PE-092_1": {
+                "total_reads": 7502652.0,
+                "pseudoaligned_reads": 4189334.0,
+                "not_pseudoaligned_reads": 3313318.0,
+                "percent_aligned": 55.83804233489704
+            },
+            "SA-PE-082_1": {
+                "total_reads": 8859833.0,
+                "pseudoaligned_reads": 4977124.0,
+                "not_pseudoaligned_reads": 3882709.0,
+                "percent_aligned": 56.17627329995949
+            },
+            "SA-PE-040_1": {
+                "total_reads": 10076140.0,
+                "pseudoaligned_reads": 6146329.0,
+                "not_pseudoaligned_reads": 3929811.0,
+                "percent_aligned": 60.99884479572535
+            },
+            "SA-PE-004_1": {
+                "total_reads": 11808218.0,
+                "pseudoaligned_reads": 7324620.0,
+                "not_pseudoaligned_reads": 4483598.0,
+                "percent_aligned": 62.0298507361568
+            }
+        },
         {
             "SA-PE-017_2": {
                 "percent_gc": 43.0,
@@ -5387,6 +6065,49 @@
     ],
     "report_general_stats_headers": [
         {
+            "percent_aligned": {
+                "title": "% Aligned",
+                "description": "% processed reads that were pseudoaligned",
+                "max": 100,
+                "min": 0,
+                "suffix": "%",
+                "scale": "YlGn",
+                "namespace": "Kallisto",
+                "rid": "mqc-generalstats-kallisto-percent_aligned",
+                "format": "{:,.1f}",
+                "colour": "55,126,184",
+                "hidden": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "modify": null,
+                "placement": 1000.0,
+                "dmax": 100.0,
+                "dmin": 0.0
+            },
+            "pseudoaligned_reads": {
+                "title": "M Aligned",
+                "description": "Pseudoaligned reads (millions)",
+                "min": 0,
+                "scale": "PuRd",
+                "modify": 1e-06,
+                "shared_key": "read_count",
+                "namespace": "Kallisto",
+                "rid": "mqc-generalstats-kallisto-pseudoaligned_reads",
+                "format": "{:,.1f}",
+                "colour": "55,126,184",
+                "hidden": null,
+                "max": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "placement": 1000.0,
+                "dmax": 11.108844999999999,
+                "dmin": 0.0
+            }
+        },
+        {
             "percent_duplicates": {
                 "title": "% Dups",
                 "description": "% Duplicate Reads",
@@ -5397,7 +6118,7 @@
                 "namespace": "FastQC",
                 "rid": "mqc-generalstats-fastqc-percent_duplicates",
                 "format": "{:,.1f}",
-                "colour": "55,126,184",
+                "colour": "77,175,74",
                 "hidden": null,
                 "ceiling": null,
                 "floor": null,
@@ -5418,7 +6139,7 @@
                 "format": "{:,.0f}",
                 "namespace": "FastQC",
                 "rid": "mqc-generalstats-fastqc-percent_gc",
-                "colour": "55,126,184",
+                "colour": "77,175,74",
                 "hidden": null,
                 "ceiling": null,
                 "floor": null,
@@ -5439,7 +6160,7 @@
                 "hidden": true,
                 "namespace": "FastQC",
                 "rid": "mqc-generalstats-fastqc-avg_sequence_length",
-                "colour": "55,126,184",
+                "colour": "77,175,74",
                 "max": null,
                 "ceiling": null,
                 "floor": null,
@@ -5461,7 +6182,7 @@
                 "hidden": true,
                 "namespace": "FastQC",
                 "rid": "mqc-generalstats-fastqc-percent_fails",
-                "colour": "55,126,184",
+                "colour": "77,175,74",
                 "ceiling": null,
                 "floor": null,
                 "minRange": null,
@@ -5481,20 +6202,337 @@
                 "namespace": "FastQC",
                 "rid": "mqc-generalstats-fastqc-total_sequences",
                 "format": "{:,.1f}",
-                "colour": "55,126,184",
+                "colour": "77,175,74",
                 "hidden": null,
                 "max": null,
                 "ceiling": null,
                 "floor": null,
                 "minRange": null,
                 "placement": 1000.0,
-                "dmax": 2.804885,
+                "dmax": 11.108844999999999,
                 "dmin": 0.0
             }
         }
     ],
-    "report_multiqc_command": "/mnt/work1/users/home2/hawleyj/miniconda3/envs/n1diff/bin/multiqc -o Reports Reports",
+    "report_multiqc_command": "/mnt/work1/users/home2/hawleyj/miniconda3/envs/n1diff/bin/multiqc -f -o Reports Reports",
     "report_plot_data": {
+        "kallisto_alignment": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "SA-PE-001_1",
+                    "SA-PE-002_1",
+                    "SA-PE-003_1",
+                    "SA-PE-004_1",
+                    "SA-PE-005_1",
+                    "SA-PE-006_1",
+                    "SA-PE-007_1",
+                    "SA-PE-008_1",
+                    "SA-PE-009_1",
+                    "SA-PE-010_1",
+                    "SA-PE-011_1",
+                    "SA-PE-012_1",
+                    "SA-PE-013_1",
+                    "SA-PE-014_1",
+                    "SA-PE-015_1",
+                    "SA-PE-016_1",
+                    "SA-PE-017_1",
+                    "SA-PE-018_1",
+                    "SA-PE-019_1",
+                    "SA-PE-020_1",
+                    "SA-PE-021_1",
+                    "SA-PE-022_1",
+                    "SA-PE-023_1",
+                    "SA-PE-024_1",
+                    "SA-PE-025_1",
+                    "SA-PE-026_1",
+                    "SA-PE-027_1",
+                    "SA-PE-028_1",
+                    "SA-PE-029_1",
+                    "SA-PE-030_1",
+                    "SA-PE-031_1",
+                    "SA-PE-032_1",
+                    "SA-PE-033_1",
+                    "SA-PE-034_1",
+                    "SA-PE-035_1",
+                    "SA-PE-036_1",
+                    "SA-PE-037_1",
+                    "SA-PE-038_1",
+                    "SA-PE-039_1",
+                    "SA-PE-040_1",
+                    "SA-PE-041_1",
+                    "SA-PE-042_1",
+                    "SA-PE-043_1",
+                    "SA-PE-044_1",
+                    "SA-PE-045_1",
+                    "SA-PE-046_1",
+                    "SA-PE-047_1",
+                    "SA-PE-048_1",
+                    "SA-PE-049_1",
+                    "SA-PE-050_1",
+                    "SA-PE-051_1",
+                    "SA-PE-052_1",
+                    "SA-PE-053_1",
+                    "SA-PE-054_1",
+                    "SA-PE-055_1",
+                    "SA-PE-056_1",
+                    "SA-PE-057_1",
+                    "SA-PE-058_1",
+                    "SA-PE-059_1",
+                    "SA-PE-060_1",
+                    "SA-PE-061_1",
+                    "SA-PE-062_1",
+                    "SA-PE-063_1",
+                    "SA-PE-064_1",
+                    "SA-PE-065_1",
+                    "SA-PE-066_1",
+                    "SA-PE-067_1",
+                    "SA-PE-068_1",
+                    "SA-PE-069_1",
+                    "SA-PE-070_1",
+                    "SA-PE-071_1",
+                    "SA-PE-072_1",
+                    "SA-PE-073_1",
+                    "SA-PE-074_1",
+                    "SA-PE-075_1",
+                    "SA-PE-076_1",
+                    "SA-PE-077_1",
+                    "SA-PE-078_1",
+                    "SA-PE-079_1",
+                    "SA-PE-080_1",
+                    "SA-PE-081_1",
+                    "SA-PE-082_1",
+                    "SA-PE-083_1",
+                    "SA-PE-084_1",
+                    "SA-PE-085_1",
+                    "SA-PE-086_1",
+                    "SA-PE-087_1",
+                    "SA-PE-088_1",
+                    "SA-PE-089_1",
+                    "SA-PE-090_1",
+                    "SA-PE-091_1",
+                    "SA-PE-092_1",
+                    "SA-PE-093_1",
+                    "SA-PE-094_1",
+                    "SA-PE-095_1",
+                    "SA-PE-096_1"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "Pseudoaligned",
+                        "data": [
+                            7148374.0,
+                            5325046.0,
+                            6078908.0,
+                            7324620.0,
+                            5551291.0,
+                            6096380.0,
+                            8376826.0,
+                            6894948.0,
+                            5612993.0,
+                            5457603.0,
+                            7714069.0,
+                            5995900.0,
+                            7421678.0,
+                            6468606.0,
+                            6649953.0,
+                            5226324.0,
+                            8930880.0,
+                            8956685.0,
+                            11108845.0,
+                            7423393.0,
+                            6472592.0,
+                            6193173.0,
+                            6540785.0,
+                            6763456.0,
+                            5471578.0,
+                            9230529.0,
+                            8838524.0,
+                            6535673.0,
+                            8631751.0,
+                            11011521.0,
+                            7158200.0,
+                            5147075.0,
+                            7013740.0,
+                            4845185.0,
+                            6392904.0,
+                            5728415.0,
+                            5990088.0,
+                            6117453.0,
+                            4512012.0,
+                            6146329.0,
+                            7063700.0,
+                            10337585.0,
+                            6541746.0,
+                            8798645.0,
+                            6820544.0,
+                            5813916.0,
+                            5052084.0,
+                            5764983.0,
+                            4836100.0,
+                            5770104.0,
+                            4700100.0,
+                            7102903.0,
+                            4867773.0,
+                            4944876.0,
+                            5138235.0,
+                            6204664.0,
+                            5552333.0,
+                            7676377.0,
+                            5178745.0,
+                            4549018.0,
+                            6008760.0,
+                            5097288.0,
+                            5278488.0,
+                            5949790.0,
+                            6332805.0,
+                            5338332.0,
+                            7520249.0,
+                            6037053.0,
+                            5872206.0,
+                            6829217.0,
+                            7059188.0,
+                            6602298.0,
+                            6962788.0,
+                            5642755.0,
+                            6198137.0,
+                            5847384.0,
+                            5597897.0,
+                            6092905.0,
+                            7319141.0,
+                            6474578.0,
+                            6110426.0,
+                            4977124.0,
+                            7032940.0,
+                            5222358.0,
+                            5971279.0,
+                            5692037.0,
+                            5399613.0,
+                            7050366.0,
+                            7320186.0,
+                            4722992.0,
+                            6664758.0,
+                            4189334.0,
+                            5940435.0,
+                            4205946.0,
+                            4833063.0,
+                            7528704.0
+                        ],
+                        "color": "#437bb1"
+                    },
+                    {
+                        "name": "Not aligned",
+                        "data": [
+                            4818152.0,
+                            3595478.0,
+                            3463814.0,
+                            4483598.0,
+                            2963456.0,
+                            3767468.0,
+                            4401587.0,
+                            5247460.0,
+                            3350999.0,
+                            3241897.0,
+                            5013661.0,
+                            4035824.0,
+                            4375173.0,
+                            4129703.0,
+                            4198755.0,
+                            3781800.0,
+                            5728431.0,
+                            6290742.0,
+                            6870051.0,
+                            3955371.0,
+                            3728951.0,
+                            3530069.0,
+                            4052683.0,
+                            3586131.0,
+                            3368531.0,
+                            5853891.0,
+                            4811697.0,
+                            3731718.0,
+                            5371294.0,
+                            6400889.0,
+                            4198364.0,
+                            3036227.0,
+                            6033315.0,
+                            3043312.0,
+                            4058216.0,
+                            3524995.0,
+                            3397269.0,
+                            3879058.0,
+                            2502597.0,
+                            3929811.0,
+                            4358222.0,
+                            7007916.0,
+                            3477604.0,
+                            4611918.0,
+                            3994379.0,
+                            3604800.0,
+                            3122210.0,
+                            4186708.0,
+                            3127711.0,
+                            3644912.0,
+                            3198439.0,
+                            4379780.0,
+                            3248510.0,
+                            3188107.0,
+                            3711755.0,
+                            4397737.0,
+                            3832802.0,
+                            4771158.0,
+                            3402818.0,
+                            4092045.0,
+                            3816449.0,
+                            3365396.0,
+                            4737893.0,
+                            3564953.0,
+                            4177863.0,
+                            3337813.0,
+                            4846445.0,
+                            3615744.0,
+                            3456791.0,
+                            4413688.0,
+                            4700932.0,
+                            4096729.0,
+                            6216525.0,
+                            3939668.0,
+                            3692035.0,
+                            5193262.0,
+                            3413003.0,
+                            3684704.0,
+                            4541350.0,
+                            3742891.0,
+                            3895266.0,
+                            3882709.0,
+                            4199133.0,
+                            3229900.0,
+                            3640050.0,
+                            4093169.0,
+                            3102058.0,
+                            4240714.0,
+                            5736779.0,
+                            4555858.0,
+                            3925329.0,
+                            3313318.0,
+                            3759524.0,
+                            2584825.0,
+                            3003405.0,
+                            4592321.0
+                        ],
+                        "color": "#b1084c"
+                    }
+                ]
+            ],
+            "config": {
+                "id": "kallisto_alignment",
+                "title": "Kallisto: Alignment Scores",
+                "ylab": "# Reads",
+                "cpswitch_counts_label": "Number of Reads"
+            }
+        },
         "fastqc-status-check-heatmap": {
             "plot_type": "heatmap",
             "data": [
@@ -43182,6 +44220,202 @@
             "plot_type": "beeswarm",
             "samples": [
                 [
+                    "SA-PE-006_1",
+                    "SA-PE-002_1",
+                    "SA-PE-001_1",
+                    "SA-PE-084_1",
+                    "SA-PE-059_1",
+                    "SA-PE-051_1",
+                    "SA-PE-012_1",
+                    "SA-PE-011_1",
+                    "SA-PE-009_1",
+                    "SA-PE-081_1",
+                    "SA-PE-052_1",
+                    "SA-PE-089_1",
+                    "SA-PE-007_1",
+                    "SA-PE-069_1",
+                    "SA-PE-015_1",
+                    "SA-PE-033_1",
+                    "SA-PE-038_1",
+                    "SA-PE-045_1",
+                    "SA-PE-018_1",
+                    "SA-PE-028_1",
+                    "SA-PE-036_1",
+                    "SA-PE-027_1",
+                    "SA-PE-079_1",
+                    "SA-PE-057_1",
+                    "SA-PE-070_1",
+                    "SA-PE-071_1",
+                    "SA-PE-035_1",
+                    "SA-PE-073_1",
+                    "SA-PE-016_1",
+                    "SA-PE-062_1",
+                    "SA-PE-019_1",
+                    "SA-PE-053_1",
+                    "SA-PE-054_1",
+                    "SA-PE-020_1",
+                    "SA-PE-021_1",
+                    "SA-PE-078_1",
+                    "SA-PE-065_1",
+                    "SA-PE-039_1",
+                    "SA-PE-005_1",
+                    "SA-PE-046_1",
+                    "SA-PE-060_1",
+                    "SA-PE-017_1",
+                    "SA-PE-014_1",
+                    "SA-PE-037_1",
+                    "SA-PE-074_1",
+                    "SA-PE-066_1",
+                    "SA-PE-083_1",
+                    "SA-PE-088_1",
+                    "SA-PE-032_1",
+                    "SA-PE-058_1",
+                    "SA-PE-029_1",
+                    "SA-PE-067_1",
+                    "SA-PE-042_1",
+                    "SA-PE-091_1",
+                    "SA-PE-096_1",
+                    "SA-PE-087_1",
+                    "SA-PE-013_1",
+                    "SA-PE-072_1",
+                    "SA-PE-068_1",
+                    "SA-PE-093_1",
+                    "SA-PE-090_1",
+                    "SA-PE-022_1",
+                    "SA-PE-008_1",
+                    "SA-PE-085_1",
+                    "SA-PE-064_1",
+                    "SA-PE-041_1",
+                    "SA-PE-010_1",
+                    "SA-PE-049_1",
+                    "SA-PE-025_1",
+                    "SA-PE-034_1",
+                    "SA-PE-095_1",
+                    "SA-PE-050_1",
+                    "SA-PE-086_1",
+                    "SA-PE-080_1",
+                    "SA-PE-030_1",
+                    "SA-PE-024_1",
+                    "SA-PE-044_1",
+                    "SA-PE-048_1",
+                    "SA-PE-055_1",
+                    "SA-PE-063_1",
+                    "SA-PE-023_1",
+                    "SA-PE-043_1",
+                    "SA-PE-061_1",
+                    "SA-PE-026_1",
+                    "SA-PE-076_1",
+                    "SA-PE-047_1",
+                    "SA-PE-056_1",
+                    "SA-PE-077_1",
+                    "SA-PE-075_1",
+                    "SA-PE-094_1",
+                    "SA-PE-031_1",
+                    "SA-PE-003_1",
+                    "SA-PE-092_1",
+                    "SA-PE-082_1",
+                    "SA-PE-040_1",
+                    "SA-PE-004_1"
+                ],
+                [
+                    "SA-PE-006_1",
+                    "SA-PE-002_1",
+                    "SA-PE-001_1",
+                    "SA-PE-084_1",
+                    "SA-PE-059_1",
+                    "SA-PE-051_1",
+                    "SA-PE-012_1",
+                    "SA-PE-011_1",
+                    "SA-PE-009_1",
+                    "SA-PE-081_1",
+                    "SA-PE-052_1",
+                    "SA-PE-089_1",
+                    "SA-PE-007_1",
+                    "SA-PE-069_1",
+                    "SA-PE-015_1",
+                    "SA-PE-033_1",
+                    "SA-PE-038_1",
+                    "SA-PE-045_1",
+                    "SA-PE-018_1",
+                    "SA-PE-028_1",
+                    "SA-PE-036_1",
+                    "SA-PE-027_1",
+                    "SA-PE-079_1",
+                    "SA-PE-057_1",
+                    "SA-PE-070_1",
+                    "SA-PE-071_1",
+                    "SA-PE-035_1",
+                    "SA-PE-073_1",
+                    "SA-PE-016_1",
+                    "SA-PE-062_1",
+                    "SA-PE-019_1",
+                    "SA-PE-053_1",
+                    "SA-PE-054_1",
+                    "SA-PE-020_1",
+                    "SA-PE-021_1",
+                    "SA-PE-078_1",
+                    "SA-PE-065_1",
+                    "SA-PE-039_1",
+                    "SA-PE-005_1",
+                    "SA-PE-046_1",
+                    "SA-PE-060_1",
+                    "SA-PE-017_1",
+                    "SA-PE-014_1",
+                    "SA-PE-037_1",
+                    "SA-PE-074_1",
+                    "SA-PE-066_1",
+                    "SA-PE-083_1",
+                    "SA-PE-088_1",
+                    "SA-PE-032_1",
+                    "SA-PE-058_1",
+                    "SA-PE-029_1",
+                    "SA-PE-067_1",
+                    "SA-PE-042_1",
+                    "SA-PE-091_1",
+                    "SA-PE-096_1",
+                    "SA-PE-087_1",
+                    "SA-PE-013_1",
+                    "SA-PE-072_1",
+                    "SA-PE-068_1",
+                    "SA-PE-093_1",
+                    "SA-PE-090_1",
+                    "SA-PE-022_1",
+                    "SA-PE-008_1",
+                    "SA-PE-085_1",
+                    "SA-PE-064_1",
+                    "SA-PE-041_1",
+                    "SA-PE-010_1",
+                    "SA-PE-049_1",
+                    "SA-PE-025_1",
+                    "SA-PE-034_1",
+                    "SA-PE-095_1",
+                    "SA-PE-050_1",
+                    "SA-PE-086_1",
+                    "SA-PE-080_1",
+                    "SA-PE-030_1",
+                    "SA-PE-024_1",
+                    "SA-PE-044_1",
+                    "SA-PE-048_1",
+                    "SA-PE-055_1",
+                    "SA-PE-063_1",
+                    "SA-PE-023_1",
+                    "SA-PE-043_1",
+                    "SA-PE-061_1",
+                    "SA-PE-026_1",
+                    "SA-PE-076_1",
+                    "SA-PE-047_1",
+                    "SA-PE-056_1",
+                    "SA-PE-077_1",
+                    "SA-PE-075_1",
+                    "SA-PE-094_1",
+                    "SA-PE-031_1",
+                    "SA-PE-003_1",
+                    "SA-PE-092_1",
+                    "SA-PE-082_1",
+                    "SA-PE-040_1",
+                    "SA-PE-004_1"
+                ],
+                [
                     "SA-PE-017_2",
                     "SA-PE-061_1",
                     "SA-PE-020_3",
@@ -46553,6 +47787,202 @@
                 ]
             ],
             "datasets": [
+                [
+                    61.805291403517174,
+                    59.69431840551071,
+                    59.73641807154391,
+                    61.78654272030031,
+                    60.3473399892304,
+                    59.50594154184717,
+                    59.769387594794274,
+                    60.608364570901486,
+                    62.61711300054708,
+                    61.069499241032,
+                    61.857520581209116,
+                    56.06345731952257,
+                    65.55450978145721,
+                    62.945737896582024,
+                    61.29718856844521,
+                    53.75726552850433,
+                    61.19588124296567,
+                    63.06604309619218,
+                    58.74227172886284,
+                    63.65466163702151,
+                    61.90598925152998,
+                    64.75004324105815,
+                    61.71026983621505,
+                    59.16092842564332,
+                    60.74245935547796,
+                    60.02649632826876,
+                    61.16955886067713,
+                    52.83119082155496,
+                    58.01789584601633,
+                    60.23252197529767,
+                    61.78824884464541,
+                    59.97539760503668,
+                    60.80027463478037,
+                    65.23901014205057,
+                    63.447186371708675,
+                    62.314876776111625,
+                    60.25121333867648,
+                    64.32307203437854,
+                    65.19619432027751,
+                    61.72726728356604,
+                    52.64419435432885,
+                    60.922917864284344,
+                    61.03432160734321,
+                    63.81016509758817,
+                    58.88651544604115,
+                    61.52884720114752,
+                    62.61479960110658,
+                    62.44190989701606,
+                    62.897287671895775,
+                    61.669856722636254,
+                    61.64195716003198,
+                    60.81050440804956,
+                    59.598076757771366,
+                    62.93393057110862,
+                    62.11276686583849,
+                    63.51237303819449,
+                    62.9123653422426,
+                    61.70933113824276,
+                    62.54200725447764,
+                    61.241856795477176,
+                    50.90061807228267,
+                    63.69452699007183,
+                    56.784025046761734,
+                    62.12750598798563,
+                    62.532324835258294,
+                    61.843357011193035,
+                    62.73467440657509,
+                    60.725951432046784,
+                    61.89491554911824,
+                    61.42088917572004,
+                    61.673996499443376,
+                    61.28618368784503,
+                    58.16982289386652,
+                    63.3677283483806,
+                    63.23949987394049,
+                    65.35000865251918,
+                    65.6098107141363,
+                    57.929682503204724,
+                    58.05921814600921,
+                    52.698554497877026,
+                    61.74356688480108,
+                    65.29112167955007,
+                    61.156561656856354,
+                    61.19246878567422,
+                    52.96233571839909,
+                    61.80453015269576,
+                    58.52131040884041,
+                    62.123616952801605,
+                    62.66965832343462,
+                    61.936207243625205,
+                    63.03138871933448,
+                    63.70203386413227,
+                    55.83804233489704,
+                    56.17627329995949,
+                    60.99884479572535,
+                    62.0298507361568
+                ],
+                [
+                    6.09638,
+                    5.3250459999999995,
+                    7.148374,
+                    5.222358,
+                    5.178745,
+                    4.7001,
+                    5.9959,
+                    7.714068999999999,
+                    5.6129929999999995,
+                    6.1104259999999995,
+                    7.1029029999999995,
+                    7.320186,
+                    8.376826,
+                    5.872205999999999,
+                    6.649953,
+                    7.013739999999999,
+                    6.117452999999999,
+                    6.820544,
+                    8.956685,
+                    6.535673,
+                    5.728415,
+                    8.838524,
+                    7.319140999999999,
+                    5.552333,
+                    6.829217,
+                    7.059188,
+                    6.392904,
+                    6.962788,
+                    5.226324,
+                    5.097288,
+                    11.108844999999999,
+                    4.867773,
+                    4.944876,
+                    7.423393,
+                    6.472592,
+                    6.092905,
+                    6.332805,
+                    4.5120119999999995,
+                    5.551291,
+                    5.813916,
+                    4.549018,
+                    8.93088,
+                    6.468605999999999,
+                    5.990088,
+                    5.642755,
+                    5.338331999999999,
+                    7.03294,
+                    7.0503659999999995,
+                    5.147075,
+                    7.676377,
+                    8.631751,
+                    7.520249,
+                    10.337584999999999,
+                    6.664758,
+                    7.528703999999999,
+                    5.3996129999999996,
+                    7.421678,
+                    6.602297999999999,
+                    6.037052999999999,
+                    5.940435,
+                    4.722992,
+                    6.193173,
+                    6.894947999999999,
+                    5.971279,
+                    5.94979,
+                    7.0637,
+                    5.457603,
+                    4.8361,
+                    5.471578,
+                    4.845185,
+                    4.833063,
+                    5.770104,
+                    5.692037,
+                    6.474577999999999,
+                    11.011521,
+                    6.763456,
+                    8.798644999999999,
+                    5.764983,
+                    5.138235,
+                    5.278487999999999,
+                    6.540785,
+                    6.541746,
+                    6.00876,
+                    9.230528999999999,
+                    5.847384,
+                    5.052084,
+                    6.204663999999999,
+                    5.597897,
+                    6.198137,
+                    4.205946,
+                    7.1582,
+                    6.078907999999999,
+                    4.189334,
+                    4.977124,
+                    6.146329,
+                    7.3246199999999995
+                ],
                 [
                     39.844532531380494,
                     34.18840892301593,
@@ -49926,6 +51356,26 @@
             ],
             "categories": [
                 {
+                    "namespace": "Kallisto",
+                    "title": "% Aligned",
+                    "description": "% processed reads that were pseudoaligned",
+                    "max": 100.0,
+                    "min": 0.0,
+                    "suffix": "%",
+                    "decimalPlaces": "2",
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "Kallisto",
+                    "title": "M Aligned",
+                    "description": "Pseudoaligned reads (millions)",
+                    "max": 11.108844999999999,
+                    "min": 0.0,
+                    "suffix": "",
+                    "decimalPlaces": "2",
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
                     "namespace": "FastQC",
                     "title": "% Dups",
                     "description": "% Duplicate Reads",
@@ -49933,7 +51383,7 @@
                     "min": 0.0,
                     "suffix": "%",
                     "decimalPlaces": "2",
-                    "bordercol": "rgb(55,126,184)"
+                    "bordercol": "rgb(77,175,74)"
                 },
                 {
                     "namespace": "FastQC",
@@ -49943,7 +51393,7 @@
                     "min": 0.0,
                     "suffix": "%",
                     "decimalPlaces": "2",
-                    "bordercol": "rgb(55,126,184)"
+                    "bordercol": "rgb(77,175,74)"
                 },
                 {
                     "namespace": "FastQC",
@@ -49953,7 +51403,7 @@
                     "min": 0.0,
                     "suffix": " bp",
                     "decimalPlaces": "2",
-                    "bordercol": "rgb(55,126,184)"
+                    "bordercol": "rgb(77,175,74)"
                 },
                 {
                     "namespace": "FastQC",
@@ -49963,22 +51413,600 @@
                     "min": 0.0,
                     "suffix": "%",
                     "decimalPlaces": "2",
-                    "bordercol": "rgb(55,126,184)"
+                    "bordercol": "rgb(77,175,74)"
                 },
                 {
                     "namespace": "FastQC",
                     "title": "M Seqs",
                     "description": "Total Sequences (millions)",
-                    "max": 2.804885,
+                    "max": 11.108844999999999,
                     "min": 0.0,
                     "suffix": "",
                     "decimalPlaces": "2",
-                    "bordercol": "rgb(55,126,184)"
+                    "bordercol": "rgb(77,175,74)"
                 }
             ]
         }
     },
     "report_saved_raw_data": {
+        "multiqc_kallisto": {
+            "SA-PE-006_1": {
+                "total_reads": 9863848.0,
+                "pseudoaligned_reads": 6096380.0,
+                "not_pseudoaligned_reads": 3767468.0,
+                "percent_aligned": 61.805291403517174
+            },
+            "SA-PE-002_1": {
+                "total_reads": 8920524.0,
+                "pseudoaligned_reads": 5325046.0,
+                "not_pseudoaligned_reads": 3595478.0,
+                "percent_aligned": 59.69431840551071
+            },
+            "SA-PE-001_1": {
+                "total_reads": 11966526.0,
+                "pseudoaligned_reads": 7148374.0,
+                "not_pseudoaligned_reads": 4818152.0,
+                "percent_aligned": 59.73641807154391
+            },
+            "SA-PE-084_1": {
+                "total_reads": 8452258.0,
+                "pseudoaligned_reads": 5222358.0,
+                "not_pseudoaligned_reads": 3229900.0,
+                "percent_aligned": 61.78654272030031
+            },
+            "SA-PE-059_1": {
+                "total_reads": 8581563.0,
+                "pseudoaligned_reads": 5178745.0,
+                "not_pseudoaligned_reads": 3402818.0,
+                "percent_aligned": 60.3473399892304
+            },
+            "SA-PE-051_1": {
+                "total_reads": 7898539.0,
+                "pseudoaligned_reads": 4700100.0,
+                "not_pseudoaligned_reads": 3198439.0,
+                "percent_aligned": 59.50594154184717
+            },
+            "SA-PE-012_1": {
+                "total_reads": 10031724.0,
+                "pseudoaligned_reads": 5995900.0,
+                "not_pseudoaligned_reads": 4035824.0,
+                "percent_aligned": 59.769387594794274
+            },
+            "SA-PE-011_1": {
+                "total_reads": 12727730.0,
+                "pseudoaligned_reads": 7714069.0,
+                "not_pseudoaligned_reads": 5013661.0,
+                "percent_aligned": 60.608364570901486
+            },
+            "SA-PE-009_1": {
+                "total_reads": 8963992.0,
+                "pseudoaligned_reads": 5612993.0,
+                "not_pseudoaligned_reads": 3350999.0,
+                "percent_aligned": 62.61711300054708
+            },
+            "SA-PE-081_1": {
+                "total_reads": 10005692.0,
+                "pseudoaligned_reads": 6110426.0,
+                "not_pseudoaligned_reads": 3895266.0,
+                "percent_aligned": 61.069499241032
+            },
+            "SA-PE-052_1": {
+                "total_reads": 11482683.0,
+                "pseudoaligned_reads": 7102903.0,
+                "not_pseudoaligned_reads": 4379780.0,
+                "percent_aligned": 61.857520581209116
+            },
+            "SA-PE-089_1": {
+                "total_reads": 13056965.0,
+                "pseudoaligned_reads": 7320186.0,
+                "not_pseudoaligned_reads": 5736779.0,
+                "percent_aligned": 56.06345731952257
+            },
+            "SA-PE-007_1": {
+                "total_reads": 12778413.0,
+                "pseudoaligned_reads": 8376826.0,
+                "not_pseudoaligned_reads": 4401587.0,
+                "percent_aligned": 65.55450978145721
+            },
+            "SA-PE-069_1": {
+                "total_reads": 9328997.0,
+                "pseudoaligned_reads": 5872206.0,
+                "not_pseudoaligned_reads": 3456791.0,
+                "percent_aligned": 62.945737896582024
+            },
+            "SA-PE-015_1": {
+                "total_reads": 10848708.0,
+                "pseudoaligned_reads": 6649953.0,
+                "not_pseudoaligned_reads": 4198755.0,
+                "percent_aligned": 61.29718856844521
+            },
+            "SA-PE-033_1": {
+                "total_reads": 13047055.0,
+                "pseudoaligned_reads": 7013740.0,
+                "not_pseudoaligned_reads": 6033315.0,
+                "percent_aligned": 53.75726552850433
+            },
+            "SA-PE-038_1": {
+                "total_reads": 9996511.0,
+                "pseudoaligned_reads": 6117453.0,
+                "not_pseudoaligned_reads": 3879058.0,
+                "percent_aligned": 61.19588124296567
+            },
+            "SA-PE-045_1": {
+                "total_reads": 10814923.0,
+                "pseudoaligned_reads": 6820544.0,
+                "not_pseudoaligned_reads": 3994379.0,
+                "percent_aligned": 63.06604309619218
+            },
+            "SA-PE-018_1": {
+                "total_reads": 15247427.0,
+                "pseudoaligned_reads": 8956685.0,
+                "not_pseudoaligned_reads": 6290742.0,
+                "percent_aligned": 58.74227172886284
+            },
+            "SA-PE-028_1": {
+                "total_reads": 10267391.0,
+                "pseudoaligned_reads": 6535673.0,
+                "not_pseudoaligned_reads": 3731718.0,
+                "percent_aligned": 63.65466163702151
+            },
+            "SA-PE-036_1": {
+                "total_reads": 9253410.0,
+                "pseudoaligned_reads": 5728415.0,
+                "not_pseudoaligned_reads": 3524995.0,
+                "percent_aligned": 61.90598925152998
+            },
+            "SA-PE-027_1": {
+                "total_reads": 13650221.0,
+                "pseudoaligned_reads": 8838524.0,
+                "not_pseudoaligned_reads": 4811697.0,
+                "percent_aligned": 64.75004324105815
+            },
+            "SA-PE-079_1": {
+                "total_reads": 11860491.0,
+                "pseudoaligned_reads": 7319141.0,
+                "not_pseudoaligned_reads": 4541350.0,
+                "percent_aligned": 61.71026983621505
+            },
+            "SA-PE-057_1": {
+                "total_reads": 9385135.0,
+                "pseudoaligned_reads": 5552333.0,
+                "not_pseudoaligned_reads": 3832802.0,
+                "percent_aligned": 59.16092842564332
+            },
+            "SA-PE-070_1": {
+                "total_reads": 11242905.0,
+                "pseudoaligned_reads": 6829217.0,
+                "not_pseudoaligned_reads": 4413688.0,
+                "percent_aligned": 60.74245935547796
+            },
+            "SA-PE-071_1": {
+                "total_reads": 11760120.0,
+                "pseudoaligned_reads": 7059188.0,
+                "not_pseudoaligned_reads": 4700932.0,
+                "percent_aligned": 60.02649632826876
+            },
+            "SA-PE-035_1": {
+                "total_reads": 10451120.0,
+                "pseudoaligned_reads": 6392904.0,
+                "not_pseudoaligned_reads": 4058216.0,
+                "percent_aligned": 61.16955886067713
+            },
+            "SA-PE-073_1": {
+                "total_reads": 13179313.0,
+                "pseudoaligned_reads": 6962788.0,
+                "not_pseudoaligned_reads": 6216525.0,
+                "percent_aligned": 52.83119082155496
+            },
+            "SA-PE-016_1": {
+                "total_reads": 9008124.0,
+                "pseudoaligned_reads": 5226324.0,
+                "not_pseudoaligned_reads": 3781800.0,
+                "percent_aligned": 58.01789584601633
+            },
+            "SA-PE-062_1": {
+                "total_reads": 8462684.0,
+                "pseudoaligned_reads": 5097288.0,
+                "not_pseudoaligned_reads": 3365396.0,
+                "percent_aligned": 60.23252197529767
+            },
+            "SA-PE-019_1": {
+                "total_reads": 17978896.0,
+                "pseudoaligned_reads": 11108845.0,
+                "not_pseudoaligned_reads": 6870051.0,
+                "percent_aligned": 61.78824884464541
+            },
+            "SA-PE-053_1": {
+                "total_reads": 8116283.0,
+                "pseudoaligned_reads": 4867773.0,
+                "not_pseudoaligned_reads": 3248510.0,
+                "percent_aligned": 59.97539760503668
+            },
+            "SA-PE-054_1": {
+                "total_reads": 8132983.0,
+                "pseudoaligned_reads": 4944876.0,
+                "not_pseudoaligned_reads": 3188107.0,
+                "percent_aligned": 60.80027463478037
+            },
+            "SA-PE-020_1": {
+                "total_reads": 11378764.0,
+                "pseudoaligned_reads": 7423393.0,
+                "not_pseudoaligned_reads": 3955371.0,
+                "percent_aligned": 65.23901014205057
+            },
+            "SA-PE-021_1": {
+                "total_reads": 10201543.0,
+                "pseudoaligned_reads": 6472592.0,
+                "not_pseudoaligned_reads": 3728951.0,
+                "percent_aligned": 63.447186371708675
+            },
+            "SA-PE-078_1": {
+                "total_reads": 9777609.0,
+                "pseudoaligned_reads": 6092905.0,
+                "not_pseudoaligned_reads": 3684704.0,
+                "percent_aligned": 62.314876776111625
+            },
+            "SA-PE-065_1": {
+                "total_reads": 10510668.0,
+                "pseudoaligned_reads": 6332805.0,
+                "not_pseudoaligned_reads": 4177863.0,
+                "percent_aligned": 60.25121333867648
+            },
+            "SA-PE-039_1": {
+                "total_reads": 7014609.0,
+                "pseudoaligned_reads": 4512012.0,
+                "not_pseudoaligned_reads": 2502597.0,
+                "percent_aligned": 64.32307203437854
+            },
+            "SA-PE-005_1": {
+                "total_reads": 8514747.0,
+                "pseudoaligned_reads": 5551291.0,
+                "not_pseudoaligned_reads": 2963456.0,
+                "percent_aligned": 65.19619432027751
+            },
+            "SA-PE-046_1": {
+                "total_reads": 9418716.0,
+                "pseudoaligned_reads": 5813916.0,
+                "not_pseudoaligned_reads": 3604800.0,
+                "percent_aligned": 61.72726728356604
+            },
+            "SA-PE-060_1": {
+                "total_reads": 8641063.0,
+                "pseudoaligned_reads": 4549018.0,
+                "not_pseudoaligned_reads": 4092045.0,
+                "percent_aligned": 52.64419435432885
+            },
+            "SA-PE-017_1": {
+                "total_reads": 14659311.0,
+                "pseudoaligned_reads": 8930880.0,
+                "not_pseudoaligned_reads": 5728431.0,
+                "percent_aligned": 60.922917864284344
+            },
+            "SA-PE-014_1": {
+                "total_reads": 10598309.0,
+                "pseudoaligned_reads": 6468606.0,
+                "not_pseudoaligned_reads": 4129703.0,
+                "percent_aligned": 61.03432160734321
+            },
+            "SA-PE-037_1": {
+                "total_reads": 9387357.0,
+                "pseudoaligned_reads": 5990088.0,
+                "not_pseudoaligned_reads": 3397269.0,
+                "percent_aligned": 63.81016509758817
+            },
+            "SA-PE-074_1": {
+                "total_reads": 9582423.0,
+                "pseudoaligned_reads": 5642755.0,
+                "not_pseudoaligned_reads": 3939668.0,
+                "percent_aligned": 58.88651544604115
+            },
+            "SA-PE-066_1": {
+                "total_reads": 8676145.0,
+                "pseudoaligned_reads": 5338332.0,
+                "not_pseudoaligned_reads": 3337813.0,
+                "percent_aligned": 61.52884720114752
+            },
+            "SA-PE-083_1": {
+                "total_reads": 11232073.0,
+                "pseudoaligned_reads": 7032940.0,
+                "not_pseudoaligned_reads": 4199133.0,
+                "percent_aligned": 62.61479960110658
+            },
+            "SA-PE-088_1": {
+                "total_reads": 11291080.0,
+                "pseudoaligned_reads": 7050366.0,
+                "not_pseudoaligned_reads": 4240714.0,
+                "percent_aligned": 62.44190989701606
+            },
+            "SA-PE-032_1": {
+                "total_reads": 8183302.0,
+                "pseudoaligned_reads": 5147075.0,
+                "not_pseudoaligned_reads": 3036227.0,
+                "percent_aligned": 62.897287671895775
+            },
+            "SA-PE-058_1": {
+                "total_reads": 12447535.0,
+                "pseudoaligned_reads": 7676377.0,
+                "not_pseudoaligned_reads": 4771158.0,
+                "percent_aligned": 61.669856722636254
+            },
+            "SA-PE-029_1": {
+                "total_reads": 14003045.0,
+                "pseudoaligned_reads": 8631751.0,
+                "not_pseudoaligned_reads": 5371294.0,
+                "percent_aligned": 61.64195716003198
+            },
+            "SA-PE-067_1": {
+                "total_reads": 12366694.0,
+                "pseudoaligned_reads": 7520249.0,
+                "not_pseudoaligned_reads": 4846445.0,
+                "percent_aligned": 60.81050440804956
+            },
+            "SA-PE-042_1": {
+                "total_reads": 17345501.0,
+                "pseudoaligned_reads": 10337585.0,
+                "not_pseudoaligned_reads": 7007916.0,
+                "percent_aligned": 59.598076757771366
+            },
+            "SA-PE-091_1": {
+                "total_reads": 10590087.0,
+                "pseudoaligned_reads": 6664758.0,
+                "not_pseudoaligned_reads": 3925329.0,
+                "percent_aligned": 62.93393057110862
+            },
+            "SA-PE-096_1": {
+                "total_reads": 12121025.0,
+                "pseudoaligned_reads": 7528704.0,
+                "not_pseudoaligned_reads": 4592321.0,
+                "percent_aligned": 62.11276686583849
+            },
+            "SA-PE-087_1": {
+                "total_reads": 8501671.0,
+                "pseudoaligned_reads": 5399613.0,
+                "not_pseudoaligned_reads": 3102058.0,
+                "percent_aligned": 63.51237303819449
+            },
+            "SA-PE-013_1": {
+                "total_reads": 11796851.0,
+                "pseudoaligned_reads": 7421678.0,
+                "not_pseudoaligned_reads": 4375173.0,
+                "percent_aligned": 62.9123653422426
+            },
+            "SA-PE-072_1": {
+                "total_reads": 10699027.0,
+                "pseudoaligned_reads": 6602298.0,
+                "not_pseudoaligned_reads": 4096729.0,
+                "percent_aligned": 61.70933113824276
+            },
+            "SA-PE-068_1": {
+                "total_reads": 9652797.0,
+                "pseudoaligned_reads": 6037053.0,
+                "not_pseudoaligned_reads": 3615744.0,
+                "percent_aligned": 62.54200725447764
+            },
+            "SA-PE-093_1": {
+                "total_reads": 9699959.0,
+                "pseudoaligned_reads": 5940435.0,
+                "not_pseudoaligned_reads": 3759524.0,
+                "percent_aligned": 61.241856795477176
+            },
+            "SA-PE-090_1": {
+                "total_reads": 9278850.0,
+                "pseudoaligned_reads": 4722992.0,
+                "not_pseudoaligned_reads": 4555858.0,
+                "percent_aligned": 50.90061807228267
+            },
+            "SA-PE-022_1": {
+                "total_reads": 9723242.0,
+                "pseudoaligned_reads": 6193173.0,
+                "not_pseudoaligned_reads": 3530069.0,
+                "percent_aligned": 63.69452699007183
+            },
+            "SA-PE-008_1": {
+                "total_reads": 12142408.0,
+                "pseudoaligned_reads": 6894948.0,
+                "not_pseudoaligned_reads": 5247460.0,
+                "percent_aligned": 56.784025046761734
+            },
+            "SA-PE-085_1": {
+                "total_reads": 9611329.0,
+                "pseudoaligned_reads": 5971279.0,
+                "not_pseudoaligned_reads": 3640050.0,
+                "percent_aligned": 62.12750598798563
+            },
+            "SA-PE-064_1": {
+                "total_reads": 9514743.0,
+                "pseudoaligned_reads": 5949790.0,
+                "not_pseudoaligned_reads": 3564953.0,
+                "percent_aligned": 62.532324835258294
+            },
+            "SA-PE-041_1": {
+                "total_reads": 11421922.0,
+                "pseudoaligned_reads": 7063700.0,
+                "not_pseudoaligned_reads": 4358222.0,
+                "percent_aligned": 61.843357011193035
+            },
+            "SA-PE-010_1": {
+                "total_reads": 8699500.0,
+                "pseudoaligned_reads": 5457603.0,
+                "not_pseudoaligned_reads": 3241897.0,
+                "percent_aligned": 62.73467440657509
+            },
+            "SA-PE-049_1": {
+                "total_reads": 7963811.0,
+                "pseudoaligned_reads": 4836100.0,
+                "not_pseudoaligned_reads": 3127711.0,
+                "percent_aligned": 60.725951432046784
+            },
+            "SA-PE-025_1": {
+                "total_reads": 8840109.0,
+                "pseudoaligned_reads": 5471578.0,
+                "not_pseudoaligned_reads": 3368531.0,
+                "percent_aligned": 61.89491554911824
+            },
+            "SA-PE-034_1": {
+                "total_reads": 7888497.0,
+                "pseudoaligned_reads": 4845185.0,
+                "not_pseudoaligned_reads": 3043312.0,
+                "percent_aligned": 61.42088917572004
+            },
+            "SA-PE-095_1": {
+                "total_reads": 7836468.0,
+                "pseudoaligned_reads": 4833063.0,
+                "not_pseudoaligned_reads": 3003405.0,
+                "percent_aligned": 61.673996499443376
+            },
+            "SA-PE-050_1": {
+                "total_reads": 9415016.0,
+                "pseudoaligned_reads": 5770104.0,
+                "not_pseudoaligned_reads": 3644912.0,
+                "percent_aligned": 61.28618368784503
+            },
+            "SA-PE-086_1": {
+                "total_reads": 9785206.0,
+                "pseudoaligned_reads": 5692037.0,
+                "not_pseudoaligned_reads": 4093169.0,
+                "percent_aligned": 58.16982289386652
+            },
+            "SA-PE-080_1": {
+                "total_reads": 10217469.0,
+                "pseudoaligned_reads": 6474578.0,
+                "not_pseudoaligned_reads": 3742891.0,
+                "percent_aligned": 63.3677283483806
+            },
+            "SA-PE-030_1": {
+                "total_reads": 17412410.0,
+                "pseudoaligned_reads": 11011521.0,
+                "not_pseudoaligned_reads": 6400889.0,
+                "percent_aligned": 63.23949987394049
+            },
+            "SA-PE-024_1": {
+                "total_reads": 10349587.0,
+                "pseudoaligned_reads": 6763456.0,
+                "not_pseudoaligned_reads": 3586131.0,
+                "percent_aligned": 65.35000865251918
+            },
+            "SA-PE-044_1": {
+                "total_reads": 13410563.0,
+                "pseudoaligned_reads": 8798645.0,
+                "not_pseudoaligned_reads": 4611918.0,
+                "percent_aligned": 65.6098107141363
+            },
+            "SA-PE-048_1": {
+                "total_reads": 9951691.0,
+                "pseudoaligned_reads": 5764983.0,
+                "not_pseudoaligned_reads": 4186708.0,
+                "percent_aligned": 57.929682503204724
+            },
+            "SA-PE-055_1": {
+                "total_reads": 8849990.0,
+                "pseudoaligned_reads": 5138235.0,
+                "not_pseudoaligned_reads": 3711755.0,
+                "percent_aligned": 58.05921814600921
+            },
+            "SA-PE-063_1": {
+                "total_reads": 10016381.0,
+                "pseudoaligned_reads": 5278488.0,
+                "not_pseudoaligned_reads": 4737893.0,
+                "percent_aligned": 52.698554497877026
+            },
+            "SA-PE-023_1": {
+                "total_reads": 10593468.0,
+                "pseudoaligned_reads": 6540785.0,
+                "not_pseudoaligned_reads": 4052683.0,
+                "percent_aligned": 61.74356688480108
+            },
+            "SA-PE-043_1": {
+                "total_reads": 10019350.0,
+                "pseudoaligned_reads": 6541746.0,
+                "not_pseudoaligned_reads": 3477604.0,
+                "percent_aligned": 65.29112167955007
+            },
+            "SA-PE-061_1": {
+                "total_reads": 9825209.0,
+                "pseudoaligned_reads": 6008760.0,
+                "not_pseudoaligned_reads": 3816449.0,
+                "percent_aligned": 61.156561656856354
+            },
+            "SA-PE-026_1": {
+                "total_reads": 15084420.0,
+                "pseudoaligned_reads": 9230529.0,
+                "not_pseudoaligned_reads": 5853891.0,
+                "percent_aligned": 61.19246878567422
+            },
+            "SA-PE-076_1": {
+                "total_reads": 11040646.0,
+                "pseudoaligned_reads": 5847384.0,
+                "not_pseudoaligned_reads": 5193262.0,
+                "percent_aligned": 52.96233571839909
+            },
+            "SA-PE-047_1": {
+                "total_reads": 8174294.0,
+                "pseudoaligned_reads": 5052084.0,
+                "not_pseudoaligned_reads": 3122210.0,
+                "percent_aligned": 61.80453015269576
+            },
+            "SA-PE-056_1": {
+                "total_reads": 10602401.0,
+                "pseudoaligned_reads": 6204664.0,
+                "not_pseudoaligned_reads": 4397737.0,
+                "percent_aligned": 58.52131040884041
+            },
+            "SA-PE-077_1": {
+                "total_reads": 9010900.0,
+                "pseudoaligned_reads": 5597897.0,
+                "not_pseudoaligned_reads": 3413003.0,
+                "percent_aligned": 62.123616952801605
+            },
+            "SA-PE-075_1": {
+                "total_reads": 9890172.0,
+                "pseudoaligned_reads": 6198137.0,
+                "not_pseudoaligned_reads": 3692035.0,
+                "percent_aligned": 62.66965832343462
+            },
+            "SA-PE-094_1": {
+                "total_reads": 6790771.0,
+                "pseudoaligned_reads": 4205946.0,
+                "not_pseudoaligned_reads": 2584825.0,
+                "percent_aligned": 61.936207243625205
+            },
+            "SA-PE-031_1": {
+                "total_reads": 11356564.0,
+                "pseudoaligned_reads": 7158200.0,
+                "not_pseudoaligned_reads": 4198364.0,
+                "percent_aligned": 63.03138871933448
+            },
+            "SA-PE-003_1": {
+                "total_reads": 9542722.0,
+                "pseudoaligned_reads": 6078908.0,
+                "not_pseudoaligned_reads": 3463814.0,
+                "percent_aligned": 63.70203386413227
+            },
+            "SA-PE-092_1": {
+                "total_reads": 7502652.0,
+                "pseudoaligned_reads": 4189334.0,
+                "not_pseudoaligned_reads": 3313318.0,
+                "percent_aligned": 55.83804233489704
+            },
+            "SA-PE-082_1": {
+                "total_reads": 8859833.0,
+                "pseudoaligned_reads": 4977124.0,
+                "not_pseudoaligned_reads": 3882709.0,
+                "percent_aligned": 56.17627329995949
+            },
+            "SA-PE-040_1": {
+                "total_reads": 10076140.0,
+                "pseudoaligned_reads": 6146329.0,
+                "not_pseudoaligned_reads": 3929811.0,
+                "percent_aligned": 60.99884479572535
+            },
+            "SA-PE-004_1": {
+                "total_reads": 11808218.0,
+                "pseudoaligned_reads": 7324620.0,
+                "not_pseudoaligned_reads": 4483598.0,
+                "percent_aligned": 62.0298507361568
+            }
+        },
         "multiqc_fastqc": {
             "SA-PE-017_2": {
                 "Filename": "SA-PE-017_2.fastq.gz",
@@ -64772,7 +66800,7 @@
     "config_analysis_dir": [
         "Reports"
     ],
-    "config_creation_date": "2021-02-01, 11:54",
+    "config_creation_date": "2021-02-01, 13:32",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
