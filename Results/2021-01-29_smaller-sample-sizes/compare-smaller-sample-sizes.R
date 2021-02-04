@@ -65,7 +65,7 @@ tests <- rbindlist(lapply(
 		))
 		bal[, Test_Condition := "Balanced"]
 		unbal_naive <- rbindlist(lapply(
-			1:10,
+			1:total_reps,
 			function(i) {
 				dt2 <- fread(
 					file.path("Iterations", paste0("Total_", total), "unbalanced", paste0(i, ".genes.tsv")),
@@ -76,9 +76,9 @@ tests <- rbindlist(lapply(
 				return(dt2)
 			}
 		))
-		unbal_naive[, Test_Condition := "Unbalanced Naive"]
+		unbal_naive[, Test_Condition := "Unbalanced OLS"]
 		unbal_jse <- rbindlist(lapply(
-			1:10,
+			1:total_reps,
 			function(i) {
 				dt2 <- fread(
 					file.path("Iterations", paste0("Total_", total), "unbalanced", paste0(i, ".genes.jse.tsv")),
@@ -118,7 +118,7 @@ test_comparisons[(qval_full <= qval_thresh) & (qval_small <= qval_thresh), Resul
 test_comparisons[(qval_full <= qval_thresh) & (qval_small > qval_thresh), Result := "FN"]
 test_comparisons[(qval_full > qval_thresh) & (qval_small <= qval_thresh), Result := "FP"]
 test_comparisons[(qval_full > qval_thresh) & (qval_small > qval_thresh), Result := "TN"]
-test_comparisons[, Test_Condition := factor(Test_Condition, levels = c("Balanced", "Unbalanced Naive", "Unbalanced James-Stein"))]
+test_comparisons[, Test_Condition := factor(Test_Condition, levels = c("Balanced", "Unbalanced OLS", "Unbalanced JS"))]
 test_comparisons[, Result := factor(Result, levels = c("TP", "FN", "FP", "TN"))]
 
 # calculate confusion matrices
@@ -159,14 +159,90 @@ rates[,
 	)
 ]
 
+# compare methods with hypothesis testing
+unbal_rates <- rates[Test_Condition != "Balanced"]
+unbal_rates[, Total := factor(Total)]
+unbal_rates[, Test_Condition := factor(Test_Condition)]
+
+comp_unbal <- list(
+	"TPR" = aov(
+		formula = TPR ~ Test_Condition + Total,
+		data = unbal_rates,
+		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+	),
+	"TNR" = aov(
+		formula = TNR ~ Test_Condition + Total,
+		data = unbal_rates,
+		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+	),
+	"PPV" = aov(
+		formula = PPV ~ Test_Condition + Total,
+		data = unbal_rates,
+		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+	),
+	"NPV" = aov(
+		formula = NPV ~ Test_Condition + Total,
+		data = unbal_rates,
+		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+	),
+	"ACC" = aov(
+		formula = ACC ~ Test_Condition + Total,
+		data = unbal_rates,
+		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+	),
+	"MCC" = aov(
+		formula = MCC ~ Test_Condition + Total,
+		data = unbal_rates,
+		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+	)
+)
+
+comp_unbal_stats <- rbindlist(lapply(
+	names(comp_unbal),
+	function(s) {
+		data.table(
+			"Statistic" = s,
+			# extracting the coefficient
+			# the alphabetical ordering has the contrast set to when Test_ConditionJS == 0
+			# we have a James-Stein estimate. When Test_ConditionJS == 1, it's the OLS.
+			# To get the effect of the James-Stime estimate, we flip the sign of the coefficient
+			# to have the OLS method as the baseline
+			"Value" = -comp_unbal[[s]]$coefficients["Test_ConditionJS"],
+			# extracting the p-value from the summary
+			# it's a little convoluted, but Test_Condition1 is the first row of the summary table
+			# this corresponds to the Test_Condition factor (aka the method)
+			"pval" = summary(comp_unbal[[s]])[[1]][["Pr(>F)"]][1]
+		)
+		
+	}
+))
+comp_unbal_stats[, qval := p.adjust(pval, method = "fdr")]
 
 # ==============================================================================
 # Save data
 # ==============================================================================
 loginfo("Saving data")
 fwrite(
+	test_comparisons,
+	file.path("Comparison", "tests.tsv"),
+	sep = "\t",
+	col.names = TRUE
+)
+fwrite(
+	confusion,
+	file.path("Comparison", "confusion.tsv"),
+	sep = "\t",
+	col.names = TRUE
+)
+fwrite(
 	rates,
 	file.path("Comparison", "rates.tsv"),
+	sep = "\t",
+	col.names = TRUE
+)
+fwrite(
+	comp_unbal_stats,
+	file.path("Comparison", "jse-comp.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
