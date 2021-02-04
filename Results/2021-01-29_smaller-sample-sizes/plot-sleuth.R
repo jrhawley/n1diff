@@ -60,10 +60,10 @@ stat_better_direction <- data.table(
 # ==============================================================================
 loginfo("Plotting figures")
 for (s in colnames(rates)[8:17]) {
-    bounds <- c(
-        rates[, boxplot.stats(get(s))$stats[2], by = "Test_Condition"][, min(V1)],
-        rates[, boxplot.stats(get(s))$stats[4], by = "Test_Condition"][, max(V1)]
-    )
+    # bounds <- c(
+    #     rates[, boxplot.stats(get(s))$stats[2], by = "Test_Condition"][, min(V1)],
+    #     rates[, boxplot.stats(get(s))$stats[4], by = "Test_Condition"][, max(V1)]
+    # )
 
     better_dir <- stat_better_direction[Stat == s, Direction]
 
@@ -95,8 +95,8 @@ for (s in colnames(rates)[8:17]) {
             labels = seq(4, 24, 2)
         )
         + scale_y_continuous(
-            name = paste0(s," (", better_dir, " is better)"),
-            limits = c(bounds[1], bounds[2])
+            name = paste0(s," (", better_dir, " is better)")
+            # limits = c(bounds[1], bounds[2])
         )
         + scale_colour_manual(
             name = "Design",
