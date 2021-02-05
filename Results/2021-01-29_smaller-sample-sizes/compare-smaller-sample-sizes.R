@@ -89,7 +89,7 @@ tests <- rbindlist(lapply(
 				return(dt2)
 			}
 		))
-		unbal_jse[, Test_Condition := "Unbalanced James-Stein"]
+		unbal_jse[, Test_Condition := "Unbalanced JS"]
 		combined_dt <- rbindlist(
 			list(
 				bal,
@@ -213,7 +213,6 @@ comp_unbal_stats <- rbindlist(lapply(
 			# this corresponds to the Test_Condition factor (aka the method)
 			"pval" = summary(comp_unbal[[s]])[[1]][["Pr(>F)"]][1]
 		)
-		
 	}
 ))
 comp_unbal_stats[, qval := p.adjust(pval, method = "fdr")]
