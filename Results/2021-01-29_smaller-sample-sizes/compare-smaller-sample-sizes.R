@@ -39,15 +39,9 @@ full <- fread(
 	header = TRUE
 )
 
-
-# ==============================================================================
-# Analysis
-# ==============================================================================
-loginfo("Compare to full scale analyses")
-
+# load sample calculations
 total_reps <- 30
 
-# load sample calculations
 tests <- rbindlist(lapply(
 	seq(4, 24, 2),
 	function(total) {
@@ -103,6 +97,15 @@ tests <- rbindlist(lapply(
 	}
 ))
 
+
+# ==============================================================================
+# Analysis
+# ==============================================================================
+
+# 1. Calculate accuracy and other measures of TP/FP/TN/FN between methods
+# ------------------------------------------------
+loginfo("Comparing methods")
+
 # compare to the full dataset
 test_comparisons <- merge(
 	x = tests[, .SD, .SDcols = c("target_id", "b", "pval", "qval", "Total", "Iteration", "Test_Condition")],
@@ -120,6 +123,7 @@ test_comparisons[(qval_full > qval_thresh) & (qval_small <= qval_thresh), Result
 test_comparisons[(qval_full > qval_thresh) & (qval_small > qval_thresh), Result := "TN"]
 test_comparisons[, Test_Condition := factor(Test_Condition, levels = c("Balanced", "Unbalanced OLS", "Unbalanced JS"))]
 test_comparisons[, Result := factor(Result, levels = c("TP", "FN", "FP", "TN"))]
+test_comparisons[, Sq_Err := (b_full - b_small) ^ 2]
 
 # calculate confusion matrices
 confusion <- test_comparisons[, .N, by = c("Result", "Total", "Test_Condition", "Iteration")]
@@ -217,6 +221,24 @@ comp_unbal_stats <- rbindlist(lapply(
 ))
 comp_unbal_stats[, qval := p.adjust(pval, method = "fdr")]
 
+# 2. Calculate MSE between fold-change estimates themselves
+# ------------------------------------------------
+mse <- test_comparisons[,
+	.(
+		MSE = mean(Sq_Err),
+		SE_SD = sd(Sq_Err)
+	),
+	by = c("target_id", "Test_Condition")
+]
+mse_all <- test_comparisons[,
+	.(
+		MSE = mean(Sq_Err),
+		SE_SD = sd(Sq_Err)
+	),
+	by = "Test_Condition"
+]
+
+
 # ==============================================================================
 # Save data
 # ==============================================================================
@@ -242,6 +264,19 @@ fwrite(
 fwrite(
 	comp_unbal_stats,
 	file.path("Comparison", "jse-comp.tsv"),
+	sep = "\t",
+	col.names = TRUE
+)
+
+fwrite(
+	mse,
+	file.path("Comparison", "mse.by-transcript.tsv"),
+	sep = "\t",
+	col.names = TRUE
+)
+fwrite(
+	mse_all,
+	file.path("Comparison", "mse.all.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )

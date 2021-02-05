@@ -32,6 +32,12 @@ rates <- fread(
     header = TRUE
 )
 
+mse_all <- fread(
+    file.path("Comparison", "mse.all.tsv"),
+    sep = "\t",
+    header = TRUE
+)
+
 # data table for making plots more intuitive
 stat_better_direction <- data.table(
     Stat = c(
@@ -173,6 +179,31 @@ gg <- (
 )
 ggsave(
     file.path("Plots", "confusion.png"),
+    width = 12,
+    height = 8,
+    units = "cm"
+)
+
+gg_mse <- (
+    ggplot(data = mse_all, mapping = aes(x = Test_Condition, y = MSE, fill = Test_Condition))
+    + geom_col()
+    + scale_x_discrete(
+        name = "Method"
+    )
+    + scale_y_continuous(
+        name = "Mean Square Error"
+    )
+    + scale_fill_manual(
+        name = "Design",
+        breaks = c("Balanced", "Unbalanced OLS", "Unbalanced JS"),
+        labels = c("Even split", "1-vs-N", "1-vs-N James-Stein"),
+        values = c("#4B4B4B", "#DA8FD6", "#FA8072")
+    )
+    + guides(fill = FALSE)
+    + theme_minimal()
+)
+ggsave(
+    file.path("Plots", "mse.png"),
     width = 12,
     height = 8,
     units = "cm"

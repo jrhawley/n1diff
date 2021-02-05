@@ -43,7 +43,7 @@ We find on average, the following changes to statistics in the James-Stein estim
 | ACC       | 0.016912601960141    | 0.000143852644329807 | 0.000451528670412287 |
 | MCC       | 0.0232626079808969   | 0.00026665173474846  | 0.000451528670412287 |
 
-When comparing all 5818 transcripts in the yeast genome, we find an average increase of 3% in the TPR in the James-Stein estimates, compared to the standard OLS estimates.
+When comparing all 5817 transcripts in the yeast genome, we find an average increase of 3% in the TPR in the James-Stein estimates, compared to the standard OLS estimates.
 
 ## Conclusions
 
