@@ -184,7 +184,7 @@ ggsave(
     units = "cm"
 )
 
-gg_mse <- (
+gg_mse_all <- (
     ggplot(data = mse_all, mapping = aes(x = Test_Condition, y = MSE, fill = Test_Condition))
     + geom_col()
     + scale_x_discrete(
@@ -203,7 +203,7 @@ gg_mse <- (
     + theme_minimal()
 )
 ggsave(
-    file.path("Plots", "mse.png"),
+    file.path("Plots", "mse.all.png"),
     width = 12,
     height = 8,
     units = "cm"
