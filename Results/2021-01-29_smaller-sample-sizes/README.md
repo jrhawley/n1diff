@@ -44,3 +44,7 @@ We find on average, the following changes to statistics in the James-Stein estim
 | MCC       | 0.0232626079808969   | 0.00026665173474846  | 0.000451528670412287 |
 
 When comparing all 5818 transcripts in the yeast genome, we find an average increase of 3% in the TPR in the James-Stein estimates, compared to the standard OLS estimates.
+
+## Conclusions
+
+The James-Stein estimates have a higher TPR across sample sizes than OLS estimates, demonstrating its utility in unbalanced experimental designs.
