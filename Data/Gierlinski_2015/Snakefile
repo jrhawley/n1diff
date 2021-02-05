@@ -29,7 +29,7 @@ rule all:
             lane=LANES,
             ext=["html", "zip"],
         ),
-        path.join(DIR["rpt"], "multiqc.html"),
+        path.join(DIR["rpt"], "multiqc_report.html"),
         expand(
             path.join(DIR["align"], "{sample}", "abundance.tsv"),
             sample=SAMPLES
