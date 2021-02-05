@@ -21,7 +21,7 @@ We quantify the RNA with [Kallisto](https://doi.org/10.1038/nbt.3519) (v0.46.2) 
 
 After quantification, we perform differential gene expression analysis between the mutated and wild type samples with the [Sleuth model](https://doi.org/10.1038/nmeth.4324) (v0.30.0).
 Hypothesis test p-values were adjusted for multiple testing with the FDR method.
-Significance was determined at a q-value threshold of 0.01.
+Significance was determined at a q-value threshold of 0.01, and we consider differentially expressed genes with a large mangitude of change, at least 2 fold in either direction.
 
 The workflow of this analysis is as follows:
 
@@ -39,8 +39,19 @@ There appears to be an issue with Lane 4, since the per base N content is high f
 But, again, this doesn't appear to be a major issue overall.
 
 More than 60% of reads were pseudo-aligned across all samples, resulting in > 6 M reads per sample, on average.
-Overall, the RNA-seq data appears to be of good quality.
+Overall, the RNA-seq data appears to be of good quality with sufficient depth.
 
 ### Differential expression
 
-With 
+3652 genes are differentially expressed between the mutant and wild type, but only 398 of them have a large change of at least 2 fold.
+
+![Volcano plot of differential expression](Plots/volcano.png)
+
+Given the large number of replicates, the p-value histogram is very clear in the enrichment of small p-values.
+
+![p-value histogram](Plots/p-values.genes.png)
+
+## Conculsions
+
+This experiment is more powerful than realistic experiments in molecular biology papers, but the analysis appears very robust.
+This is a good benchmark of differentially expressed genes to compare against.
