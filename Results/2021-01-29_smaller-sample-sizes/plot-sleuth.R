@@ -21,6 +21,11 @@ suppressMessages(library("ggplot2"))
 loginfo("Loading data")
 
 # load data
+confusion <- fread(
+    file.path("Comparison", "confusion.tsv"),
+    sep = "\t",
+    header = TRUE
+)
 rates <- fread(
     file.path("Comparison", "rates.tsv"),
     sep = "\t",
@@ -31,10 +36,6 @@ rates <- fread(
 stat_better_direction <- data.table(
     Stat = c(
         "ACC",
-        "F1",
-        "FDR",
-        "FNR",
-        "FOR",
         "MCC",
         "NPV",
         "PPV",
@@ -60,10 +61,6 @@ stat_better_direction <- data.table(
 # ==============================================================================
 loginfo("Plotting figures")
 for (s in colnames(rates)[8:17]) {
-    # bounds <- c(
-    #     rates[, boxplot.stats(get(s))$stats[2], by = "Test_Condition"][, min(V1)],
-    #     rates[, boxplot.stats(get(s))$stats[4], by = "Test_Condition"][, max(V1)]
-    # )
 
     better_dir <- stat_better_direction[Stat == s, Direction]
 
@@ -100,13 +97,13 @@ for (s in colnames(rates)[8:17]) {
         )
         + scale_colour_manual(
             name = "Design",
-            breaks = c("Balanced", "Unbalanced Naive", "Unbalanced James-Stein"),
+            breaks = c("Balanced", "Unbalanced OLS", "Unbalanced JS"),
             labels = c("Even split", "1-vs-N", "1-vs-N James-Stein"),
             values = c("#4B4B4B", "#DA8FD6", "#FA8072")
         )
         + scale_fill_manual(
             name = "Design",
-            breaks = c("Balanced", "Unbalanced Naive", "Unbalanced James-Stein"),
+            breaks = c("Balanced", "Unbalanced OLS", "Unbalanced JS"),
             labels = c("Even split", "1-vs-N", "1-vs-N James-Stein"),
             values = c("#4B4B4B", "#DA8FD6", "#FA8072")
         )
@@ -123,3 +120,60 @@ for (s in colnames(rates)[8:17]) {
         units = "cm"
     )
 }
+
+gg <- (
+    ggplot(
+        data = confusion,
+        aes(x = Total, y = N, colour = Test_Condition)
+    )
+    + geom_boxplot(
+        mapping = aes(
+            fill = Test_Condition,
+            group = paste(Total, Test_Condition)
+        ),
+        colour = "#000000",
+        alpha = 0.5,
+        outlier.shape = NA,
+        position = position_dodge(width = 1.5)
+    )
+    # + geom_point(
+    #     position = position_jitterdodge(
+    #         jitter.width = 0.6,
+    #         dodge.width = 1.5
+    #     ),
+    #     alpha = 0.5
+    # )
+    + scale_x_continuous(
+        name = "Total Number of Samples",
+        breaks = seq(4, 24, 2),
+        labels = seq(4, 24, 2)
+    )
+    + scale_y_continuous(
+        name = "Frequency"
+        # limits = c(bounds[1], bounds[2])
+    )
+    + scale_colour_manual(
+        name = "Design",
+        breaks = c("Balanced", "Unbalanced OLS", "Unbalanced JS"),
+        labels = c("Even split", "1-vs-N", "1-vs-N James-Stein"),
+        values = c("#4B4B4B", "#DA8FD6", "#FA8072")
+    )
+    + scale_fill_manual(
+        name = "Design",
+        breaks = c("Balanced", "Unbalanced OLS", "Unbalanced JS"),
+        labels = c("Even split", "1-vs-N", "1-vs-N James-Stein"),
+        values = c("#4B4B4B", "#DA8FD6", "#FA8072")
+    )
+    + facet_wrap(~ Result, scales = "free_y")
+    + theme_minimal()
+    + theme(
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom"
+    )
+)
+ggsave(
+    file.path("Plots", "confusion.png"),
+    width = 12,
+    height = 8,
+    units = "cm"
+)
