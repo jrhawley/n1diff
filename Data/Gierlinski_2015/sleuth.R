@@ -58,27 +58,6 @@ so_genes <- as.data.table(sleuth_results(
 ))
 
 # ==============================================================================
-# Plots
-# ==============================================================================
-loginfo("Plotting figures")
-# p-value histograms
-gg_pval <- (
-    ggplot(data = so_genes)
-    + geom_histogram(aes(x = pval))
-    + theme_minimal()
-)
-ggsave("Plots/p-values.genes.png", gg_pval, height = 8, width = 12, units = "cm")
-
-# volcano plot of transcript fold changes
-gg_vol <- (
-    ggplot(data = so_genes)
-    + geom_point(aes(x = b, y = -log10(pval)))
-    + theme_minimal()
-)
-ggsave("Plots/volcano.png", gg_vol, height = 8, width = 12, units = "cm")
-
-
-# ==============================================================================
 # Save Data
 # ==============================================================================
 loginfo("Saving data")

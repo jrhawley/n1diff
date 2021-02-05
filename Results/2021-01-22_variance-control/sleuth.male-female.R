@@ -43,7 +43,9 @@ so <- sleuth_prep(
     extra_bootstrap_summary = TRUE,
     num_cores = 8,
     target_mapping = t2g_map,
-    aggregation_column = "ens_gene"
+    aggregation_column = "ens_gene",
+    # filter out transcripts that have < 10 reads in > 60% of the samples
+    filter_fun = function(x) length(which(x > 10)) / length(x) > 0.6
 )
 
 loginfo("Fitting model and hypothesis testing")

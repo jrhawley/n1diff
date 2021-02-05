@@ -23,12 +23,6 @@ DIR = {
 # ==============================================================================
 rule all:
     input:
-        expand(
-            path.join(DIR["rpt"], "{sample}_{lane}_fastqc.{ext}"),
-            sample=SAMPLES,
-            lane=LANES,
-            ext=["html", "zip"],
-        ),
         path.join(DIR["rpt"], "multiqc_report.html"),
         expand(
             path.join(DIR["align"], "{sample}", "abundance.tsv"),
@@ -109,8 +103,15 @@ rule sleuth:
     output:
         path.join("Sleuth", "genes.tsv"),
         path.join("Sleuth", "sleuth-object.rds"),
+    shell:
+        "Rscript {input.script}"
+
+rule plot_sleuth:
+    input:
+        script = "plot-sleuth.R",
+        data = path.join("Sleuth", "genes.tsv"),
+    output:
         path.join("Plots", "p-values.genes.png"),
         path.join("Plots", "volcano.png"),
     shell:
         "Rscript {input.script}"
-
