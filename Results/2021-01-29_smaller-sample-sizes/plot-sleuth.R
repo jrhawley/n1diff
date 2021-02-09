@@ -50,6 +50,17 @@ prc <- fread(
 	header = TRUE
 )
 
+# load full dataset
+full <- fread(
+	file.path("..", "..", "Data", "Gierlinski_2015", "Sleuth", "genes.tsv"),
+	sep = "\t",
+	header = TRUE
+)
+
+# calculate PPV of an uninformative binary classifier
+full_qval_thresh <- 0.01
+uninform_ppv <- full[qval <= full_qval_thresh, .N] / full[, .N]
+
 # data table for making plots more intuitive
 stat_better_direction <- data.table(
 	Stat = c(
@@ -64,10 +75,6 @@ stat_better_direction <- data.table(
 	Direction = c(
 		"higher",
 		"higher",
-		"higher",
-		"lower",
-		"lower",
-		"lower",
 		"higher",
 		"higher",
 		"higher",
@@ -125,7 +132,14 @@ for (s in colnames(rates)[8:length(colnames(rates))]) {
 		+ theme_minimal()
 		+ theme(
 			panel.grid.minor = element_blank(),
-			legend.position = "bottom"
+			legend.position = "bottom",
+			axis.text.x = element_text(
+				colour = "#000000",
+				angle = 90
+			),
+			axis.text.y = element_text(
+				colour = "#000000"
+			)
 		)
 	)
 	ggsave(
@@ -177,7 +191,14 @@ gg <- (
 	+ theme_minimal()
 	+ theme(
 		panel.grid.minor = element_blank(),
-		legend.position = "bottom"
+		legend.position = "bottom",
+		axis.text.x = element_text(
+			colour = "#000000",
+			angle = 90
+		),
+		axis.text.y = element_text(
+			colour = "#000000"
+		)
 	)
 )
 ggsave(
@@ -205,6 +226,15 @@ gg_mse_all <- (
 	)
 	+ guides(fill = FALSE)
 	+ theme_minimal()
+	+ theme(
+		axis.text.x = element_text(
+			colour = "#000000",
+			angle = 90
+		),
+		axis.text.y = element_text(
+			colour = "#000000"
+		)
+	)
 )
 ggsave(
 	file.path("Plots", "mse.all.png"),
@@ -230,9 +260,24 @@ gg <- (
 		colour = "#000000"
 	)
 	+ facet_wrap(~ Total)
+	+ scale_x_continuous(
+		name = "False positive rate",
+		limits = c(0, 1)
+	)
+	+ scale_y_continuous(
+		name = "True positive rate",
+		limits = c(0, 1)
+	)
 	+ theme_minimal()
 	+ theme(
-		legend.position = "bottom"
+		legend.position = "bottom",
+		axis.text.x = element_text(
+			colour = "#000000",
+			angle = 90
+		),
+		axis.text.y = element_text(
+			colour = "#000000"
+		)
 	)
 )
 ggsave(
@@ -253,15 +298,30 @@ gg <- (
 		)
 	)
 	+ geom_abline(
-		slope = 1,
-		intercept = 0,
+		slope = 0,
+		intercept = uninform_ppv,
 		linetype = "dashed",
 		colour = "#000000"
 	)
 	+ facet_wrap(~ Total)
+	+ scale_x_continuous(
+		name = "True positive rate",
+		limits = c(0, 1)
+	)
+	+ scale_y_continuous(
+		name = "Positive predictive value",
+		limits = c(0, 1)
+	)
 	+ theme_minimal()
 	+ theme(
-		legend.position = "bottom"
+		legend.position = "bottom",
+		axis.text.x = element_text(
+			colour = "#000000",
+			angle = 90
+		),
+		axis.text.y = element_text(
+			colour = "#000000"
+		)
 	)
 )
 ggsave(
