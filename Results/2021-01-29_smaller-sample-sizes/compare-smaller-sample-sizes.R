@@ -20,6 +20,146 @@ suppressMessages(library("sleuth"))
 # ==============================================================================
 # Functions
 # ==============================================================================
+#' Calculate TP/FP/TN/FN, and derivative metrics, for a provided q-value threshold
+#' dt: data.table test comparisons
+#' qval_thresh: numeric q-value threshold
+assess_jse <- function(dt, qval_thresh = 0.01) {
+	# q-value threshold for ideal full results
+	full_qval_thresh <- 0.01
+	# classify points based on the threshold
+	dt[(qval_full <= full_qval_thresh) & (qval_small <= qval_thresh), Result := "TP"]
+	dt[(qval_full <= full_qval_thresh) & (qval_small > qval_thresh), Result := "FN"]
+	dt[(qval_full > full_qval_thresh) & (qval_small <= qval_thresh), Result := "FP"]
+	dt[(qval_full > full_qval_thresh) & (qval_small > qval_thresh), Result := "TN"]
+	dt[, Result := factor(Result, levels = c("TP", "FN", "FP", "TN"))]
+
+	# calculate confusion matrices
+	confusion <- dt[, .N, by = c("Result", "Total", "Test_Condition", "Iteration")]
+	# ensure that all 4 values (TP/FN/FP/TN) exist in the table for each combo of iteration, total, and balance
+	setkey(confusion, Total, Test_Condition, Iteration, Result)
+	## uses a cross-join to calculate all combinations of the four columns
+	confusion <- confusion[
+		CJ(
+			unique(Total),
+			levels(Test_Condition),
+			unique(Iteration),
+			levels(Result)
+		),
+		allow.cartesian = TRUE
+	]
+	confusion[is.na(N), N := 0L]
+
+	# calculate various rates from the confusion matrices
+	rates <- dcast(
+		confusion,
+		Total + Test_Condition + Iteration ~ Result,
+		value.var = "N"
+	)
+
+	rates[,
+		`:=`(
+			TPR = TP / (TP + FN),
+			TNR = TN / (TN + FP),
+			PPV = TP / (TP + FP),
+			NPV = TN / (TN + FN),
+			ACC = (TP + TN) / (TP + TN + FP + FN),
+			BA = ( TP / (TP + FN) + TN / (TN + FP) ) / 2,
+			F1 = 2 * TP / (2 * TP + FP + FN),
+			MCC = (TP * TN - FP * FN) / (sqrt(TP + FP) * sqrt(TP + FN) * sqrt(TN + FP) * sqrt(TN + FN))
+		)
+	]
+
+	# compare methods with hypothesis testing
+	unbal_rates <- rates[Test_Condition != "Balanced"]
+	unbal_rates[, Total := factor(Total)]
+	unbal_rates[, Test_Condition := factor(Test_Condition)]
+
+	comp_unbal <- list(
+		"TPR" = aov(
+			formula = TPR ~ Test_Condition + Total,
+			data = unbal_rates,
+			contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+		),
+		"TNR" = aov(
+			formula = TNR ~ Test_Condition + Total,
+			data = unbal_rates,
+			contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+		),
+		"PPV" = aov(
+			formula = PPV ~ Test_Condition + Total,
+			data = unbal_rates,
+			contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+		),
+		"NPV" = aov(
+			formula = NPV ~ Test_Condition + Total,
+			data = unbal_rates,
+			contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+		),
+		"ACC" = aov(
+			formula = ACC ~ Test_Condition + Total,
+			data = unbal_rates,
+			contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+		),
+		"BA" = aov(
+			formula = BA ~ Test_Condition + Total,
+			data = unbal_rates,
+			contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+		),
+		"MCC" = aov(
+			formula = MCC ~ Test_Condition + Total,
+			data = unbal_rates,
+			contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
+		)
+	)
+
+	comp_unbal_stats <- rbindlist(lapply(
+		names(comp_unbal),
+		function(s) {
+			data.table(
+				"Statistic" = s,
+				# extracting the coefficient
+				# the alphabetical ordering has the contrast set to when Test_ConditionJS == 0
+				# we have a James-Stein estimate. When Test_ConditionJS == 1, it's the OLS.
+				# To get the effect of the James-Stime estimate, we flip the sign of the coefficient
+				# to have the OLS method as the baseline
+				"Value" = -comp_unbal[[s]]$coefficients["Test_ConditionJS"],
+				# extracting the p-value from the summary
+				# it's a little convoluted, but Test_Condition1 is the first row of the summary table
+				# this corresponds to the Test_Condition factor (aka the method)
+				"pval" = summary(comp_unbal[[s]])[[1]][["Pr(>F)"]][1]
+			)
+		}
+	))
+	comp_unbal_stats[, qval := p.adjust(pval, method = "fdr")]
+
+	# 2. Calculate MSE between fold-change estimates themselves
+	# ------------------------------------------------
+	mse <- dt[,
+		.(
+			MSE = mean(Sq_Err),
+			SE_SD = sd(Sq_Err)
+		),
+		by = c("target_id", "Test_Condition")
+	]
+	mse_all <- dt[,
+		.(
+			MSE = mean(Sq_Err),
+			SE_SD = sd(Sq_Err)
+		),
+		by = "Test_Condition"
+	]
+
+	return(list(
+		"qval_thresh" = qval_thresh,
+		"results" = dt,
+		"rates" = rates,
+		"confusion" = confusion,
+		"jse_comp" = comp_unbal,
+		"coefficients" = comp_unbal_stats,
+		"mse" = mse,
+		"mse_all" = mse_all
+	))
+}
 
 # ==============================================================================
 # Data
@@ -102,7 +242,7 @@ tests <- rbindlist(lapply(
 # Analysis
 # ==============================================================================
 
-# 1. Calculate accuracy and other measures of TP/FP/TN/FN between methods
+# 1. Calculate accuracy and other measures of TP/FP/TN/FN between methods at a given q-value threshold
 # ------------------------------------------------
 loginfo("Comparing methods")
 
@@ -113,169 +253,66 @@ test_comparisons <- merge(
 	by = "target_id",
 	suffixes = c("_small", "_full")
 )
+# force to be a factor for easier calculations later
+test_comparisons[, Test_Condition := factor(
+	Test_Condition,
+	levels = c("Balanced", "Unbalanced OLS", "Unbalanced JS")
+)]
+# calculate square-error of estimates from the smaller samples
+test_comparisons[, Sq_Err := (b_full - b_small) ^ 2]
 
 # label the result as "TP", "FN", "TN", "FP" depending on the q-value of the full comparison
 # this is a "methodologically true/false", not a "biologically true/false"
-qval_thresh <- 0.01
-test_comparisons[(qval_full <= qval_thresh) & (qval_small <= qval_thresh), Result := "TP"]
-test_comparisons[(qval_full <= qval_thresh) & (qval_small > qval_thresh), Result := "FN"]
-test_comparisons[(qval_full > qval_thresh) & (qval_small <= qval_thresh), Result := "FP"]
-test_comparisons[(qval_full > qval_thresh) & (qval_small > qval_thresh), Result := "TN"]
-test_comparisons[, Test_Condition := factor(Test_Condition, levels = c("Balanced", "Unbalanced OLS", "Unbalanced JS"))]
-test_comparisons[, Result := factor(Result, levels = c("TP", "FN", "FP", "TN"))]
-test_comparisons[, Sq_Err := (b_full - b_small) ^ 2]
-
-# calculate confusion matrices
-confusion <- test_comparisons[, .N, by = c("Result", "Total", "Test_Condition", "Iteration")]
-# ensure that all 4 values (TP/FN/FP/TN) exist in the table for each combo of iteration, total, and balance
-setkey(confusion, Total, Test_Condition, Iteration, Result)
-## uses a cross-join to calculate all combinations of the four columns
-confusion <- confusion[
-	CJ(
-		unique(Total),
-		levels(Test_Condition),
-		unique(Iteration),
-		levels(Result)
-	),
-	allow.cartesian = TRUE
-]
-confusion[is.na(N), N := 0L]
-
-# calculate various rates from the confusion matrices
-rates <- dcast(
-	confusion,
-	Total + Test_Condition + Iteration ~ Result,
-	value.var = "N"
-)
-
-rates[,
-	`:=`(
-		TPR = TP / (TP + FN),
-		TNR = TN / (TN + FP),
-		PPV = TP / (TP + FP),
-		NPV = TN / (TN + FN),
-		FNR = FN / (FN + TP),
-		FDR = FP / (FP + TP),
-		FOR = FN / (FN + TN),
-		ACC = (TP + TN) / (TP + TN + FP + FN),
-		F1 = 2 * TP / (2 * TP + FP + FN),
-		MCC = (TP * TN - FP * FN) / (sqrt(TP + FP) * sqrt(TP + FN) * sqrt(TN + FP) * sqrt(TN + FN))
-	)
-]
-
-# compare methods with hypothesis testing
-unbal_rates <- rates[Test_Condition != "Balanced"]
-unbal_rates[, Total := factor(Total)]
-unbal_rates[, Test_Condition := factor(Test_Condition)]
-
-comp_unbal <- list(
-	"TPR" = aov(
-		formula = TPR ~ Test_Condition + Total,
-		data = unbal_rates,
-		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
-	),
-	"TNR" = aov(
-		formula = TNR ~ Test_Condition + Total,
-		data = unbal_rates,
-		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
-	),
-	"PPV" = aov(
-		formula = PPV ~ Test_Condition + Total,
-		data = unbal_rates,
-		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
-	),
-	"NPV" = aov(
-		formula = NPV ~ Test_Condition + Total,
-		data = unbal_rates,
-		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
-	),
-	"ACC" = aov(
-		formula = ACC ~ Test_Condition + Total,
-		data = unbal_rates,
-		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
-	),
-	"MCC" = aov(
-		formula = MCC ~ Test_Condition + Total,
-		data = unbal_rates,
-		contrasts = list("Test_Condition" = contr.treatment(c("OLS", "JS")))
-	)
-)
-
-comp_unbal_stats <- rbindlist(lapply(
-	names(comp_unbal),
-	function(s) {
-		data.table(
-			"Statistic" = s,
-			# extracting the coefficient
-			# the alphabetical ordering has the contrast set to when Test_ConditionJS == 0
-			# we have a James-Stein estimate. When Test_ConditionJS == 1, it's the OLS.
-			# To get the effect of the James-Stime estimate, we flip the sign of the coefficient
-			# to have the OLS method as the baseline
-			"Value" = -comp_unbal[[s]]$coefficients["Test_ConditionJS"],
-			# extracting the p-value from the summary
-			# it's a little convoluted, but Test_Condition1 is the first row of the summary table
-			# this corresponds to the Test_Condition factor (aka the method)
-			"pval" = summary(comp_unbal[[s]])[[1]][["Pr(>F)"]][1]
-		)
+iterations <- lapply(
+	seq(0, 0.99, 0.01),
+	function(q) {
+		cat(q)
+		assess_jse(test_comparisons, q)
 	}
-))
-comp_unbal_stats[, qval := p.adjust(pval, method = "fdr")]
-
-# 2. Calculate MSE between fold-change estimates themselves
-# ------------------------------------------------
-mse <- test_comparisons[,
-	.(
-		MSE = mean(Sq_Err),
-		SE_SD = sd(Sq_Err)
-	),
-	by = c("target_id", "Test_Condition")
-]
-mse_all <- test_comparisons[,
-	.(
-		MSE = mean(Sq_Err),
-		SE_SD = sd(Sq_Err)
-	),
-	by = "Test_Condition"
-]
+)
 
 
 # ==============================================================================
 # Save data
 # ==============================================================================
 loginfo("Saving data")
+
+saveRDS(iterations, file.path("Comparison", "jse-comp.rds"))
+
+# write results with the q-value threshold of 0.01
 fwrite(
-	test_comparisons,
+	iterations[[2]]$results,
 	file.path("Comparison", "tests.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 fwrite(
-	confusion,
+	iterations[[2]]$confusion,
 	file.path("Comparison", "confusion.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 fwrite(
-	rates,
+	iterations[[2]]$rates,
 	file.path("Comparison", "rates.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 fwrite(
-	comp_unbal_stats,
+	iterations[[2]]$jse_comp,
 	file.path("Comparison", "jse-comp.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 
 fwrite(
-	mse,
+	iterations[[2]]$mse,
 	file.path("Comparison", "mse.by-transcript.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 fwrite(
-	mse_all,
+	iterations[[2]]$mse_all,
 	file.path("Comparison", "mse.all.tsv"),
 	sep = "\t",
 	col.names = TRUE
