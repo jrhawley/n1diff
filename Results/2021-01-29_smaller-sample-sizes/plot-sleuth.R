@@ -38,6 +38,10 @@ mse_all <- fread(
     header = TRUE
 )
 
+iterations <- readRDS(
+    file.path("Comparison", "jse-comp.rds")
+)
+
 # data table for making plots more intuitive
 stat_better_direction <- data.table(
     Stat = c(
@@ -62,6 +66,38 @@ stat_better_direction <- data.table(
     )
 )
 
+
+roc <- rbindlist(lapply(
+	iterations,
+	function(it) {
+		dt <- it$rates[,
+			.(
+				TPR = mean(TPR),
+				FPR = 1 - mean(TNR)
+			),
+			by = c("Total", "Test_Condition")
+		]
+		dt[, q := it$qval_thresh]
+		return(dt)
+	}
+))
+
+prc <- rbindlist(lapply(
+	iterations,
+	function(it) {
+		dt <- it$rates[,
+			.(
+				PPV = mean(PPV),
+				TPR = mean(TPR)
+			),
+			by = c("Total", "Test_Condition")
+		]
+		dt[, q := it$qval_thresh]
+		return(dt)
+	}
+))
+
+
 # ==============================================================================
 # Plots
 # ==============================================================================
@@ -82,16 +118,9 @@ for (s in colnames(rates)[8:17]) {
             ),
             colour = "#000000",
             alpha = 0.5,
-            outlier.shape = NA,
+            outlier.shape = 21,
             position = position_dodge(width = 1.5)
         )
-        # + geom_point(
-        #     position = position_jitterdodge(
-        #         jitter.width = 0.6,
-        #         dodge.width = 1.5
-        #     ),
-        #     alpha = 0.5
-        # )
         + scale_x_continuous(
             name = "Total Number of Samples",
             breaks = seq(4, 24, 2),
@@ -208,3 +237,49 @@ ggsave(
     height = 8,
     units = "cm"
 )
+
+gg <- (
+	ggplot(data = roc)
+	+ geom_path(
+		aes(
+			x = FPR,
+			y = TPR,
+			colour = Test_Condition
+		)
+	)
+	+ geom_abline(
+		slope = 1,
+		intercept = 0,
+		linetype = "dashed",
+		colour = "#000000"
+	)
+	+ facet_wrap(~ Total)
+	+ theme_minimal()
+	+ theme(
+		legend.position = "bottom"
+	)
+)
+ggsave(file.path("Plots", "auroc.png"), width = 12, height = 12, units = "cm")
+
+gg <- (
+	ggplot(data = prc)
+	+ geom_path(
+		aes(
+			x = TPR,
+			y = PPV,
+			colour = Test_Condition
+		)
+	)
+	+ geom_abline(
+		slope = 1,
+		intercept = 0,
+		linetype = "dashed",
+		colour = "#000000"
+	)
+	+ facet_wrap(~ Total)
+	+ theme_minimal()
+	+ theme(
+		legend.position = "bottom"
+	)
+)
+ggsave(file.path("Plots", "auprc.png"), width = 12, height = 12, units = "cm")
