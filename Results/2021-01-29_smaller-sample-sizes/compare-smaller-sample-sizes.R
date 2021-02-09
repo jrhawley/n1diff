@@ -266,18 +266,46 @@ test_comparisons[, Sq_Err := (b_full - b_small) ^ 2]
 iterations <- lapply(
 	seq(0, 0.99, 0.01),
 	function(q) {
-		cat(q)
 		assess_jse(test_comparisons, q)
 	}
 )
 
+# calculate receiver-operater characteristic
+roc <- rbindlist(lapply(
+	iterations,
+	function(it) {
+		dt <- it$rates[,
+			.(
+				TPR = mean(TPR),
+				FPR = 1 - mean(TNR)
+			),
+			by = c("Total", "Test_Condition")
+		]
+		dt[, q := it$qval_thresh]
+		return(dt)
+	}
+))
+
+# calculate precision-recall curve
+prc <- rbindlist(lapply(
+	iterations,
+	function(it) {
+		dt <- it$rates[,
+			.(
+				PPV = mean(PPV),
+				TPR = mean(TPR)
+			),
+			by = c("Total", "Test_Condition")
+		]
+		dt[, q := it$qval_thresh]
+		return(dt)
+	}
+))
 
 # ==============================================================================
 # Save data
 # ==============================================================================
 loginfo("Saving data")
-
-saveRDS(iterations, file.path("Comparison", "jse-comp.rds"))
 
 # write results with the q-value threshold of 0.01
 fwrite(
@@ -299,8 +327,8 @@ fwrite(
 	col.names = TRUE
 )
 fwrite(
-	iterations[[2]]$jse_comp,
-	file.path("Comparison", "jse-comp.tsv"),
+	iterations[[2]]$coefficients,
+	file.path("Comparison", "jse-comp-coeffs.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
@@ -317,3 +345,18 @@ fwrite(
 	sep = "\t",
 	col.names = TRUE
 )
+
+fwrite(
+	roc,
+	file.path("Comparison", "roc.tsv"),
+	sep = "\t",
+	col.names = TRUE
+)
+
+fwrite(
+	prc,
+	file.path("Comparison", "prc.tsv"),
+	sep = "\t",
+	col.names = TRUE
+)
+
