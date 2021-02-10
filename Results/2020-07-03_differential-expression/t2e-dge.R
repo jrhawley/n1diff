@@ -4,7 +4,7 @@
 suppressMessages(library("sleuth"))
 suppressMessages(library("data.table"))
 
-KALLISTO_DIR <- file.path("..", "..", "Data", "CPC-GENE")
+KALLISTO_DIR <- file.path("..", "..", "data", "CPC-GENE")
 
 # ==============================================================================
 # Data

@@ -7,7 +7,7 @@ We compare the James-Stein estimates to the OLS estimates of an unbalanced exper
 
 We use the RNA-seq data from Gierlinksi et al, Bioinformatics, 2015, which has 48 biological replicates of _Saccharomyces cerevisiae_ cells.
 The cells are either mutated to remove the _snf2_ gene on chrXV, or wild type.
-The full, 48 replicate, differential analysis results can be found in [`../../Data/Gierlinski_2015/`](../../Data/Gierlinski_2015/).
+The full, 48 replicate, differential analysis results can be found in [`../../data/Gierlinski_2015/`](../../data/Gierlinski_2015/).
 
 ## Methods
 

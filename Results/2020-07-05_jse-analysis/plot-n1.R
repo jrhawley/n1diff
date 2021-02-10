@@ -4,7 +4,7 @@
 suppressMessages(library("data.table"))
 suppressMessages(library("ggplot2"))
 
-KALLISTO_DIR <- file.path("..", "..", "Data", "CPC-GENE")
+KALLISTO_DIR <- file.path("..", "..", "data", "CPC-GENE")
 PLOT_DIR <- "Plots"
 
 # ==============================================================================

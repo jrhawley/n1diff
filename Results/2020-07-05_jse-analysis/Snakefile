@@ -5,7 +5,7 @@ import pandas as pd
 import os.path as path
 
 CONFIG = pd.read_csv(
-    path.join("..", "..", "Data", "CPC-GENE", "config.tsv"),
+    path.join("..", "..", "data", "CPC-GENE", "config.tsv"),
     index_col=False,
     sep="\t"
 )

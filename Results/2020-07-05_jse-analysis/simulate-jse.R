@@ -39,7 +39,7 @@ if (!interactive()) {
     )
 }
 
-KALLISTO_DIR <- file.path("..", "..", "Data", "CPC-GENE")
+KALLISTO_DIR <- file.path("..", "..", "data", "CPC-GENE")
 
 # ==============================================================================
 # Functions
@@ -129,7 +129,10 @@ mse <- function(jse, full_so, targets) {
 # Data
 # ==============================================================================
 # load sample metadata
-metadata <- fread("../../Data/CPC-GENE/config.tsv", sep = "\t")
+metadata <- fread(
+    file.path("..", "..", "data", "CPC-GENE", "config.tsv"),
+    sep = "\t"
+)
 T2E_SAMPLES <- metadata[T2E_Status == "Yes", SampleID]
 NONT2E_SAMPLES <- metadata[T2E_Status == "No", SampleID]
 

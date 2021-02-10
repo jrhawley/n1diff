@@ -21,7 +21,7 @@ if (!interactive()) {
     )
 }
 
-KALLISTO_DIR <- file.path("..", "..", "Data", "CPC-GENE")
+KALLISTO_DIR <- file.path("..", "..", "data", "CPC-GENE")
 
 # ==============================================================================
 # Functions

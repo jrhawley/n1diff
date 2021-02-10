@@ -95,7 +95,7 @@ meta <- fread("config.tsv")
 
 # load transcript ID to gene ID mapping
 t2g_map <- fread(
-    "../../Data/Kallisto_Index/transcripts_to_genes.txt",
+    file.path("..", "..", "data", "Kallisto_GRCh38_Index", "transcripts_to_genes.txt"),
     sep = "\t",
     header = FALSE,
     col.names = c("target_id", "ens_gene", "ext_gene")

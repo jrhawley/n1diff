@@ -52,7 +52,7 @@ prc <- fread(
 
 # load full dataset
 full <- fread(
-	file.path("..", "..", "Data", "Gierlinski_2015", "Sleuth", "genes.tsv"),
+	file.path("..", "..", "data", "Gierlinski_2015", "Sleuth", "genes.tsv"),
 	sep = "\t",
 	header = TRUE
 )
