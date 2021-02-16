@@ -17,14 +17,18 @@ The _Snf2_ protein is part of the SNI/SNF complex in yeast.
 Given the protein's function and the importance of chromatin remodelling in cellular processes, we can focus on the other members of the SWI/SNF complex in yeast.
 They are as follows [^1]:
 
-- ARP4
-- RSC1
-- SWI1
-- SWI2
-- SWI3
+- ARP7
+- ARP9
+- RTT102
 - SNF2
 - SNF5
+- SNF6
+- SNF11
 - SNF12
+- SWI1
+- SWI3
+- SWP82
+- TAF14
 
 ## Methods
 
@@ -48,4 +52,4 @@ Code for these experiments can be found in [`swi-snf-sleuth.R`](swi-snf-sleuth.R
 
 ## Results
 
-[^1]: Members of the SWI/SNF complex in yeast are obtained from [Table 1](https://www.nature.com/articles/onc20094/tables/1) in [Reisman, Glaros, and Thompson, Oncogene, 2009](https://doi.org/10.1038/onc.2009.4).
+[^1]: Members of the SWI/SNF complex in yeast are obtained from [Saccharomyces Genome Database](https://www.yeastgenome.org/complex/CPX-1150).
