@@ -1,0 +1,6 @@
+sleuth:
+    params: "-c 8 -t 2:00:00 -p himem --mem=30G"
+
+sleuth_small_n:
+    params: "-c 8 -t 2:00:00 -p himem --mem=30G"
+

@@ -1,0 +1,37 @@
+# ==============================================================================
+# Configuration
+# ==============================================================================
+import pandas as pd
+import os.path as path
+
+CONFIG = pd.read_csv(
+    path.join("..", "..", "data", "CPC-GENE", "config.tsv"),
+    index_col=False,
+    sep="\t"
+)
+SAMPLES = CONFIG.SampleID.tolist()
+
+RESULTS_DIR = "sleuth"
+
+# ==============================================================================
+# Meta Rules
+# ==============================================================================
+rule all:
+    input:
+        expand(
+            path.join(RESULTS_DIR, "{sample}.{ext}"),
+            sample=SAMPLES,
+            ext=["sleuth-object.rds", "results.tsv"],
+        ),
+
+# ==============================================================================
+# Rules
+# ==============================================================================
+rule n1_dge:
+    input:
+        script = "n1-t2e-dge.R"
+    output:
+        path.join(RESULTS_DIR, "{sample}.sleuth-object.rds"),
+        path.join(RESULTS_DIR, "{sample}.results.tsv"),
+    shell:
+        "Rscript {input.script} {wildcards.sample}"

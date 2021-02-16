@@ -1,0 +1,3961 @@
+Result	Total	Test_Condition	Iteration	N
+FN	4	Balanced	1	3443
+FP	4	Balanced	1	0
+TN	4	Balanced	1	2157
+TP	4	Balanced	1	206
+FN	4	Balanced	2	3459
+FP	4	Balanced	2	3
+TN	4	Balanced	2	2157
+TP	4	Balanced	2	190
+FN	4	Balanced	3	2963
+FP	4	Balanced	3	53
+TN	4	Balanced	3	2099
+TP	4	Balanced	3	685
+FN	4	Balanced	4	3378
+FP	4	Balanced	4	0
+TN	4	Balanced	4	2155
+TP	4	Balanced	4	270
+FN	4	Balanced	5	3461
+FP	4	Balanced	5	0
+TN	4	Balanced	5	2159
+TP	4	Balanced	5	187
+FN	4	Balanced	6	2420
+FP	4	Balanced	6	7
+TN	4	Balanced	6	2153
+TP	4	Balanced	6	1229
+FN	4	Balanced	7	3106
+FP	4	Balanced	7	2
+TN	4	Balanced	7	2162
+TP	4	Balanced	7	540
+FN	4	Balanced	8	3338
+FP	4	Balanced	8	0
+TN	4	Balanced	8	2163
+TP	4	Balanced	8	311
+FN	4	Balanced	9	2804
+FP	4	Balanced	9	17
+TN	4	Balanced	9	2146
+TP	4	Balanced	9	848
+FN	4	Balanced	10	2568
+FP	4	Balanced	10	33
+TN	4	Balanced	10	2128
+TP	4	Balanced	10	1082
+FN	4	Balanced	11	3297
+FP	4	Balanced	11	8
+TN	4	Balanced	11	2144
+TP	4	Balanced	11	349
+FN	4	Balanced	12	3344
+FP	4	Balanced	12	1
+TN	4	Balanced	12	2152
+TP	4	Balanced	12	304
+FN	4	Balanced	13	3269
+FP	4	Balanced	13	0
+TN	4	Balanced	13	2151
+TP	4	Balanced	13	380
+FN	4	Balanced	14	3149
+FP	4	Balanced	14	5
+TN	4	Balanced	14	2138
+TP	4	Balanced	14	493
+FN	4	Balanced	15	3428
+FP	4	Balanced	15	0
+TN	4	Balanced	15	2157
+TP	4	Balanced	15	223
+FN	4	Balanced	16	2807
+FP	4	Balanced	16	11
+TN	4	Balanced	16	2152
+TP	4	Balanced	16	844
+FN	4	Balanced	17	3189
+FP	4	Balanced	17	0
+TN	4	Balanced	17	2155
+TP	4	Balanced	17	458
+FN	4	Balanced	18	2596
+FP	4	Balanced	18	41
+TN	4	Balanced	18	2121
+TP	4	Balanced	18	1053
+FN	4	Balanced	19	2641
+FP	4	Balanced	19	34
+TN	4	Balanced	19	2118
+TP	4	Balanced	19	1006
+FN	4	Balanced	20	3150
+FP	4	Balanced	20	0
+TN	4	Balanced	20	2153
+TP	4	Balanced	20	497
+FN	4	Balanced	21	3605
+FP	4	Balanced	21	0
+TN	4	Balanced	21	2161
+TP	4	Balanced	21	45
+FN	4	Balanced	22	3263
+FP	4	Balanced	22	1
+TN	4	Balanced	22	2157
+TP	4	Balanced	22	385
+FN	4	Balanced	23	3044
+FP	4	Balanced	23	1
+TN	4	Balanced	23	2163
+TP	4	Balanced	23	607
+FN	4	Balanced	24	3486
+FP	4	Balanced	24	1
+TN	4	Balanced	24	2157
+TP	4	Balanced	24	163
+FN	4	Balanced	25	2507
+FP	4	Balanced	25	27
+TN	4	Balanced	25	2135
+TP	4	Balanced	25	1142
+FN	4	Balanced	26	3299
+FP	4	Balanced	26	0
+TN	4	Balanced	26	2157
+TP	4	Balanced	26	350
+FN	4	Balanced	27	3109
+FP	4	Balanced	27	0
+TN	4	Balanced	27	2160
+TP	4	Balanced	27	540
+FN	4	Balanced	28	3290
+FP	4	Balanced	28	3
+TN	4	Balanced	28	2157
+TP	4	Balanced	28	360
+FN	4	Balanced	29	3530
+FP	4	Balanced	29	0
+TN	4	Balanced	29	2158
+TP	4	Balanced	29	117
+FN	4	Balanced	30	3385
+FP	4	Balanced	30	0
+TN	4	Balanced	30	2162
+TP	4	Balanced	30	264
+FN	4	Unbalanced JS	1	2142
+FP	4	Unbalanced JS	1	66
+TN	4	Unbalanced JS	1	2099
+TP	4	Unbalanced JS	1	1508
+FN	4	Unbalanced JS	2	3076
+FP	4	Unbalanced JS	2	99
+TN	4	Unbalanced JS	2	2054
+TP	4	Unbalanced JS	2	559
+FN	4	Unbalanced JS	3	2960
+FP	4	Unbalanced JS	3	8
+TN	4	Unbalanced JS	3	2156
+TP	4	Unbalanced JS	3	690
+FN	4	Unbalanced JS	4	3185
+FP	4	Unbalanced JS	4	15
+TN	4	Unbalanced JS	4	2142
+TP	4	Unbalanced JS	4	449
+FN	4	Unbalanced JS	5	3146
+FP	4	Unbalanced JS	5	3
+TN	4	Unbalanced JS	5	2157
+TP	4	Unbalanced JS	5	502
+FN	4	Unbalanced JS	6	3428
+FP	4	Unbalanced JS	6	1
+TN	4	Unbalanced JS	6	2148
+TP	4	Unbalanced JS	6	204
+FN	4	Unbalanced JS	7	3053
+FP	4	Unbalanced JS	7	69
+TN	4	Unbalanced JS	7	2084
+TP	4	Unbalanced JS	7	593
+FN	4	Unbalanced JS	8	2625
+FP	4	Unbalanced JS	8	189
+TN	4	Unbalanced JS	8	1968
+TP	4	Unbalanced JS	8	1008
+FN	4	Unbalanced JS	9	2468
+FP	4	Unbalanced JS	9	75
+TN	4	Unbalanced JS	9	2080
+TP	4	Unbalanced JS	9	1177
+FN	4	Unbalanced JS	10	1984
+FP	4	Unbalanced JS	10	134
+TN	4	Unbalanced JS	10	2022
+TP	4	Unbalanced JS	10	1649
+FN	4	Unbalanced JS	11	3363
+FP	4	Unbalanced JS	11	0
+TN	4	Unbalanced JS	11	2155
+TP	4	Unbalanced JS	11	284
+FN	4	Unbalanced JS	12	3431
+FP	4	Unbalanced JS	12	2
+TN	4	Unbalanced JS	12	2157
+TP	4	Unbalanced JS	12	203
+FN	4	Unbalanced JS	13	3547
+FP	4	Unbalanced JS	13	4
+TN	4	Unbalanced JS	13	2156
+TP	4	Unbalanced JS	13	102
+FN	4	Unbalanced JS	14	3137
+FP	4	Unbalanced JS	14	3
+TN	4	Unbalanced JS	14	2155
+TP	4	Unbalanced JS	14	499
+FN	4	Unbalanced JS	15	2898
+FP	4	Unbalanced JS	15	10
+TN	4	Unbalanced JS	15	2145
+TP	4	Unbalanced JS	15	752
+FN	4	Unbalanced JS	16	3426
+FP	4	Unbalanced JS	16	5
+TN	4	Unbalanced JS	16	2151
+TP	4	Unbalanced JS	16	209
+FN	4	Unbalanced JS	17	2576
+FP	4	Unbalanced JS	17	47
+TN	4	Unbalanced JS	17	2110
+TP	4	Unbalanced JS	17	1073
+FN	4	Unbalanced JS	18	3100
+FP	4	Unbalanced JS	18	9
+TN	4	Unbalanced JS	18	2153
+TP	4	Unbalanced JS	18	539
+FN	4	Unbalanced JS	19	2801
+FP	4	Unbalanced JS	19	25
+TN	4	Unbalanced JS	19	2136
+TP	4	Unbalanced JS	19	850
+FN	4	Unbalanced JS	20	2280
+FP	4	Unbalanced JS	20	272
+TN	4	Unbalanced JS	20	1863
+TP	4	Unbalanced JS	20	1334
+FN	4	Unbalanced JS	21	2469
+FP	4	Unbalanced JS	21	536
+TN	4	Unbalanced JS	21	1624
+TP	4	Unbalanced JS	21	1176
+FN	4	Unbalanced JS	22	3428
+FP	4	Unbalanced JS	22	1
+TN	4	Unbalanced JS	22	2155
+TP	4	Unbalanced JS	22	202
+FN	4	Unbalanced JS	23	3088
+FP	4	Unbalanced JS	23	5
+TN	4	Unbalanced JS	23	2148
+TP	4	Unbalanced JS	23	555
+FN	4	Unbalanced JS	24	3353
+FP	4	Unbalanced JS	24	34
+TN	4	Unbalanced JS	24	2125
+TP	4	Unbalanced JS	24	290
+FN	4	Unbalanced JS	25	2391
+FP	4	Unbalanced JS	25	309
+TN	4	Unbalanced JS	25	1843
+TP	4	Unbalanced JS	25	1253
+FN	4	Unbalanced JS	26	3403
+FP	4	Unbalanced JS	26	1
+TN	4	Unbalanced JS	26	2157
+TP	4	Unbalanced JS	26	242
+FN	4	Unbalanced JS	27	2634
+FP	4	Unbalanced JS	27	46
+TN	4	Unbalanced JS	27	2112
+TP	4	Unbalanced JS	27	1014
+FN	4	Unbalanced JS	28	3036
+FP	4	Unbalanced JS	28	10
+TN	4	Unbalanced JS	28	2149
+TP	4	Unbalanced JS	28	597
+FN	4	Unbalanced JS	29	3418
+FP	4	Unbalanced JS	29	2
+TN	4	Unbalanced JS	29	2158
+TP	4	Unbalanced JS	29	230
+FN	4	Unbalanced JS	30	3004
+FP	4	Unbalanced JS	30	29
+TN	4	Unbalanced JS	30	2128
+TP	4	Unbalanced JS	30	622
+FN	4	Unbalanced OLS	1	2549
+FP	4	Unbalanced OLS	1	31
+TN	4	Unbalanced OLS	1	2134
+TP	4	Unbalanced OLS	1	1101
+FN	4	Unbalanced OLS	2	3300
+FP	4	Unbalanced OLS	2	69
+TN	4	Unbalanced OLS	2	2084
+TP	4	Unbalanced OLS	2	335
+FN	4	Unbalanced OLS	3	3178
+FP	4	Unbalanced OLS	3	2
+TN	4	Unbalanced OLS	3	2162
+TP	4	Unbalanced OLS	3	472
+FN	4	Unbalanced OLS	4	3358
+FP	4	Unbalanced OLS	4	2
+TN	4	Unbalanced OLS	4	2155
+TP	4	Unbalanced OLS	4	276
+FN	4	Unbalanced OLS	5	3335
+FP	4	Unbalanced OLS	5	0
+TN	4	Unbalanced OLS	5	2160
+TP	4	Unbalanced OLS	5	313
+FN	4	Unbalanced OLS	6	3539
+FP	4	Unbalanced OLS	6	0
+TN	4	Unbalanced OLS	6	2149
+TP	4	Unbalanced OLS	6	93
+FN	4	Unbalanced OLS	7	3331
+FP	4	Unbalanced OLS	7	10
+TN	4	Unbalanced OLS	7	2143
+TP	4	Unbalanced OLS	7	315
+FN	4	Unbalanced OLS	8	2921
+FP	4	Unbalanced OLS	8	96
+TN	4	Unbalanced OLS	8	2061
+TP	4	Unbalanced OLS	8	712
+FN	4	Unbalanced OLS	9	2755
+FP	4	Unbalanced OLS	9	25
+TN	4	Unbalanced OLS	9	2130
+TP	4	Unbalanced OLS	9	890
+FN	4	Unbalanced OLS	10	2255
+FP	4	Unbalanced OLS	10	80
+TN	4	Unbalanced OLS	10	2076
+TP	4	Unbalanced OLS	10	1378
+FN	4	Unbalanced OLS	11	3528
+FP	4	Unbalanced OLS	11	0
+TN	4	Unbalanced OLS	11	2155
+TP	4	Unbalanced OLS	11	119
+FN	4	Unbalanced OLS	12	3516
+FP	4	Unbalanced OLS	12	0
+TN	4	Unbalanced OLS	12	2159
+TP	4	Unbalanced OLS	12	118
+FN	4	Unbalanced OLS	13	3609
+FP	4	Unbalanced OLS	13	1
+TN	4	Unbalanced OLS	13	2159
+TP	4	Unbalanced OLS	13	40
+FN	4	Unbalanced OLS	14	3342
+FP	4	Unbalanced OLS	14	1
+TN	4	Unbalanced OLS	14	2157
+TP	4	Unbalanced OLS	14	294
+FN	4	Unbalanced OLS	15	3143
+FP	4	Unbalanced OLS	15	2
+TN	4	Unbalanced OLS	15	2153
+TP	4	Unbalanced OLS	15	507
+FN	4	Unbalanced OLS	16	3530
+FP	4	Unbalanced OLS	16	5
+TN	4	Unbalanced OLS	16	2151
+TP	4	Unbalanced OLS	16	105
+FN	4	Unbalanced OLS	17	2870
+FP	4	Unbalanced OLS	17	16
+TN	4	Unbalanced OLS	17	2141
+TP	4	Unbalanced OLS	17	779
+FN	4	Unbalanced OLS	18	3339
+FP	4	Unbalanced OLS	18	0
+TN	4	Unbalanced OLS	18	2162
+TP	4	Unbalanced OLS	18	300
+FN	4	Unbalanced OLS	19	3040
+FP	4	Unbalanced OLS	19	7
+TN	4	Unbalanced OLS	19	2154
+TP	4	Unbalanced OLS	19	611
+FN	4	Unbalanced OLS	20	2624
+FP	4	Unbalanced OLS	20	134
+TN	4	Unbalanced OLS	20	2001
+TP	4	Unbalanced OLS	20	990
+FN	4	Unbalanced OLS	21	2740
+FP	4	Unbalanced OLS	21	352
+TN	4	Unbalanced OLS	21	1808
+TP	4	Unbalanced OLS	21	905
+FN	4	Unbalanced OLS	22	3512
+FP	4	Unbalanced OLS	22	0
+TN	4	Unbalanced OLS	22	2156
+TP	4	Unbalanced OLS	22	118
+FN	4	Unbalanced OLS	23	3308
+FP	4	Unbalanced OLS	23	3
+TN	4	Unbalanced OLS	23	2150
+TP	4	Unbalanced OLS	23	335
+FN	4	Unbalanced OLS	24	3505
+FP	4	Unbalanced OLS	24	2
+TN	4	Unbalanced OLS	24	2157
+TP	4	Unbalanced OLS	24	138
+FN	4	Unbalanced OLS	25	2711
+FP	4	Unbalanced OLS	25	170
+TN	4	Unbalanced OLS	25	1982
+TP	4	Unbalanced OLS	25	933
+FN	4	Unbalanced OLS	26	3514
+FP	4	Unbalanced OLS	26	0
+TN	4	Unbalanced OLS	26	2158
+TP	4	Unbalanced OLS	26	131
+FN	4	Unbalanced OLS	27	2925
+FP	4	Unbalanced OLS	27	13
+TN	4	Unbalanced OLS	27	2145
+TP	4	Unbalanced OLS	27	723
+FN	4	Unbalanced OLS	28	3281
+FP	4	Unbalanced OLS	28	2
+TN	4	Unbalanced OLS	28	2157
+TP	4	Unbalanced OLS	28	352
+FN	4	Unbalanced OLS	29	3581
+FP	4	Unbalanced OLS	29	0
+TN	4	Unbalanced OLS	29	2160
+TP	4	Unbalanced OLS	29	67
+FN	4	Unbalanced OLS	30	3234
+FP	4	Unbalanced OLS	30	11
+TN	4	Unbalanced OLS	30	2146
+TP	4	Unbalanced OLS	30	392
+FN	6	Balanced	1	3106
+FP	6	Balanced	1	1
+TN	6	Balanced	1	2164
+TP	6	Balanced	1	545
+FN	6	Balanced	2	1594
+FP	6	Balanced	2	107
+TN	6	Balanced	2	2052
+TP	6	Balanced	2	2056
+FN	6	Balanced	3	2114
+FP	6	Balanced	3	123
+TN	6	Balanced	3	2035
+TP	6	Balanced	3	1534
+FN	6	Balanced	4	2887
+FP	6	Balanced	4	10
+TN	6	Balanced	4	2145
+TP	6	Balanced	4	759
+FN	6	Balanced	5	3290
+FP	6	Balanced	5	2
+TN	6	Balanced	5	2152
+TP	6	Balanced	5	357
+FN	6	Balanced	6	3176
+FP	6	Balanced	6	0
+TN	6	Balanced	6	2162
+TP	6	Balanced	6	474
+FN	6	Balanced	7	2624
+FP	6	Balanced	7	17
+TN	6	Balanced	7	2142
+TP	6	Balanced	7	1026
+FN	6	Balanced	8	2964
+FP	6	Balanced	8	24
+TN	6	Balanced	8	2134
+TP	6	Balanced	8	686
+FN	6	Balanced	9	2755
+FP	6	Balanced	9	28
+TN	6	Balanced	9	2132
+TP	6	Balanced	9	896
+FN	6	Balanced	10	2695
+FP	6	Balanced	10	9
+TN	6	Balanced	10	2154
+TP	6	Balanced	10	956
+FN	6	Balanced	11	2701
+FP	6	Balanced	11	54
+TN	6	Balanced	11	2108
+TP	6	Balanced	11	950
+FN	6	Balanced	12	2291
+FP	6	Balanced	12	7
+TN	6	Balanced	12	2154
+TP	6	Balanced	12	1359
+FN	6	Balanced	13	3060
+FP	6	Balanced	13	0
+TN	6	Balanced	13	2158
+TP	6	Balanced	13	586
+FN	6	Balanced	14	2738
+FP	6	Balanced	14	9
+TN	6	Balanced	14	2154
+TP	6	Balanced	14	911
+FN	6	Balanced	15	2323
+FP	6	Balanced	15	164
+TN	6	Balanced	15	1995
+TP	6	Balanced	15	1324
+FN	6	Balanced	16	2942
+FP	6	Balanced	16	1
+TN	6	Balanced	16	2163
+TP	6	Balanced	16	709
+FN	6	Balanced	17	2893
+FP	6	Balanced	17	1
+TN	6	Balanced	17	2159
+TP	6	Balanced	17	754
+FN	6	Balanced	18	3172
+FP	6	Balanced	18	2
+TN	6	Balanced	18	2158
+TP	6	Balanced	18	474
+FN	6	Balanced	19	1621
+FP	6	Balanced	19	145
+TN	6	Balanced	19	2004
+TP	6	Balanced	19	2025
+FN	6	Balanced	20	2938
+FP	6	Balanced	20	2
+TN	6	Balanced	20	2157
+TP	6	Balanced	20	711
+FN	6	Balanced	21	2643
+FP	6	Balanced	21	5
+TN	6	Balanced	21	2140
+TP	6	Balanced	21	997
+FN	6	Balanced	22	3330
+FP	6	Balanced	22	2
+TN	6	Balanced	22	2155
+TP	6	Balanced	22	315
+FN	6	Balanced	23	3077
+FP	6	Balanced	23	2
+TN	6	Balanced	23	2161
+TP	6	Balanced	23	572
+FN	6	Balanced	24	2807
+FP	6	Balanced	24	6
+TN	6	Balanced	24	2153
+TP	6	Balanced	24	844
+FN	6	Balanced	25	3215
+FP	6	Balanced	25	1
+TN	6	Balanced	25	2160
+TP	6	Balanced	25	437
+FN	6	Balanced	26	3069
+FP	6	Balanced	26	8
+TN	6	Balanced	26	2146
+TP	6	Balanced	26	577
+FN	6	Balanced	27	2494
+FP	6	Balanced	27	58
+TN	6	Balanced	27	2104
+TP	6	Balanced	27	1150
+FN	6	Balanced	28	2586
+FP	6	Balanced	28	34
+TN	6	Balanced	28	2131
+TP	6	Balanced	28	1064
+FN	6	Balanced	29	3383
+FP	6	Balanced	29	2
+TN	6	Balanced	29	2155
+TP	6	Balanced	29	265
+FN	6	Balanced	30	2777
+FP	6	Balanced	30	1
+TN	6	Balanced	30	2161
+TP	6	Balanced	30	875
+FN	6	Unbalanced JS	1	2568
+FP	6	Unbalanced JS	1	192
+TN	6	Unbalanced JS	1	1961
+TP	6	Unbalanced JS	1	1080
+FN	6	Unbalanced JS	2	3030
+FP	6	Unbalanced JS	2	7
+TN	6	Unbalanced JS	2	2150
+TP	6	Unbalanced JS	2	607
+FN	6	Unbalanced JS	3	2846
+FP	6	Unbalanced JS	3	7
+TN	6	Unbalanced JS	3	2150
+TP	6	Unbalanced JS	3	802
+FN	6	Unbalanced JS	4	3070
+FP	6	Unbalanced JS	4	14
+TN	6	Unbalanced JS	4	2138
+TP	6	Unbalanced JS	4	562
+FN	6	Unbalanced JS	5	2511
+FP	6	Unbalanced JS	5	4
+TN	6	Unbalanced JS	5	2160
+TP	6	Unbalanced JS	5	1138
+FN	6	Unbalanced JS	6	3527
+FP	6	Unbalanced JS	6	1
+TN	6	Unbalanced JS	6	2159
+TP	6	Unbalanced JS	6	105
+FN	6	Unbalanced JS	7	2612
+FP	6	Unbalanced JS	7	22
+TN	6	Unbalanced JS	7	2132
+TP	6	Unbalanced JS	7	1033
+FN	6	Unbalanced JS	8	3509
+FP	6	Unbalanced JS	8	1
+TN	6	Unbalanced JS	8	2153
+TP	6	Unbalanced JS	8	129
+FN	6	Unbalanced JS	9	2114
+FP	6	Unbalanced JS	9	162
+TN	6	Unbalanced JS	9	2000
+TP	6	Unbalanced JS	9	1536
+FN	6	Unbalanced JS	10	3487
+FP	6	Unbalanced JS	10	0
+TN	6	Unbalanced JS	10	2151
+TP	6	Unbalanced JS	10	143
+FN	6	Unbalanced JS	11	2978
+FP	6	Unbalanced JS	11	7
+TN	6	Unbalanced JS	11	2156
+TP	6	Unbalanced JS	11	670
+FN	6	Unbalanced JS	12	3361
+FP	6	Unbalanced JS	12	3
+TN	6	Unbalanced JS	12	2157
+TP	6	Unbalanced JS	12	267
+FN	6	Unbalanced JS	13	2201
+FP	6	Unbalanced JS	13	59
+TN	6	Unbalanced JS	13	2101
+TP	6	Unbalanced JS	13	1447
+FN	6	Unbalanced JS	14	3490
+FP	6	Unbalanced JS	14	2
+TN	6	Unbalanced JS	14	2154
+TP	6	Unbalanced JS	14	140
+FN	6	Unbalanced JS	15	2613
+FP	6	Unbalanced JS	15	4
+TN	6	Unbalanced JS	15	2158
+TP	6	Unbalanced JS	15	1037
+FN	6	Unbalanced JS	16	3464
+FP	6	Unbalanced JS	16	2
+TN	6	Unbalanced JS	16	2151
+TP	6	Unbalanced JS	16	170
+FN	6	Unbalanced JS	17	2577
+FP	6	Unbalanced JS	17	18
+TN	6	Unbalanced JS	17	2139
+TP	6	Unbalanced JS	17	1072
+FN	6	Unbalanced JS	18	3484
+FP	6	Unbalanced JS	18	8
+TN	6	Unbalanced JS	18	2146
+TP	6	Unbalanced JS	18	145
+FN	6	Unbalanced JS	19	2045
+FP	6	Unbalanced JS	19	101
+TN	6	Unbalanced JS	19	2061
+TP	6	Unbalanced JS	19	1605
+FN	6	Unbalanced JS	20	2914
+FP	6	Unbalanced JS	20	7
+TN	6	Unbalanced JS	20	2147
+TP	6	Unbalanced JS	20	717
+FN	6	Unbalanced JS	21	1816
+FP	6	Unbalanced JS	21	170
+TN	6	Unbalanced JS	21	1993
+TP	6	Unbalanced JS	21	1832
+FN	6	Unbalanced JS	22	2584
+FP	6	Unbalanced JS	22	29
+TN	6	Unbalanced JS	22	2133
+TP	6	Unbalanced JS	22	1054
+FN	6	Unbalanced JS	23	1980
+FP	6	Unbalanced JS	23	51
+TN	6	Unbalanced JS	23	2114
+TP	6	Unbalanced JS	23	1671
+FN	6	Unbalanced JS	24	3460
+FP	6	Unbalanced JS	24	0
+TN	6	Unbalanced JS	24	2154
+TP	6	Unbalanced JS	24	171
+FN	6	Unbalanced JS	25	2455
+FP	6	Unbalanced JS	25	16
+TN	6	Unbalanced JS	25	2145
+TP	6	Unbalanced JS	25	1193
+FN	6	Unbalanced JS	26	3407
+FP	6	Unbalanced JS	26	2
+TN	6	Unbalanced JS	26	2154
+TP	6	Unbalanced JS	26	220
+FN	6	Unbalanced JS	27	3249
+FP	6	Unbalanced JS	27	1
+TN	6	Unbalanced JS	27	2163
+TP	6	Unbalanced JS	27	402
+FN	6	Unbalanced JS	28	3302
+FP	6	Unbalanced JS	28	1
+TN	6	Unbalanced JS	28	2153
+TP	6	Unbalanced JS	28	323
+FN	6	Unbalanced JS	29	2679
+FP	6	Unbalanced JS	29	18
+TN	6	Unbalanced JS	29	2141
+TP	6	Unbalanced JS	29	970
+FN	6	Unbalanced JS	30	3359
+FP	6	Unbalanced JS	30	0
+TN	6	Unbalanced JS	30	2144
+TP	6	Unbalanced JS	30	262
+FN	6	Unbalanced OLS	1	2785
+FP	6	Unbalanced OLS	1	116
+TN	6	Unbalanced OLS	1	2037
+TP	6	Unbalanced OLS	1	863
+FN	6	Unbalanced OLS	2	3282
+FP	6	Unbalanced OLS	2	4
+TN	6	Unbalanced OLS	2	2153
+TP	6	Unbalanced OLS	2	355
+FN	6	Unbalanced OLS	3	3047
+FP	6	Unbalanced OLS	3	1
+TN	6	Unbalanced OLS	3	2156
+TP	6	Unbalanced OLS	3	601
+FN	6	Unbalanced OLS	4	3239
+FP	6	Unbalanced OLS	4	2
+TN	6	Unbalanced OLS	4	2150
+TP	6	Unbalanced OLS	4	393
+FN	6	Unbalanced OLS	5	2745
+FP	6	Unbalanced OLS	5	1
+TN	6	Unbalanced OLS	5	2163
+TP	6	Unbalanced OLS	5	904
+FN	6	Unbalanced OLS	6	3589
+FP	6	Unbalanced OLS	6	0
+TN	6	Unbalanced OLS	6	2160
+TP	6	Unbalanced OLS	6	43
+FN	6	Unbalanced OLS	7	2813
+FP	6	Unbalanced OLS	7	10
+TN	6	Unbalanced OLS	7	2144
+TP	6	Unbalanced OLS	7	832
+FN	6	Unbalanced OLS	8	3562
+FP	6	Unbalanced OLS	8	0
+TN	6	Unbalanced OLS	8	2154
+TP	6	Unbalanced OLS	8	76
+FN	6	Unbalanced OLS	9	2290
+FP	6	Unbalanced OLS	9	108
+TN	6	Unbalanced OLS	9	2054
+TP	6	Unbalanced OLS	9	1360
+FN	6	Unbalanced OLS	10	3564
+FP	6	Unbalanced OLS	10	0
+TN	6	Unbalanced OLS	10	2151
+TP	6	Unbalanced OLS	10	66
+FN	6	Unbalanced OLS	11	3129
+FP	6	Unbalanced OLS	11	3
+TN	6	Unbalanced OLS	11	2160
+TP	6	Unbalanced OLS	11	519
+FN	6	Unbalanced OLS	12	3466
+FP	6	Unbalanced OLS	12	0
+TN	6	Unbalanced OLS	12	2160
+TP	6	Unbalanced OLS	12	162
+FN	6	Unbalanced OLS	13	2469
+FP	6	Unbalanced OLS	13	31
+TN	6	Unbalanced OLS	13	2129
+TP	6	Unbalanced OLS	13	1179
+FN	6	Unbalanced OLS	14	3553
+FP	6	Unbalanced OLS	14	0
+TN	6	Unbalanced OLS	14	2156
+TP	6	Unbalanced OLS	14	77
+FN	6	Unbalanced OLS	15	2824
+FP	6	Unbalanced OLS	15	4
+TN	6	Unbalanced OLS	15	2158
+TP	6	Unbalanced OLS	15	826
+FN	6	Unbalanced OLS	16	3529
+FP	6	Unbalanced OLS	16	0
+TN	6	Unbalanced OLS	16	2153
+TP	6	Unbalanced OLS	16	105
+FN	6	Unbalanced OLS	17	2820
+FP	6	Unbalanced OLS	17	6
+TN	6	Unbalanced OLS	17	2151
+TP	6	Unbalanced OLS	17	829
+FN	6	Unbalanced OLS	18	3556
+FP	6	Unbalanced OLS	18	0
+TN	6	Unbalanced OLS	18	2154
+TP	6	Unbalanced OLS	18	73
+FN	6	Unbalanced OLS	19	2309
+FP	6	Unbalanced OLS	19	57
+TN	6	Unbalanced OLS	19	2105
+TP	6	Unbalanced OLS	19	1341
+FN	6	Unbalanced OLS	20	3145
+FP	6	Unbalanced OLS	20	3
+TN	6	Unbalanced OLS	20	2151
+TP	6	Unbalanced OLS	20	486
+FN	6	Unbalanced OLS	21	2026
+FP	6	Unbalanced OLS	21	121
+TN	6	Unbalanced OLS	21	2042
+TP	6	Unbalanced OLS	21	1622
+FN	6	Unbalanced OLS	22	2866
+FP	6	Unbalanced OLS	22	11
+TN	6	Unbalanced OLS	22	2151
+TP	6	Unbalanced OLS	22	772
+FN	6	Unbalanced OLS	23	2219
+FP	6	Unbalanced OLS	23	28
+TN	6	Unbalanced OLS	23	2137
+TP	6	Unbalanced OLS	23	1432
+FN	6	Unbalanced OLS	24	3519
+FP	6	Unbalanced OLS	24	5
+TN	6	Unbalanced OLS	24	2149
+TP	6	Unbalanced OLS	24	112
+FN	6	Unbalanced OLS	25	2713
+FP	6	Unbalanced OLS	25	6
+TN	6	Unbalanced OLS	25	2155
+TP	6	Unbalanced OLS	25	935
+FN	6	Unbalanced OLS	26	3483
+FP	6	Unbalanced OLS	26	0
+TN	6	Unbalanced OLS	26	2156
+TP	6	Unbalanced OLS	26	144
+FN	6	Unbalanced OLS	27	3386
+FP	6	Unbalanced OLS	27	0
+TN	6	Unbalanced OLS	27	2164
+TP	6	Unbalanced OLS	27	265
+FN	6	Unbalanced OLS	28	3413
+FP	6	Unbalanced OLS	28	0
+TN	6	Unbalanced OLS	28	2154
+TP	6	Unbalanced OLS	28	212
+FN	6	Unbalanced OLS	29	2889
+FP	6	Unbalanced OLS	29	10
+TN	6	Unbalanced OLS	29	2149
+TP	6	Unbalanced OLS	29	760
+FN	6	Unbalanced OLS	30	3423
+FP	6	Unbalanced OLS	30	0
+TN	6	Unbalanced OLS	30	2144
+TP	6	Unbalanced OLS	30	198
+FN	8	Balanced	1	2757
+FP	8	Balanced	1	6
+TN	8	Balanced	1	2150
+TP	8	Balanced	1	893
+FN	8	Balanced	2	1796
+FP	8	Balanced	2	21
+TN	8	Balanced	2	2132
+TP	8	Balanced	2	1850
+FN	8	Balanced	3	2459
+FP	8	Balanced	3	9
+TN	8	Balanced	3	2145
+TP	8	Balanced	3	1188
+FN	8	Balanced	4	2939
+FP	8	Balanced	4	8
+TN	8	Balanced	4	2147
+TP	8	Balanced	4	705
+FN	8	Balanced	5	3303
+FP	8	Balanced	5	0
+TN	8	Balanced	5	2146
+TP	8	Balanced	5	338
+FN	8	Balanced	6	2531
+FP	8	Balanced	6	20
+TN	8	Balanced	6	2143
+TP	8	Balanced	6	1117
+FN	8	Balanced	7	2953
+FP	8	Balanced	7	6
+TN	8	Balanced	7	2152
+TP	8	Balanced	7	695
+FN	8	Balanced	8	1583
+FP	8	Balanced	8	163
+TN	8	Balanced	8	1997
+TP	8	Balanced	8	2068
+FN	8	Balanced	9	2146
+FP	8	Balanced	9	54
+TN	8	Balanced	9	2109
+TP	8	Balanced	9	1505
+FN	8	Balanced	10	2871
+FP	8	Balanced	10	0
+TN	8	Balanced	10	2163
+TP	8	Balanced	10	776
+FN	8	Balanced	11	2690
+FP	8	Balanced	11	7
+TN	8	Balanced	11	2155
+TP	8	Balanced	11	962
+FN	8	Balanced	12	3075
+FP	8	Balanced	12	3
+TN	8	Balanced	12	2157
+TP	8	Balanced	12	574
+FN	8	Balanced	13	3408
+FP	8	Balanced	13	0
+TN	8	Balanced	13	2160
+TP	8	Balanced	13	242
+FN	8	Balanced	14	3159
+FP	8	Balanced	14	2
+TN	8	Balanced	14	2159
+TP	8	Balanced	14	493
+FN	8	Balanced	15	1949
+FP	8	Balanced	15	43
+TN	8	Balanced	15	2120
+TP	8	Balanced	15	1701
+FN	8	Balanced	16	2589
+FP	8	Balanced	16	29
+TN	8	Balanced	16	2128
+TP	8	Balanced	16	1059
+FN	8	Balanced	17	2881
+FP	8	Balanced	17	3
+TN	8	Balanced	17	2150
+TP	8	Balanced	17	765
+FN	8	Balanced	18	3174
+FP	8	Balanced	18	5
+TN	8	Balanced	18	2151
+TP	8	Balanced	18	473
+FN	8	Balanced	19	2701
+FP	8	Balanced	19	1
+TN	8	Balanced	19	2144
+TP	8	Balanced	19	945
+FN	8	Balanced	20	2611
+FP	8	Balanced	20	1
+TN	8	Balanced	20	2151
+TP	8	Balanced	20	1037
+FN	8	Balanced	21	2876
+FP	8	Balanced	21	0
+TN	8	Balanced	21	2149
+TP	8	Balanced	21	770
+FN	8	Balanced	22	3162
+FP	8	Balanced	22	0
+TN	8	Balanced	22	2160
+TP	8	Balanced	22	487
+FN	8	Balanced	23	2954
+FP	8	Balanced	23	5
+TN	8	Balanced	23	2149
+TP	8	Balanced	23	691
+FN	8	Balanced	24	2588
+FP	8	Balanced	24	2
+TN	8	Balanced	24	2155
+TP	8	Balanced	24	1059
+FN	8	Balanced	25	2401
+FP	8	Balanced	25	12
+TN	8	Balanced	25	2147
+TP	8	Balanced	25	1248
+FN	8	Balanced	26	2185
+FP	8	Balanced	26	21
+TN	8	Balanced	26	2139
+TP	8	Balanced	26	1462
+FN	8	Balanced	27	3211
+FP	8	Balanced	27	0
+TN	8	Balanced	27	2161
+TP	8	Balanced	27	441
+FN	8	Balanced	28	2687
+FP	8	Balanced	28	15
+TN	8	Balanced	28	2145
+TP	8	Balanced	28	961
+FN	8	Balanced	29	3019
+FP	8	Balanced	29	0
+TN	8	Balanced	29	2156
+TP	8	Balanced	29	627
+FN	8	Balanced	30	3066
+FP	8	Balanced	30	4
+TN	8	Balanced	30	2151
+TP	8	Balanced	30	580
+FN	8	Unbalanced JS	1	2875
+FP	8	Unbalanced JS	1	18
+TN	8	Unbalanced JS	1	2139
+TP	8	Unbalanced JS	1	773
+FN	8	Unbalanced JS	2	3405
+FP	8	Unbalanced JS	2	0
+TN	8	Unbalanced JS	2	2153
+TP	8	Unbalanced JS	2	220
+FN	8	Unbalanced JS	3	2964
+FP	8	Unbalanced JS	3	6
+TN	8	Unbalanced JS	3	2156
+TP	8	Unbalanced JS	3	684
+FN	8	Unbalanced JS	4	3228
+FP	8	Unbalanced JS	4	44
+TN	8	Unbalanced JS	4	2111
+TP	8	Unbalanced JS	4	399
+FN	8	Unbalanced JS	5	2523
+FP	8	Unbalanced JS	5	16
+TN	8	Unbalanced JS	5	2139
+TP	8	Unbalanced JS	5	1124
+FN	8	Unbalanced JS	6	2668
+FP	8	Unbalanced JS	6	47
+TN	8	Unbalanced JS	6	2111
+TP	8	Unbalanced JS	6	961
+FN	8	Unbalanced JS	7	1638
+FP	8	Unbalanced JS	7	950
+TN	8	Unbalanced JS	7	1214
+TP	8	Unbalanced JS	7	2011
+FN	8	Unbalanced JS	8	3470
+FP	8	Unbalanced JS	8	1
+TN	8	Unbalanced JS	8	2160
+TP	8	Unbalanced JS	8	159
+FN	8	Unbalanced JS	9	2736
+FP	8	Unbalanced JS	9	104
+TN	8	Unbalanced JS	9	2054
+TP	8	Unbalanced JS	9	910
+FN	8	Unbalanced JS	10	3400
+FP	8	Unbalanced JS	10	0
+TN	8	Unbalanced JS	10	2162
+TP	8	Unbalanced JS	10	229
+FN	8	Unbalanced JS	11	2938
+FP	8	Unbalanced JS	11	7
+TN	8	Unbalanced JS	11	2148
+TP	8	Unbalanced JS	11	711
+FN	8	Unbalanced JS	12	3385
+FP	8	Unbalanced JS	12	0
+TN	8	Unbalanced JS	12	2156
+TP	8	Unbalanced JS	12	237
+FN	8	Unbalanced JS	13	3041
+FP	8	Unbalanced JS	13	5
+TN	8	Unbalanced JS	13	2153
+TP	8	Unbalanced JS	13	607
+FN	8	Unbalanced JS	14	3486
+FP	8	Unbalanced JS	14	0
+TN	8	Unbalanced JS	14	2157
+TP	8	Unbalanced JS	14	141
+FN	8	Unbalanced JS	15	3154
+FP	8	Unbalanced JS	15	5
+TN	8	Unbalanced JS	15	2155
+TP	8	Unbalanced JS	15	496
+FN	8	Unbalanced JS	16	3295
+FP	8	Unbalanced JS	16	1
+TN	8	Unbalanced JS	16	2149
+TP	8	Unbalanced JS	16	337
+FN	8	Unbalanced JS	17	3087
+FP	8	Unbalanced JS	17	13
+TN	8	Unbalanced JS	17	2150
+TP	8	Unbalanced JS	17	564
+FN	8	Unbalanced JS	18	3463
+FP	8	Unbalanced JS	18	0
+TN	8	Unbalanced JS	18	2149
+TP	8	Unbalanced JS	18	166
+FN	8	Unbalanced JS	19	2693
+FP	8	Unbalanced JS	19	142
+TN	8	Unbalanced JS	19	2022
+TP	8	Unbalanced JS	19	956
+FN	8	Unbalanced JS	20	2355
+FP	8	Unbalanced JS	20	7
+TN	8	Unbalanced JS	20	2150
+TP	8	Unbalanced JS	20	1273
+FN	8	Unbalanced JS	21	2828
+FP	8	Unbalanced JS	21	89
+TN	8	Unbalanced JS	21	2070
+TP	8	Unbalanced JS	21	821
+FN	8	Unbalanced JS	22	2944
+FP	8	Unbalanced JS	22	14
+TN	8	Unbalanced JS	22	2143
+TP	8	Unbalanced JS	22	683
+FN	8	Unbalanced JS	23	2353
+FP	8	Unbalanced JS	23	393
+TN	8	Unbalanced JS	23	1765
+TP	8	Unbalanced JS	23	1297
+FN	8	Unbalanced JS	24	3436
+FP	8	Unbalanced JS	24	0
+TN	8	Unbalanced JS	24	2143
+TP	8	Unbalanced JS	24	186
+FN	8	Unbalanced JS	25	3234
+FP	8	Unbalanced JS	25	7
+TN	8	Unbalanced JS	25	2156
+TP	8	Unbalanced JS	25	416
+FN	8	Unbalanced JS	26	3041
+FP	8	Unbalanced JS	26	23
+TN	8	Unbalanced JS	26	2136
+TP	8	Unbalanced JS	26	590
+FN	8	Unbalanced JS	27	3226
+FP	8	Unbalanced JS	27	6
+TN	8	Unbalanced JS	27	2155
+TP	8	Unbalanced JS	27	422
+FN	8	Unbalanced JS	28	3496
+FP	8	Unbalanced JS	28	1
+TN	8	Unbalanced JS	28	2154
+TP	8	Unbalanced JS	28	136
+FN	8	Unbalanced JS	29	3441
+FP	8	Unbalanced JS	29	13
+TN	8	Unbalanced JS	29	2144
+TP	8	Unbalanced JS	29	208
+FN	8	Unbalanced JS	30	3451
+FP	8	Unbalanced JS	30	0
+TN	8	Unbalanced JS	30	2158
+TP	8	Unbalanced JS	30	177
+FN	8	Unbalanced OLS	1	2996
+FP	8	Unbalanced OLS	1	13
+TN	8	Unbalanced OLS	1	2144
+TP	8	Unbalanced OLS	1	652
+FN	8	Unbalanced OLS	2	3477
+FP	8	Unbalanced OLS	2	0
+TN	8	Unbalanced OLS	2	2153
+TP	8	Unbalanced OLS	2	148
+FN	8	Unbalanced OLS	3	3094
+FP	8	Unbalanced OLS	3	4
+TN	8	Unbalanced OLS	3	2158
+TP	8	Unbalanced OLS	3	554
+FN	8	Unbalanced OLS	4	3444
+FP	8	Unbalanced OLS	4	9
+TN	8	Unbalanced OLS	4	2146
+TP	8	Unbalanced OLS	4	183
+FN	8	Unbalanced OLS	5	2711
+FP	8	Unbalanced OLS	5	9
+TN	8	Unbalanced OLS	5	2146
+TP	8	Unbalanced OLS	5	936
+FN	8	Unbalanced OLS	6	2851
+FP	8	Unbalanced OLS	6	32
+TN	8	Unbalanced OLS	6	2126
+TP	8	Unbalanced OLS	6	778
+FN	8	Unbalanced OLS	7	1740
+FP	8	Unbalanced OLS	7	881
+TN	8	Unbalanced OLS	7	1283
+TP	8	Unbalanced OLS	7	1909
+FN	8	Unbalanced OLS	8	3557
+FP	8	Unbalanced OLS	8	0
+TN	8	Unbalanced OLS	8	2161
+TP	8	Unbalanced OLS	8	72
+FN	8	Unbalanced OLS	9	2890
+FP	8	Unbalanced OLS	9	65
+TN	8	Unbalanced OLS	9	2093
+TP	8	Unbalanced OLS	9	756
+FN	8	Unbalanced OLS	10	3503
+FP	8	Unbalanced OLS	10	0
+TN	8	Unbalanced OLS	10	2162
+TP	8	Unbalanced OLS	10	126
+FN	8	Unbalanced OLS	11	3087
+FP	8	Unbalanced OLS	11	3
+TN	8	Unbalanced OLS	11	2152
+TP	8	Unbalanced OLS	11	562
+FN	8	Unbalanced OLS	12	3460
+FP	8	Unbalanced OLS	12	0
+TN	8	Unbalanced OLS	12	2156
+TP	8	Unbalanced OLS	12	162
+FN	8	Unbalanced OLS	13	3199
+FP	8	Unbalanced OLS	13	1
+TN	8	Unbalanced OLS	13	2157
+TP	8	Unbalanced OLS	13	449
+FN	8	Unbalanced OLS	14	3557
+FP	8	Unbalanced OLS	14	0
+TN	8	Unbalanced OLS	14	2157
+TP	8	Unbalanced OLS	14	70
+FN	8	Unbalanced OLS	15	3239
+FP	8	Unbalanced OLS	15	4
+TN	8	Unbalanced OLS	15	2156
+TP	8	Unbalanced OLS	15	411
+FN	8	Unbalanced OLS	16	3379
+FP	8	Unbalanced OLS	16	0
+TN	8	Unbalanced OLS	16	2150
+TP	8	Unbalanced OLS	16	253
+FN	8	Unbalanced OLS	17	3182
+FP	8	Unbalanced OLS	17	8
+TN	8	Unbalanced OLS	17	2155
+TP	8	Unbalanced OLS	17	469
+FN	8	Unbalanced OLS	18	3521
+FP	8	Unbalanced OLS	18	0
+TN	8	Unbalanced OLS	18	2149
+TP	8	Unbalanced OLS	18	108
+FN	8	Unbalanced OLS	19	2838
+FP	8	Unbalanced OLS	19	107
+TN	8	Unbalanced OLS	19	2057
+TP	8	Unbalanced OLS	19	811
+FN	8	Unbalanced OLS	20	2562
+FP	8	Unbalanced OLS	20	4
+TN	8	Unbalanced OLS	20	2153
+TP	8	Unbalanced OLS	20	1066
+FN	8	Unbalanced OLS	21	3011
+FP	8	Unbalanced OLS	21	44
+TN	8	Unbalanced OLS	21	2115
+TP	8	Unbalanced OLS	21	638
+FN	8	Unbalanced OLS	22	3118
+FP	8	Unbalanced OLS	22	9
+TN	8	Unbalanced OLS	22	2148
+TP	8	Unbalanced OLS	22	509
+FN	8	Unbalanced OLS	23	2543
+FP	8	Unbalanced OLS	23	288
+TN	8	Unbalanced OLS	23	1870
+TP	8	Unbalanced OLS	23	1107
+FN	8	Unbalanced OLS	24	3474
+FP	8	Unbalanced OLS	24	0
+TN	8	Unbalanced OLS	24	2143
+TP	8	Unbalanced OLS	24	148
+FN	8	Unbalanced OLS	25	3366
+FP	8	Unbalanced OLS	25	2
+TN	8	Unbalanced OLS	25	2161
+TP	8	Unbalanced OLS	25	284
+FN	8	Unbalanced OLS	26	3188
+FP	8	Unbalanced OLS	26	12
+TN	8	Unbalanced OLS	26	2147
+TP	8	Unbalanced OLS	26	443
+FN	8	Unbalanced OLS	27	3416
+FP	8	Unbalanced OLS	27	1
+TN	8	Unbalanced OLS	27	2160
+TP	8	Unbalanced OLS	27	232
+FN	8	Unbalanced OLS	28	3577
+FP	8	Unbalanced OLS	28	0
+TN	8	Unbalanced OLS	28	2155
+TP	8	Unbalanced OLS	28	55
+FN	8	Unbalanced OLS	29	3500
+FP	8	Unbalanced OLS	29	1
+TN	8	Unbalanced OLS	29	2156
+TP	8	Unbalanced OLS	29	149
+FN	8	Unbalanced OLS	30	3516
+FP	8	Unbalanced OLS	30	5
+TN	8	Unbalanced OLS	30	2153
+TP	8	Unbalanced OLS	30	112
+FN	10	Balanced	1	2222
+FP	10	Balanced	1	10
+TN	10	Balanced	1	2145
+TP	10	Balanced	1	1425
+FN	10	Balanced	2	2675
+FP	10	Balanced	2	0
+TN	10	Balanced	2	2160
+TP	10	Balanced	2	972
+FN	10	Balanced	3	2926
+FP	10	Balanced	3	2
+TN	10	Balanced	3	2157
+TP	10	Balanced	3	722
+FN	10	Balanced	4	2534
+FP	10	Balanced	4	6
+TN	10	Balanced	4	2156
+TP	10	Balanced	4	1114
+FN	10	Balanced	5	2640
+FP	10	Balanced	5	0
+TN	10	Balanced	5	2163
+TP	10	Balanced	5	1010
+FN	10	Balanced	6	2660
+FP	10	Balanced	6	1
+TN	10	Balanced	6	2148
+TP	10	Balanced	6	986
+FN	10	Balanced	7	3014
+FP	10	Balanced	7	5
+TN	10	Balanced	7	2141
+TP	10	Balanced	7	627
+FN	10	Balanced	8	1597
+FP	10	Balanced	8	41
+TN	10	Balanced	8	2115
+TP	10	Balanced	8	2054
+FN	10	Balanced	9	2610
+FP	10	Balanced	9	4
+TN	10	Balanced	9	2158
+TP	10	Balanced	9	1040
+FN	10	Balanced	10	1931
+FP	10	Balanced	10	28
+TN	10	Balanced	10	2131
+TP	10	Balanced	10	1720
+FN	10	Balanced	11	2227
+FP	10	Balanced	11	1
+TN	10	Balanced	11	2162
+TP	10	Balanced	11	1421
+FN	10	Balanced	12	2467
+FP	10	Balanced	12	9
+TN	10	Balanced	12	2149
+TP	10	Balanced	12	1177
+FN	10	Balanced	13	2398
+FP	10	Balanced	13	59
+TN	10	Balanced	13	2099
+TP	10	Balanced	13	1246
+FN	10	Balanced	14	2765
+FP	10	Balanced	14	0
+TN	10	Balanced	14	2157
+TP	10	Balanced	14	883
+FN	10	Balanced	15	3025
+FP	10	Balanced	15	1
+TN	10	Balanced	15	2159
+TP	10	Balanced	15	623
+FN	10	Balanced	16	2834
+FP	10	Balanced	16	4
+TN	10	Balanced	16	2153
+TP	10	Balanced	16	814
+FN	10	Balanced	17	2526
+FP	10	Balanced	17	1
+TN	10	Balanced	17	2154
+TP	10	Balanced	17	1121
+FN	10	Balanced	18	3197
+FP	10	Balanced	18	0
+TN	10	Balanced	18	2159
+TP	10	Balanced	18	455
+FN	10	Balanced	19	3255
+FP	10	Balanced	19	0
+TN	10	Balanced	19	2157
+TP	10	Balanced	19	394
+FN	10	Balanced	20	2380
+FP	10	Balanced	20	5
+TN	10	Balanced	20	2157
+TP	10	Balanced	20	1270
+FN	10	Balanced	21	2684
+FP	10	Balanced	21	22
+TN	10	Balanced	21	2131
+TP	10	Balanced	21	957
+FN	10	Balanced	22	2091
+FP	10	Balanced	22	3
+TN	10	Balanced	22	2157
+TP	10	Balanced	22	1555
+FN	10	Balanced	23	2188
+FP	10	Balanced	23	20
+TN	10	Balanced	23	2137
+TP	10	Balanced	23	1460
+FN	10	Balanced	24	2758
+FP	10	Balanced	24	0
+TN	10	Balanced	24	2159
+TP	10	Balanced	24	889
+FN	10	Balanced	25	2828
+FP	10	Balanced	25	3
+TN	10	Balanced	25	2154
+TP	10	Balanced	25	821
+FN	10	Balanced	26	2587
+FP	10	Balanced	26	20
+TN	10	Balanced	26	2140
+TP	10	Balanced	26	1062
+FN	10	Balanced	27	1994
+FP	10	Balanced	27	52
+TN	10	Balanced	27	2105
+TP	10	Balanced	27	1655
+FN	10	Balanced	28	1795
+FP	10	Balanced	28	62
+TN	10	Balanced	28	2097
+TP	10	Balanced	28	1853
+FN	10	Balanced	29	2581
+FP	10	Balanced	29	3
+TN	10	Balanced	29	2157
+TP	10	Balanced	29	1069
+FN	10	Balanced	30	3254
+FP	10	Balanced	30	0
+TN	10	Balanced	30	2161
+TP	10	Balanced	30	396
+FN	10	Unbalanced JS	1	2989
+FP	10	Unbalanced JS	1	21
+TN	10	Unbalanced JS	1	2143
+TP	10	Unbalanced JS	1	660
+FN	10	Unbalanced JS	2	3359
+FP	10	Unbalanced JS	2	0
+TN	10	Unbalanced JS	2	2151
+TP	10	Unbalanced JS	2	272
+FN	10	Unbalanced JS	3	2385
+FP	10	Unbalanced JS	3	20
+TN	10	Unbalanced JS	3	2141
+TP	10	Unbalanced JS	3	1264
+FN	10	Unbalanced JS	4	3370
+FP	10	Unbalanced JS	4	3
+TN	10	Unbalanced JS	4	2161
+TP	10	Unbalanced JS	4	264
+FN	10	Unbalanced JS	5	2165
+FP	10	Unbalanced JS	5	35
+TN	10	Unbalanced JS	5	2127
+TP	10	Unbalanced JS	5	1480
+FN	10	Unbalanced JS	6	3447
+FP	10	Unbalanced JS	6	0
+TN	10	Unbalanced JS	6	2160
+TP	10	Unbalanced JS	6	182
+FN	10	Unbalanced JS	7	2451
+FP	10	Unbalanced JS	7	169
+TN	10	Unbalanced JS	7	1982
+TP	10	Unbalanced JS	7	1194
+FN	10	Unbalanced JS	8	3453
+FP	10	Unbalanced JS	8	0
+TN	10	Unbalanced JS	8	2153
+TP	10	Unbalanced JS	8	177
+FN	10	Unbalanced JS	9	2938
+FP	10	Unbalanced JS	9	4
+TN	10	Unbalanced JS	9	2154
+TP	10	Unbalanced JS	9	709
+FN	10	Unbalanced JS	10	3417
+FP	10	Unbalanced JS	10	0
+TN	10	Unbalanced JS	10	2156
+TP	10	Unbalanced JS	10	212
+FN	10	Unbalanced JS	11	2568
+FP	10	Unbalanced JS	11	42
+TN	10	Unbalanced JS	11	2117
+TP	10	Unbalanced JS	11	1079
+FN	10	Unbalanced JS	12	2677
+FP	10	Unbalanced JS	12	27
+TN	10	Unbalanced JS	12	2129
+TP	10	Unbalanced JS	12	952
+FN	10	Unbalanced JS	13	2582
+FP	10	Unbalanced JS	13	15
+TN	10	Unbalanced JS	13	2140
+TP	10	Unbalanced JS	13	1064
+FN	10	Unbalanced JS	14	3414
+FP	10	Unbalanced JS	14	1
+TN	10	Unbalanced JS	14	2151
+TP	10	Unbalanced JS	14	208
+FN	10	Unbalanced JS	15	3348
+FP	10	Unbalanced JS	15	1
+TN	10	Unbalanced JS	15	2156
+TP	10	Unbalanced JS	15	301
+FN	10	Unbalanced JS	16	2586
+FP	10	Unbalanced JS	16	461
+TN	10	Unbalanced JS	16	1701
+TP	10	Unbalanced JS	16	1047
+FN	10	Unbalanced JS	17	2877
+FP	10	Unbalanced JS	17	6
+TN	10	Unbalanced JS	17	2153
+TP	10	Unbalanced JS	17	773
+FN	10	Unbalanced JS	18	3423
+FP	10	Unbalanced JS	18	0
+TN	10	Unbalanced JS	18	2158
+TP	10	Unbalanced JS	18	211
+FN	10	Unbalanced JS	19	3118
+FP	10	Unbalanced JS	19	3
+TN	10	Unbalanced JS	19	2159
+TP	10	Unbalanced JS	19	532
+FN	10	Unbalanced JS	20	3209
+FP	10	Unbalanced JS	20	2
+TN	10	Unbalanced JS	20	2148
+TP	10	Unbalanced JS	20	414
+FN	10	Unbalanced JS	21	2302
+FP	10	Unbalanced JS	21	51
+TN	10	Unbalanced JS	21	2109
+TP	10	Unbalanced JS	21	1345
+FN	10	Unbalanced JS	22	2936
+FP	10	Unbalanced JS	22	3
+TN	10	Unbalanced JS	22	2153
+TP	10	Unbalanced JS	22	697
+FN	10	Unbalanced JS	23	3069
+FP	10	Unbalanced JS	23	13
+TN	10	Unbalanced JS	23	2147
+TP	10	Unbalanced JS	23	577
+FN	10	Unbalanced JS	24	3422
+FP	10	Unbalanced JS	24	1
+TN	10	Unbalanced JS	24	2156
+TP	10	Unbalanced JS	24	208
+FN	10	Unbalanced JS	25	3230
+FP	10	Unbalanced JS	25	5
+TN	10	Unbalanced JS	25	2157
+TP	10	Unbalanced JS	25	418
+FN	10	Unbalanced JS	26	2998
+FP	10	Unbalanced JS	26	65
+TN	10	Unbalanced JS	26	2086
+TP	10	Unbalanced JS	26	627
+FN	10	Unbalanced JS	27	2943
+FP	10	Unbalanced JS	27	81
+TN	10	Unbalanced JS	27	2082
+TP	10	Unbalanced JS	27	704
+FN	10	Unbalanced JS	28	3265
+FP	10	Unbalanced JS	28	7
+TN	10	Unbalanced JS	28	2135
+TP	10	Unbalanced JS	28	353
+FN	10	Unbalanced JS	29	3198
+FP	10	Unbalanced JS	29	11
+TN	10	Unbalanced JS	29	2149
+TP	10	Unbalanced JS	29	448
+FN	10	Unbalanced JS	30	2911
+FP	10	Unbalanced JS	30	49
+TN	10	Unbalanced JS	30	2108
+TP	10	Unbalanced JS	30	715
+FN	10	Unbalanced OLS	1	3202
+FP	10	Unbalanced OLS	1	7
+TN	10	Unbalanced OLS	1	2157
+TP	10	Unbalanced OLS	1	447
+FN	10	Unbalanced OLS	2	3469
+FP	10	Unbalanced OLS	2	0
+TN	10	Unbalanced OLS	2	2151
+TP	10	Unbalanced OLS	2	162
+FN	10	Unbalanced OLS	3	2558
+FP	10	Unbalanced OLS	3	11
+TN	10	Unbalanced OLS	3	2150
+TP	10	Unbalanced OLS	3	1091
+FN	10	Unbalanced OLS	4	3443
+FP	10	Unbalanced OLS	4	0
+TN	10	Unbalanced OLS	4	2164
+TP	10	Unbalanced OLS	4	191
+FN	10	Unbalanced OLS	5	2322
+FP	10	Unbalanced OLS	5	20
+TN	10	Unbalanced OLS	5	2142
+TP	10	Unbalanced OLS	5	1323
+FN	10	Unbalanced OLS	6	3540
+FP	10	Unbalanced OLS	6	0
+TN	10	Unbalanced OLS	6	2160
+TP	10	Unbalanced OLS	6	89
+FN	10	Unbalanced OLS	7	2604
+FP	10	Unbalanced OLS	7	110
+TN	10	Unbalanced OLS	7	2041
+TP	10	Unbalanced OLS	7	1041
+FN	10	Unbalanced OLS	8	3506
+FP	10	Unbalanced OLS	8	0
+TN	10	Unbalanced OLS	8	2153
+TP	10	Unbalanced OLS	8	124
+FN	10	Unbalanced OLS	9	3049
+FP	10	Unbalanced OLS	9	1
+TN	10	Unbalanced OLS	9	2157
+TP	10	Unbalanced OLS	9	598
+FN	10	Unbalanced OLS	10	3470
+FP	10	Unbalanced OLS	10	0
+TN	10	Unbalanced OLS	10	2156
+TP	10	Unbalanced OLS	10	159
+FN	10	Unbalanced OLS	11	2717
+FP	10	Unbalanced OLS	11	28
+TN	10	Unbalanced OLS	11	2131
+TP	10	Unbalanced OLS	11	930
+FN	10	Unbalanced OLS	12	2838
+FP	10	Unbalanced OLS	12	12
+TN	10	Unbalanced OLS	12	2144
+TP	10	Unbalanced OLS	12	791
+FN	10	Unbalanced OLS	13	2737
+FP	10	Unbalanced OLS	13	9
+TN	10	Unbalanced OLS	13	2146
+TP	10	Unbalanced OLS	13	909
+FN	10	Unbalanced OLS	14	3489
+FP	10	Unbalanced OLS	14	0
+TN	10	Unbalanced OLS	14	2152
+TP	10	Unbalanced OLS	14	133
+FN	10	Unbalanced OLS	15	3439
+FP	10	Unbalanced OLS	15	1
+TN	10	Unbalanced OLS	15	2156
+TP	10	Unbalanced OLS	15	210
+FN	10	Unbalanced OLS	16	2844
+FP	10	Unbalanced OLS	16	262
+TN	10	Unbalanced OLS	16	1900
+TP	10	Unbalanced OLS	16	789
+FN	10	Unbalanced OLS	17	3036
+FP	10	Unbalanced OLS	17	1
+TN	10	Unbalanced OLS	17	2158
+TP	10	Unbalanced OLS	17	614
+FN	10	Unbalanced OLS	18	3480
+FP	10	Unbalanced OLS	18	0
+TN	10	Unbalanced OLS	18	2158
+TP	10	Unbalanced OLS	18	154
+FN	10	Unbalanced OLS	19	3263
+FP	10	Unbalanced OLS	19	1
+TN	10	Unbalanced OLS	19	2161
+TP	10	Unbalanced OLS	19	387
+FN	10	Unbalanced OLS	20	3341
+FP	10	Unbalanced OLS	20	0
+TN	10	Unbalanced OLS	20	2150
+TP	10	Unbalanced OLS	20	282
+FN	10	Unbalanced OLS	21	2463
+FP	10	Unbalanced OLS	21	40
+TN	10	Unbalanced OLS	21	2120
+TP	10	Unbalanced OLS	21	1184
+FN	10	Unbalanced OLS	22	3061
+FP	10	Unbalanced OLS	22	1
+TN	10	Unbalanced OLS	22	2155
+TP	10	Unbalanced OLS	22	572
+FN	10	Unbalanced OLS	23	3261
+FP	10	Unbalanced OLS	23	8
+TN	10	Unbalanced OLS	23	2152
+TP	10	Unbalanced OLS	23	385
+FN	10	Unbalanced OLS	24	3496
+FP	10	Unbalanced OLS	24	0
+TN	10	Unbalanced OLS	24	2157
+TP	10	Unbalanced OLS	24	134
+FN	10	Unbalanced OLS	25	3318
+FP	10	Unbalanced OLS	25	2
+TN	10	Unbalanced OLS	25	2160
+TP	10	Unbalanced OLS	25	330
+FN	10	Unbalanced OLS	26	3189
+FP	10	Unbalanced OLS	26	29
+TN	10	Unbalanced OLS	26	2122
+TP	10	Unbalanced OLS	26	436
+FN	10	Unbalanced OLS	27	3016
+FP	10	Unbalanced OLS	27	60
+TN	10	Unbalanced OLS	27	2103
+TP	10	Unbalanced OLS	27	631
+FN	10	Unbalanced OLS	28	3341
+FP	10	Unbalanced OLS	28	6
+TN	10	Unbalanced OLS	28	2136
+TP	10	Unbalanced OLS	28	277
+FN	10	Unbalanced OLS	29	3294
+FP	10	Unbalanced OLS	29	5
+TN	10	Unbalanced OLS	29	2155
+TP	10	Unbalanced OLS	29	352
+FN	10	Unbalanced OLS	30	3136
+FP	10	Unbalanced OLS	30	23
+TN	10	Unbalanced OLS	30	2134
+TP	10	Unbalanced OLS	30	490
+FN	12	Balanced	1	2878
+FP	12	Balanced	1	0
+TN	12	Balanced	1	2158
+TP	12	Balanced	1	768
+FN	12	Balanced	2	1781
+FP	12	Balanced	2	29
+TN	12	Balanced	2	2130
+TP	12	Balanced	2	1866
+FN	12	Balanced	3	1810
+FP	12	Balanced	3	51
+TN	12	Balanced	3	2111
+TP	12	Balanced	3	1838
+FN	12	Balanced	4	1739
+FP	12	Balanced	4	13
+TN	12	Balanced	4	2145
+TP	12	Balanced	4	1911
+FN	12	Balanced	5	2394
+FP	12	Balanced	5	37
+TN	12	Balanced	5	2119
+TP	12	Balanced	5	1254
+FN	12	Balanced	6	3017
+FP	12	Balanced	6	0
+TN	12	Balanced	6	2152
+TP	12	Balanced	6	630
+FN	12	Balanced	7	2753
+FP	12	Balanced	7	6
+TN	12	Balanced	7	2155
+TP	12	Balanced	7	897
+FN	12	Balanced	8	1952
+FP	12	Balanced	8	11
+TN	12	Balanced	8	2147
+TP	12	Balanced	8	1697
+FN	12	Balanced	9	1990
+FP	12	Balanced	9	22
+TN	12	Balanced	9	2139
+TP	12	Balanced	9	1657
+FN	12	Balanced	10	1987
+FP	12	Balanced	10	40
+TN	12	Balanced	10	2115
+TP	12	Balanced	10	1663
+FN	12	Balanced	11	2624
+FP	12	Balanced	11	3
+TN	12	Balanced	11	2156
+TP	12	Balanced	11	1026
+FN	12	Balanced	12	1899
+FP	12	Balanced	12	113
+TN	12	Balanced	12	2044
+TP	12	Balanced	12	1747
+FN	12	Balanced	13	2447
+FP	12	Balanced	13	23
+TN	12	Balanced	13	2140
+TP	12	Balanced	13	1204
+FN	12	Balanced	14	1642
+FP	12	Balanced	14	58
+TN	12	Balanced	14	2099
+TP	12	Balanced	14	2004
+FN	12	Balanced	15	1877
+FP	12	Balanced	15	21
+TN	12	Balanced	15	2136
+TP	12	Balanced	15	1768
+FN	12	Balanced	16	2167
+FP	12	Balanced	16	23
+TN	12	Balanced	16	2132
+TP	12	Balanced	16	1480
+FN	12	Balanced	17	2429
+FP	12	Balanced	17	2
+TN	12	Balanced	17	2152
+TP	12	Balanced	17	1217
+FN	12	Balanced	18	2521
+FP	12	Balanced	18	7
+TN	12	Balanced	18	2155
+TP	12	Balanced	18	1130
+FN	12	Balanced	19	1811
+FP	12	Balanced	19	53
+TN	12	Balanced	19	2105
+TP	12	Balanced	19	1838
+FN	12	Balanced	20	1425
+FP	12	Balanced	20	202
+TN	12	Balanced	20	1953
+TP	12	Balanced	20	2224
+FN	12	Balanced	21	2254
+FP	12	Balanced	21	68
+TN	12	Balanced	21	2094
+TP	12	Balanced	21	1397
+FN	12	Balanced	22	1884
+FP	12	Balanced	22	29
+TN	12	Balanced	22	2129
+TP	12	Balanced	22	1765
+FN	12	Balanced	23	2827
+FP	12	Balanced	23	0
+TN	12	Balanced	23	2152
+TP	12	Balanced	23	821
+FN	12	Balanced	24	1534
+FP	12	Balanced	24	49
+TN	12	Balanced	24	2115
+TP	12	Balanced	24	2117
+FN	12	Balanced	25	2344
+FP	12	Balanced	25	28
+TN	12	Balanced	25	2137
+TP	12	Balanced	25	1305
+FN	12	Balanced	26	2507
+FP	12	Balanced	26	2
+TN	12	Balanced	26	2151
+TP	12	Balanced	26	1135
+FN	12	Balanced	27	2250
+FP	12	Balanced	27	9
+TN	12	Balanced	27	2150
+TP	12	Balanced	27	1400
+FN	12	Balanced	28	2413
+FP	12	Balanced	28	9
+TN	12	Balanced	28	2145
+TP	12	Balanced	28	1237
+FN	12	Balanced	29	2070
+FP	12	Balanced	29	52
+TN	12	Balanced	29	2105
+TP	12	Balanced	29	1575
+FN	12	Balanced	30	2556
+FP	12	Balanced	30	33
+TN	12	Balanced	30	2130
+TP	12	Balanced	30	1094
+FN	12	Unbalanced JS	1	2962
+FP	12	Unbalanced JS	1	4
+TN	12	Unbalanced JS	1	2154
+TP	12	Unbalanced JS	1	686
+FN	12	Unbalanced JS	2	3076
+FP	12	Unbalanced JS	2	7
+TN	12	Unbalanced JS	2	2151
+TP	12	Unbalanced JS	2	550
+FN	12	Unbalanced JS	3	2325
+FP	12	Unbalanced JS	3	41
+TN	12	Unbalanced JS	3	2119
+TP	12	Unbalanced JS	3	1325
+FN	12	Unbalanced JS	4	3294
+FP	12	Unbalanced JS	4	2
+TN	12	Unbalanced JS	4	2149
+TP	12	Unbalanced JS	4	328
+FN	12	Unbalanced JS	5	2326
+FP	12	Unbalanced JS	5	43
+TN	12	Unbalanced JS	5	2115
+TP	12	Unbalanced JS	5	1318
+FN	12	Unbalanced JS	6	3469
+FP	12	Unbalanced JS	6	0
+TN	12	Unbalanced JS	6	2153
+TP	12	Unbalanced JS	6	155
+FN	12	Unbalanced JS	7	3002
+FP	12	Unbalanced JS	7	60
+TN	12	Unbalanced JS	7	2101
+TP	12	Unbalanced JS	7	646
+FN	12	Unbalanced JS	8	3455
+FP	12	Unbalanced JS	8	2
+TN	12	Unbalanced JS	8	2159
+TP	12	Unbalanced JS	8	172
+FN	12	Unbalanced JS	9	3227
+FP	12	Unbalanced JS	9	3
+TN	12	Unbalanced JS	9	2157
+TP	12	Unbalanced JS	9	423
+FN	12	Unbalanced JS	10	3500
+FP	12	Unbalanced JS	10	0
+TN	12	Unbalanced JS	10	2152
+TP	12	Unbalanced JS	10	133
+FN	12	Unbalanced JS	11	2727
+FP	12	Unbalanced JS	11	16
+TN	12	Unbalanced JS	11	2145
+TP	12	Unbalanced JS	11	921
+FN	12	Unbalanced JS	12	3430
+FP	12	Unbalanced JS	12	0
+TN	12	Unbalanced JS	12	2146
+TP	12	Unbalanced JS	12	196
+FN	12	Unbalanced JS	13	3211
+FP	12	Unbalanced JS	13	6
+TN	12	Unbalanced JS	13	2155
+TP	12	Unbalanced JS	13	437
+FN	12	Unbalanced JS	14	3176
+FP	12	Unbalanced JS	14	0
+TN	12	Unbalanced JS	14	2155
+TP	12	Unbalanced JS	14	454
+FN	12	Unbalanced JS	15	3333
+FP	12	Unbalanced JS	15	9
+TN	12	Unbalanced JS	15	2154
+TP	12	Unbalanced JS	15	316
+FN	12	Unbalanced JS	16	3058
+FP	12	Unbalanced JS	16	4
+TN	12	Unbalanced JS	16	2148
+TP	12	Unbalanced JS	16	569
+FN	12	Unbalanced JS	17	2253
+FP	12	Unbalanced JS	17	159
+TN	12	Unbalanced JS	17	1998
+TP	12	Unbalanced JS	17	1393
+FN	12	Unbalanced JS	18	3403
+FP	12	Unbalanced JS	18	0
+TN	12	Unbalanced JS	18	2159
+TP	12	Unbalanced JS	18	224
+FN	12	Unbalanced JS	19	2779
+FP	12	Unbalanced JS	19	68
+TN	12	Unbalanced JS	19	2087
+TP	12	Unbalanced JS	19	870
+FN	12	Unbalanced JS	20	3328
+FP	12	Unbalanced JS	20	4
+TN	12	Unbalanced JS	20	2155
+TP	12	Unbalanced JS	20	301
+FN	12	Unbalanced JS	21	3227
+FP	12	Unbalanced JS	21	1
+TN	12	Unbalanced JS	21	2162
+TP	12	Unbalanced JS	21	422
+FN	12	Unbalanced JS	22	3459
+FP	12	Unbalanced JS	22	3
+TN	12	Unbalanced JS	22	2149
+TP	12	Unbalanced JS	22	168
+FN	12	Unbalanced JS	23	3044
+FP	12	Unbalanced JS	23	178
+TN	12	Unbalanced JS	23	1985
+TP	12	Unbalanced JS	23	605
+FN	12	Unbalanced JS	24	3328
+FP	12	Unbalanced JS	24	2
+TN	12	Unbalanced JS	24	2148
+TP	12	Unbalanced JS	24	299
+FN	12	Unbalanced JS	25	3207
+FP	12	Unbalanced JS	25	6
+TN	12	Unbalanced JS	25	2156
+TP	12	Unbalanced JS	25	441
+FN	12	Unbalanced JS	26	3346
+FP	12	Unbalanced JS	26	1
+TN	12	Unbalanced JS	26	2148
+TP	12	Unbalanced JS	26	279
+FN	12	Unbalanced JS	27	2318
+FP	12	Unbalanced JS	27	16
+TN	12	Unbalanced JS	27	2148
+TP	12	Unbalanced JS	27	1332
+FN	12	Unbalanced JS	28	2542
+FP	12	Unbalanced JS	28	491
+TN	12	Unbalanced JS	28	1662
+TP	12	Unbalanced JS	28	1083
+FN	12	Unbalanced JS	29	3115
+FP	12	Unbalanced JS	29	0
+TN	12	Unbalanced JS	29	2162
+TP	12	Unbalanced JS	29	535
+FN	12	Unbalanced JS	30	3101
+FP	12	Unbalanced JS	30	2
+TN	12	Unbalanced JS	30	2153
+TP	12	Unbalanced JS	30	532
+FN	12	Unbalanced OLS	1	3058
+FP	12	Unbalanced OLS	1	2
+TN	12	Unbalanced OLS	1	2156
+TP	12	Unbalanced OLS	1	590
+FN	12	Unbalanced OLS	2	3193
+FP	12	Unbalanced OLS	2	1
+TN	12	Unbalanced OLS	2	2157
+TP	12	Unbalanced OLS	2	433
+FN	12	Unbalanced OLS	3	2460
+FP	12	Unbalanced OLS	3	26
+TN	12	Unbalanced OLS	3	2134
+TP	12	Unbalanced OLS	3	1190
+FN	12	Unbalanced OLS	4	3358
+FP	12	Unbalanced OLS	4	2
+TN	12	Unbalanced OLS	4	2149
+TP	12	Unbalanced OLS	4	264
+FN	12	Unbalanced OLS	5	2439
+FP	12	Unbalanced OLS	5	31
+TN	12	Unbalanced OLS	5	2127
+TP	12	Unbalanced OLS	5	1205
+FN	12	Unbalanced OLS	6	3524
+FP	12	Unbalanced OLS	6	5
+TN	12	Unbalanced OLS	6	2148
+TP	12	Unbalanced OLS	6	100
+FN	12	Unbalanced OLS	7	3120
+FP	12	Unbalanced OLS	7	38
+TN	12	Unbalanced OLS	7	2123
+TP	12	Unbalanced OLS	7	528
+FN	12	Unbalanced OLS	8	3486
+FP	12	Unbalanced OLS	8	1
+TN	12	Unbalanced OLS	8	2160
+TP	12	Unbalanced OLS	8	141
+FN	12	Unbalanced OLS	9	3349
+FP	12	Unbalanced OLS	9	2
+TN	12	Unbalanced OLS	9	2158
+TP	12	Unbalanced OLS	9	301
+FN	12	Unbalanced OLS	10	3571
+FP	12	Unbalanced OLS	10	0
+TN	12	Unbalanced OLS	10	2152
+TP	12	Unbalanced OLS	10	62
+FN	12	Unbalanced OLS	11	2836
+FP	12	Unbalanced OLS	11	5
+TN	12	Unbalanced OLS	11	2156
+TP	12	Unbalanced OLS	11	812
+FN	12	Unbalanced OLS	12	3479
+FP	12	Unbalanced OLS	12	0
+TN	12	Unbalanced OLS	12	2146
+TP	12	Unbalanced OLS	12	147
+FN	12	Unbalanced OLS	13	3380
+FP	12	Unbalanced OLS	13	1
+TN	12	Unbalanced OLS	13	2160
+TP	12	Unbalanced OLS	13	268
+FN	12	Unbalanced OLS	14	3338
+FP	12	Unbalanced OLS	14	0
+TN	12	Unbalanced OLS	14	2155
+TP	12	Unbalanced OLS	14	292
+FN	12	Unbalanced OLS	15	3373
+FP	12	Unbalanced OLS	15	1
+TN	12	Unbalanced OLS	15	2162
+TP	12	Unbalanced OLS	15	276
+FN	12	Unbalanced OLS	16	3188
+FP	12	Unbalanced OLS	16	0
+TN	12	Unbalanced OLS	16	2152
+TP	12	Unbalanced OLS	16	439
+FN	12	Unbalanced OLS	17	2384
+FP	12	Unbalanced OLS	17	122
+TN	12	Unbalanced OLS	17	2035
+TP	12	Unbalanced OLS	17	1262
+FN	12	Unbalanced OLS	18	3483
+FP	12	Unbalanced OLS	18	0
+TN	12	Unbalanced OLS	18	2159
+TP	12	Unbalanced OLS	18	144
+FN	12	Unbalanced OLS	19	2860
+FP	12	Unbalanced OLS	19	52
+TN	12	Unbalanced OLS	19	2103
+TP	12	Unbalanced OLS	19	789
+FN	12	Unbalanced OLS	20	3424
+FP	12	Unbalanced OLS	20	2
+TN	12	Unbalanced OLS	20	2157
+TP	12	Unbalanced OLS	20	205
+FN	12	Unbalanced OLS	21	3331
+FP	12	Unbalanced OLS	21	1
+TN	12	Unbalanced OLS	21	2162
+TP	12	Unbalanced OLS	21	318
+FN	12	Unbalanced OLS	22	3504
+FP	12	Unbalanced OLS	22	2
+TN	12	Unbalanced OLS	22	2150
+TP	12	Unbalanced OLS	22	123
+FN	12	Unbalanced OLS	23	3258
+FP	12	Unbalanced OLS	23	104
+TN	12	Unbalanced OLS	23	2059
+TP	12	Unbalanced OLS	23	391
+FN	12	Unbalanced OLS	24	3408
+FP	12	Unbalanced OLS	24	0
+TN	12	Unbalanced OLS	24	2150
+TP	12	Unbalanced OLS	24	219
+FN	12	Unbalanced OLS	25	3303
+FP	12	Unbalanced OLS	25	3
+TN	12	Unbalanced OLS	25	2159
+TP	12	Unbalanced OLS	25	345
+FN	12	Unbalanced OLS	26	3397
+FP	12	Unbalanced OLS	26	1
+TN	12	Unbalanced OLS	26	2148
+TP	12	Unbalanced OLS	26	228
+FN	12	Unbalanced OLS	27	2458
+FP	12	Unbalanced OLS	27	12
+TN	12	Unbalanced OLS	27	2152
+TP	12	Unbalanced OLS	27	1192
+FN	12	Unbalanced OLS	28	2786
+FP	12	Unbalanced OLS	28	324
+TN	12	Unbalanced OLS	28	1829
+TP	12	Unbalanced OLS	28	839
+FN	12	Unbalanced OLS	29	3201
+FP	12	Unbalanced OLS	29	0
+TN	12	Unbalanced OLS	29	2162
+TP	12	Unbalanced OLS	29	449
+FN	12	Unbalanced OLS	30	3217
+FP	12	Unbalanced OLS	30	0
+TN	12	Unbalanced OLS	30	2155
+TP	12	Unbalanced OLS	30	416
+FN	14	Balanced	1	1655
+FP	14	Balanced	1	12
+TN	14	Balanced	1	2145
+TP	14	Balanced	1	1994
+FN	14	Balanced	2	1895
+FP	14	Balanced	2	10
+TN	14	Balanced	2	2146
+TP	14	Balanced	2	1753
+FN	14	Balanced	3	2060
+FP	14	Balanced	3	9
+TN	14	Balanced	3	2144
+TP	14	Balanced	3	1588
+FN	14	Balanced	4	1741
+FP	14	Balanced	4	35
+TN	14	Balanced	4	2127
+TP	14	Balanced	4	1909
+FN	14	Balanced	5	2673
+FP	14	Balanced	5	0
+TN	14	Balanced	5	2163
+TP	14	Balanced	5	977
+FN	14	Balanced	6	2595
+FP	14	Balanced	6	5
+TN	14	Balanced	6	2152
+TP	14	Balanced	6	1055
+FN	14	Balanced	7	2836
+FP	14	Balanced	7	1
+TN	14	Balanced	7	2155
+TP	14	Balanced	7	811
+FN	14	Balanced	8	1860
+FP	14	Balanced	8	17
+TN	14	Balanced	8	2140
+TP	14	Balanced	8	1790
+FN	14	Balanced	9	2503
+FP	14	Balanced	9	0
+TN	14	Balanced	9	2162
+TP	14	Balanced	9	1146
+FN	14	Balanced	10	2757
+FP	14	Balanced	10	4
+TN	14	Balanced	10	2157
+TP	14	Balanced	10	890
+FN	14	Balanced	11	1909
+FP	14	Balanced	11	25
+TN	14	Balanced	11	2133
+TP	14	Balanced	11	1743
+FN	14	Balanced	12	2548
+FP	14	Balanced	12	0
+TN	14	Balanced	12	2160
+TP	14	Balanced	12	1103
+FN	14	Balanced	13	1764
+FP	14	Balanced	13	12
+TN	14	Balanced	13	2150
+TP	14	Balanced	13	1887
+FN	14	Balanced	14	2405
+FP	14	Balanced	14	2
+TN	14	Balanced	14	2160
+TP	14	Balanced	14	1241
+FN	14	Balanced	15	2493
+FP	14	Balanced	15	5
+TN	14	Balanced	15	2149
+TP	14	Balanced	15	1153
+FN	14	Balanced	16	2293
+FP	14	Balanced	16	26
+TN	14	Balanced	16	2130
+TP	14	Balanced	16	1354
+FN	14	Balanced	17	2134
+FP	14	Balanced	17	109
+TN	14	Balanced	17	2040
+TP	14	Balanced	17	1509
+FN	14	Balanced	18	2091
+FP	14	Balanced	18	19
+TN	14	Balanced	18	2140
+TP	14	Balanced	18	1557
+FN	14	Balanced	19	2911
+FP	14	Balanced	19	0
+TN	14	Balanced	19	2161
+TP	14	Balanced	19	738
+FN	14	Balanced	20	2025
+FP	14	Balanced	20	35
+TN	14	Balanced	20	2126
+TP	14	Balanced	20	1623
+FN	14	Balanced	21	2002
+FP	14	Balanced	21	19
+TN	14	Balanced	21	2137
+TP	14	Balanced	21	1648
+FN	14	Balanced	22	1732
+FP	14	Balanced	22	11
+TN	14	Balanced	22	2152
+TP	14	Balanced	22	1917
+FN	14	Balanced	23	1869
+FP	14	Balanced	23	19
+TN	14	Balanced	23	2145
+TP	14	Balanced	23	1782
+FN	14	Balanced	24	1788
+FP	14	Balanced	24	158
+TN	14	Balanced	24	1998
+TP	14	Balanced	24	1859
+FN	14	Balanced	25	2387
+FP	14	Balanced	25	6
+TN	14	Balanced	25	2153
+TP	14	Balanced	25	1264
+FN	14	Balanced	26	2707
+FP	14	Balanced	26	0
+TN	14	Balanced	26	2160
+TP	14	Balanced	26	942
+FN	14	Balanced	27	2186
+FP	14	Balanced	27	25
+TN	14	Balanced	27	2132
+TP	14	Balanced	27	1461
+FN	14	Balanced	28	2498
+FP	14	Balanced	28	26
+TN	14	Balanced	28	2133
+TP	14	Balanced	28	1151
+FN	14	Balanced	29	1732
+FP	14	Balanced	29	90
+TN	14	Balanced	29	2073
+TP	14	Balanced	29	1919
+FN	14	Balanced	30	2268
+FP	14	Balanced	30	10
+TN	14	Balanced	30	2150
+TP	14	Balanced	30	1384
+FN	14	Unbalanced JS	1	3310
+FP	14	Unbalanced JS	1	13
+TN	14	Unbalanced JS	1	2150
+TP	14	Unbalanced JS	1	338
+FN	14	Unbalanced JS	2	3319
+FP	14	Unbalanced JS	2	0
+TN	14	Unbalanced JS	2	2158
+TP	14	Unbalanced JS	2	313
+FN	14	Unbalanced JS	3	3203
+FP	14	Unbalanced JS	3	6
+TN	14	Unbalanced JS	3	2156
+TP	14	Unbalanced JS	3	443
+FN	14	Unbalanced JS	4	3099
+FP	14	Unbalanced JS	4	27
+TN	14	Unbalanced JS	4	2121
+TP	14	Unbalanced JS	4	520
+FN	14	Unbalanced JS	5	3133
+FP	14	Unbalanced JS	5	7
+TN	14	Unbalanced JS	5	2155
+TP	14	Unbalanced JS	5	515
+FN	14	Unbalanced JS	6	3354
+FP	14	Unbalanced JS	6	1
+TN	14	Unbalanced JS	6	2158
+TP	14	Unbalanced JS	6	275
+FN	14	Unbalanced JS	7	2854
+FP	14	Unbalanced JS	7	6
+TN	14	Unbalanced JS	7	2154
+TP	14	Unbalanced JS	7	793
+FN	14	Unbalanced JS	8	3341
+FP	14	Unbalanced JS	8	3
+TN	14	Unbalanced JS	8	2148
+TP	14	Unbalanced JS	8	287
+FN	14	Unbalanced JS	9	2585
+FP	14	Unbalanced JS	9	67
+TN	14	Unbalanced JS	9	2096
+TP	14	Unbalanced JS	9	1062
+FN	14	Unbalanced JS	10	3383
+FP	14	Unbalanced JS	10	1
+TN	14	Unbalanced JS	10	2149
+TP	14	Unbalanced JS	10	240
+FN	14	Unbalanced JS	11	2246
+FP	14	Unbalanced JS	11	336
+TN	14	Unbalanced JS	11	1824
+TP	14	Unbalanced JS	11	1401
+FN	14	Unbalanced JS	12	3353
+FP	14	Unbalanced JS	12	16
+TN	14	Unbalanced JS	12	2137
+TP	14	Unbalanced JS	12	274
+FN	14	Unbalanced JS	13	2669
+FP	14	Unbalanced JS	13	8
+TN	14	Unbalanced JS	13	2152
+TP	14	Unbalanced JS	13	979
+FN	14	Unbalanced JS	14	3516
+FP	14	Unbalanced JS	14	1
+TN	14	Unbalanced JS	14	2151
+TP	14	Unbalanced JS	14	108
+FN	14	Unbalanced JS	15	2913
+FP	14	Unbalanced JS	15	11
+TN	14	Unbalanced JS	15	2150
+TP	14	Unbalanced JS	15	736
+FN	14	Unbalanced JS	16	2469
+FP	14	Unbalanced JS	16	374
+TN	14	Unbalanced JS	16	1776
+TP	14	Unbalanced JS	16	1153
+FN	14	Unbalanced JS	17	2100
+FP	14	Unbalanced JS	17	609
+TN	14	Unbalanced JS	17	1549
+TP	14	Unbalanced JS	17	1547
+FN	14	Unbalanced JS	18	3445
+FP	14	Unbalanced JS	18	1
+TN	14	Unbalanced JS	18	2154
+TP	14	Unbalanced JS	18	180
+FN	14	Unbalanced JS	19	3107
+FP	14	Unbalanced JS	19	4
+TN	14	Unbalanced JS	19	2155
+TP	14	Unbalanced JS	19	542
+FN	14	Unbalanced JS	20	3424
+FP	14	Unbalanced JS	20	0
+TN	14	Unbalanced JS	20	2159
+TP	14	Unbalanced JS	20	200
+FN	14	Unbalanced JS	21	2712
+FP	14	Unbalanced JS	21	31
+TN	14	Unbalanced JS	21	2130
+TP	14	Unbalanced JS	21	937
+FN	14	Unbalanced JS	22	3447
+FP	14	Unbalanced JS	22	0
+TN	14	Unbalanced JS	22	2155
+TP	14	Unbalanced JS	22	182
+FN	14	Unbalanced JS	23	3192
+FP	14	Unbalanced JS	23	1
+TN	14	Unbalanced JS	23	2160
+TP	14	Unbalanced JS	23	456
+FN	14	Unbalanced JS	24	3476
+FP	14	Unbalanced JS	24	0
+TN	14	Unbalanced JS	24	2157
+TP	14	Unbalanced JS	24	147
+FN	14	Unbalanced JS	25	3122
+FP	14	Unbalanced JS	25	23
+TN	14	Unbalanced JS	25	2141
+TP	14	Unbalanced JS	25	526
+FN	14	Unbalanced JS	26	2902
+FP	14	Unbalanced JS	26	128
+TN	14	Unbalanced JS	26	2030
+TP	14	Unbalanced JS	26	728
+FN	14	Unbalanced JS	27	3196
+FP	14	Unbalanced JS	27	1
+TN	14	Unbalanced JS	27	2161
+TP	14	Unbalanced JS	27	452
+FN	14	Unbalanced JS	28	3342
+FP	14	Unbalanced JS	28	7
+TN	14	Unbalanced JS	28	2143
+TP	14	Unbalanced JS	28	282
+FN	14	Unbalanced JS	29	3041
+FP	14	Unbalanced JS	29	37
+TN	14	Unbalanced JS	29	2124
+TP	14	Unbalanced JS	29	606
+FN	14	Unbalanced JS	30	3478
+FP	14	Unbalanced JS	30	0
+TN	14	Unbalanced JS	30	2146
+TP	14	Unbalanced JS	30	145
+FN	14	Unbalanced OLS	1	3372
+FP	14	Unbalanced OLS	1	7
+TN	14	Unbalanced OLS	1	2156
+TP	14	Unbalanced OLS	1	276
+FN	14	Unbalanced OLS	2	3430
+FP	14	Unbalanced OLS	2	0
+TN	14	Unbalanced OLS	2	2158
+TP	14	Unbalanced OLS	2	202
+FN	14	Unbalanced OLS	3	3334
+FP	14	Unbalanced OLS	3	4
+TN	14	Unbalanced OLS	3	2158
+TP	14	Unbalanced OLS	3	312
+FN	14	Unbalanced OLS	4	3258
+FP	14	Unbalanced OLS	4	8
+TN	14	Unbalanced OLS	4	2140
+TP	14	Unbalanced OLS	4	361
+FN	14	Unbalanced OLS	5	3178
+FP	14	Unbalanced OLS	5	5
+TN	14	Unbalanced OLS	5	2157
+TP	14	Unbalanced OLS	5	470
+FN	14	Unbalanced OLS	6	3445
+FP	14	Unbalanced OLS	6	1
+TN	14	Unbalanced OLS	6	2158
+TP	14	Unbalanced OLS	6	184
+FN	14	Unbalanced OLS	7	2965
+FP	14	Unbalanced OLS	7	3
+TN	14	Unbalanced OLS	7	2157
+TP	14	Unbalanced OLS	7	682
+FN	14	Unbalanced OLS	8	3389
+FP	14	Unbalanced OLS	8	0
+TN	14	Unbalanced OLS	8	2151
+TP	14	Unbalanced OLS	8	239
+FN	14	Unbalanced OLS	9	2698
+FP	14	Unbalanced OLS	9	50
+TN	14	Unbalanced OLS	9	2113
+TP	14	Unbalanced OLS	9	949
+FN	14	Unbalanced OLS	10	3456
+FP	14	Unbalanced OLS	10	0
+TN	14	Unbalanced OLS	10	2150
+TP	14	Unbalanced OLS	10	167
+FN	14	Unbalanced OLS	11	2326
+FP	14	Unbalanced OLS	11	283
+TN	14	Unbalanced OLS	11	1877
+TP	14	Unbalanced OLS	11	1321
+FN	14	Unbalanced OLS	12	3432
+FP	14	Unbalanced OLS	12	4
+TN	14	Unbalanced OLS	12	2149
+TP	14	Unbalanced OLS	12	195
+FN	14	Unbalanced OLS	13	2776
+FP	14	Unbalanced OLS	13	5
+TN	14	Unbalanced OLS	13	2155
+TP	14	Unbalanced OLS	13	872
+FN	14	Unbalanced OLS	14	3547
+FP	14	Unbalanced OLS	14	1
+TN	14	Unbalanced OLS	14	2151
+TP	14	Unbalanced OLS	14	77
+FN	14	Unbalanced OLS	15	3007
+FP	14	Unbalanced OLS	15	6
+TN	14	Unbalanced OLS	15	2155
+TP	14	Unbalanced OLS	15	642
+FN	14	Unbalanced OLS	16	2608
+FP	14	Unbalanced OLS	16	295
+TN	14	Unbalanced OLS	16	1855
+TP	14	Unbalanced OLS	16	1014
+FN	14	Unbalanced OLS	17	2170
+FP	14	Unbalanced OLS	17	550
+TN	14	Unbalanced OLS	17	1608
+TP	14	Unbalanced OLS	17	1477
+FN	14	Unbalanced OLS	18	3489
+FP	14	Unbalanced OLS	18	0
+TN	14	Unbalanced OLS	18	2155
+TP	14	Unbalanced OLS	18	136
+FN	14	Unbalanced OLS	19	3241
+FP	14	Unbalanced OLS	19	1
+TN	14	Unbalanced OLS	19	2158
+TP	14	Unbalanced OLS	19	408
+FN	14	Unbalanced OLS	20	3488
+FP	14	Unbalanced OLS	20	0
+TN	14	Unbalanced OLS	20	2159
+TP	14	Unbalanced OLS	20	136
+FN	14	Unbalanced OLS	21	2801
+FP	14	Unbalanced OLS	21	21
+TN	14	Unbalanced OLS	21	2140
+TP	14	Unbalanced OLS	21	848
+FN	14	Unbalanced OLS	22	3491
+FP	14	Unbalanced OLS	22	0
+TN	14	Unbalanced OLS	22	2155
+TP	14	Unbalanced OLS	22	138
+FN	14	Unbalanced OLS	23	3270
+FP	14	Unbalanced OLS	23	0
+TN	14	Unbalanced OLS	23	2161
+TP	14	Unbalanced OLS	23	378
+FN	14	Unbalanced OLS	24	3520
+FP	14	Unbalanced OLS	24	0
+TN	14	Unbalanced OLS	24	2157
+TP	14	Unbalanced OLS	24	103
+FN	14	Unbalanced OLS	25	3161
+FP	14	Unbalanced OLS	25	15
+TN	14	Unbalanced OLS	25	2149
+TP	14	Unbalanced OLS	25	487
+FN	14	Unbalanced OLS	26	3136
+FP	14	Unbalanced OLS	26	40
+TN	14	Unbalanced OLS	26	2118
+TP	14	Unbalanced OLS	26	494
+FN	14	Unbalanced OLS	27	3307
+FP	14	Unbalanced OLS	27	1
+TN	14	Unbalanced OLS	27	2161
+TP	14	Unbalanced OLS	27	341
+FN	14	Unbalanced OLS	28	3405
+FP	14	Unbalanced OLS	28	9
+TN	14	Unbalanced OLS	28	2141
+TP	14	Unbalanced OLS	28	219
+FN	14	Unbalanced OLS	29	3122
+FP	14	Unbalanced OLS	29	29
+TN	14	Unbalanced OLS	29	2132
+TP	14	Unbalanced OLS	29	525
+FN	14	Unbalanced OLS	30	3516
+FP	14	Unbalanced OLS	30	5
+TN	14	Unbalanced OLS	30	2141
+TP	14	Unbalanced OLS	30	107
+FN	16	Balanced	1	2056
+FP	16	Balanced	1	6
+TN	16	Balanced	1	2151
+TP	16	Balanced	1	1593
+FN	16	Balanced	2	2551
+FP	16	Balanced	2	0
+TN	16	Balanced	2	2150
+TP	16	Balanced	2	1096
+FN	16	Balanced	3	2415
+FP	16	Balanced	3	3
+TN	16	Balanced	3	2149
+TP	16	Balanced	3	1232
+FN	16	Balanced	4	1868
+FP	16	Balanced	4	10
+TN	16	Balanced	4	2152
+TP	16	Balanced	4	1784
+FN	16	Balanced	5	1657
+FP	16	Balanced	5	63
+TN	16	Balanced	5	2098
+TP	16	Balanced	5	1993
+FN	16	Balanced	6	2430
+FP	16	Balanced	6	2
+TN	16	Balanced	6	2157
+TP	16	Balanced	6	1220
+FN	16	Balanced	7	2831
+FP	16	Balanced	7	0
+TN	16	Balanced	7	2158
+TP	16	Balanced	7	819
+FN	16	Balanced	8	2626
+FP	16	Balanced	8	0
+TN	16	Balanced	8	2161
+TP	16	Balanced	8	1025
+FN	16	Balanced	9	2150
+FP	16	Balanced	9	1
+TN	16	Balanced	9	2159
+TP	16	Balanced	9	1501
+FN	16	Balanced	10	1790
+FP	16	Balanced	10	11
+TN	16	Balanced	10	2152
+TP	16	Balanced	10	1858
+FN	16	Balanced	11	2065
+FP	16	Balanced	11	5
+TN	16	Balanced	11	2152
+TP	16	Balanced	11	1583
+FN	16	Balanced	12	2179
+FP	16	Balanced	12	3
+TN	16	Balanced	12	2159
+TP	16	Balanced	12	1470
+FN	16	Balanced	13	833
+FP	16	Balanced	13	183
+TN	16	Balanced	13	1979
+TP	16	Balanced	13	2816
+FN	16	Balanced	14	2299
+FP	16	Balanced	14	4
+TN	16	Balanced	14	2158
+TP	16	Balanced	14	1353
+FN	16	Balanced	15	1856
+FP	16	Balanced	15	57
+TN	16	Balanced	15	2104
+TP	16	Balanced	15	1795
+FN	16	Balanced	16	1859
+FP	16	Balanced	16	13
+TN	16	Balanced	16	2150
+TP	16	Balanced	16	1792
+FN	16	Balanced	17	2008
+FP	16	Balanced	17	35
+TN	16	Balanced	17	2124
+TP	16	Balanced	17	1642
+FN	16	Balanced	18	2218
+FP	16	Balanced	18	4
+TN	16	Balanced	18	2155
+TP	16	Balanced	18	1429
+FN	16	Balanced	19	2042
+FP	16	Balanced	19	20
+TN	16	Balanced	19	2131
+TP	16	Balanced	19	1606
+FN	16	Balanced	20	1978
+FP	16	Balanced	20	35
+TN	16	Balanced	20	2127
+TP	16	Balanced	20	1672
+FN	16	Balanced	21	1642
+FP	16	Balanced	21	22
+TN	16	Balanced	21	2135
+TP	16	Balanced	21	2005
+FN	16	Balanced	22	2647
+FP	16	Balanced	22	2
+TN	16	Balanced	22	2155
+TP	16	Balanced	22	1001
+FN	16	Balanced	23	1243
+FP	16	Balanced	23	180
+TN	16	Balanced	23	1979
+TP	16	Balanced	23	2405
+FN	16	Balanced	24	1006
+FP	16	Balanced	24	74
+TN	16	Balanced	24	2086
+TP	16	Balanced	24	2644
+FN	16	Balanced	25	1617
+FP	16	Balanced	25	34
+TN	16	Balanced	25	2125
+TP	16	Balanced	25	2033
+FN	16	Balanced	26	2427
+FP	16	Balanced	26	0
+TN	16	Balanced	26	2155
+TP	16	Balanced	26	1223
+FN	16	Balanced	27	2324
+FP	16	Balanced	27	25
+TN	16	Balanced	27	2135
+TP	16	Balanced	27	1323
+FN	16	Balanced	28	2081
+FP	16	Balanced	28	10
+TN	16	Balanced	28	2152
+TP	16	Balanced	28	1567
+FN	16	Balanced	29	2249
+FP	16	Balanced	29	9
+TN	16	Balanced	29	2149
+TP	16	Balanced	29	1401
+FN	16	Balanced	30	2203
+FP	16	Balanced	30	40
+TN	16	Balanced	30	2119
+TP	16	Balanced	30	1448
+FN	16	Unbalanced JS	1	3223
+FP	16	Unbalanced JS	1	3
+TN	16	Unbalanced JS	1	2159
+TP	16	Unbalanced JS	1	425
+FN	16	Unbalanced JS	2	2087
+FP	16	Unbalanced JS	2	878
+TN	16	Unbalanced JS	2	1281
+TP	16	Unbalanced JS	2	1544
+FN	16	Unbalanced JS	3	2934
+FP	16	Unbalanced JS	3	2
+TN	16	Unbalanced JS	3	2158
+TP	16	Unbalanced JS	3	714
+FN	16	Unbalanced JS	4	3407
+FP	16	Unbalanced JS	4	6
+TN	16	Unbalanced JS	4	2147
+TP	16	Unbalanced JS	4	216
+FN	16	Unbalanced JS	5	3296
+FP	16	Unbalanced JS	5	4
+TN	16	Unbalanced JS	5	2155
+TP	16	Unbalanced JS	5	352
+FN	16	Unbalanced JS	6	2881
+FP	16	Unbalanced JS	6	135
+TN	16	Unbalanced JS	6	2019
+TP	16	Unbalanced JS	6	748
+FN	16	Unbalanced JS	7	2658
+FP	16	Unbalanced JS	7	6
+TN	16	Unbalanced JS	7	2158
+TP	16	Unbalanced JS	7	992
+FN	16	Unbalanced JS	8	3311
+FP	16	Unbalanced JS	8	0
+TN	16	Unbalanced JS	8	2159
+TP	16	Unbalanced JS	8	310
+FN	16	Unbalanced JS	9	3055
+FP	16	Unbalanced JS	9	2
+TN	16	Unbalanced JS	9	2157
+TP	16	Unbalanced JS	9	592
+FN	16	Unbalanced JS	10	3354
+FP	16	Unbalanced JS	10	0
+TN	16	Unbalanced JS	10	2157
+TP	16	Unbalanced JS	10	276
+FN	16	Unbalanced JS	11	2991
+FP	16	Unbalanced JS	11	5
+TN	16	Unbalanced JS	11	2157
+TP	16	Unbalanced JS	11	657
+FN	16	Unbalanced JS	12	3408
+FP	16	Unbalanced JS	12	0
+TN	16	Unbalanced JS	12	2151
+TP	16	Unbalanced JS	12	216
+FN	16	Unbalanced JS	13	3080
+FP	16	Unbalanced JS	13	3
+TN	16	Unbalanced JS	13	2159
+TP	16	Unbalanced JS	13	566
+FN	16	Unbalanced JS	14	3255
+FP	16	Unbalanced JS	14	3
+TN	16	Unbalanced JS	14	2144
+TP	16	Unbalanced JS	14	365
+FN	16	Unbalanced JS	15	3011
+FP	16	Unbalanced JS	15	72
+TN	16	Unbalanced JS	15	2088
+TP	16	Unbalanced JS	15	637
+FN	16	Unbalanced JS	16	3413
+FP	16	Unbalanced JS	16	0
+TN	16	Unbalanced JS	16	2154
+TP	16	Unbalanced JS	16	213
+FN	16	Unbalanced JS	17	2654
+FP	16	Unbalanced JS	17	190
+TN	16	Unbalanced JS	17	1974
+TP	16	Unbalanced JS	17	994
+FN	16	Unbalanced JS	18	3372
+FP	16	Unbalanced JS	18	5
+TN	16	Unbalanced JS	18	2147
+TP	16	Unbalanced JS	18	252
+FN	16	Unbalanced JS	19	3393
+FP	16	Unbalanced JS	19	21
+TN	16	Unbalanced JS	19	2141
+TP	16	Unbalanced JS	19	254
+FN	16	Unbalanced JS	20	3473
+FP	16	Unbalanced JS	20	0
+TN	16	Unbalanced JS	20	2153
+TP	16	Unbalanced JS	20	152
+FN	16	Unbalanced JS	21	3279
+FP	16	Unbalanced JS	21	12
+TN	16	Unbalanced JS	21	2150
+TP	16	Unbalanced JS	21	368
+FN	16	Unbalanced JS	22	2958
+FP	16	Unbalanced JS	22	48
+TN	16	Unbalanced JS	22	2103
+TP	16	Unbalanced JS	22	668
+FN	16	Unbalanced JS	23	3066
+FP	16	Unbalanced JS	23	54
+TN	16	Unbalanced JS	23	2110
+TP	16	Unbalanced JS	23	584
+FN	16	Unbalanced JS	24	2952
+FP	16	Unbalanced JS	24	2
+TN	16	Unbalanced JS	24	2151
+TP	16	Unbalanced JS	24	674
+FN	16	Unbalanced JS	25	2931
+FP	16	Unbalanced JS	25	26
+TN	16	Unbalanced JS	25	2135
+TP	16	Unbalanced JS	25	715
+FN	16	Unbalanced JS	26	3455
+FP	16	Unbalanced JS	26	2
+TN	16	Unbalanced JS	26	2149
+TP	16	Unbalanced JS	26	172
+FN	16	Unbalanced JS	27	3179
+FP	16	Unbalanced JS	27	2
+TN	16	Unbalanced JS	27	2163
+TP	16	Unbalanced JS	27	470
+FN	16	Unbalanced JS	28	3399
+FP	16	Unbalanced JS	28	0
+TN	16	Unbalanced JS	28	2150
+TP	16	Unbalanced JS	28	225
+FN	16	Unbalanced JS	29	2484
+FP	16	Unbalanced JS	29	167
+TN	16	Unbalanced JS	29	1996
+TP	16	Unbalanced JS	29	1164
+FN	16	Unbalanced JS	30	3283
+FP	16	Unbalanced JS	30	1
+TN	16	Unbalanced JS	30	2151
+TP	16	Unbalanced JS	30	339
+FN	16	Unbalanced OLS	1	3316
+FP	16	Unbalanced OLS	1	3
+TN	16	Unbalanced OLS	1	2159
+TP	16	Unbalanced OLS	1	332
+FN	16	Unbalanced OLS	2	2213
+FP	16	Unbalanced OLS	2	791
+TN	16	Unbalanced OLS	2	1368
+TP	16	Unbalanced OLS	2	1418
+FN	16	Unbalanced OLS	3	3062
+FP	16	Unbalanced OLS	3	2
+TN	16	Unbalanced OLS	3	2158
+TP	16	Unbalanced OLS	3	586
+FN	16	Unbalanced OLS	4	3444
+FP	16	Unbalanced OLS	4	1
+TN	16	Unbalanced OLS	4	2152
+TP	16	Unbalanced OLS	4	179
+FN	16	Unbalanced OLS	5	3375
+FP	16	Unbalanced OLS	5	1
+TN	16	Unbalanced OLS	5	2158
+TP	16	Unbalanced OLS	5	273
+FN	16	Unbalanced OLS	6	3064
+FP	16	Unbalanced OLS	6	83
+TN	16	Unbalanced OLS	6	2071
+TP	16	Unbalanced OLS	6	565
+FN	16	Unbalanced OLS	7	2775
+FP	16	Unbalanced OLS	7	3
+TN	16	Unbalanced OLS	7	2161
+TP	16	Unbalanced OLS	7	875
+FN	16	Unbalanced OLS	8	3390
+FP	16	Unbalanced OLS	8	0
+TN	16	Unbalanced OLS	8	2159
+TP	16	Unbalanced OLS	8	231
+FN	16	Unbalanced OLS	9	3133
+FP	16	Unbalanced OLS	9	1
+TN	16	Unbalanced OLS	9	2158
+TP	16	Unbalanced OLS	9	514
+FN	16	Unbalanced OLS	10	3409
+FP	16	Unbalanced OLS	10	0
+TN	16	Unbalanced OLS	10	2157
+TP	16	Unbalanced OLS	10	221
+FN	16	Unbalanced OLS	11	3047
+FP	16	Unbalanced OLS	11	3
+TN	16	Unbalanced OLS	11	2159
+TP	16	Unbalanced OLS	11	601
+FN	16	Unbalanced OLS	12	3475
+FP	16	Unbalanced OLS	12	0
+TN	16	Unbalanced OLS	12	2151
+TP	16	Unbalanced OLS	12	149
+FN	16	Unbalanced OLS	13	3157
+FP	16	Unbalanced OLS	13	1
+TN	16	Unbalanced OLS	13	2161
+TP	16	Unbalanced OLS	13	489
+FN	16	Unbalanced OLS	14	3348
+FP	16	Unbalanced OLS	14	1
+TN	16	Unbalanced OLS	14	2146
+TP	16	Unbalanced OLS	14	272
+FN	16	Unbalanced OLS	15	3078
+FP	16	Unbalanced OLS	15	56
+TN	16	Unbalanced OLS	15	2104
+TP	16	Unbalanced OLS	15	570
+FN	16	Unbalanced OLS	16	3464
+FP	16	Unbalanced OLS	16	0
+TN	16	Unbalanced OLS	16	2154
+TP	16	Unbalanced OLS	16	162
+FN	16	Unbalanced OLS	17	2762
+FP	16	Unbalanced OLS	17	152
+TN	16	Unbalanced OLS	17	2012
+TP	16	Unbalanced OLS	17	886
+FN	16	Unbalanced OLS	18	3413
+FP	16	Unbalanced OLS	18	0
+TN	16	Unbalanced OLS	18	2152
+TP	16	Unbalanced OLS	18	211
+FN	16	Unbalanced OLS	19	3421
+FP	16	Unbalanced OLS	19	11
+TN	16	Unbalanced OLS	19	2151
+TP	16	Unbalanced OLS	19	226
+FN	16	Unbalanced OLS	20	3509
+FP	16	Unbalanced OLS	20	0
+TN	16	Unbalanced OLS	20	2153
+TP	16	Unbalanced OLS	20	116
+FN	16	Unbalanced OLS	21	3364
+FP	16	Unbalanced OLS	21	5
+TN	16	Unbalanced OLS	21	2157
+TP	16	Unbalanced OLS	21	283
+FN	16	Unbalanced OLS	22	3135
+FP	16	Unbalanced OLS	22	18
+TN	16	Unbalanced OLS	22	2133
+TP	16	Unbalanced OLS	22	491
+FN	16	Unbalanced OLS	23	3200
+FP	16	Unbalanced OLS	23	32
+TN	16	Unbalanced OLS	23	2132
+TP	16	Unbalanced OLS	23	450
+FN	16	Unbalanced OLS	24	3118
+FP	16	Unbalanced OLS	24	0
+TN	16	Unbalanced OLS	24	2153
+TP	16	Unbalanced OLS	24	508
+FN	16	Unbalanced OLS	25	2998
+FP	16	Unbalanced OLS	25	19
+TN	16	Unbalanced OLS	25	2142
+TP	16	Unbalanced OLS	25	648
+FN	16	Unbalanced OLS	26	3519
+FP	16	Unbalanced OLS	26	1
+TN	16	Unbalanced OLS	26	2150
+TP	16	Unbalanced OLS	26	108
+FN	16	Unbalanced OLS	27	3266
+FP	16	Unbalanced OLS	27	2
+TN	16	Unbalanced OLS	27	2163
+TP	16	Unbalanced OLS	27	383
+FN	16	Unbalanced OLS	28	3463
+FP	16	Unbalanced OLS	28	0
+TN	16	Unbalanced OLS	28	2150
+TP	16	Unbalanced OLS	28	161
+FN	16	Unbalanced OLS	29	2546
+FP	16	Unbalanced OLS	29	135
+TN	16	Unbalanced OLS	29	2028
+TP	16	Unbalanced OLS	29	1102
+FN	16	Unbalanced OLS	30	3354
+FP	16	Unbalanced OLS	30	0
+TN	16	Unbalanced OLS	30	2152
+TP	16	Unbalanced OLS	30	268
+FN	18	Balanced	1	2352
+FP	18	Balanced	1	0
+TN	18	Balanced	1	2163
+TP	18	Balanced	1	1300
+FN	18	Balanced	2	1886
+FP	18	Balanced	2	32
+TN	18	Balanced	2	2125
+TP	18	Balanced	2	1762
+FN	18	Balanced	3	1867
+FP	18	Balanced	3	17
+TN	18	Balanced	3	2143
+TP	18	Balanced	3	1779
+FN	18	Balanced	4	2059
+FP	18	Balanced	4	22
+TN	18	Balanced	4	2135
+TP	18	Balanced	4	1588
+FN	18	Balanced	5	1127
+FP	18	Balanced	5	66
+TN	18	Balanced	5	2091
+TP	18	Balanced	5	2522
+FN	18	Balanced	6	1777
+FP	18	Balanced	6	4
+TN	18	Balanced	6	2151
+TP	18	Balanced	6	1868
+FN	18	Balanced	7	2512
+FP	18	Balanced	7	0
+TN	18	Balanced	7	2160
+TP	18	Balanced	7	1137
+FN	18	Balanced	8	2067
+FP	18	Balanced	8	3
+TN	18	Balanced	8	2153
+TP	18	Balanced	8	1577
+FN	18	Balanced	9	2222
+FP	18	Balanced	9	10
+TN	18	Balanced	9	2148
+TP	18	Balanced	9	1429
+FN	18	Balanced	10	1148
+FP	18	Balanced	10	50
+TN	18	Balanced	10	2103
+TP	18	Balanced	10	2498
+FN	18	Balanced	11	1579
+FP	18	Balanced	11	23
+TN	18	Balanced	11	2137
+TP	18	Balanced	11	2069
+FN	18	Balanced	12	1932
+FP	18	Balanced	12	7
+TN	18	Balanced	12	2151
+TP	18	Balanced	12	1716
+FN	18	Balanced	13	1597
+FP	18	Balanced	13	5
+TN	18	Balanced	13	2156
+TP	18	Balanced	13	2053
+FN	18	Balanced	14	1893
+FP	18	Balanced	14	2
+TN	18	Balanced	14	2158
+TP	18	Balanced	14	1755
+FN	18	Balanced	15	2114
+FP	18	Balanced	15	3
+TN	18	Balanced	15	2159
+TP	18	Balanced	15	1536
+FN	18	Balanced	16	2347
+FP	18	Balanced	16	1
+TN	18	Balanced	16	2157
+TP	18	Balanced	16	1305
+FN	18	Balanced	17	2194
+FP	18	Balanced	17	4
+TN	18	Balanced	17	2155
+TP	18	Balanced	17	1457
+FN	18	Balanced	18	2579
+FP	18	Balanced	18	2
+TN	18	Balanced	18	2152
+TP	18	Balanced	18	1069
+FN	18	Balanced	19	1671
+FP	18	Balanced	19	13
+TN	18	Balanced	19	2148
+TP	18	Balanced	19	1977
+FN	18	Balanced	20	2100
+FP	18	Balanced	20	1
+TN	18	Balanced	20	2158
+TP	18	Balanced	20	1550
+FN	18	Balanced	21	1462
+FP	18	Balanced	21	42
+TN	18	Balanced	21	2114
+TP	18	Balanced	21	2187
+FN	18	Balanced	22	1380
+FP	18	Balanced	22	47
+TN	18	Balanced	22	2115
+TP	18	Balanced	22	2271
+FN	18	Balanced	23	2084
+FP	18	Balanced	23	4
+TN	18	Balanced	23	2156
+TP	18	Balanced	23	1566
+FN	18	Balanced	24	2301
+FP	18	Balanced	24	1
+TN	18	Balanced	24	2162
+TP	18	Balanced	24	1350
+FN	18	Balanced	25	1700
+FP	18	Balanced	25	8
+TN	18	Balanced	25	2149
+TP	18	Balanced	25	1946
+FN	18	Balanced	26	830
+FP	18	Balanced	26	141
+TN	18	Balanced	26	2023
+TP	18	Balanced	26	2820
+FN	18	Balanced	27	1173
+FP	18	Balanced	27	47
+TN	18	Balanced	27	2113
+TP	18	Balanced	27	2476
+FN	18	Balanced	28	1512
+FP	18	Balanced	28	44
+TN	18	Balanced	28	2113
+TP	18	Balanced	28	2135
+FN	18	Balanced	29	1610
+FP	18	Balanced	29	30
+TN	18	Balanced	29	2132
+TP	18	Balanced	29	2039
+FN	18	Balanced	30	2118
+FP	18	Balanced	30	0
+TN	18	Balanced	30	2154
+TP	18	Balanced	30	1525
+FN	18	Unbalanced JS	1	2976
+FP	18	Unbalanced JS	1	15
+TN	18	Unbalanced JS	1	2146
+TP	18	Unbalanced JS	1	673
+FN	18	Unbalanced JS	2	3438
+FP	18	Unbalanced JS	2	1
+TN	18	Unbalanced JS	2	2155
+TP	18	Unbalanced JS	2	190
+FN	18	Unbalanced JS	3	3032
+FP	18	Unbalanced JS	3	33
+TN	18	Unbalanced JS	3	2128
+TP	18	Unbalanced JS	3	614
+FN	18	Unbalanced JS	4	3211
+FP	18	Unbalanced JS	4	3
+TN	18	Unbalanced JS	4	2142
+TP	18	Unbalanced JS	4	414
+FN	18	Unbalanced JS	5	3301
+FP	18	Unbalanced JS	5	2
+TN	18	Unbalanced JS	5	2155
+TP	18	Unbalanced JS	5	345
+FN	18	Unbalanced JS	6	3359
+FP	18	Unbalanced JS	6	6
+TN	18	Unbalanced JS	6	2146
+TP	18	Unbalanced JS	6	264
+FN	18	Unbalanced JS	7	3056
+FP	18	Unbalanced JS	7	13
+TN	18	Unbalanced JS	7	2150
+TP	18	Unbalanced JS	7	592
+FN	18	Unbalanced JS	8	3353
+FP	18	Unbalanced JS	8	0
+TN	18	Unbalanced JS	8	2153
+TP	18	Unbalanced JS	8	272
+FN	18	Unbalanced JS	9	2822
+FP	18	Unbalanced JS	9	6
+TN	18	Unbalanced JS	9	2154
+TP	18	Unbalanced JS	9	825
+FN	18	Unbalanced JS	10	3134
+FP	18	Unbalanced JS	10	28
+TN	18	Unbalanced JS	10	2126
+TP	18	Unbalanced JS	10	491
+FN	18	Unbalanced JS	11	3222
+FP	18	Unbalanced JS	11	1
+TN	18	Unbalanced JS	11	2159
+TP	18	Unbalanced JS	11	424
+FN	18	Unbalanced JS	12	3403
+FP	18	Unbalanced JS	12	0
+TN	18	Unbalanced JS	12	2156
+TP	18	Unbalanced JS	12	225
+FN	18	Unbalanced JS	13	3023
+FP	18	Unbalanced JS	13	4
+TN	18	Unbalanced JS	13	2159
+TP	18	Unbalanced JS	13	625
+FN	18	Unbalanced JS	14	3322
+FP	18	Unbalanced JS	14	0
+TN	18	Unbalanced JS	14	2152
+TP	18	Unbalanced JS	14	300
+FN	18	Unbalanced JS	15	3181
+FP	18	Unbalanced JS	15	31
+TN	18	Unbalanced JS	15	2128
+TP	18	Unbalanced JS	15	466
+FN	18	Unbalanced JS	16	3335
+FP	18	Unbalanced JS	16	0
+TN	18	Unbalanced JS	16	2151
+TP	18	Unbalanced JS	16	289
+FN	18	Unbalanced JS	17	3377
+FP	18	Unbalanced JS	17	2
+TN	18	Unbalanced JS	17	2162
+TP	18	Unbalanced JS	17	272
+FN	18	Unbalanced JS	18	3269
+FP	18	Unbalanced JS	18	1
+TN	18	Unbalanced JS	18	2152
+TP	18	Unbalanced JS	18	355
+FN	18	Unbalanced JS	19	2046
+FP	18	Unbalanced JS	19	681
+TN	18	Unbalanced JS	19	1484
+TP	18	Unbalanced JS	19	1603
+FN	18	Unbalanced JS	20	3434
+FP	18	Unbalanced JS	20	0
+TN	18	Unbalanced JS	20	2153
+TP	18	Unbalanced JS	20	190
+FN	18	Unbalanced JS	21	2634
+FP	18	Unbalanced JS	21	12
+TN	18	Unbalanced JS	21	2152
+TP	18	Unbalanced JS	21	1013
+FN	18	Unbalanced JS	22	3397
+FP	18	Unbalanced JS	22	0
+TN	18	Unbalanced JS	22	2154
+TP	18	Unbalanced JS	22	225
+FN	18	Unbalanced JS	23	2226
+FP	18	Unbalanced JS	23	38
+TN	18	Unbalanced JS	23	2117
+TP	18	Unbalanced JS	23	1419
+FN	18	Unbalanced JS	24	3375
+FP	18	Unbalanced JS	24	1
+TN	18	Unbalanced JS	24	2144
+TP	18	Unbalanced JS	24	243
+FN	18	Unbalanced JS	25	3010
+FP	18	Unbalanced JS	25	5
+TN	18	Unbalanced JS	25	2158
+TP	18	Unbalanced JS	25	637
+FN	18	Unbalanced JS	26	3424
+FP	18	Unbalanced JS	26	0
+TN	18	Unbalanced JS	26	2156
+TP	18	Unbalanced JS	26	198
+FN	18	Unbalanced JS	27	2410
+FP	18	Unbalanced JS	27	23
+TN	18	Unbalanced JS	27	2138
+TP	18	Unbalanced JS	27	1238
+FN	18	Unbalanced JS	28	3363
+FP	18	Unbalanced JS	28	0
+TN	18	Unbalanced JS	28	2152
+TP	18	Unbalanced JS	28	263
+FN	18	Unbalanced JS	29	3235
+FP	18	Unbalanced JS	29	29
+TN	18	Unbalanced JS	29	2133
+TP	18	Unbalanced JS	29	414
+FN	18	Unbalanced JS	30	3383
+FP	18	Unbalanced JS	30	0
+TN	18	Unbalanced JS	30	2153
+TP	18	Unbalanced JS	30	241
+FN	18	Unbalanced OLS	1	3061
+FP	18	Unbalanced OLS	1	7
+TN	18	Unbalanced OLS	1	2154
+TP	18	Unbalanced OLS	1	588
+FN	18	Unbalanced OLS	2	3507
+FP	18	Unbalanced OLS	2	1
+TN	18	Unbalanced OLS	2	2155
+TP	18	Unbalanced OLS	2	121
+FN	18	Unbalanced OLS	3	3092
+FP	18	Unbalanced OLS	3	26
+TN	18	Unbalanced OLS	3	2135
+TP	18	Unbalanced OLS	3	554
+FN	18	Unbalanced OLS	4	3346
+FP	18	Unbalanced OLS	4	2
+TN	18	Unbalanced OLS	4	2143
+TP	18	Unbalanced OLS	4	279
+FN	18	Unbalanced OLS	5	3407
+FP	18	Unbalanced OLS	5	2
+TN	18	Unbalanced OLS	5	2155
+TP	18	Unbalanced OLS	5	239
+FN	18	Unbalanced OLS	6	3446
+FP	18	Unbalanced OLS	6	0
+TN	18	Unbalanced OLS	6	2152
+TP	18	Unbalanced OLS	6	177
+FN	18	Unbalanced OLS	7	3154
+FP	18	Unbalanced OLS	7	4
+TN	18	Unbalanced OLS	7	2159
+TP	18	Unbalanced OLS	7	494
+FN	18	Unbalanced OLS	8	3402
+FP	18	Unbalanced OLS	8	0
+TN	18	Unbalanced OLS	8	2153
+TP	18	Unbalanced OLS	8	223
+FN	18	Unbalanced OLS	9	2911
+FP	18	Unbalanced OLS	9	4
+TN	18	Unbalanced OLS	9	2156
+TP	18	Unbalanced OLS	9	736
+FN	18	Unbalanced OLS	10	3300
+FP	18	Unbalanced OLS	10	8
+TN	18	Unbalanced OLS	10	2146
+TP	18	Unbalanced OLS	10	325
+FN	18	Unbalanced OLS	11	3284
+FP	18	Unbalanced OLS	11	0
+TN	18	Unbalanced OLS	11	2160
+TP	18	Unbalanced OLS	11	362
+FN	18	Unbalanced OLS	12	3471
+FP	18	Unbalanced OLS	12	0
+TN	18	Unbalanced OLS	12	2156
+TP	18	Unbalanced OLS	12	157
+FN	18	Unbalanced OLS	13	3094
+FP	18	Unbalanced OLS	13	3
+TN	18	Unbalanced OLS	13	2160
+TP	18	Unbalanced OLS	13	554
+FN	18	Unbalanced OLS	14	3373
+FP	18	Unbalanced OLS	14	0
+TN	18	Unbalanced OLS	14	2152
+TP	18	Unbalanced OLS	14	249
+FN	18	Unbalanced OLS	15	3261
+FP	18	Unbalanced OLS	15	17
+TN	18	Unbalanced OLS	15	2142
+TP	18	Unbalanced OLS	15	386
+FN	18	Unbalanced OLS	16	3429
+FP	18	Unbalanced OLS	16	0
+TN	18	Unbalanced OLS	16	2151
+TP	18	Unbalanced OLS	16	195
+FN	18	Unbalanced OLS	17	3424
+FP	18	Unbalanced OLS	17	2
+TN	18	Unbalanced OLS	17	2162
+TP	18	Unbalanced OLS	17	225
+FN	18	Unbalanced OLS	18	3350
+FP	18	Unbalanced OLS	18	1
+TN	18	Unbalanced OLS	18	2152
+TP	18	Unbalanced OLS	18	274
+FN	18	Unbalanced OLS	19	2107
+FP	18	Unbalanced OLS	19	640
+TN	18	Unbalanced OLS	19	1525
+TP	18	Unbalanced OLS	19	1542
+FN	18	Unbalanced OLS	20	3485
+FP	18	Unbalanced OLS	20	0
+TN	18	Unbalanced OLS	20	2153
+TP	18	Unbalanced OLS	20	139
+FN	18	Unbalanced OLS	21	2740
+FP	18	Unbalanced OLS	21	9
+TN	18	Unbalanced OLS	21	2155
+TP	18	Unbalanced OLS	21	907
+FN	18	Unbalanced OLS	22	3455
+FP	18	Unbalanced OLS	22	0
+TN	18	Unbalanced OLS	22	2154
+TP	18	Unbalanced OLS	22	167
+FN	18	Unbalanced OLS	23	2324
+FP	18	Unbalanced OLS	23	31
+TN	18	Unbalanced OLS	23	2124
+TP	18	Unbalanced OLS	23	1321
+FN	18	Unbalanced OLS	24	3421
+FP	18	Unbalanced OLS	24	0
+TN	18	Unbalanced OLS	24	2145
+TP	18	Unbalanced OLS	24	197
+FN	18	Unbalanced OLS	25	3099
+FP	18	Unbalanced OLS	25	2
+TN	18	Unbalanced OLS	25	2161
+TP	18	Unbalanced OLS	25	548
+FN	18	Unbalanced OLS	26	3474
+FP	18	Unbalanced OLS	26	0
+TN	18	Unbalanced OLS	26	2156
+TP	18	Unbalanced OLS	26	148
+FN	18	Unbalanced OLS	27	2506
+FP	18	Unbalanced OLS	27	12
+TN	18	Unbalanced OLS	27	2149
+TP	18	Unbalanced OLS	27	1142
+FN	18	Unbalanced OLS	28	3437
+FP	18	Unbalanced OLS	28	0
+TN	18	Unbalanced OLS	28	2152
+TP	18	Unbalanced OLS	28	189
+FN	18	Unbalanced OLS	29	3261
+FP	18	Unbalanced OLS	29	24
+TN	18	Unbalanced OLS	29	2138
+TP	18	Unbalanced OLS	29	388
+FN	18	Unbalanced OLS	30	3464
+FP	18	Unbalanced OLS	30	0
+TN	18	Unbalanced OLS	30	2153
+TP	18	Unbalanced OLS	30	160
+FN	20	Balanced	1	2475
+FP	20	Balanced	1	0
+TN	20	Balanced	1	2159
+TP	20	Balanced	1	1174
+FN	20	Balanced	2	2154
+FP	20	Balanced	2	3
+TN	20	Balanced	2	2157
+TP	20	Balanced	2	1496
+FN	20	Balanced	3	1493
+FP	20	Balanced	3	15
+TN	20	Balanced	3	2148
+TP	20	Balanced	3	2157
+FN	20	Balanced	4	2018
+FP	20	Balanced	4	6
+TN	20	Balanced	4	2148
+TP	20	Balanced	4	1629
+FN	20	Balanced	5	1349
+FP	20	Balanced	5	22
+TN	20	Balanced	5	2138
+TP	20	Balanced	5	2299
+FN	20	Balanced	6	1348
+FP	20	Balanced	6	26
+TN	20	Balanced	6	2131
+TP	20	Balanced	6	2301
+FN	20	Balanced	7	1479
+FP	20	Balanced	7	51
+TN	20	Balanced	7	2100
+TP	20	Balanced	7	2166
+FN	20	Balanced	8	2013
+FP	20	Balanced	8	5
+TN	20	Balanced	8	2159
+TP	20	Balanced	8	1637
+FN	20	Balanced	9	1409
+FP	20	Balanced	9	25
+TN	20	Balanced	9	2139
+TP	20	Balanced	9	2242
+FN	20	Balanced	10	1232
+FP	20	Balanced	10	144
+TN	20	Balanced	10	2013
+TP	20	Balanced	10	2417
+FN	20	Balanced	11	1063
+FP	20	Balanced	11	38
+TN	20	Balanced	11	2121
+TP	20	Balanced	11	2586
+FN	20	Balanced	12	2470
+FP	20	Balanced	12	1
+TN	20	Balanced	12	2150
+TP	20	Balanced	12	1176
+FN	20	Balanced	13	2189
+FP	20	Balanced	13	4
+TN	20	Balanced	13	2152
+TP	20	Balanced	13	1460
+FN	20	Balanced	14	2133
+FP	20	Balanced	14	15
+TN	20	Balanced	14	2139
+TP	20	Balanced	14	1516
+FN	20	Balanced	15	2433
+FP	20	Balanced	15	0
+TN	20	Balanced	15	2160
+TP	20	Balanced	15	1219
+FN	20	Balanced	16	2137
+FP	20	Balanced	16	16
+TN	20	Balanced	16	2136
+TP	20	Balanced	16	1510
+FN	20	Balanced	17	1390
+FP	20	Balanced	17	39
+TN	20	Balanced	17	2120
+TP	20	Balanced	17	2260
+FN	20	Balanced	18	1692
+FP	20	Balanced	18	26
+TN	20	Balanced	18	2133
+TP	20	Balanced	18	1957
+FN	20	Balanced	19	1567
+FP	20	Balanced	19	37
+TN	20	Balanced	19	2120
+TP	20	Balanced	19	2078
+FN	20	Balanced	20	2196
+FP	20	Balanced	20	0
+TN	20	Balanced	20	2160
+TP	20	Balanced	20	1453
+FN	20	Balanced	21	1830
+FP	20	Balanced	21	12
+TN	20	Balanced	21	2145
+TP	20	Balanced	21	1818
+FN	20	Balanced	22	1904
+FP	20	Balanced	22	1
+TN	20	Balanced	22	2159
+TP	20	Balanced	22	1747
+FN	20	Balanced	23	2361
+FP	20	Balanced	23	5
+TN	20	Balanced	23	2156
+TP	20	Balanced	23	1285
+FN	20	Balanced	24	1893
+FP	20	Balanced	24	19
+TN	20	Balanced	24	2140
+TP	20	Balanced	24	1758
+FN	20	Balanced	25	1872
+FP	20	Balanced	25	15
+TN	20	Balanced	25	2146
+TP	20	Balanced	25	1780
+FN	20	Balanced	26	1269
+FP	20	Balanced	26	44
+TN	20	Balanced	26	2113
+TP	20	Balanced	26	2380
+FN	20	Balanced	27	2118
+FP	20	Balanced	27	6
+TN	20	Balanced	27	2155
+TP	20	Balanced	27	1531
+FN	20	Balanced	28	1121
+FP	20	Balanced	28	169
+TN	20	Balanced	28	1994
+TP	20	Balanced	28	2529
+FN	20	Balanced	29	1175
+FP	20	Balanced	29	62
+TN	20	Balanced	29	2102
+TP	20	Balanced	29	2476
+FN	20	Balanced	30	1257
+FP	20	Balanced	30	135
+TN	20	Balanced	30	2023
+TP	20	Balanced	30	2392
+FN	20	Unbalanced JS	1	3226
+FP	20	Unbalanced JS	1	0
+TN	20	Unbalanced JS	1	2160
+TP	20	Unbalanced JS	1	420
+FN	20	Unbalanced JS	2	3481
+FP	20	Unbalanced JS	2	0
+TN	20	Unbalanced JS	2	2152
+TP	20	Unbalanced JS	2	147
+FN	20	Unbalanced JS	3	2772
+FP	20	Unbalanced JS	3	11
+TN	20	Unbalanced JS	3	2152
+TP	20	Unbalanced JS	3	875
+FN	20	Unbalanced JS	4	3422
+FP	20	Unbalanced JS	4	1
+TN	20	Unbalanced JS	4	2158
+TP	20	Unbalanced JS	4	208
+FN	20	Unbalanced JS	5	2537
+FP	20	Unbalanced JS	5	7
+TN	20	Unbalanced JS	5	2155
+TP	20	Unbalanced JS	5	1111
+FN	20	Unbalanced JS	6	3440
+FP	20	Unbalanced JS	6	0
+TN	20	Unbalanced JS	6	2159
+TP	20	Unbalanced JS	6	185
+FN	20	Unbalanced JS	7	3314
+FP	20	Unbalanced JS	7	10
+TN	20	Unbalanced JS	7	2154
+TP	20	Unbalanced JS	7	334
+FN	20	Unbalanced JS	8	3262
+FP	20	Unbalanced JS	8	8
+TN	20	Unbalanced JS	8	2144
+TP	20	Unbalanced JS	8	360
+FN	20	Unbalanced JS	9	2595
+FP	20	Unbalanced JS	9	12
+TN	20	Unbalanced JS	9	2149
+TP	20	Unbalanced JS	9	1054
+FN	20	Unbalanced JS	10	3453
+FP	20	Unbalanced JS	10	0
+TN	20	Unbalanced JS	10	2150
+TP	20	Unbalanced JS	10	171
+FN	20	Unbalanced JS	11	3373
+FP	20	Unbalanced JS	11	6
+TN	20	Unbalanced JS	11	2158
+TP	20	Unbalanced JS	11	277
+FN	20	Unbalanced JS	12	3444
+FP	20	Unbalanced JS	12	0
+TN	20	Unbalanced JS	12	2153
+TP	20	Unbalanced JS	12	180
+FN	20	Unbalanced JS	13	3213
+FP	20	Unbalanced JS	13	15
+TN	20	Unbalanced JS	13	2150
+TP	20	Unbalanced JS	13	435
+FN	20	Unbalanced JS	14	3141
+FP	20	Unbalanced JS	14	0
+TN	20	Unbalanced JS	14	2150
+TP	20	Unbalanced JS	14	482
+FN	20	Unbalanced JS	15	3260
+FP	20	Unbalanced JS	15	2
+TN	20	Unbalanced JS	15	2159
+TP	20	Unbalanced JS	15	387
+FN	20	Unbalanced JS	16	3463
+FP	20	Unbalanced JS	16	0
+TN	20	Unbalanced JS	16	2155
+TP	20	Unbalanced JS	16	160
+FN	20	Unbalanced JS	17	3371
+FP	20	Unbalanced JS	17	5
+TN	20	Unbalanced JS	17	2160
+TP	20	Unbalanced JS	17	277
+FN	20	Unbalanced JS	18	3249
+FP	20	Unbalanced JS	18	4
+TN	20	Unbalanced JS	18	2150
+TP	20	Unbalanced JS	18	375
+FN	20	Unbalanced JS	19	3051
+FP	20	Unbalanced JS	19	5
+TN	20	Unbalanced JS	19	2157
+TP	20	Unbalanced JS	19	596
+FN	20	Unbalanced JS	20	3410
+FP	20	Unbalanced JS	20	1
+TN	20	Unbalanced JS	20	2159
+TP	20	Unbalanced JS	20	215
+FN	20	Unbalanced JS	21	2781
+FP	20	Unbalanced JS	21	341
+TN	20	Unbalanced JS	21	1819
+TP	20	Unbalanced JS	21	865
+FN	20	Unbalanced JS	22	3439
+FP	20	Unbalanced JS	22	5
+TN	20	Unbalanced JS	22	2149
+TP	20	Unbalanced JS	22	189
+FN	20	Unbalanced JS	23	3305
+FP	20	Unbalanced JS	23	12
+TN	20	Unbalanced JS	23	2153
+TP	20	Unbalanced JS	23	345
+FN	20	Unbalanced JS	24	3435
+FP	20	Unbalanced JS	24	1
+TN	20	Unbalanced JS	24	2148
+TP	20	Unbalanced JS	24	191
+FN	20	Unbalanced JS	25	2149
+FP	20	Unbalanced JS	25	38
+TN	20	Unbalanced JS	25	2121
+TP	20	Unbalanced JS	25	1499
+FN	20	Unbalanced JS	26	3202
+FP	20	Unbalanced JS	26	0
+TN	20	Unbalanced JS	26	2160
+TP	20	Unbalanced JS	26	424
+FN	20	Unbalanced JS	27	3379
+FP	20	Unbalanced JS	27	4
+TN	20	Unbalanced JS	27	2161
+TP	20	Unbalanced JS	27	271
+FN	20	Unbalanced JS	28	3366
+FP	20	Unbalanced JS	28	2
+TN	20	Unbalanced JS	28	2151
+TP	20	Unbalanced JS	28	258
+FN	20	Unbalanced JS	29	2585
+FP	20	Unbalanced JS	29	14
+TN	20	Unbalanced JS	29	2151
+TP	20	Unbalanced JS	29	1064
+FN	20	Unbalanced JS	30	3473
+FP	20	Unbalanced JS	30	5
+TN	20	Unbalanced JS	30	2147
+TP	20	Unbalanced JS	30	152
+FN	20	Unbalanced OLS	1	3315
+FP	20	Unbalanced OLS	1	0
+TN	20	Unbalanced OLS	1	2160
+TP	20	Unbalanced OLS	1	331
+FN	20	Unbalanced OLS	2	3546
+FP	20	Unbalanced OLS	2	0
+TN	20	Unbalanced OLS	2	2152
+TP	20	Unbalanced OLS	2	82
+FN	20	Unbalanced OLS	3	2856
+FP	20	Unbalanced OLS	3	8
+TN	20	Unbalanced OLS	3	2155
+TP	20	Unbalanced OLS	3	791
+FN	20	Unbalanced OLS	4	3479
+FP	20	Unbalanced OLS	4	0
+TN	20	Unbalanced OLS	4	2159
+TP	20	Unbalanced OLS	4	151
+FN	20	Unbalanced OLS	5	2596
+FP	20	Unbalanced OLS	5	5
+TN	20	Unbalanced OLS	5	2157
+TP	20	Unbalanced OLS	5	1052
+FN	20	Unbalanced OLS	6	3498
+FP	20	Unbalanced OLS	6	0
+TN	20	Unbalanced OLS	6	2159
+TP	20	Unbalanced OLS	6	127
+FN	20	Unbalanced OLS	7	3390
+FP	20	Unbalanced OLS	7	5
+TN	20	Unbalanced OLS	7	2159
+TP	20	Unbalanced OLS	7	258
+FN	20	Unbalanced OLS	8	3349
+FP	20	Unbalanced OLS	8	6
+TN	20	Unbalanced OLS	8	2146
+TP	20	Unbalanced OLS	8	273
+FN	20	Unbalanced OLS	9	2691
+FP	20	Unbalanced OLS	9	9
+TN	20	Unbalanced OLS	9	2152
+TP	20	Unbalanced OLS	9	958
+FN	20	Unbalanced OLS	10	3498
+FP	20	Unbalanced OLS	10	1
+TN	20	Unbalanced OLS	10	2149
+TP	20	Unbalanced OLS	10	126
+FN	20	Unbalanced OLS	11	3395
+FP	20	Unbalanced OLS	11	2
+TN	20	Unbalanced OLS	11	2162
+TP	20	Unbalanced OLS	11	255
+FN	20	Unbalanced OLS	12	3501
+FP	20	Unbalanced OLS	12	0
+TN	20	Unbalanced OLS	12	2153
+TP	20	Unbalanced OLS	12	123
+FN	20	Unbalanced OLS	13	3231
+FP	20	Unbalanced OLS	13	13
+TN	20	Unbalanced OLS	13	2152
+TP	20	Unbalanced OLS	13	417
+FN	20	Unbalanced OLS	14	3255
+FP	20	Unbalanced OLS	14	0
+TN	20	Unbalanced OLS	14	2150
+TP	20	Unbalanced OLS	14	368
+FN	20	Unbalanced OLS	15	3346
+FP	20	Unbalanced OLS	15	1
+TN	20	Unbalanced OLS	15	2160
+TP	20	Unbalanced OLS	15	301
+FN	20	Unbalanced OLS	16	3497
+FP	20	Unbalanced OLS	16	0
+TN	20	Unbalanced OLS	16	2155
+TP	20	Unbalanced OLS	16	126
+FN	20	Unbalanced OLS	17	3397
+FP	20	Unbalanced OLS	17	3
+TN	20	Unbalanced OLS	17	2162
+TP	20	Unbalanced OLS	17	251
+FN	20	Unbalanced OLS	18	3353
+FP	20	Unbalanced OLS	18	2
+TN	20	Unbalanced OLS	18	2152
+TP	20	Unbalanced OLS	18	271
+FN	20	Unbalanced OLS	19	3146
+FP	20	Unbalanced OLS	19	4
+TN	20	Unbalanced OLS	19	2158
+TP	20	Unbalanced OLS	19	501
+FN	20	Unbalanced OLS	20	3485
+FP	20	Unbalanced OLS	20	1
+TN	20	Unbalanced OLS	20	2159
+TP	20	Unbalanced OLS	20	140
+FN	20	Unbalanced OLS	21	2893
+FP	20	Unbalanced OLS	21	238
+TN	20	Unbalanced OLS	21	1922
+TP	20	Unbalanced OLS	21	753
+FN	20	Unbalanced OLS	22	3493
+FP	20	Unbalanced OLS	22	3
+TN	20	Unbalanced OLS	22	2151
+TP	20	Unbalanced OLS	22	135
+FN	20	Unbalanced OLS	23	3351
+FP	20	Unbalanced OLS	23	8
+TN	20	Unbalanced OLS	23	2157
+TP	20	Unbalanced OLS	23	299
+FN	20	Unbalanced OLS	24	3490
+FP	20	Unbalanced OLS	24	1
+TN	20	Unbalanced OLS	24	2148
+TP	20	Unbalanced OLS	24	136
+FN	20	Unbalanced OLS	25	2244
+FP	20	Unbalanced OLS	25	31
+TN	20	Unbalanced OLS	25	2128
+TP	20	Unbalanced OLS	25	1404
+FN	20	Unbalanced OLS	26	3330
+FP	20	Unbalanced OLS	26	0
+TN	20	Unbalanced OLS	26	2160
+TP	20	Unbalanced OLS	26	296
+FN	20	Unbalanced OLS	27	3408
+FP	20	Unbalanced OLS	27	2
+TN	20	Unbalanced OLS	27	2163
+TP	20	Unbalanced OLS	27	242
+FN	20	Unbalanced OLS	28	3423
+FP	20	Unbalanced OLS	28	6
+TN	20	Unbalanced OLS	28	2147
+TP	20	Unbalanced OLS	28	201
+FN	20	Unbalanced OLS	29	2684
+FP	20	Unbalanced OLS	29	9
+TN	20	Unbalanced OLS	29	2156
+TP	20	Unbalanced OLS	29	965
+FN	20	Unbalanced OLS	30	3521
+FP	20	Unbalanced OLS	30	0
+TN	20	Unbalanced OLS	30	2152
+TP	20	Unbalanced OLS	30	104
+FN	22	Balanced	1	2057
+FP	22	Balanced	1	0
+TN	22	Balanced	1	2163
+TP	22	Balanced	1	1594
+FN	22	Balanced	2	2312
+FP	22	Balanced	2	2
+TN	22	Balanced	2	2153
+TP	22	Balanced	2	1335
+FN	22	Balanced	3	1625
+FP	22	Balanced	3	17
+TN	22	Balanced	3	2145
+TP	22	Balanced	3	2026
+FN	22	Balanced	4	1696
+FP	22	Balanced	4	15
+TN	22	Balanced	4	2139
+TP	22	Balanced	4	1948
+FN	22	Balanced	5	1552
+FP	22	Balanced	5	79
+TN	22	Balanced	5	2082
+TP	22	Balanced	5	2095
+FN	22	Balanced	6	1290
+FP	22	Balanced	6	51
+TN	22	Balanced	6	2103
+TP	22	Balanced	6	2358
+FN	22	Balanced	7	1884
+FP	22	Balanced	7	2
+TN	22	Balanced	7	2160
+TP	22	Balanced	7	1766
+FN	22	Balanced	8	1224
+FP	22	Balanced	8	116
+TN	22	Balanced	8	2044
+TP	22	Balanced	8	2424
+FN	22	Balanced	9	1386
+FP	22	Balanced	9	5
+TN	22	Balanced	9	2154
+TP	22	Balanced	9	2264
+FN	22	Balanced	10	1454
+FP	22	Balanced	10	68
+TN	22	Balanced	10	2091
+TP	22	Balanced	10	2195
+FN	22	Balanced	11	1792
+FP	22	Balanced	11	9
+TN	22	Balanced	11	2144
+TP	22	Balanced	11	1858
+FN	22	Balanced	12	1858
+FP	22	Balanced	12	10
+TN	22	Balanced	12	2147
+TP	22	Balanced	12	1790
+FN	22	Balanced	13	1413
+FP	22	Balanced	13	39
+TN	22	Balanced	13	2123
+TP	22	Balanced	13	2239
+FN	22	Balanced	14	2151
+FP	22	Balanced	14	3
+TN	22	Balanced	14	2152
+TP	22	Balanced	14	1495
+FN	22	Balanced	15	1325
+FP	22	Balanced	15	27
+TN	22	Balanced	15	2133
+TP	22	Balanced	15	2326
+FN	22	Balanced	16	1555
+FP	22	Balanced	16	62
+TN	22	Balanced	16	2096
+TP	22	Balanced	16	2095
+FN	22	Balanced	17	1494
+FP	22	Balanced	17	24
+TN	22	Balanced	17	2133
+TP	22	Balanced	17	2156
+FN	22	Balanced	18	1870
+FP	22	Balanced	18	6
+TN	22	Balanced	18	2153
+TP	22	Balanced	18	1779
+FN	22	Balanced	19	1888
+FP	22	Balanced	19	30
+TN	22	Balanced	19	2129
+TP	22	Balanced	19	1758
+FN	22	Balanced	20	1598
+FP	22	Balanced	20	5
+TN	22	Balanced	20	2154
+TP	22	Balanced	20	2051
+FN	22	Balanced	21	2217
+FP	22	Balanced	21	2
+TN	22	Balanced	21	2155
+TP	22	Balanced	21	1432
+FN	22	Balanced	22	2219
+FP	22	Balanced	22	0
+TN	22	Balanced	22	2163
+TP	22	Balanced	22	1429
+FN	22	Balanced	23	1236
+FP	22	Balanced	23	37
+TN	22	Balanced	23	2122
+TP	22	Balanced	23	2412
+FN	22	Balanced	24	1274
+FP	22	Balanced	24	30
+TN	22	Balanced	24	2127
+TP	22	Balanced	24	2376
+FN	22	Balanced	25	2275
+FP	22	Balanced	25	0
+TN	22	Balanced	25	2157
+TP	22	Balanced	25	1371
+FN	22	Balanced	26	1994
+FP	22	Balanced	26	1
+TN	22	Balanced	26	2162
+TP	22	Balanced	26	1657
+FN	22	Balanced	27	916
+FP	22	Balanced	27	77
+TN	22	Balanced	27	2081
+TP	22	Balanced	27	2729
+FN	22	Balanced	28	1540
+FP	22	Balanced	28	52
+TN	22	Balanced	28	2096
+TP	22	Balanced	28	2105
+FN	22	Balanced	29	2179
+FP	22	Balanced	29	0
+TN	22	Balanced	29	2154
+TP	22	Balanced	29	1472
+FN	22	Balanced	30	1535
+FP	22	Balanced	30	28
+TN	22	Balanced	30	2133
+TP	22	Balanced	30	2115
+FN	22	Unbalanced JS	1	2589
+FP	22	Unbalanced JS	1	12
+TN	22	Unbalanced JS	1	2150
+TP	22	Unbalanced JS	1	1059
+FN	22	Unbalanced JS	2	3329
+FP	22	Unbalanced JS	2	0
+TN	22	Unbalanced JS	2	2150
+TP	22	Unbalanced JS	2	294
+FN	22	Unbalanced JS	3	2705
+FP	22	Unbalanced JS	3	6
+TN	22	Unbalanced JS	3	2155
+TP	22	Unbalanced JS	3	943
+FN	22	Unbalanced JS	4	3300
+FP	22	Unbalanced JS	4	0
+TN	22	Unbalanced JS	4	2152
+TP	22	Unbalanced JS	4	326
+FN	22	Unbalanced JS	5	2988
+FP	22	Unbalanced JS	5	4
+TN	22	Unbalanced JS	5	2158
+TP	22	Unbalanced JS	5	661
+FN	22	Unbalanced JS	6	3445
+FP	22	Unbalanced JS	6	1
+TN	22	Unbalanced JS	6	2155
+TP	22	Unbalanced JS	6	183
+FN	22	Unbalanced JS	7	3337
+FP	22	Unbalanced JS	7	18
+TN	22	Unbalanced JS	7	2146
+TP	22	Unbalanced JS	7	312
+FN	22	Unbalanced JS	8	3409
+FP	22	Unbalanced JS	8	2
+TN	22	Unbalanced JS	8	2152
+TP	22	Unbalanced JS	8	215
+FN	22	Unbalanced JS	9	2930
+FP	22	Unbalanced JS	9	25
+TN	22	Unbalanced JS	9	2137
+TP	22	Unbalanced JS	9	716
+FN	22	Unbalanced JS	10	3455
+FP	22	Unbalanced JS	10	0
+TN	22	Unbalanced JS	10	2151
+TP	22	Unbalanced JS	10	168
+FN	22	Unbalanced JS	11	2617
+FP	22	Unbalanced JS	11	52
+TN	22	Unbalanced JS	11	2109
+TP	22	Unbalanced JS	11	1029
+FN	22	Unbalanced JS	12	2869
+FP	22	Unbalanced JS	12	75
+TN	22	Unbalanced JS	12	2080
+TP	22	Unbalanced JS	12	755
+FN	22	Unbalanced JS	13	3187
+FP	22	Unbalanced JS	13	21
+TN	22	Unbalanced JS	13	2143
+TP	22	Unbalanced JS	13	460
+FN	22	Unbalanced JS	14	3359
+FP	22	Unbalanced JS	14	1
+TN	22	Unbalanced JS	14	2154
+TP	22	Unbalanced JS	14	263
+FN	22	Unbalanced JS	15	2614
+FP	22	Unbalanced JS	15	71
+TN	22	Unbalanced JS	15	2084
+TP	22	Unbalanced JS	15	1034
+FN	22	Unbalanced JS	16	3177
+FP	22	Unbalanced JS	16	20
+TN	22	Unbalanced JS	16	2128
+TP	22	Unbalanced JS	16	446
+FN	22	Unbalanced JS	17	2771
+FP	22	Unbalanced JS	17	9
+TN	22	Unbalanced JS	17	2153
+TP	22	Unbalanced JS	17	876
+FN	22	Unbalanced JS	18	3337
+FP	22	Unbalanced JS	18	0
+TN	22	Unbalanced JS	18	2158
+TP	22	Unbalanced JS	18	289
+FN	22	Unbalanced JS	19	3180
+FP	22	Unbalanced JS	19	2
+TN	22	Unbalanced JS	19	2163
+TP	22	Unbalanced JS	19	468
+FN	22	Unbalanced JS	20	2153
+FP	22	Unbalanced JS	20	840
+TN	22	Unbalanced JS	20	1316
+TP	22	Unbalanced JS	20	1471
+FN	22	Unbalanced JS	21	2739
+FP	22	Unbalanced JS	21	4
+TN	22	Unbalanced JS	21	2158
+TP	22	Unbalanced JS	21	912
+FN	22	Unbalanced JS	22	3492
+FP	22	Unbalanced JS	22	0
+TN	22	Unbalanced JS	22	2156
+TP	22	Unbalanced JS	22	137
+FN	22	Unbalanced JS	23	3010
+FP	22	Unbalanced JS	23	5
+TN	22	Unbalanced JS	23	2158
+TP	22	Unbalanced JS	23	638
+FN	22	Unbalanced JS	24	3461
+FP	22	Unbalanced JS	24	0
+TN	22	Unbalanced JS	24	2160
+TP	22	Unbalanced JS	24	168
+FN	22	Unbalanced JS	25	2619
+FP	22	Unbalanced JS	25	22
+TN	22	Unbalanced JS	25	2142
+TP	22	Unbalanced JS	25	1030
+FN	22	Unbalanced JS	26	3382
+FP	22	Unbalanced JS	26	1
+TN	22	Unbalanced JS	26	2153
+TP	22	Unbalanced JS	26	245
+FN	22	Unbalanced JS	27	2780
+FP	22	Unbalanced JS	27	3
+TN	22	Unbalanced JS	27	2160
+TP	22	Unbalanced JS	27	869
+FN	22	Unbalanced JS	28	3282
+FP	22	Unbalanced JS	28	0
+TN	22	Unbalanced JS	28	2157
+TP	22	Unbalanced JS	28	339
+FN	22	Unbalanced JS	29	3353
+FP	22	Unbalanced JS	29	10
+TN	22	Unbalanced JS	29	2152
+TP	22	Unbalanced JS	29	294
+FN	22	Unbalanced JS	30	3459
+FP	22	Unbalanced JS	30	0
+TN	22	Unbalanced JS	30	2150
+TP	22	Unbalanced JS	30	166
+FN	22	Unbalanced OLS	1	2650
+FP	22	Unbalanced OLS	1	10
+TN	22	Unbalanced OLS	1	2152
+TP	22	Unbalanced OLS	1	998
+FN	22	Unbalanced OLS	2	3393
+FP	22	Unbalanced OLS	2	0
+TN	22	Unbalanced OLS	2	2150
+TP	22	Unbalanced OLS	2	230
+FN	22	Unbalanced OLS	3	2795
+FP	22	Unbalanced OLS	3	6
+TN	22	Unbalanced OLS	3	2155
+TP	22	Unbalanced OLS	3	853
+FN	22	Unbalanced OLS	4	3430
+FP	22	Unbalanced OLS	4	0
+TN	22	Unbalanced OLS	4	2152
+TP	22	Unbalanced OLS	4	196
+FN	22	Unbalanced OLS	5	3047
+FP	22	Unbalanced OLS	5	3
+TN	22	Unbalanced OLS	5	2159
+TP	22	Unbalanced OLS	5	602
+FN	22	Unbalanced OLS	6	3491
+FP	22	Unbalanced OLS	6	0
+TN	22	Unbalanced OLS	6	2156
+TP	22	Unbalanced OLS	6	137
+FN	22	Unbalanced OLS	7	3367
+FP	22	Unbalanced OLS	7	12
+TN	22	Unbalanced OLS	7	2152
+TP	22	Unbalanced OLS	7	282
+FN	22	Unbalanced OLS	8	3482
+FP	22	Unbalanced OLS	8	1
+TN	22	Unbalanced OLS	8	2153
+TP	22	Unbalanced OLS	8	142
+FN	22	Unbalanced OLS	9	2989
+FP	22	Unbalanced OLS	9	21
+TN	22	Unbalanced OLS	9	2141
+TP	22	Unbalanced OLS	9	657
+FN	22	Unbalanced OLS	10	3523
+FP	22	Unbalanced OLS	10	0
+TN	22	Unbalanced OLS	10	2151
+TP	22	Unbalanced OLS	10	100
+FN	22	Unbalanced OLS	11	2721
+FP	22	Unbalanced OLS	11	29
+TN	22	Unbalanced OLS	11	2132
+TP	22	Unbalanced OLS	11	925
+FN	22	Unbalanced OLS	12	3029
+FP	22	Unbalanced OLS	12	41
+TN	22	Unbalanced OLS	12	2114
+TP	22	Unbalanced OLS	12	595
+FN	22	Unbalanced OLS	13	3214
+FP	22	Unbalanced OLS	13	13
+TN	22	Unbalanced OLS	13	2151
+TP	22	Unbalanced OLS	13	433
+FN	22	Unbalanced OLS	14	3443
+FP	22	Unbalanced OLS	14	0
+TN	22	Unbalanced OLS	14	2155
+TP	22	Unbalanced OLS	14	179
+FN	22	Unbalanced OLS	15	2710
+FP	22	Unbalanced OLS	15	57
+TN	22	Unbalanced OLS	15	2098
+TP	22	Unbalanced OLS	15	938
+FN	22	Unbalanced OLS	16	3293
+FP	22	Unbalanced OLS	16	3
+TN	22	Unbalanced OLS	16	2145
+TP	22	Unbalanced OLS	16	330
+FN	22	Unbalanced OLS	17	2863
+FP	22	Unbalanced OLS	17	4
+TN	22	Unbalanced OLS	17	2158
+TP	22	Unbalanced OLS	17	784
+FN	22	Unbalanced OLS	18	3430
+FP	22	Unbalanced OLS	18	0
+TN	22	Unbalanced OLS	18	2158
+TP	22	Unbalanced OLS	18	196
+FN	22	Unbalanced OLS	19	3249
+FP	22	Unbalanced OLS	19	1
+TN	22	Unbalanced OLS	19	2164
+TP	22	Unbalanced OLS	19	399
+FN	22	Unbalanced OLS	20	2230
+FP	22	Unbalanced OLS	20	787
+TN	22	Unbalanced OLS	20	1369
+TP	22	Unbalanced OLS	20	1394
+FN	22	Unbalanced OLS	21	2819
+FP	22	Unbalanced OLS	21	4
+TN	22	Unbalanced OLS	21	2158
+TP	22	Unbalanced OLS	21	832
+FN	22	Unbalanced OLS	22	3532
+FP	22	Unbalanced OLS	22	0
+TN	22	Unbalanced OLS	22	2156
+TP	22	Unbalanced OLS	22	97
+FN	22	Unbalanced OLS	23	3136
+FP	22	Unbalanced OLS	23	3
+TN	22	Unbalanced OLS	23	2160
+TP	22	Unbalanced OLS	23	512
+FN	22	Unbalanced OLS	24	3482
+FP	22	Unbalanced OLS	24	0
+TN	22	Unbalanced OLS	24	2160
+TP	22	Unbalanced OLS	24	147
+FN	22	Unbalanced OLS	25	2717
+FP	22	Unbalanced OLS	25	13
+TN	22	Unbalanced OLS	25	2151
+TP	22	Unbalanced OLS	25	932
+FN	22	Unbalanced OLS	26	3423
+FP	22	Unbalanced OLS	26	0
+TN	22	Unbalanced OLS	26	2154
+TP	22	Unbalanced OLS	26	204
+FN	22	Unbalanced OLS	27	2874
+FP	22	Unbalanced OLS	27	1
+TN	22	Unbalanced OLS	27	2162
+TP	22	Unbalanced OLS	27	775
+FN	22	Unbalanced OLS	28	3374
+FP	22	Unbalanced OLS	28	0
+TN	22	Unbalanced OLS	28	2157
+TP	22	Unbalanced OLS	28	247
+FN	22	Unbalanced OLS	29	3385
+FP	22	Unbalanced OLS	29	6
+TN	22	Unbalanced OLS	29	2156
+TP	22	Unbalanced OLS	29	262
+FN	22	Unbalanced OLS	30	3495
+FP	22	Unbalanced OLS	30	0
+TN	22	Unbalanced OLS	30	2150
+TP	22	Unbalanced OLS	30	130
+FN	24	Balanced	1	1936
+FP	24	Balanced	1	0
+TN	24	Balanced	1	2158
+TP	24	Balanced	1	1714
+FN	24	Balanced	2	1535
+FP	24	Balanced	2	4
+TN	24	Balanced	2	2157
+TP	24	Balanced	2	2114
+FN	24	Balanced	3	1298
+FP	24	Balanced	3	40
+TN	24	Balanced	3	2119
+TP	24	Balanced	3	2352
+FN	24	Balanced	4	1490
+FP	24	Balanced	4	14
+TN	24	Balanced	4	2140
+TP	24	Balanced	4	2159
+FN	24	Balanced	5	1891
+FP	24	Balanced	5	3
+TN	24	Balanced	5	2156
+TP	24	Balanced	5	1759
+FN	24	Balanced	6	1456
+FP	24	Balanced	6	35
+TN	24	Balanced	6	2126
+TP	24	Balanced	6	2193
+FN	24	Balanced	7	1835
+FP	24	Balanced	7	3
+TN	24	Balanced	7	2159
+TP	24	Balanced	7	1813
+FN	24	Balanced	8	2136
+FP	24	Balanced	8	0
+TN	24	Balanced	8	2163
+TP	24	Balanced	8	1515
+FN	24	Balanced	9	1944
+FP	24	Balanced	9	4
+TN	24	Balanced	9	2148
+TP	24	Balanced	9	1704
+FN	24	Balanced	10	1154
+FP	24	Balanced	10	68
+TN	24	Balanced	10	2090
+TP	24	Balanced	10	2495
+FN	24	Balanced	11	1148
+FP	24	Balanced	11	49
+TN	24	Balanced	11	2109
+TP	24	Balanced	11	2500
+FN	24	Balanced	12	1868
+FP	24	Balanced	12	1
+TN	24	Balanced	12	2157
+TP	24	Balanced	12	1782
+FN	24	Balanced	13	1044
+FP	24	Balanced	13	29
+TN	24	Balanced	13	2125
+TP	24	Balanced	13	2605
+FN	24	Balanced	14	1178
+FP	24	Balanced	14	45
+TN	24	Balanced	14	2114
+TP	24	Balanced	14	2471
+FN	24	Balanced	15	1376
+FP	24	Balanced	15	7
+TN	24	Balanced	15	2153
+TP	24	Balanced	15	2272
+FN	24	Balanced	16	1534
+FP	24	Balanced	16	34
+TN	24	Balanced	16	2123
+TP	24	Balanced	16	2112
+FN	24	Balanced	17	1264
+FP	24	Balanced	17	20
+TN	24	Balanced	17	2137
+TP	24	Balanced	17	2383
+FN	24	Balanced	18	1441
+FP	24	Balanced	18	5
+TN	24	Balanced	18	2154
+TP	24	Balanced	18	2207
+FN	24	Balanced	19	935
+FP	24	Balanced	19	112
+TN	24	Balanced	19	2050
+TP	24	Balanced	19	2715
+FN	24	Balanced	20	2000
+FP	24	Balanced	20	0
+TN	24	Balanced	20	2155
+TP	24	Balanced	20	1649
+FN	24	Balanced	21	1825
+FP	24	Balanced	21	1
+TN	24	Balanced	21	2155
+TP	24	Balanced	21	1823
+FN	24	Balanced	22	991
+FP	24	Balanced	22	107
+TN	24	Balanced	22	2050
+TP	24	Balanced	22	2659
+FN	24	Balanced	23	2203
+FP	24	Balanced	23	0
+TN	24	Balanced	23	2155
+TP	24	Balanced	23	1443
+FN	24	Balanced	24	1883
+FP	24	Balanced	24	2
+TN	24	Balanced	24	2159
+TP	24	Balanced	24	1764
+FN	24	Balanced	25	1789
+FP	24	Balanced	25	7
+TN	24	Balanced	25	2152
+TP	24	Balanced	25	1861
+FN	24	Balanced	26	1376
+FP	24	Balanced	26	42
+TN	24	Balanced	26	2116
+TP	24	Balanced	26	2276
+FN	24	Balanced	27	1492
+FP	24	Balanced	27	24
+TN	24	Balanced	27	2137
+TP	24	Balanced	27	2157
+FN	24	Balanced	28	1720
+FP	24	Balanced	28	14
+TN	24	Balanced	28	2143
+TP	24	Balanced	28	1931
+FN	24	Balanced	29	2004
+FP	24	Balanced	29	16
+TN	24	Balanced	29	2145
+TP	24	Balanced	29	1644
+FN	24	Balanced	30	1006
+FP	24	Balanced	30	33
+TN	24	Balanced	30	2126
+TP	24	Balanced	30	2643
+FN	24	Unbalanced JS	1	3207
+FP	24	Unbalanced JS	1	27
+TN	24	Unbalanced JS	1	2137
+TP	24	Unbalanced JS	1	441
+FN	24	Unbalanced JS	2	2830
+FP	24	Unbalanced JS	2	92
+TN	24	Unbalanced JS	2	2061
+TP	24	Unbalanced JS	2	792
+FN	24	Unbalanced JS	3	2604
+FP	24	Unbalanced JS	3	77
+TN	24	Unbalanced JS	3	2086
+TP	24	Unbalanced JS	3	1045
+FN	24	Unbalanced JS	4	3435
+FP	24	Unbalanced JS	4	1
+TN	24	Unbalanced JS	4	2152
+TP	24	Unbalanced JS	4	191
+FN	24	Unbalanced JS	5	2810
+FP	24	Unbalanced JS	5	4
+TN	24	Unbalanced JS	5	2156
+TP	24	Unbalanced JS	5	834
+FN	24	Unbalanced JS	6	3417
+FP	24	Unbalanced JS	6	1
+TN	24	Unbalanced JS	6	2148
+TP	24	Unbalanced JS	6	210
+FN	24	Unbalanced JS	7	2983
+FP	24	Unbalanced JS	7	3
+TN	24	Unbalanced JS	7	2159
+TP	24	Unbalanced JS	7	663
+FN	24	Unbalanced JS	8	3404
+FP	24	Unbalanced JS	8	2
+TN	24	Unbalanced JS	8	2155
+TP	24	Unbalanced JS	8	221
+FN	24	Unbalanced JS	9	2250
+FP	24	Unbalanced JS	9	33
+TN	24	Unbalanced JS	9	2129
+TP	24	Unbalanced JS	9	1399
+FN	24	Unbalanced JS	10	3306
+FP	24	Unbalanced JS	10	0
+TN	24	Unbalanced JS	10	2150
+TP	24	Unbalanced JS	10	319
+FN	24	Unbalanced JS	11	3230
+FP	24	Unbalanced JS	11	14
+TN	24	Unbalanced JS	11	2149
+TP	24	Unbalanced JS	11	419
+FN	24	Unbalanced JS	12	3445
+FP	24	Unbalanced JS	12	2
+TN	24	Unbalanced JS	12	2150
+TP	24	Unbalanced JS	12	178
+FN	24	Unbalanced JS	13	3135
+FP	24	Unbalanced JS	13	4
+TN	24	Unbalanced JS	13	2159
+TP	24	Unbalanced JS	13	514
+FN	24	Unbalanced JS	14	3420
+FP	24	Unbalanced JS	14	6
+TN	24	Unbalanced JS	14	2146
+TP	24	Unbalanced JS	14	201
+FN	24	Unbalanced JS	15	2860
+FP	24	Unbalanced JS	15	25
+TN	24	Unbalanced JS	15	2139
+TP	24	Unbalanced JS	15	789
+FN	24	Unbalanced JS	16	3453
+FP	24	Unbalanced JS	16	5
+TN	24	Unbalanced JS	16	2153
+TP	24	Unbalanced JS	16	173
+FN	24	Unbalanced JS	17	2624
+FP	24	Unbalanced JS	17	7
+TN	24	Unbalanced JS	17	2156
+TP	24	Unbalanced JS	17	1022
+FN	24	Unbalanced JS	18	3328
+FP	24	Unbalanced JS	18	0
+TN	24	Unbalanced JS	18	2152
+TP	24	Unbalanced JS	18	301
+FN	24	Unbalanced JS	19	3331
+FP	24	Unbalanced JS	19	1
+TN	24	Unbalanced JS	19	2164
+TP	24	Unbalanced JS	19	316
+FN	24	Unbalanced JS	20	3431
+FP	24	Unbalanced JS	20	1
+TN	24	Unbalanced JS	20	2158
+TP	24	Unbalanced JS	20	200
+FN	24	Unbalanced JS	21	3184
+FP	24	Unbalanced JS	21	8
+TN	24	Unbalanced JS	21	2156
+TP	24	Unbalanced JS	21	465
+FN	24	Unbalanced JS	22	3365
+FP	24	Unbalanced JS	22	1
+TN	24	Unbalanced JS	22	2155
+TP	24	Unbalanced JS	22	259
+FN	24	Unbalanced JS	23	2981
+FP	24	Unbalanced JS	23	71
+TN	24	Unbalanced JS	23	2092
+TP	24	Unbalanced JS	23	666
+FN	24	Unbalanced JS	24	3473
+FP	24	Unbalanced JS	24	0
+TN	24	Unbalanced JS	24	2155
+TP	24	Unbalanced JS	24	152
+FN	24	Unbalanced JS	25	2919
+FP	24	Unbalanced JS	25	173
+TN	24	Unbalanced JS	25	1990
+TP	24	Unbalanced JS	25	730
+FN	24	Unbalanced JS	26	3416
+FP	24	Unbalanced JS	26	1
+TN	24	Unbalanced JS	26	2152
+TP	24	Unbalanced JS	26	210
+FN	24	Unbalanced JS	27	2753
+FP	24	Unbalanced JS	27	8
+TN	24	Unbalanced JS	27	2153
+TP	24	Unbalanced JS	27	894
+FN	24	Unbalanced JS	28	3360
+FP	24	Unbalanced JS	28	4
+TN	24	Unbalanced JS	28	2149
+TP	24	Unbalanced JS	28	264
+FN	24	Unbalanced JS	29	2806
+FP	24	Unbalanced JS	29	9
+TN	24	Unbalanced JS	29	2149
+TP	24	Unbalanced JS	29	840
+FN	24	Unbalanced JS	30	2806
+FP	24	Unbalanced JS	30	203
+TN	24	Unbalanced JS	30	1950
+TP	24	Unbalanced JS	30	819
+FN	24	Unbalanced OLS	1	3256
+FP	24	Unbalanced OLS	1	15
+TN	24	Unbalanced OLS	1	2149
+TP	24	Unbalanced OLS	1	392
+FN	24	Unbalanced OLS	2	3076
+FP	24	Unbalanced OLS	2	20
+TN	24	Unbalanced OLS	2	2133
+TP	24	Unbalanced OLS	2	546
+FN	24	Unbalanced OLS	3	2700
+FP	24	Unbalanced OLS	3	53
+TN	24	Unbalanced OLS	3	2110
+TP	24	Unbalanced OLS	3	949
+FN	24	Unbalanced OLS	4	3510
+FP	24	Unbalanced OLS	4	0
+TN	24	Unbalanced OLS	4	2153
+TP	24	Unbalanced OLS	4	116
+FN	24	Unbalanced OLS	5	2891
+FP	24	Unbalanced OLS	5	4
+TN	24	Unbalanced OLS	5	2156
+TP	24	Unbalanced OLS	5	753
+FN	24	Unbalanced OLS	6	3478
+FP	24	Unbalanced OLS	6	0
+TN	24	Unbalanced OLS	6	2149
+TP	24	Unbalanced OLS	6	149
+FN	24	Unbalanced OLS	7	3097
+FP	24	Unbalanced OLS	7	1
+TN	24	Unbalanced OLS	7	2161
+TP	24	Unbalanced OLS	7	549
+FN	24	Unbalanced OLS	8	3452
+FP	24	Unbalanced OLS	8	1
+TN	24	Unbalanced OLS	8	2156
+TP	24	Unbalanced OLS	8	173
+FN	24	Unbalanced OLS	9	2317
+FP	24	Unbalanced OLS	9	27
+TN	24	Unbalanced OLS	9	2135
+TP	24	Unbalanced OLS	9	1332
+FN	24	Unbalanced OLS	10	3360
+FP	24	Unbalanced OLS	10	0
+TN	24	Unbalanced OLS	10	2150
+TP	24	Unbalanced OLS	10	265
+FN	24	Unbalanced OLS	11	3281
+FP	24	Unbalanced OLS	11	7
+TN	24	Unbalanced OLS	11	2156
+TP	24	Unbalanced OLS	11	368
+FN	24	Unbalanced OLS	12	3481
+FP	24	Unbalanced OLS	12	1
+TN	24	Unbalanced OLS	12	2151
+TP	24	Unbalanced OLS	12	142
+FN	24	Unbalanced OLS	13	3197
+FP	24	Unbalanced OLS	13	3
+TN	24	Unbalanced OLS	13	2160
+TP	24	Unbalanced OLS	13	452
+FN	24	Unbalanced OLS	14	3474
+FP	24	Unbalanced OLS	14	5
+TN	24	Unbalanced OLS	14	2147
+TP	24	Unbalanced OLS	14	147
+FN	24	Unbalanced OLS	15	2954
+FP	24	Unbalanced OLS	15	19
+TN	24	Unbalanced OLS	15	2145
+TP	24	Unbalanced OLS	15	695
+FN	24	Unbalanced OLS	16	3505
+FP	24	Unbalanced OLS	16	5
+TN	24	Unbalanced OLS	16	2153
+TP	24	Unbalanced OLS	16	121
+FN	24	Unbalanced OLS	17	2699
+FP	24	Unbalanced OLS	17	6
+TN	24	Unbalanced OLS	17	2157
+TP	24	Unbalanced OLS	17	947
+FN	24	Unbalanced OLS	18	3439
+FP	24	Unbalanced OLS	18	0
+TN	24	Unbalanced OLS	18	2152
+TP	24	Unbalanced OLS	18	190
+FN	24	Unbalanced OLS	19	3387
+FP	24	Unbalanced OLS	19	1
+TN	24	Unbalanced OLS	19	2164
+TP	24	Unbalanced OLS	19	260
+FN	24	Unbalanced OLS	20	3496
+FP	24	Unbalanced OLS	20	0
+TN	24	Unbalanced OLS	20	2159
+TP	24	Unbalanced OLS	20	135
+FN	24	Unbalanced OLS	21	3218
+FP	24	Unbalanced OLS	21	4
+TN	24	Unbalanced OLS	21	2160
+TP	24	Unbalanced OLS	21	431
+FN	24	Unbalanced OLS	22	3433
+FP	24	Unbalanced OLS	22	1
+TN	24	Unbalanced OLS	22	2155
+TP	24	Unbalanced OLS	22	191
+FN	24	Unbalanced OLS	23	3034
+FP	24	Unbalanced OLS	23	59
+TN	24	Unbalanced OLS	23	2104
+TP	24	Unbalanced OLS	23	613
+FN	24	Unbalanced OLS	24	3513
+FP	24	Unbalanced OLS	24	0
+TN	24	Unbalanced OLS	24	2155
+TP	24	Unbalanced OLS	24	112
+FN	24	Unbalanced OLS	25	3037
+FP	24	Unbalanced OLS	25	102
+TN	24	Unbalanced OLS	25	2061
+TP	24	Unbalanced OLS	25	612
+FN	24	Unbalanced OLS	26	3484
+FP	24	Unbalanced OLS	26	0
+TN	24	Unbalanced OLS	26	2153
+TP	24	Unbalanced OLS	26	142
+FN	24	Unbalanced OLS	27	2813
+FP	24	Unbalanced OLS	27	6
+TN	24	Unbalanced OLS	27	2155
+TP	24	Unbalanced OLS	27	834
+FN	24	Unbalanced OLS	28	3473
+FP	24	Unbalanced OLS	28	0
+TN	24	Unbalanced OLS	28	2153
+TP	24	Unbalanced OLS	28	151
+FN	24	Unbalanced OLS	29	2884
+FP	24	Unbalanced OLS	29	6
+TN	24	Unbalanced OLS	29	2152
+TP	24	Unbalanced OLS	29	762
+FN	24	Unbalanced OLS	30	2989
+FP	24	Unbalanced OLS	30	137
+TN	24	Unbalanced OLS	30	2016
+TP	24	Unbalanced OLS	30	636
