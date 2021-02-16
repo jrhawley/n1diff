@@ -15,6 +15,9 @@ loginfo("Loading packages")
 suppressMessages(library("data.table"))
 suppressMessages(library("ggplot2"))
 
+DATA_DIR <- file.path("..", "..", "data", "Gierlinski_2015", "Sleuth")
+RESULT_DIR <- file.path("..", "..", "results", "small-sample-sizes")
+PLOT_DIR <- file.path(RESULT_DIR, "Plots")
 # ==============================================================================
 # Data
 # ==============================================================================
@@ -22,37 +25,37 @@ loginfo("Loading data")
 
 # load data
 confusion <- fread(
-	file.path("Comparison", "confusion.tsv"),
+	file.path(RESULT_DIR, "Comparison", "confusion.tsv"),
 	sep = "\t",
 	header = TRUE
 )
 rates <- fread(
-	file.path("Comparison", "rates.tsv"),
+	file.path(RESULT_DIR, "Comparison", "rates.tsv"),
 	sep = "\t",
 	header = TRUE
 )
 
 mse_all <- fread(
-	file.path("Comparison", "mse.all.tsv"),
+	file.path(RESULT_DIR, "Comparison", "mse.all.tsv"),
 	sep = "\t",
 	header = TRUE
 )
 
 roc <- fread(
-	file.path("Comparison", "roc.tsv"),
+	file.path(RESULT_DIR, "Comparison", "roc.tsv"),
 	sep = "\t",
 	header = TRUE
 )
 
 prc <- fread(
-	file.path("Comparison", "prc.tsv"),
+	file.path(RESULT_DIR, "Comparison", "prc.tsv"),
 	sep = "\t",
 	header = TRUE
 )
 
 # load full dataset
 full <- fread(
-	file.path("..", "..", "data", "Gierlinski_2015", "Sleuth", "genes.tsv"),
+	file.path(DATA_DIR, "genes.tsv"),
 	sep = "\t",
 	header = TRUE
 )
@@ -143,7 +146,7 @@ for (s in colnames(rates)[8:length(colnames(rates))]) {
 		)
 	)
 	ggsave(
-		file.path("Plots", paste0(s, ".png")),
+		file.path(PLOT_DIR, paste0(s, ".png")),
 		width = 12,
 		height = 8,
 		units = "cm"
@@ -202,7 +205,7 @@ gg <- (
 	)
 )
 ggsave(
-	file.path("Plots", "confusion.png"),
+	file.path(PLOT_DIR, "confusion.png"),
 	width = 12,
 	height = 8,
 	units = "cm"
@@ -210,10 +213,15 @@ ggsave(
 
 loginfo("MSE")
 gg_mse_all <- (
-	ggplot(data = mse_all, mapping = aes(x = Test_Condition, y = MSE, fill = Test_Condition))
+	ggplot(
+		data = mse_all,
+		mapping = aes(x = Test_Condition, y = MSE, fill = Test_Condition)
+		)
 	+ geom_col()
 	+ scale_x_discrete(
-		name = "Method"
+		name = NULL,
+		breaks = c("Balanced", "Unbalanced JS", "Unbalanced OLS"),
+		labels = c("Even split", "1-vs-N James-Stein", "1-vs-N")
 	)
 	+ scale_y_continuous(
 		name = "Mean Square Error"
@@ -229,7 +237,7 @@ gg_mse_all <- (
 	+ theme(
 		axis.text.x = element_text(
 			colour = "#000000",
-			angle = 90
+			angle = 0
 		),
 		axis.text.y = element_text(
 			colour = "#000000"
@@ -237,7 +245,7 @@ gg_mse_all <- (
 	)
 )
 ggsave(
-	file.path("Plots", "mse.all.png"),
+	file.path(PLOT_DIR, "mse.all.png"),
 	width = 12,
 	height = 8,
 	units = "cm"
@@ -281,7 +289,7 @@ gg <- (
 	)
 )
 ggsave(
-	file.path("Plots", "auroc.png"),
+	file.path(PLOT_DIR, "auroc.png"),
 	width = 12,
 	height = 12,
 	units = "cm"
@@ -325,7 +333,7 @@ gg <- (
 	)
 )
 ggsave(
-	file.path("Plots", "auprc.png"),
+	file.path(PLOT_DIR, "auprc.png"),
 	width = 12,
 	height = 12,
 	units = "cm"

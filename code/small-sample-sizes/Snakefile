@@ -1,0 +1,92 @@
+# ==============================================================================
+# Configuration
+# ==============================================================================
+import pandas as pd
+import os.path as path
+
+RESULT_DIR = path.join("..", "..", "results", "small-sample-sizes")
+PLOT_DIR = path.join(RESULT_DIR, "Plots")
+# ==============================================================================
+# Meta Rules
+# ==============================================================================
+rule all:
+	input:
+		expand(
+			path.join(PLOT_DIR, "{plot}.png"),
+			plot=[
+				"ACC",
+				"MCC",
+				"NPV",
+				"PPV",
+				"TNR",
+				"TPR",
+				"confusion",
+				"mse.all"
+			],
+		)
+
+# ==============================================================================
+# Rules
+# ==============================================================================
+rule sleuth_small_n:
+	input:
+		script = "sleuth.shuffle.R",
+	output:
+		expand(
+			path.join(RESULT_DIR, "Iterations", "Total_{{n}}", "balanced", "{i}.{file}"),
+			i=range(1, 11),
+			file=["genes.tsv", "sleuth-object.rds"],
+		),
+		expand(
+			path.join(RESULT_DIR, "Iterations", "Total_{{n}}", "unbalanced", "{i}.{file}"),
+			i=range(1, 11),
+			file=["genes.tsv", "sleuth-object.rds"],
+		),
+		expand(
+			path.join(RESULT_DIR, "Iterations", "Total_{{n}}", "unbalanced", "{i}.{file}"),
+			i=range(1, 11),
+			file=["genes.jse.tsv", "jse-object.rds"],
+		),
+	shell:
+		"Rscript {input.script} {wildcards.n}"
+
+rule calc_rates:
+	input:
+		script = "compare-smaller-sample-sizes.R",
+		data = expand(
+			path.join(RESULT_DIR, "Iterations", "Total_{n}", "unbalanced", "{i}.{ext}"),
+			n=range(4, 25, 2),
+			i=range(1, 11),
+			ext=["genes.tsv", "sleuth-object.rds", "genes.jse.tsv", "jse-object.rds"],
+		),
+	output:
+		path.join(RESULT_DIR, "Comparison", "tests.tsv"),
+		path.join(RESULT_DIR, "Comparison", "confusion.tsv"),
+		path.join(RESULT_DIR, "Comparison", "rates.tsv"),
+		path.join(RESULT_DIR, "Comparison", "jse-comp-coeffs.tsv"),
+		path.join(RESULT_DIR, "Comparison", "mse.by-transcript.tsv"),
+		path.join(RESULT_DIR, "Comparison", "mse.all.tsv"),
+		path.join(RESULT_DIR, "Comparison", "roc.tsv"),
+		path.join(RESULT_DIR, "Comparison", "prc.tsv"),
+	shell:
+		"Rscript {input.script}"
+
+rule plot_rates:
+	input:
+		script = "plot-sleuth.R",
+		cfn = path.join(RESULT_DIR, "Comparison", "confusion.tsv"),
+		rat = path.join(RESULT_DIR, "Comparison", "rates.tsv"),
+		mse = path.join(RESULT_DIR, "Comparison", "mse.all.tsv"),
+		roc = path.join(RESULT_DIR, "Comparison", "roc.tsv"),
+		prc = path.join(RESULT_DIR, "Comparison", "prc.tsv"),
+	output:
+		path.join(PLOT_DIR, "ACC.png"),
+		path.join(PLOT_DIR, "MCC.png"),
+		path.join(PLOT_DIR, "NPV.png"),
+		path.join(PLOT_DIR, "PPV.png"),
+		path.join(PLOT_DIR, "TNR.png"),
+		path.join(PLOT_DIR, "TPR.png"),
+		path.join(PLOT_DIR, "confusion.png"),
+		path.join(PLOT_DIR, "mse.all.png"),
+	shell:
+		"Rscript {input.script}"

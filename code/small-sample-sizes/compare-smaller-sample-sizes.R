@@ -17,6 +17,12 @@ suppressMessages(library("data.table"))
 suppressMessages(library("ggplot2"))
 suppressMessages(library("sleuth"))
 
+RESULT_DIR <- file.path(
+	"..",
+	"..",
+	"results",
+	"small-sample-sizes"
+)
 # ==============================================================================
 # Functions
 # ==============================================================================
@@ -189,7 +195,11 @@ tests <- rbindlist(lapply(
 			1:total_reps,
 			function(i) {
 				dt2 <- fread(
-					file.path("Iterations", paste0("Total_", total), "balanced", paste0(i, ".genes.tsv")),
+					file.path(
+						RESULT_DIR
+						"Iterations",
+						paste0("Total_", total), "balanced", paste0(i, ".genes.tsv")
+					),
 					sep = "\t",
 					header = TRUE
 				)
@@ -202,7 +212,11 @@ tests <- rbindlist(lapply(
 			1:total_reps,
 			function(i) {
 				dt2 <- fread(
-					file.path("Iterations", paste0("Total_", total), "unbalanced", paste0(i, ".genes.tsv")),
+					file.path(
+						RESULT_DIR,
+						"Iterations",
+						paste0("Total_", total), "unbalanced", paste0(i, ".genes.tsv")
+					),
 					sep = "\t",
 					header = TRUE
 				)
@@ -215,7 +229,11 @@ tests <- rbindlist(lapply(
 			1:total_reps,
 			function(i) {
 				dt2 <- fread(
-					file.path("Iterations", paste0("Total_", total), "unbalanced", paste0(i, ".genes.jse.tsv")),
+					file.path(
+						RESULT_DIR,
+						"Iterations",
+						paste0("Total_", total), "unbalanced", paste0(i, ".genes.jse.tsv")
+					),
 					sep = "\t",
 					header = TRUE
 				)
@@ -310,52 +328,52 @@ loginfo("Saving data")
 # write results with the q-value threshold of 0.01
 fwrite(
 	iterations[[2]]$results,
-	file.path("Comparison", "tests.tsv"),
+	file.path(RESULT_DIR, "Comparison", "tests.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 fwrite(
 	iterations[[2]]$confusion,
-	file.path("Comparison", "confusion.tsv"),
+	file.path(RESULT_DIR, "Comparison", "confusion.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 fwrite(
 	iterations[[2]]$rates,
-	file.path("Comparison", "rates.tsv"),
+	file.path(RESULT_DIR, "Comparison", "rates.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 fwrite(
 	iterations[[2]]$coefficients,
-	file.path("Comparison", "jse-comp-coeffs.tsv"),
+	file.path(RESULT_DIR, "Comparison", "jse-comp-coeffs.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 
 fwrite(
 	iterations[[2]]$mse,
-	file.path("Comparison", "mse.by-transcript.tsv"),
+	file.path(RESULT_DIR, "Comparison", "mse.by-transcript.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 fwrite(
 	iterations[[2]]$mse_all,
-	file.path("Comparison", "mse.all.tsv"),
+	file.path(RESULT_DIR, "Comparison", "mse.all.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 
 fwrite(
 	roc,
-	file.path("Comparison", "roc.tsv"),
+	file.path(RESULT_DIR, "Comparison", "roc.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
 
 fwrite(
 	prc,
-	file.path("Comparison", "prc.tsv"),
+	file.path(RESULT_DIR, "Comparison", "prc.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )

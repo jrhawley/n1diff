@@ -36,6 +36,7 @@ suppressMessages(library("data.table"))
 suppressMessages(library("ggplot2"))
 suppressMessages(library("sleuth"))
 
+RESULT_DIR <- file.path("..", "..", "results", "small-sample-sizes")
 # ==============================================================================
 # Functions
 # ==============================================================================
@@ -267,6 +268,7 @@ for (i in 1:(total_reps / 2)) {
 				saveRDS(
 					so_jse,
 					file.path(
+						RESULT_DIR,
 						"Iterations",
 						paste0("Total_", cli_args$n),
 						k,
@@ -277,6 +279,7 @@ for (i in 1:(total_reps / 2)) {
 				fwrite(
 					so_jse_results,
 					file.path(
+						RESULT_DIR,
 						"Iterations",
 						paste0("Total_", cli_args$n),
 						k,
@@ -291,6 +294,7 @@ for (i in 1:(total_reps / 2)) {
 			fwrite(
 				so_genes,
 				file.path(
+					RESULT_DIR,
 					"Iterations",
 					paste0("Total_", cli_args$n),
 					k,
@@ -302,6 +306,7 @@ for (i in 1:(total_reps / 2)) {
 			saveRDS(
 				so,
 				file.path(
+					RESULT_DIR,
 					"Iterations",
 					paste0("Total_", cli_args$n),
 					k,
