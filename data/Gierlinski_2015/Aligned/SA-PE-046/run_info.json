@@ -1,0 +1,13 @@
+{
+	"n_targets": 6612,
+	"n_bootstraps": 100,
+	"n_processed": 9418716,
+	"n_pseudoaligned": 5813916,
+	"n_unique": 5214101,
+	"p_pseudoaligned": 61.7,
+	"p_unique": 55.4,
+	"kallisto_version": "0.46.2",
+	"index_version": 10,
+	"start_time": "Thu Jan 28 11:34:04 2021",
+	"call": "kallisto quant -b 100 -t 8 --verbose --single -l 300 -s 10 -i ../Kallisto_s-cerevisiae_Index/transcriptome.idx -o Aligned/SA-PE-046 FASTQs/SA-PE-046_1.fastq.gz FASTQs/SA-PE-046_2.fastq.gz FASTQs/SA-PE-046_3.fastq.gz FASTQs/SA-PE-046_4.fastq.gz FASTQs/SA-PE-046_5.fastq.gz FASTQs/SA-PE-046_6.fastq.gz FASTQs/SA-PE-046_7.fastq.gz"
+}
