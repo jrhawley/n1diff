@@ -155,7 +155,7 @@ save_dge_data <- function(obj, res, design, prefix) {
 	)
 	# save experimental design for troubleshooting
 	fwrite(
-		res,
+		design,
 		paste0(prefix, ".design.tsv"),
 		sep = "\t",
 		col.names = TRUE
