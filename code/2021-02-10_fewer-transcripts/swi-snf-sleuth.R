@@ -23,6 +23,8 @@ RESULT_DIR <- file.path("..", "..", "results", "2021-02-19_fewer-transcripts")
 # randomly select groups this many times before performing comparison
 TOTAL_REPS <- 30
 
+# set random seed for reproducible results
+set.seed(10001)
 
 # ==============================================================================
 # Functions
@@ -142,7 +144,7 @@ for (i in 1:(TOTAL_REPS / 2)) {
 					file.path(
 						RESULT_DIR,
 						"Iterations",
-						paste0("Total_", cli_args$n),
+						"SWI-SNF",
 						k,
 						paste0(iter_idx, ".jse-object.rds")
 					)
@@ -153,7 +155,7 @@ for (i in 1:(TOTAL_REPS / 2)) {
 					file.path(
 						RESULT_DIR,
 						"Iterations",
-						paste0("Total_", cli_args$n),
+						"SWI-SNF",
 						k,
 						paste0(iter_idx, ".genes.jse.tsv")
 					),
@@ -168,7 +170,7 @@ for (i in 1:(TOTAL_REPS / 2)) {
 				file.path(
 					RESULT_DIR,
 					"Iterations",
-					paste0("Total_", cli_args$n),
+					"SWI-SNF",
 					k,
 					paste0(iter_idx, ".genes.tsv")
 				),
@@ -180,7 +182,7 @@ for (i in 1:(TOTAL_REPS / 2)) {
 				file.path(
 					RESULT_DIR,
 					"Iterations",
-					paste0("Total_", cli_args$n),
+					"SWI-SNF",
 					k,
 					paste0(iter_idx, ".sleuth-object.rds")
 				)

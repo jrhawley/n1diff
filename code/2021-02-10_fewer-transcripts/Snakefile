@@ -1,0 +1,52 @@
+# ==============================================================================
+# Configuration
+# ==============================================================================
+import pandas as pd
+import os.path as path
+
+RESULT_DIR = path.join("..", "..", "results", "2021-02-10_fewer-transcripts")
+PLOT_DIR = path.join(RESULT_DIR, "Plots")
+
+N_ITERS = 30
+
+# ==============================================================================
+# Meta Rules
+# ==============================================================================
+rule all:
+	input:
+		expand(
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{file}"),
+			i=range(1, N_ITERS + 1),
+			file=["genes.tsv", "sleuth-object.rds"],
+		),
+		expand(
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{file}"),
+			i=range(1, N_ITERS + 1),
+			file=["genes.tsv", "sleuth-object.rds"],
+		),
+
+# ==============================================================================
+# Rules
+# ==============================================================================
+rule sleuth_small_swi_snf:
+	input:
+		script = "swi-snf-sleuth.R",
+	output:
+		expand(
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{file}"),
+			i=range(1, N_ITERS + 1),
+			file=["genes.tsv", "sleuth-object.rds"],
+		),
+		expand(
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{file}"),
+			i=range(1, N_ITERS + 1),
+			file=["genes.tsv", "sleuth-object.rds"],
+		),
+		expand(
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{file}"),
+			i=range(1, N_ITERS + 1),
+			file=["genes.jse.tsv", "jse-object.rds"],
+		),
+	shell:
+		"Rscript {input.script}"
+
