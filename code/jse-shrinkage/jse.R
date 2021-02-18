@@ -62,7 +62,21 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 
 	# check that conditions for JSE are met (i.e. Trace(Sigma) <= 2 * \lambda_L )
 	if (trace_sigma <= 2 * lambda_L) {
-		stop('Conditions for James-Stein criteria are not met: Tr(Sigma) > 2 * lambda_L')
+		warning('Conditions for James-Stein criteria are not met: Tr(Sigma) > 2 * lambda_L')
+		return(list(
+			targets = s_targets,
+			na_targets = tx_to_remove,
+			which_var = which_var,
+			sigma = sigma,
+			trace_sigma = trace_sigma,
+			lambda_L = lambda_L,
+			shrinkage_numerator = NA,
+			shrinkage_denom = NA,
+			shrinkage_coef = NA,
+			ols = NA,
+			jse = NA,
+			jse_var = NA
+		))
 	}
 
 	# matrix multiplication creates a 1x1 matrix, not a scalar
@@ -106,6 +120,19 @@ jse_wald_test <- function(ols_list) {
 	b1_jse <- ols_list$jse
 	v <- ols_list$jse_var
 
+	# check that estimates aren't NA
+	# (can happen if the trace-eigenvalue or dimensionality requirements aren't met)
+	if (is.na(b1_ols)) {
+		return(data.table(
+			target_id = targets,
+			W = NA,
+			pval = NA,
+			qval = NA,
+			b = NA,
+			se_b = NA
+		))
+	}
+
 	# calculate the Wald test statistic for each target
 	w <- sapply(
 		1:length(b1_jse),
@@ -135,3 +162,4 @@ jse_wald_test <- function(ols_list) {
 		se_b = sapply(1:length(b1_jse), function(i) sqrt(v[i, i]))
 	))
 }
+
