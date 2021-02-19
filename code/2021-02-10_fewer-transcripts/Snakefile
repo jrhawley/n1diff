@@ -14,6 +14,7 @@ N_ITERS = 30
 # ==============================================================================
 rule all:
 	input:
+		# SWI/SNF complex subunits
 		expand(
 			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{ext}"),
 			i=range(1, N_ITERS + 1),
@@ -21,6 +22,20 @@ rule all:
 		),
 		expand(
 			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{method}.{ext}"),
+			i=range(1, N_ITERS + 1),
+			method=["ols", "jse"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
+		),
+		# randomly selected transcripts
+		expand(
+			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "balanced", "{i}.{ext}"),
+			n=[3, 10, 25, 50, 100, 250, 500, 1000],
+			i=range(1, N_ITERS + 1),
+			ext=["genes.tsv", "sleuth-object.rds"],
+		),
+		expand(
+			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "unbalanced", "{i}.{method}.{ext}"),
+			n=[3, 10, 25, 50, 100, 250, 500, 1000],
 			i=range(1, N_ITERS + 1),
 			method=["ols", "jse"],
 			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
@@ -47,3 +62,20 @@ rule sleuth_small_swi_snf:
 	shell:
 		"Rscript {input.script}"
 
+rule sleuth_small_random:
+	input:
+		script = "generic-small-sleuth.R",
+	output:
+		expand(
+			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "balanced", "{i}.{ext}"),
+			i=range(1, N_ITERS + 1),
+			ext=["genes.tsv", "sleuth-object.rds"],
+		),
+		expand(
+			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "unbalanced", "{i}.{method}.{ext}"),
+			i=range(1, N_ITERS + 1),
+			method=["ols", "jse"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
+		),
+	shell:
+		"Rscript {input.script} {wildcards.n}"

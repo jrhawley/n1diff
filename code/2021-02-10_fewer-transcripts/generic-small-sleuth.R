@@ -206,7 +206,7 @@ meta[condition == "wt", condition := "ctrl"]
 loginfo("Performing calculations")
 
 # set random seed for reproducible results
-set.seed(10002)
+set.seed(10000 + cli_args$n)
 
 for (i in 1:(TOTAL_REPS / 2)) {
 	loginfo("\tPreparing sleuth objects")
