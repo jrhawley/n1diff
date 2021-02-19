@@ -14,17 +14,17 @@ suppressWarnings(library("argparse"))
 
 if (!interactive()) {
 	parser <- ArgumentParser(description = "Differential expression analysis for randomly selected transcripts")
-	parser$add_arg(
+	parser$add_argument(
 		"n",
 		type = "integer",
-		description = "Number of transcripts to sample"
+		help = "Number of transcripts to sample"
 	)
 	cli_args <- parser$parse_args()
 } else {
 	cli_args <- list(
 		n = 3
 	)
-)
+}
 
 suppressWarnings(library("logging"))
 
@@ -130,7 +130,7 @@ diff_ge <- function(small_meta, unbalanced = FALSE, iter_idx = "", n_tx = 3) {
 	))
 	# pick a random subset of transcripts
 	subset_tx <- sample_transcripts(so, n_tx)
-	so_genes <- so_genes[transcript_id %in% subset_tx]
+	so_genes <- so_genes[target_id %in% subset_tx]
 
 	# perform James-Stein shrinkage if desired
 	if (unbalanced) {

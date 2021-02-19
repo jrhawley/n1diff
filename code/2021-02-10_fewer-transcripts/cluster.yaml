@@ -1,3 +1,9 @@
+__default__:
+    params: "-c 1 -t 2:00:00 -p all --mem=12G"
+
 sleuth_small_swi_snf:
     params: "-c 8 -t 2:00:00 -p himem --mem=30G"
+
+sleuth_small_random:
+    params: "-c 8 -t 3:00:00 -p himem --mem=30G"
 
