@@ -15,14 +15,15 @@ N_ITERS = 30
 rule all:
 	input:
 		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{file}"),
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{ext}"),
 			i=range(1, N_ITERS + 1),
-			file=["genes.tsv", "sleuth-object.rds"],
+			ext=["genes.tsv", "sleuth-object.rds"],
 		),
 		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{file}"),
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{method}.{ext}"),
 			i=range(1, N_ITERS + 1),
-			file=["genes.tsv", "sleuth-object.rds"],
+			method=["ols", "jse"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
 		),
 
 # ==============================================================================
@@ -33,19 +34,15 @@ rule sleuth_small_swi_snf:
 		script = "swi-snf-sleuth.R",
 	output:
 		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{file}"),
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{ext}"),
 			i=range(1, N_ITERS + 1),
-			file=["genes.tsv", "sleuth-object.rds"],
+			ext=["genes.tsv", "sleuth-object.rds"],
 		),
 		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{file}"),
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{method}.{ext}"),
 			i=range(1, N_ITERS + 1),
-			file=["genes.tsv", "sleuth-object.rds"],
-		),
-		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{file}"),
-			i=range(1, N_ITERS + 1),
-			file=["genes.jse.tsv", "jse-object.rds"],
+			method=["ols", "jse"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
 		),
 	shell:
 		"Rscript {input.script}"
