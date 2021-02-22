@@ -101,14 +101,21 @@ which_single <- function(small_meta) {
 }
 
 # Helper function for selecting random set of transcripts to assess
-sample_transcripts <- function(obj, n_tx = 3) {
+sample_transcripts <- function(obj, n_tx = 3, limit_to = NULL) {
 	# only consider transcripts that have not been filtered out due to low read counts or other QC filters
 	possible_tx <- names(which(obj$filter_bool))
+
+	# specify if the total set of transcripts to choose from needs to be limited
+	if (!is.null(limit_to)) {
+		possible_tx <- intersect(limit_to, possible_tx)
+	}
+
+	# return the selected set of transcripts
 	return(sample(possible_tx, n_tx, replace = FALSE))
 }
 
 # Helper function to perform differential analysis
-diff_ge <- function(small_meta, unbalanced = FALSE, iter_idx = "", n_tx = 3) {
+diff_ge <- function(small_meta, iter_idx = "") {
 	iter_prefix <- paste0("(", iter_idx, " / ", TOTAL_REPS, ")")
 	so <- sleuth_prep(
 		small_meta,
@@ -128,35 +135,35 @@ diff_ge <- function(small_meta, unbalanced = FALSE, iter_idx = "", n_tx = 3) {
 		"wt",
 		show_all = FALSE
 	))
-	# pick a random subset of transcripts
-	subset_tx <- sample_transcripts(so, n_tx)
-	so_genes <- so_genes[target_id %in% subset_tx]
-
-	# perform James-Stein shrinkage if desired
-	if (unbalanced) {
-		vprint("Calculating James-Stein estimates", iter_prefix)
-		# specifiy the sample with the single condition
-		single_sample <- which_single(small_meta)
-		so_jse <- jse_shrinkage(
-			so,
-			which_sample = single_sample,
-			which_beta = "conditionmu",
-			# only select SWI/SNF complex subunits
-			s_targets = subset_tx
-		)
-		so_jse_results <- jse_wald_test(so_jse)
-	} else {
-		so_jse <- NA
-		so_jse_results <- NA
-	}
 
 	# return this set of items for future saving
 	return(list(
 		"object" = so,
 		"results" = so_genes,
-		"design" = small_meta,
-		"shrunk_object" = so_jse,
-		"shrunk_results" = so_jse_results
+		"design" = small_meta
+	))
+}
+
+# Helper function for performing James-Stein shrinkage
+perform_jse <- function(so, small_meta, subset_tx = NULL, iter_idx = "") {
+	iter_prefix <- paste0("(", iter_idx, " / ", TOTAL_REPS, ")")
+	vprint("Calculating James-Stein estimates", iter_prefix)
+	# specifiy the sample with the single condition
+	single_sample <- which_single(small_meta)
+	so_jse <- jse_shrinkage(
+		so,
+		which_sample = single_sample,
+		which_beta = "conditionmu",
+		# only select transcripts in the desired subset
+		s_targets = subset_tx
+	)
+	so_jse_results <- jse_wald_test(so_jse)
+
+	# return this set of items for future saving
+	return(list(
+		"object" = so_jse,
+		"results" = so_jse_results,
+		"design" = small_meta
 	))
 }
 
@@ -200,6 +207,14 @@ meta <- fread("config.tsv")
 # replace "wt" with "ctrl" to ensure that its the baseline control, alphabetically
 meta[condition == "wt", condition := "ctrl"]
 
+# load full dataset to determine the total set of transcripts to select from
+full <- fread(
+	file.path("..", "..", "data", "Gierlinski_2015", "Sleuth", "genes.tsv"),
+	sep = "\t",
+	header = TRUE
+)
+allowed_tx <- full$target_id
+
 # ==============================================================================
 # Analysis
 # ==============================================================================
@@ -215,56 +230,100 @@ for (i in 1:(TOTAL_REPS / 2)) {
 	for (j in 1:2) {
 		iter_idx <- (i - 1) * 2 + j
 		# perform differential analysis of balanced experimental design
+		vprint("Balanced", iter_idx)
 		comp_bal <- diff_ge(
-			sampled_metadata[[j]][["balanced"]],
-			FALSE,
-			iter_idx,
-			cli_args$n
+			small_meta = sampled_metadata[[j]][["balanced"]],
+			iter_idx = iter_idx
 		)
 
-		# perform differential analysis of unbalanced experimental design
-		# both OLS and James-Stein estimates
-		comp_unbal <- diff_ge(
-			sampled_metadata[[j]][["unbalanced"]],
-			TRUE,
-			iter_idx,
-			cli_args$n
-		)
-
-		# check that the trace-lambda condition for James-Stein shrinkage is met
-		while (is.na(comp_unbal$shrunk_object$shrinkage_coef)) {
-			loginfo("Failed shrinkage, trying with new samples")
-			# if not, re-select samples to work with
-			sampled_metadata[[j]][["unbalanced"]] <- select_samples(meta, 6)[[j]][["unbalanced"]]
-			comp_unbal <- diff_ge(
-				sampled_metadata[[j]][["unbalanced"]],
-				TRUE,
-				iter_idx,
-				cli_args$n
+		# set default values to initiate while loop
+		subset_tx <- NA
+		comp_unbal_jse <- list(
+			"object" = list(
+				"shrinkage_coef" = NA
 			)
+		)
+
+		# check that
+		# 1. the balanced and unbalanced designs share >= cli_args$n transcripts that aren't filtered out
+		# 2. the trace-lambda condition for James-Stein shrinkage is met
+		while (is.na(subset_tx) && is.na(comp_unbal_jse$object$shrinkage_coef)) {
+			# perform differential analysis of unbalanced experimental design (only OLS estimates)
+			vprint("Unbalanced OLS", iter_idx)
+			comp_unbal <- diff_ge(
+				small_meta = sampled_metadata[[j]][["unbalanced"]],
+				iter_idx = iter_idx
+			)
+
+			# limit analyses to randomly select from transcripts that weren't filtered out in both the balanced and unbalanced design
+			# this ensures that all iterations of the same index will use the same transcripts
+			# (i.e. paired experimental comparison)
+			allowed_filtered_tx <- intersect(
+				intersect(
+					names(which(comp_bal$object$filter_bool)),
+					names(which(comp_unbal$object$filter_bool))
+				),
+				allowed_tx
+			)
+			if (length(allowed_filtered_tx) >= cli_args$n) {
+				subset_tx <- sample(allowed_filtered_tx, cli_args$n, replace = FALSE)
+			}
+
+			vprint("Unbalanced JS", iter_idx)
+			comp_unbal_jse <- perform_jse(
+				so = comp_unbal$object,
+				small_meta = sampled_metadata[[j]][["unbalanced"]],
+				subset_tx = subset_tx,
+				iter_idx = iter_idx
+			)
+			# if the trace-lambda condition isn't met, need to re-select samples
+			if (is.na(comp_unbal_jse$object$shrinkage_coef)) {
+				vprint("Failed shrinkage, trying with new samples", iter_idx)
+				# if not, re-select samples to work with for unbalanced experimental design
+				sampled_metadata[[j]][["unbalanced"]] <- select_samples(meta, 6)[[j]][["unbalanced"]]
+			}
 		}
 
 		vprint("Saving data", iter_idx)
 		# save balanced design
 		save_dge_data(
 			comp_bal$object,
-			comp_bal$results,
+			comp_bal$results[target_id %in% subset_tx, .SD, keyby = "target_id"],
 			comp_bal$design,
-			file.path(RESULT_DIR, "Iterations", "random", paste0("total_", cli_args$n), "balanced", iter_idx)
+			file.path(
+				RESULT_DIR,
+				"Iterations",
+				"random",
+				paste0("total_", cli_args$n),
+				paste0("iter_", iter_idx, ".balanced")
+			)
 		)
 		# save unbalanced design with OLS results
 		save_dge_data(
 			comp_unbal$object,
-			comp_unbal$results,
+			comp_unbal$results[target_id %in% subset_tx, .SD, keyby = "target_id"],
 			comp_unbal$design,
-			file.path(RESULT_DIR, "Iterations", "random", paste0("total_", cli_args$n), "unbalanced", paste0(iter_idx, ".ols"))
+			file.path(
+				RESULT_DIR,
+				"Iterations",
+				"random",
+				paste0("total_", cli_args$n),
+				paste0("iter_", iter_idx, ".unbalanced-ols")
+			)
 		)
 		# save unbalanced design with James-Stein results
 		save_dge_data(
-			comp_unbal$shrunk_object,
-			comp_unbal$shrunk_results,
+			comp_unbal_jse$object,
+			comp_unbal_jse$results[, .SD, keyby = "target_id"],
 			comp_unbal$design,
-			file.path(RESULT_DIR, "Iterations", "random", paste0("total_", cli_args$n), "unbalanced", paste0(iter_idx, ".jse"))
+			file.path(
+				RESULT_DIR,
+				"Iterations",
+				"random",
+				paste0("total_", cli_args$n),
+				paste0("iter_", iter_idx, ".unbalanced-jse")
+			)
 		)
 	}
 }
+

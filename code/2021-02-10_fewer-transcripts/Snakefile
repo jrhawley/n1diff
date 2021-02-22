@@ -28,13 +28,13 @@ rule all:
 		),
 		# randomly selected transcripts
 		expand(
-			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "balanced", "{i}.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "iter_{i}.balanced.{ext}"),
 			n=[3, 10, 25, 50, 100, 250, 500, 1000],
 			i=range(1, N_ITERS + 1),
-			ext=["genes.tsv", "sleuth-object.rds"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
 		),
 		expand(
-			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "unbalanced", "{i}.{method}.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "iter_{i}.unbalanced-{method}.{ext}"),
 			n=[3, 10, 25, 50, 100, 250, 500, 1000],
 			i=range(1, N_ITERS + 1),
 			method=["ols", "jse"],
@@ -67,15 +67,16 @@ rule sleuth_small_random:
 		script = "generic-small-sleuth.R",
 	output:
 		expand(
-			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "balanced", "{i}.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "iter_{i}.balanced.{ext}"),
 			i=range(1, N_ITERS + 1),
-			ext=["genes.tsv", "sleuth-object.rds"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
 		),
 		expand(
-			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "unbalanced", "{i}.{method}.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "iter_{i}.unbalanced-{method}.{ext}"),
 			i=range(1, N_ITERS + 1),
 			method=["ols", "jse"],
 			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
 		),
 	shell:
 		"Rscript {input.script} {wildcards.n}"
+
