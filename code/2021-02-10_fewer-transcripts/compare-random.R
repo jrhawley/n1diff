@@ -134,7 +134,7 @@ sims_comp <- merge(
     suffixes = c("_small", "_full")
 )
 
-# calculate square error
+# calculate error
 sims_comp[, `:=`(
     Err = b_small - b_full,
     Abs_Err = abs(b_small - b_full),
