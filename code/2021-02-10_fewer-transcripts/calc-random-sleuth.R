@@ -120,7 +120,9 @@ diff_ge <- function(small_meta, iter_idx = "") {
 	so <- sleuth_prep(
 		small_meta,
 		extra_bootstrap_summary = TRUE,
-		num_cores = 8
+		num_cores = 8,
+		# filter out transcripts with < 10 reads in any sample
+		filter_fun = function(row, min_reads = 10, min_prop = 0.83) { mean(row >= min_reads) >= min_prop }
 	)
 	vprint("Fitting model and hypothesis testing", iter_prefix)
 	so <- sleuth_fit(so, ~condition, "full")
@@ -196,6 +198,15 @@ save_dge_data <- function(obj, res, design, prefix) {
 	)
 }
 
+# Helper function for determining if everything in the James-Stein shrinkage worked properly
+is_jse_error <- function(jse_obj) {
+	return(
+		is.na(jse_obj$object$shrinkage_coef)
+		|| (any(is.na(jse_obj$results$b)))
+		|| (any(is.na(jse_obj$results$se_b)))
+	)
+}
+
 # ==============================================================================
 # Data
 # ==============================================================================
@@ -241,13 +252,19 @@ for (i in 1:(TOTAL_REPS / 2)) {
 		comp_unbal_jse <- list(
 			"object" = list(
 				"shrinkage_coef" = NA
+			),
+			"results" = list(
+				"b" = NA,
+				"se_b" = NA
 			)
 		)
 
 		# check that
 		# 1. the balanced and unbalanced designs share >= cli_args$n transcripts that aren't filtered out
 		# 2. the trace-lambda condition for James-Stein shrinkage is met
-		while (is.na(subset_tx) && is.na(comp_unbal_jse$object$shrinkage_coef)) {
+		while_counter <- 0
+		while (is.na(subset_tx) || is_jse_error(comp_unbal_jse)) {
+			vprint(while_counter)
 			# perform differential analysis of unbalanced experimental design (only OLS estimates)
 			vprint("Unbalanced OLS", iter_idx)
 			comp_unbal <- diff_ge(
@@ -276,12 +293,16 @@ for (i in 1:(TOTAL_REPS / 2)) {
 				subset_tx = subset_tx,
 				iter_idx = iter_idx
 			)
-			# if the trace-lambda condition isn't met, need to re-select samples
-			if (is.na(comp_unbal_jse$object$shrinkage_coef)) {
+			# need to re-select samples if
+			# 1. trace-lambda condition isn't met
+			# 2. any transcript has an NA as an folc change estimate
+			# 3. any transcript has an NA as a variance estimate
+			if (is_jse_error(comp_unbal_jse)) {
 				vprint("Failed shrinkage, trying with new samples", iter_idx)
 				# if not, re-select samples to work with for unbalanced experimental design
 				sampled_metadata[[j]][["unbalanced"]] <- select_samples(meta, 6)[[j]][["unbalanced"]]
 			}
+			while_counter <- while_counter + 1
 		}
 
 		vprint("Saving data", iter_idx)

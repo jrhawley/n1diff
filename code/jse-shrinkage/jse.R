@@ -131,7 +131,7 @@ jse_wald_test <- function(ols_list) {
 
 	# check that estimates aren't NA
 	# (can happen if the trace-eigenvalue or dimensionality requirements aren't met)
-	if (is.na(b1_ols)) {
+	if (any(is.na(b1_ols))) {
 		return(data.table(
 			target_id = targets,
 			W = NA,
