@@ -26,7 +26,8 @@ PLOT_DIR <- file.path(RESULT_DIR, "Plots")
 loginfo("Loading data")
 
 # load comparison data
-comp <- fread(file.path(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"))
+err <- fread(file.path(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"))
+comp <- fread(file.path(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"))
 
 # load SWI/SNF complex information
 swi_snf <- fread("swi-snf-complex-subunits.tsv")
@@ -70,7 +71,7 @@ gg <- (
     + theme_minimal()
 )
 ggsave(
-    file.path(PLOT_DIR, "unbalanced-comparison.png"),
+    file.path(PLOT_DIR, "swi-snf.unbalanced-comparison.png"),
     gg,
     width = 12,
     height = 8,
@@ -94,7 +95,7 @@ gg <- (
     )
 )
 ggsave(
-    file.path(PLOT_DIR, "mse.png"),
+    file.path(PLOT_DIR, "swi-snf.mse.png"),
     gg,
     width = 16,
     height = 10,
@@ -118,7 +119,7 @@ gg <- (
     )
 )
 ggsave(
-    file.path(PLOT_DIR, "mse.percent-change.png"),
+    file.path(PLOT_DIR, "swi-snf.mse.percent-change.png"),
     gg,
     width = 16,
     height = 10,

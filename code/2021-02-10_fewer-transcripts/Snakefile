@@ -15,31 +15,11 @@ N_ITERS = 30
 rule all:
 	input:
 		# SWI/SNF complex subunits
-		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{ext}"),
-			i=range(1, N_ITERS + 1),
-			ext=["genes.tsv", "sleuth-object.rds"],
-		),
-		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{method}.{ext}"),
-			i=range(1, N_ITERS + 1),
-			method=["ols", "jse"],
-			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
-		),
+		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"),
+		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
 		# randomly selected transcripts
-		expand(
-			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "iter_{i}.balanced.{ext}"),
-			n=[3, 10, 25, 50, 100, 250, 500, 1000],
-			i=range(1, N_ITERS + 1),
-			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
-		),
-		expand(
-			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "iter_{i}.unbalanced-{method}.{ext}"),
-			n=[3, 10, 25, 50, 100, 250, 500, 1000],
-			i=range(1, N_ITERS + 1),
-			method=["ols", "jse"],
-			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
-		),
+		path.join(RESULT_DIR, "Comparison", "random", "err.tsv"),
+		path.join(RESULT_DIR, "Comparison", "random", "simulations.tsv"),
 
 # ==============================================================================
 # Rules
@@ -62,6 +42,26 @@ rule sleuth_small_swi_snf:
 	shell:
 		"Rscript {input.script}"
 
+rule compare_swi_snf:
+	input:
+		script = "compare-swi-snf.R",
+		data_bal = expand(
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{ext}"),
+			i=range(1, N_ITERS + 1),
+			ext=["genes.tsv", "sleuth-object.rds"],
+		),
+		data_unbal = expand(
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{method}.{ext}"),
+			i=range(1, N_ITERS + 1),
+			method=["ols", "jse"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
+		),
+	output:
+		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"),
+		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
+	shell:
+		"Rscript {input.script}"
+
 rule sleuth_small_random:
 	input:
 		script = "calc-random-sleuth.R",
@@ -80,3 +80,22 @@ rule sleuth_small_random:
 	shell:
 		"Rscript {input.script} {wildcards.n}"
 
+rule compare_random:
+	input:
+		script = "compare-swi-snf.R",
+		data_bal = expand(
+			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "iter_{i}.balanced.{ext}"),
+			i=range(1, N_ITERS + 1),
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
+		),
+		data_unbal = expand(
+			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "iter_{i}.unbalanced-{method}.{ext}"),
+			i=range(1, N_ITERS + 1),
+			method=["ols", "jse"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
+		),
+	output:
+		path.join(RESULT_DIR, "Comparison", "random", "err.tsv"),
+		path.join(RESULT_DIR, "Comparison", "random", "simulations.tsv"),
+	shell:
+		"Rscript {input.script}"

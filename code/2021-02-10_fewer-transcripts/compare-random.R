@@ -183,7 +183,12 @@ dest_dir <- file.path(RESULT_DIR, "Comparison", "random")
 if (!dir.exists(dest_dir)) {
     dir.create(dest_dir, recursive = TRUE)
 }
-
+fwrite(
+    sims_comp_wide,
+    file.path(dest_dir, "simulations.tsv"),
+    sep = "\t",
+    col.names = TRUE
+)
 fwrite(
     err,
     file.path(dest_dir, "err.tsv"),

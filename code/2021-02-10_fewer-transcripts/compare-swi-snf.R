@@ -161,6 +161,12 @@ if (!dir.exists(dest_dir)) {
 }
 
 fwrite(
+    sims_comp_wide,
+    file.path(dest_dir, "simulations.tsv"),
+    sep = "\t",
+    col.names = TRUE
+)
+fwrite(
     err,
     file.path(dest_dir, "err.tsv"),
     sep = "\t",
