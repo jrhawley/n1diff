@@ -42,6 +42,12 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 			mes[[tid]]$ols_fit$coefficients[[which_beta]]
 		}
 	)
+	mean_obs <- sapply(
+		s_targets,
+		function(tid) {
+			mes[[tid]]$mean_obs
+		}
+	)
 
 	# check if any coefficients are NULL, and remove them if so
 	null_counter <- sapply(ols, is.null)
@@ -67,6 +73,7 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 			targets = s_targets,
 			na_targets = tx_to_remove,
 			which_var = which_var,
+			mean_obs = mean_obs,
 			sigma = sigma,
 			trace_sigma = trace_sigma,
 			lambda_L = lambda_L,
@@ -100,6 +107,7 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 		targets = s_targets,
 		na_targets = tx_to_remove,
 		which_var = which_var,
+		mean_obs = mean_obs,
 		sigma = sigma,
 		trace_sigma = trace_sigma,
 		lambda_L = lambda_L,
@@ -116,6 +124,7 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 jse_wald_test <- function(ols_list) {
 	# shorthand for estimators
 	targets <- ols_list$targets
+	mean_obs <- ols_list$mean_obs
 	b1_ols <- ols_list$ols
 	b1_jse <- ols_list$jse
 	v <- ols_list$jse_var
@@ -129,7 +138,8 @@ jse_wald_test <- function(ols_list) {
 			pval = NA,
 			qval = NA,
 			b = NA,
-			se_b = NA
+			se_b = NA,
+			mean_obs = mean_obs
 		))
 	}
 
@@ -159,7 +169,8 @@ jse_wald_test <- function(ols_list) {
 		pval = pvals,
 		qval = qvals,
 		b = b1_jse,
-		se_b = sapply(1:length(b1_jse), function(i) sqrt(v[i, i]))
+		se_b = sapply(1:length(b1_jse), function(i) sqrt(v[i, i])),
+		mean_obs = mean_obs
 	))
 }
 
