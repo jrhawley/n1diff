@@ -20,7 +20,7 @@ source(file.path("..", "jse-shrinkage", "jse.R"))
 RESULT_DIR <- file.path("..", "..", "results", "2021-02-10_fewer-transcripts")
 
 # randomly select groups this many times before performing comparison
-TOTAL_REPS <- 30
+TOTAL_REPS <- 2
 
 
 # ==============================================================================

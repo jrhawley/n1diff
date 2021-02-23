@@ -46,7 +46,7 @@ rule all:
 # ==============================================================================
 rule sleuth_small_swi_snf:
 	input:
-		script = "swi-snf-sleuth.R",
+		script = "calc-swi-snf-sleuth.R",
 	output:
 		expand(
 			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{ext}"),
@@ -64,7 +64,7 @@ rule sleuth_small_swi_snf:
 
 rule sleuth_small_random:
 	input:
-		script = "generic-small-sleuth.R",
+		script = "calc-random-sleuth.R",
 	output:
 		expand(
 			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "iter_{i}.balanced.{ext}"),

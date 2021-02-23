@@ -93,6 +93,14 @@ full <- fread(
 )
 full <- full[target_id %in% swi_snf$transcript_id]
 
+# merge full results with gene annotations
+full <- merge(
+    x = full,
+    y = swi_snf,
+    by.x = "target_id",
+    by.y = "transcript_id"
+)
+
 # ==============================================================================
 # Analysis
 # ==============================================================================
@@ -104,16 +112,40 @@ sims_comp <- merge(
     suffixes = c("_small", "_full")
 )
 
-# calculate square error
-sims_comp[, Sq_Err := (b_small - b_full) ^ 2]
+# calculate error
+sims_comp[, `:=`(
+    Err = b_small - b_full,
+    Abs_Err = abs(b_small - b_full),
+    Sq_Err = (b_small - b_full) ^ 2,
+    Frac_Err = (b_small - b_full) / b_full
+)]
+
+# recast to wide format for easier calculations
+sims_comp_wide <- dcast(
+    sims_comp[, .(
+        Iteration,
+        target_id,
+        Method = gsub(" ", "_", Method),
+        Sq_Err
+    )],
+    Iteration + target_id ~ Method,
+    value.var = "Sq_Err"
+)
+
+# calculate percent difference in error between OLS and JSE
+sims_comp_wide[, Delta_Err := (Unbalanced_JS - Unbalanced_OLS)]
+sims_comp_wide[, Frac_Delta := (Unbalanced_JS - Unbalanced_OLS) / Unbalanced_OLS]
 
 # calculate MSE
-err <- sims_comp[,
+err <- sims_comp_wide[,
     .(
-        Mean_SE = mean(Sq_Err),
-        SD_SE = sd(Sq_Err)
-    ),
-    by = c("target_id", "Method")
+        Median_Delta_Err = median(Delta_Err, na.rm = TRUE),
+        Mean_Delta_Err = mean(Delta_Err, na.rm = TRUE),
+        SD_Delta_Err = sd(Delta_Err, na.rm = TRUE),
+        Median_Frac_Delta = median(Frac_Delta, na.rm = TRUE),
+        Mean_Frac_Delta = mean(Frac_Delta, na.rm = TRUE),
+        SD_Frac_Delta = sd(Frac_Delta, na.rm = TRUE)
+    )
 ]
 
 
