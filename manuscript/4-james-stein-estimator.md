@@ -17,20 +17,20 @@ The most shrinkage occurs when $c = 2 \left( \frac{\text{Tr}(\Sigma)}{\lambda_L}
 Let's consider the `sleuth` model with our simple experimental design (`d ~ 1 + mutation`):
 
 $$
-D_t | Y_t \sim N_p \left( \beta_{t,0} + \mathbb{I}_{mut}\beta_{t,1}, (\sigma_t^2 + \tau_t^2)I_n \right)
+D_t | Y_t \sim \mathcal{N}_p \left( \beta_{t,0} + \mathbb{I}_{mut}\beta_{t,1}, (\sigma_t^2 + \tau_t^2)I_n \right)
 $$
 
 For our $n_{nonmut}$ non-mutated samples this is equivalent to
 
 $$
-D_t | Y_t \sim N_{n_{nonmut}} \left( \beta_{t,0}, (\sigma_t^2 + \tau_t^2)I_n \right)
+D_t | Y_t \sim \mathcal{N}_{n_{nonmut}} \left( \beta_{t,0}, (\sigma_t^2 + \tau_t^2)I_n \right)
 $$
 
 which can be fit with the same model process that `sleuth` typically employs.
 For the single mutated sample, the model is
 
 $$
-D_t | Y_t \sim N \left( \beta_{t, 0} + \beta_{t, 1}, \sigma_t^2 + \tau_t^2 \right)
+D_t | Y_t \sim \mathcal{N} \left( \beta_{t, 0} + \beta_{t, 1}, \sigma_t^2 + \tau_t^2 \right)
 $$
 
 The covariance matrix is the same as the mutated samples, but the mean $\beta_{t, 0} + \beta_{t, 1}$ is unknown and we have a single observation of this distribution.
@@ -38,7 +38,7 @@ If we are interested in a subset of all transcripts, $S \subset T$ (e.g. we are 
 Our model for the single mutated sample is then
 
 $$
-\Delta \sim N_{|S|}(\Beta_0 + \Beta_1, \Sigma) \\
+\Delta \sim \mathcal{N}_{|S|}(\Beta_0 + \Beta_1, \Sigma) \\
 $$
 
 where
