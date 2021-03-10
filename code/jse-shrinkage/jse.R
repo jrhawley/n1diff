@@ -42,22 +42,30 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 			mes[[tid]]$ols_fit$coefficients[[which_beta]]
 		}
 	)
+	names(ols) <- s_targets
+
 	mean_obs <- sapply(
 		s_targets,
 		function(tid) {
 			mes[[tid]]$mean_obs
 		}
 	)
+	names(mean_obs) <- s_targets
 
 	# check if any coefficients are NULL, and remove them if so
 	null_counter <- sapply(ols, is.null)
 	tx_to_remove <- c()
 	if (any(null_counter)) {
+		# get names of targets to remove
 		tx_to_remove <- names(ols)[null_counter]
+		# remove them from the targets that will be operated on
 		s_targets <- setdiff(s_targets, tx_to_remove)
+
+		# remove these targets from all the important places
 		mes <- mes[names(mes) %ni% tx_to_remove]
 		covariances <- covariances[names(covariances) %ni% tx_to_remove]
 		ols <- as.vector(ols[names(ols) %ni% tx_to_remove], mode = "numeric")
+		mean_obs <- as.vector(mean_obs[names(mean_obs) %ni% tx_to_remove], mode = "numeric")
 	}
 
 	# get covariance matrix
