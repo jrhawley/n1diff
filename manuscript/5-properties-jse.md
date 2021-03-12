@@ -28,7 +28,7 @@ Then
 
 $$
 \mathbb{E}\left[ \hat{\Beta}_1^{(JS)} \right] = \mathbb{E} \left[ \hat{\Beta}_1^{(OLS)} \right] - c\Sigma^{1/2}\mathbb{E} \left[ \frac{u}{\Vert u \Vert ^2} \right] \\
- = \Beta_1 - c\Sigma^{1/2}\mathbb{E} \left[ \frac{u}{\Vert u \Vert ^2} \right] \\
+ = \Beta_1 - c\Sigma^{1/2}\mathbb{E} \left[ \frac{u}{\Vert u \Vert ^2} \right] \Sigma^{1/2}\\
 $$
 
 Expanding $\frac{u}{\Vert u \Vert ^2}$ around $a = \Sigma^{-1/2}\Beta_1$, we get
@@ -47,7 +47,14 @@ the Taylor approximation should be close to $\left(1 - \frac{c}{\Beta_1^T \Sigma
 
 ## Variance
 
-This estimator is the minimax estimator under the mean square error, $\mathbb{E} \left[ \Vert \hat{\Beta}_1^{(JS)} - \Beta_1 \Vert ^2\right] = \sum_{s \in S} \mathbb{E}\left[ \left( \hat{\Beta}_{1,s}^{(JS)} - \Beta_{1,s} \right)^2 \right] = \sum_{s \in S} \text{Var}\left[ \hat{\Beta}_{1,s}^{(JS)} \right]$.
+This estimator is the minimax estimator under the mean square error.
+
+$$
+\mathbb{E} \left[ \Vert \hat{\Beta}_1^{(JS)} - \Beta_1 \Vert ^2\right] \\
+= \sum_{s \in S} \mathbb{E}\left[ \left( \hat{\Beta}_{1,s}^{(JS)} - \Beta_{1,s} \right)^2 \right] \\
+= \sum_{s \in S} \text{Var}\left[ \hat{\Beta}_{1,s}^{(JS)} \right]
+$$
+
 While $\mathbb{E} \left[ \Vert \hat{\Beta}_1^{(JS)} - \Beta_1 \Vert ^2\right] \le \mathbb{E} \left[ \Vert \hat{\Beta}_1^{(OLS)} - \Beta_1 \Vert ^2\right]$, this does not imply that $\text{Var}\left[ \hat{\Beta}_{1,s}^{(JS)} \right] \le \text{Var}\left[ \hat{\Beta}_{1,s}^{(OLS)} \right] \forall s \in S$.
 Some transcripts may have larger variances than the OLS estimator, but all transcripts in aggregate will have a smaller mean square error.
 This is still desirable if the goal is to find if there is an effect on any transcripts in the set $S$, instead of a particular one within the set.
@@ -55,7 +62,8 @@ This is still desirable if the goal is to find if there is an effect on any tran
 To calculate the variance for each individual transcript, we can take the same approach as above.
 
 $$
-\text{Var} \left [ \hat{\Beta}_1^{(JS)} \right] \approx \mathbb{E}\left[ \hat{\Beta}_1^{(JS)} \left( \hat{\Beta}_1^{(JS)} \right)^T \right] - \left(1 - \frac{c}{\Beta_1^T \Sigma^{-1} \Beta_1} \right)^2 \Beta_1 \Beta_1^T \\
+\text{Var} \left [ \hat{\Beta}_1^{(JS)} \right] \\
+\approx \mathbb{E}\left[ \hat{\Beta}_1^{(JS)} \left( \hat{\Beta}_1^{(JS)} \right)^T \right] - \left(1 - \frac{c}{\Beta_1^T \Sigma^{-1} \Beta_1} \right)^2 \Beta_1 \Beta_1^T \\
 = \Sigma^{1/2}\mathbb{E}\left[ u u^T - \frac{2c}{u^Tu}uu^T + \left( \frac{c}{u^Tu} \right)^2 uu^T \right]\Sigma^{1/2} - \left(1 - \frac{c}{\Beta_1^T \Sigma^{-1} \Beta_1} \right)^2 \Beta_1 \Beta_1^T \\
 $$
 
@@ -63,9 +71,10 @@ where again $u = \Sigma^{-1/2} \hat{\Beta}_1^{(OLS)}$.
 Expanding about $a = \Sigma^{-1/2} \Beta_1$,
 
 $$
-\text{Var} \left [ \hat{\Beta}_1^{(JS)} \right] = \left(1 - \frac{c}{\Beta_1^T \Sigma^{-1} \Beta_1} \right)^2 \Sigma + \left[ \left(1 - \frac{c}{\Beta_1^T \Sigma^{-1} \Beta_1} \right)^2 + \frac{2c}{\left( \Beta_1^T \Sigma ^{-1} \Beta_1 \right)^2 } - 1 \right] \Beta_1 \Beta_1^T + \mathcal{O}(\Vert u - a \Vert ^4) \\
+\text{Var} \left [ \hat{\Beta}_1^{(JS)} \right] \\
+= \left(1 - \frac{2c}{\Beta_1^T \Sigma^{-1} \Beta_1} \right) \Sigma - \frac{2c}{\left( \Beta_1^T \Sigma^{-1} \Beta_1 \right)^2} \Beta_1 \Beta_1^T + \mathcal{O}(\Vert u - a \Vert ^4) \\
 $$
 
-We see the shrinkage factor, squared, multiplying $\Sigma$, providing the possibility of a smaller estimator variance.
+We see a shrinkage factor multiplying $\Sigma$, providing the possibility of a smaller estimator variance.
 Unfortunately, $\Beta_1$ is unknown, so this estimator variance is a function of both the mean and variance of the transcripts under consideration.
 This is in contrast to the OLS estimator, which is solely a function of the variance and experimental design.

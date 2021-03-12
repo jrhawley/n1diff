@@ -55,9 +55,9 @@ where $k_{ti}$ is the estimated read count from `kallisto` for transcript $t$ in
 
 ## Bias and variance of the OLS estimator
 
-As shown in Supplementary Note 2 of [the `sleuth` paper](https://doi.org/10.1038/nmeth.4324), the OLS estimator is unbiased $\left( \mathbb{E} \left[ \hat{\beta_t}^{(MLE)} \right] = \beta_t \right)$.
-It can also be shown that $\text{Var} \left[ \hat{\beta_t}^{(MLE)} \right] = (X^TX)^{-1} \Sigma X (X^TX)^{-1}$ for a general covariance matrix $\Sigma$.
-In the case where $\Sigma = (\sigma_t^2 + \tau_t^2)I_n$ (such as in the `sleuth` model), this reduces to $\text{Var} \left[ \hat{\beta_t}^{(MLE)} \right] = (\sigma_t^2 + \tau_t^2)(X^TX)^{-1}$.
+As shown in Supplementary Note 2 of [the `sleuth` paper](https://doi.org/10.1038/nmeth.4324), the OLS estimator is unbiased $\left( \mathbb{E} \left[ \hat{\beta_t}^{(OLS)} \right] = \beta_t \right)$.
+It can also be shown that $\text{Var} \left[ \hat{\beta_t}^{(OLS)} \right] = (X^TX)^{-1} \Sigma X (X^TX)^{-1}$ for a general covariance matrix $\Sigma$.
+In the case where $\Sigma = (\sigma_t^2 + \tau_t^2)I_n$ (such as in the `sleuth` model), this reduces to $\text{Var} \left[ \hat{\beta_t}^{(OLS)} \right] = (\sigma_t^2 + \tau_t^2)(X^TX)^{-1}$.
 
 Consider a simple experimental design where our only covariate of interest is the presence of a mutation.
 Then our design matrix, with the first column being the intercept and the second being the mutation status, looks like so:
@@ -77,7 +77,7 @@ $$
 The variance of the OLS estimator is then
 
 $$
-\text{Var} \left[ \hat{\beta_t}^{(MLE)} \right] = \frac{(\sigma_t^2 + \tau_t^2)}{n_{mut} n_{nonmut}}
+\text{Var} \left[ \hat{\beta_t}^{(OLS)} \right] = \frac{(\sigma_t^2 + \tau_t^2)}{n_{mut} n_{nonmut}}
 \begin{bmatrix}
 n_{mut} & -n_{mut} \\
 - n_{mut} & n_{mut} + n_{nonmut} \\
