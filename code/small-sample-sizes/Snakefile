@@ -6,6 +6,8 @@ import os.path as path
 
 RESULT_DIR = path.join("..", "..", "results", "small-sample-sizes")
 PLOT_DIR = path.join(RESULT_DIR, "Plots")
+JSE_SCRIPT = path.join("..", "jse-shrinkage", "jse.R")
+
 # ==============================================================================
 # Meta Rules
 # ==============================================================================
@@ -31,6 +33,7 @@ rule all:
 rule sleuth_small_n:
 	input:
 		script = "sleuth.shuffle.R",
+		jse = JSE_SCRIPT,
 	output:
 		expand(
 			path.join(RESULT_DIR, "Iterations", "Total_{{n}}", "balanced", "{i}.{file}"),
@@ -53,6 +56,7 @@ rule sleuth_small_n:
 rule calc_rates:
 	input:
 		script = "compare-smaller-sample-sizes.R",
+		jse = JSE_SCRIPT,
 		data = expand(
 			path.join(RESULT_DIR, "Iterations", "Total_{n}", "unbalanced", "{i}.{ext}"),
 			n=range(4, 25, 2),
