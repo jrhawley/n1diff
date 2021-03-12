@@ -16,7 +16,7 @@ suppressMessages(library("data.table"))
 # Functions
 # ==============================================================================
 # Perform James-Stein shrinkage
-jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which_fit = "full", shrinkage_coef = NULL, which_var = "obs_counts") {
+jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which_fit = "full", which_var = "obs_counts") {
 	# shorthand for Not-In function
 	'%ni%' <- Negate('%in%')
 
@@ -87,7 +87,6 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 			lambda_L = lambda_L,
 			shrinkage_numerator = NA,
 			shrinkage_denom = NA,
-			shrinkage_coef = NA,
 			ols = NA,
 			jse = NA,
 			jse_var = NA
@@ -95,19 +94,13 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 	}
 
 	# matrix multiplication creates a 1x1 matrix, not a scalar
+	shrinkage_numerator <- max(0, 2 * (trace_sigma / lambda_L - 2))
 	shrinkage_denom <- as.numeric(t(ols) %*% sigma_inv %*% ols)
 
-	# maximize shrinkage coefficient if not given
-	if (is.null(shrinkage_coef)) {
-		shrinkage_numerator <- max(0, 2 * (trace_sigma / lambda_L - 2))
-	} else if (shrinkage_numerator > 2 * (trace_sigma / lambda_L - 2)) {
-		warning('`shrinkage_numerator` > 2 * (Tr(Sigma) / lambda_L - 2). Capping at max value')
-		shrinkage_numerator <- 2 * (trace_sigma / lambda_L - 2)
-	}
 	b1 <- (1 - shrinkage_numerator / shrinkage_denom) * ols
 	# the coefficient in the approximate can be < 0, leading to a negative variance.
 	# cap it with 0 for safer calculations
-	b1_var <- ( 
+	b1_var <- (
 		(1 - 2 * shrinkage_numerator / shrinkage_denom) * sigma
 		- 2 / shrinkage_denom ^ 2 * (ols %*% t(ols))
 	)
@@ -121,7 +114,7 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 		trace_sigma = trace_sigma,
 		lambda_L = lambda_L,
 		shrinkage_numerator = shrinkage_numerator,
-		shrinkage_denom = denom,
+		shrinkage_denom = shrinkage_denom,
 		ols = ols,
 		jse = b1,
 		jse_var = b1_var
