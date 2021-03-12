@@ -95,7 +95,7 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 	}
 
 	# matrix multiplication creates a 1x1 matrix, not a scalar
-	denom <- as.numeric(t(ols) %*% sigma_inv %*% ols)
+	shrinkage_denom <- as.numeric(t(ols) %*% sigma_inv %*% ols)
 
 	# maximize shrinkage coefficient if not given
 	if (is.null(shrinkage_coef)) {
@@ -104,11 +104,12 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 		warning('`shrinkage_numerator` > 2 * (Tr(Sigma) / lambda_L - 2). Capping at max value')
 		shrinkage_numerator <- 2 * (trace_sigma / lambda_L - 2)
 	}
-	shrinkage_coef <- (1 - shrinkage_numerator / denom)
-	b1 <- shrinkage_coef * ols
-	b1_var <- (
-		shrinkage_coef ^ 2 * sigma
-		+ ( shrinkage_coef ^ 2 + 2 * shrinkage_numerator / (denom ^ 2) - 1 ) * (b1 %*% t(b1))
+	b1 <- (1 - shrinkage_numerator / shrinkage_denom) * ols
+	# the coefficient in the approximate can be < 0, leading to a negative variance.
+	# cap it with 0 for safer calculations
+	b1_var <- ( 
+		(1 - 2 * shrinkage_numerator / shrinkage_denom) * sigma
+		- 2 / shrinkage_denom ^ 2 * (ols %*% t(ols))
 	)
 
 	return(list(
@@ -121,7 +122,6 @@ jse_shrinkage <- function(obj, s_targets = NULL, which_sample, which_beta, which
 		lambda_L = lambda_L,
 		shrinkage_numerator = shrinkage_numerator,
 		shrinkage_denom = denom,
-		shrinkage_coef = shrinkage_coef,
 		ols = ols,
 		jse = b1,
 		jse_var = b1_var
