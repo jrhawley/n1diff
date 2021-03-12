@@ -8,6 +8,7 @@ RESULT_DIR = path.join("..", "..", "results", "2021-02-10_fewer-transcripts")
 PLOT_DIR = path.join(RESULT_DIR, "Plots")
 
 N_ITERS = 30
+N_TXS = [3, 10, 25, 50, 100, 250, 500]
 
 # ==============================================================================
 # Meta Rules
@@ -29,12 +30,12 @@ rule sleuth_small_swi_snf:
 		script = "calc-swi-snf-sleuth.R",
 	output:
 		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "iter_{i}.balanced.{ext}"),
 			i=range(1, N_ITERS + 1),
-			ext=["genes.tsv", "sleuth-object.rds"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
 		),
 		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{method}.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "iter_{i}.unbalanced-{method}.{ext}"),
 			i=range(1, N_ITERS + 1),
 			method=["ols", "jse"],
 			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
@@ -46,12 +47,12 @@ rule compare_swi_snf:
 	input:
 		script = "compare-swi-snf.R",
 		data_bal = expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", "{i}.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "iter_{i}.balanced.{ext}"),
 			i=range(1, N_ITERS + 1),
-			ext=["genes.tsv", "sleuth-object.rds"],
+			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
 		),
 		data_unbal = expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", "{i}.{method}.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "iter_{i}.unbalanced-{method}.{ext}"),
 			i=range(1, N_ITERS + 1),
 			method=["ols", "jse"],
 			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
@@ -84,12 +85,14 @@ rule compare_random:
 	input:
 		script = "compare-swi-snf.R",
 		data_bal = expand(
-			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "iter_{i}.balanced.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "iter_{i}.balanced.{ext}"),
+			n=N_TXS,
 			i=range(1, N_ITERS + 1),
 			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
 		),
 		data_unbal = expand(
-			path.join(RESULT_DIR, "Iterations", "random", "total_{{n}}", "iter_{i}.unbalanced-{method}.{ext}"),
+			path.join(RESULT_DIR, "Iterations", "random", "total_{n}", "iter_{i}.unbalanced-{method}.{ext}"),
+			n=N_TXS,
 			i=range(1, N_ITERS + 1),
 			method=["ols", "jse"],
 			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
