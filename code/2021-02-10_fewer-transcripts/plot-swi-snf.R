@@ -43,17 +43,6 @@ comp <- merge(
     by.y = "transcript_id"
 )
 
-# convert to wide format for plotting
-comp_wide_mean <- dcast(
-    # replace spaces in Method column with underscores on the fly for easier column access after casting
-    comp[, .(
-        gene_name,
-        Method = gsub(" ", "_", Method),
-        Mean_SE
-    )],
-    gene_name ~ Method,
-    value.var = "Mean_SE"
-)
 
 # ==============================================================================
 # Plots
@@ -65,7 +54,7 @@ if (!dir.exists(PLOT_DIR)) {
 }
 
 gg <- (
-    ggplot(data = comp_wide_mean)
+    ggplot(data = comp)
     + geom_point(aes(x = Unbalanced_OLS, y = Unbalanced_JS))
     + geom_abline(slope = 1, intercept = 0, linetype = "dashed")
     + theme_minimal()
@@ -78,32 +67,32 @@ ggsave(
     units = "cm"
 )
 
-gg <- (
-    ggplot(data = comp)
-    + geom_col(aes(x = Method, y = Mean_SE, fill = Method))
-    + scale_x_discrete(
-        name = NULL
-    )
-    + scale_y_continuous(
-        name = "Fold-Change MSE"
-    )
-    + facet_wrap(~ gene_name, scales = "free_y")
-    + guides(fill = FALSE)
-    + theme_minimal()
-    + theme(
-        axis.text.x = element_text(colour = "#000000", angle = 90, hjust = 1, vjust = 0.5)
-    )
-)
-ggsave(
-    file.path(PLOT_DIR, "swi-snf.mse.png"),
-    gg,
-    width = 16,
-    height = 10,
-    units = "cm"
-)
+# gg <- (
+#     ggplot(data = comp)
+#     + geom_col(aes(x = Method, y = Mean_SE, fill = Method))
+#     + scale_x_discrete(
+#         name = NULL
+#     )
+#     + scale_y_continuous(
+#         name = "Fold-Change MSE"
+#     )
+#     + facet_wrap(~ gene_name, scales = "free_y")
+#     + guides(fill = FALSE)
+#     + theme_minimal()
+#     + theme(
+#         axis.text.x = element_text(colour = "#000000", angle = 90, hjust = 1, vjust = 0.5)
+#     )
+# )
+# ggsave(
+#     file.path(PLOT_DIR, "swi-snf.mse.png"),
+#     gg,
+#     width = 16,
+#     height = 10,
+#     units = "cm"
+# )
 
 gg <- (
-    ggplot(data = comp_wide_mean)
+    ggplot(data = comp)
     + geom_col(aes(x = gene_name, y = 100 * (Unbalanced_JS - Unbalanced_OLS) / Unbalanced_OLS))
     + scale_x_discrete(
         name = NULL

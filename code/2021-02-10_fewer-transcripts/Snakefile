@@ -18,6 +18,9 @@ rule all:
 		# SWI/SNF complex subunits
 		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"),
 		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
+		path.join(PLOT_DIR, "swi-snf.unbalanced-comparison.png"),
+		path.join(PLOT_DIR, "swi-snf.mse.png"),
+		path.join(PLOT_DIR, "swi-snf.mse.percent-change.png"),
 		# randomly selected transcripts
 		path.join(RESULT_DIR, "Comparison", "random", "err.tsv"),
 		path.join(RESULT_DIR, "Comparison", "random", "simulations.tsv"),
@@ -60,6 +63,18 @@ rule compare_swi_snf:
 	output:
 		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"),
 		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
+	shell:
+		"Rscript {input.script}"
+
+rule plot_swi_snf:
+	input:
+		script = "plot-swi-snf.R",
+		err = path.join(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"),
+		sim = path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
+	output:
+		path.join(PLOT_DIR, "swi-snf.unbalanced-comparison.png"),
+		path.join(PLOT_DIR, "swi-snf.mse.png"),
+		path.join(PLOT_DIR, "swi-snf.mse.percent-change.png"),
 	shell:
 		"Rscript {input.script}"
 

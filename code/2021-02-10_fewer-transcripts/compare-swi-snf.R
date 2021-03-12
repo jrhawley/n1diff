@@ -35,7 +35,7 @@ bal <- rbindlist(lapply(
     1:N_ITERS,
     function(i) {
         dt <- fread(
-            file.path(RESULT_DIR, "Iterations", "SWI-SNF", "balanced", paste0(i, ".genes.tsv")),
+            file.path(RESULT_DIR, "Iterations", "SWI-SNF", paste0("iter_", i, ".balanced.genes.tsv")),
             sep = "\t",
             header = TRUE
         )
@@ -51,7 +51,7 @@ unbal_ols <- rbindlist(lapply(
     1:N_ITERS,
     function(i) {
         dt <- fread(
-            file.path(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", paste0(i, ".ols.genes.tsv")),
+            file.path(RESULT_DIR, "Iterations", "SWI-SNF", paste0("iter_", i, ".unbalanced-ols.genes.tsv")),
             sep = "\t",
             header = TRUE
         )
@@ -67,7 +67,7 @@ unbal_js <- rbindlist(lapply(
     1:N_ITERS,
     function(i) {
         dt <- fread(
-            file.path(RESULT_DIR, "Iterations", "SWI-SNF", "unbalanced", paste0(i, ".jse.genes.tsv")),
+            file.path(RESULT_DIR, "Iterations", "SWI-SNF", paste0("iter_", i, ".unbalanced-jse.genes.tsv")),
             sep = "\t",
             header = TRUE
         )

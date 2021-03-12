@@ -90,7 +90,7 @@ diff_ge <- function(small_meta, iter_idx = "") {
 	so <- sleuth_prep(
 		small_meta,
 		extra_bootstrap_summary = TRUE,
-		num_cores = 8,
+		num_cores = 4,
 		# filter out transcripts with < 10 reads in any sample
 		filter_fun = function(row, min_reads = 10, min_prop = 0.83) { mean(row >= min_reads) >= min_prop }
 	)
@@ -169,7 +169,7 @@ save_dge_data <- function(obj, res, design, prefix) {
 # Helper function for determining if everything in the James-Stein shrinkage worked properly
 is_jse_error <- function(jse_obj) {
 	return(
-		is.na(jse_obj$object$shrinkage_coef)
+		is.na(jse_obj$object$shrinkage_numerator)
 		|| (any(is.na(jse_obj$results$b)))
 		|| (any(is.na(jse_obj$results$se_b)))
 	)
