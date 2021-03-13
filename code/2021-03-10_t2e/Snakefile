@@ -1,0 +1,28 @@
+# ==============================================================================
+# Configuration
+# ==============================================================================
+import pandas as pd
+import os.path as path
+
+RESULT_DIR = path.join("..", "..", "results", "2021-03-10_t2e")
+PLOT_DIR = path.join(RESULT_DIR, "Plots")
+
+# ==============================================================================
+# Meta Rules
+# ==============================================================================
+rule all:
+	input:
+		# randomly selected transcripts
+		path.join(RESULT_DIR, "agg-res.rds")
+
+# ==============================================================================
+# Rules
+# ==============================================================================
+rule t2e:
+	input:
+		script = "calc-t2e-dge.R",
+	output:
+		path.join(RESULT_DIR, "agg-res.rds"),
+	shell:
+		"Rscript {input.script}"
+

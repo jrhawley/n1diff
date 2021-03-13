@@ -43,7 +43,7 @@ diff_ge <- function(small_meta) {
 		extra_bootstrap_summary = TRUE,
 		num_cores = 4
 	)
-	vprint("Fitting model and hypothesis testing", iter_prefix)
+	vprint("Fitting model and hypothesis testing")
 	so <- sleuth_fit(so, ~condition, "full")
 
 	# perform differential analysis
@@ -194,7 +194,7 @@ for (i in 1:6) {
 	vprint(paste0("Single T2E+ (iteration ", i, " / 6)"))
 	t2e_idx <- design[, which(condition == "Yes")]
 	single_sample_idx <- t2e_idx[i]
-	single_sample <- design[single_sample_idx, Label]
+	single_sample <- design[single_sample_idx, sample]
 	small_meta <- rbindlist(list(
 		design[single_sample_idx],
 		design[-t2e_idx]
@@ -212,7 +212,7 @@ for (i in 1:6) {
 	vprint(paste0("Single T2E- (iteration ", i, " / 6)"))
 	t2e_idx <- design[, which(condition == "No")]
 	single_sample_idx <- t2e_idx[i]
-	single_sample <- design[single_sample_idx, Label]
+	single_sample <- design[single_sample_idx, sample]
 	small_meta <- rbindlist(list(
 		design[single_sample_idx],
 		design[-t2e_idx]
@@ -228,3 +228,4 @@ if (!dir.exists(RESULT_DIR)) {
 	dir.create(RESULT_DIR, recursive = TRUE)
 }
 saveRDS(agg_res, file.path(RESULT_DIR, "agg-res.rds"))
+

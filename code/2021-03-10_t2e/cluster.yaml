@@ -1,0 +1,3 @@
+__default__:
+    params: "-c 1 -t 4:00:00 -p himem --mem=30G"
+
