@@ -196,9 +196,11 @@ tests <- rbindlist(lapply(
 			function(i) {
 				dt2 <- fread(
 					file.path(
-						RESULT_DIR
+						RESULT_DIR,
 						"Iterations",
-						paste0("Total_", total), "balanced", paste0(i, ".genes.tsv")
+						paste0("Total_", total),
+						"balanced",
+						paste0(i, ".genes.tsv")
 					),
 					sep = "\t",
 					header = TRUE
