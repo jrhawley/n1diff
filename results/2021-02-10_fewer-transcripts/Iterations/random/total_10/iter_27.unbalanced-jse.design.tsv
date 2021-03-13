@@ -1,0 +1,7 @@
+sample	condition	path
+SA-PE-004	mu	../../data/Gierlinski_2015/Aligned/SA-PE-004
+SA-PE-072	mu	../../data/Gierlinski_2015/Aligned/SA-PE-072
+SA-PE-042	mu	../../data/Gierlinski_2015/Aligned/SA-PE-042
+SA-PE-034	mu	../../data/Gierlinski_2015/Aligned/SA-PE-034
+SA-PE-079	mu	../../data/Gierlinski_2015/Aligned/SA-PE-079
+SA-PE-069	ctrl	../../data/Gierlinski_2015/Aligned/SA-PE-069

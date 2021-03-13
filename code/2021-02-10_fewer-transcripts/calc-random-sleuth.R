@@ -201,7 +201,7 @@ save_dge_data <- function(obj, res, design, prefix) {
 # Helper function for determining if everything in the James-Stein shrinkage worked properly
 is_jse_error <- function(jse_obj) {
 	return(
-		is.na(jse_obj$object$shrinkage_coef)
+		is.na(jse_obj$object$shrinkage_numerator)
 		|| (any(is.na(jse_obj$results$b)))
 		|| (any(is.na(jse_obj$results$se_b)))
 	)
