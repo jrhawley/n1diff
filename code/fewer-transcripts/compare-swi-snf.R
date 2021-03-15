@@ -1,10 +1,10 @@
 # ==============================================================================
 # Meta
 # ==============================================================================
-# compare-random
+# compare-swi-snf
 # ------------------------------------------------
 # Author: James Hawley
-# Description: Compare differential analysis results of randomly selected transcripts
+# Description: Compare differential analysis results of SWI/SNF complex subunits
 
 
 # ==============================================================================
@@ -15,9 +15,9 @@ loginfo("Loading packages")
 
 suppressWarnings(library("data.table"))
 
-RESULT_DIR <- file.path("..", "..", "results", "2021-02-10_fewer-transcripts")
+RESULT_DIR <- file.path("..", "..", "results", "fewer-transcripts")
 N_ITERS <- 30
-N_TX <- c(3, 10, 25, 50, 100, 250, 500)
+
 
 # ==============================================================================
 # Data
@@ -27,93 +27,62 @@ loginfo("Loading data")
 # load sample metadata
 meta <- fread("config.tsv")
 
+# load SWI/SNF complex subunit annotations
+swi_snf <- fread("swi-snf-complex-subunits.tsv")
+
 # load fully balanced simulations
 bal <- rbindlist(lapply(
     1:N_ITERS,
     function(i) {
-        dt2 <- rbindlist(lapply(
-            N_TX,
-            function(n) {
-                dt1 <- fread(
-                    file.path(
-                        RESULT_DIR,
-                        "Iterations",
-                        "random",
-                        paste0("total_", n),
-                        paste0("iter_", i, ".balanced.genes.tsv")
-                    ),
-                    sep = "\t",
-                    header = TRUE
-                )
-                dt1[, Total := n]
-                return(dt1)
-            }
-        ))
-        dt2[, Iteration := i]
-        dt2[, Method := "Balanced"]
-        return(dt2)
+        dt <- fread(
+            file.path(RESULT_DIR, "Iterations", "SWI-SNF", paste0("iter_", i, ".balanced.genes.tsv")),
+            sep = "\t",
+            header = TRUE
+        )
+        # only keep SWI/SNF subunits
+        dt <- dt[target_id %in% swi_snf$transcript_id]
+        dt[, Iteration := i]
+        dt[, Method := "Balanced"]
+        return(dt)
     }
 ))
 # load unbalanced OLS simulations
 unbal_ols <- rbindlist(lapply(
     1:N_ITERS,
     function(i) {
-        dt2 <- rbindlist(lapply(
-            N_TX,
-            function(n) {
-                dt1 <- fread(
-                    file.path(
-                        RESULT_DIR,
-                        "Iterations",
-                        "random",
-                        paste0("total_", n),
-                        paste0("iter_", i, ".unbalanced-ols.genes.tsv")
-                    ),
-                    sep = "\t",
-                    header = TRUE
-                )
-                dt1[, Total := n]
-                return(dt1)
-            }
-        ))
-        dt2[, Iteration := i]
-        dt2[, Method := "Unbalanced OLS"]
-        return(dt2)
+        dt <- fread(
+            file.path(RESULT_DIR, "Iterations", "SWI-SNF", paste0("iter_", i, ".unbalanced-ols.genes.tsv")),
+            sep = "\t",
+            header = TRUE
+        )
+        # only keep SWI/SNF subunits
+        dt <- dt[target_id %in% swi_snf$transcript_id]
+        dt[, Iteration := i]
+        dt[, Method := "Unbalanced OLS"]
+        return(dt)
     }
 ))
 # load unbalanced JS simulations
 unbal_js <- rbindlist(lapply(
     1:N_ITERS,
     function(i) {
-        dt2 <- rbindlist(lapply(
-            N_TX,
-            function(n) {
-                dt1 <- fread(
-                    file.path(
-                        RESULT_DIR,
-                        "Iterations",
-                        "random",
-                        paste0("total_", n),
-                        paste0("iter_", i, ".unbalanced-jse.genes.tsv")
-                    ),
-                    sep = "\t",
-                    header = TRUE
-                )
-                dt1[, Total := n]
-                return(dt1)
-            }
-        ))
-        dt2[, Iteration := i]
-        dt2[, Method := "Unbalanced JS"]
-        return(dt2)
+        dt <- fread(
+            file.path(RESULT_DIR, "Iterations", "SWI-SNF", paste0("iter_", i, ".unbalanced-jse.genes.tsv")),
+            sep = "\t",
+            header = TRUE
+        )
+        # only keep SWI/SNF subunits
+        dt <- dt[target_id %in% swi_snf$transcript_id]
+        dt[, Iteration := i]
+        dt[, Method := "Unbalanced JS"]
+        return(dt)
     }
 ))
 
-cols_to_keep <- c("target_id", "pval", "qval", "b", "Iteration", "Method", "Total")
 sims <- rbindlist(list(
-    bal[, .SD, .SDcols = cols_to_keep],
-    unbal_ols[, .SD, .SDcols = cols_to_keep],
-    unbal_js[, .SD, .SDcols = cols_to_keep]
+    bal[, .SD, .SDcols = c("target_id", "pval", "qval", "b", "Iteration", "Method")],
+    unbal_ols[, .SD, .SDcols = c("target_id", "pval", "qval", "b", "Iteration", "Method")],
+    unbal_js[, .SD, .SDcols = c("target_id", "pval", "qval", "b", "Iteration", "Method")]
 ))
 
 # load full set of differential analysis data
@@ -121,6 +90,15 @@ full <- fread(
     file.path("..", "..", "data", "Gierlinski_2015", "Sleuth", "genes.tsv"),
     sep = "\t",
     header = TRUE
+)
+full <- full[target_id %in% swi_snf$transcript_id]
+
+# merge full results with gene annotations
+full <- merge(
+    x = full,
+    y = swi_snf,
+    by.x = "target_id",
+    by.y = "transcript_id"
 )
 
 # ==============================================================================
@@ -145,13 +123,12 @@ sims_comp[, `:=`(
 # recast to wide format for easier calculations
 sims_comp_wide <- dcast(
     sims_comp[, .(
-        Total,
         Iteration,
         target_id,
         Method = gsub(" ", "_", Method),
         Sq_Err
     )],
-    Total + Iteration + target_id ~ Method,
+    Iteration + target_id ~ Method,
     value.var = "Sq_Err"
 )
 
@@ -168,8 +145,7 @@ err <- sims_comp_wide[,
         Median_Frac_Delta = median(Frac_Delta, na.rm = TRUE),
         Mean_Frac_Delta = mean(Frac_Delta, na.rm = TRUE),
         SD_Frac_Delta = sd(Frac_Delta, na.rm = TRUE)
-    ),
-    by = c("Total")
+    )
 ]
 
 
@@ -179,10 +155,11 @@ err <- sims_comp_wide[,
 loginfo("Saving data")
 
 # ensure that the directory exists
-dest_dir <- file.path(RESULT_DIR, "Comparison", "random")
+dest_dir <- file.path(RESULT_DIR, "Comparison", "SWI-SNF")
 if (!dir.exists(dest_dir)) {
     dir.create(dest_dir, recursive = TRUE)
 }
+
 fwrite(
     sims_comp_wide,
     file.path(dest_dir, "simulations.tsv"),
@@ -195,4 +172,3 @@ fwrite(
     sep = "\t",
     col.names = TRUE
 )
-

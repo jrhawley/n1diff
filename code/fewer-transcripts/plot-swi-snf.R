@@ -16,7 +16,7 @@ loginfo("Loading packages")
 suppressWarnings(library("data.table"))
 suppressWarnings(library("ggplot2"))
 
-RESULT_DIR <- file.path("..", "..", "results", "2021-02-10_fewer-transcripts")
+RESULT_DIR <- file.path("..", "..", "results", "fewer-transcripts")
 PLOT_DIR <- file.path(RESULT_DIR, "Plots")
 
 

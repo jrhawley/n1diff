@@ -4,7 +4,7 @@
 import pandas as pd
 import os.path as path
 
-RESULT_DIR = path.join("..", "..", "results", "2021-02-10_fewer-transcripts")
+RESULT_DIR = path.join("..", "..", "results", "fewer-transcripts")
 PLOT_DIR = path.join(RESULT_DIR, "Plots")
 
 N_ITERS = 30
