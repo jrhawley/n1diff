@@ -19,12 +19,11 @@ rule all:
 		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"),
 		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
 		path.join(PLOT_DIR, "swi-snf.unbalanced-comparison.png"),
-		path.join(PLOT_DIR, "swi-snf.mse.percent-change.png"),
 		# randomly selected transcripts
 		path.join(RESULT_DIR, "Comparison", "random", "err.tsv"),
 		path.join(RESULT_DIR, "Comparison", "random", "simulations.tsv"),
 		path.join(PLOT_DIR, "random.unbalanced-comparison.png"),
-		path.join(PLOT_DIR, "random.mse.percent-change.png"),
+		path.join(PLOT_DIR, "random.mse.all.png"),
 
 # ==============================================================================
 # Rules
@@ -74,7 +73,6 @@ rule plot_swi_snf:
 		sim = path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
 	output:
 		path.join(PLOT_DIR, "swi-snf.unbalanced-comparison.png"),
-		path.join(PLOT_DIR, "swi-snf.mse.percent-change.png"),
 	shell:
 		"Rscript {input.script}"
 
@@ -125,7 +123,7 @@ rule plot_random:
 		sim = path.join(RESULT_DIR, "Comparison", "random", "simulations.tsv"),
 	output:
 		path.join(PLOT_DIR, "random.unbalanced-comparison.png"),
-		path.join(PLOT_DIR, "random.mse.percent-change.png"),
+		path.join(PLOT_DIR, "random.mse.all.png"),
 	shell:
 		"Rscript {input.script}"
 

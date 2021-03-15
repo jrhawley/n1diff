@@ -124,36 +124,6 @@ ggsave(
 )
 
 gg <- (
-	ggplot(data = mse)
-	+ geom_point(
-		aes(
-			x = as.factor(Total),
-			y = 100 * (Unbalanced_JS - Unbalanced_OLS) / Unbalanced_OLS
-		),
-		position = position_jitter(width = 0.2, height = 0)
-	)
-	+ scale_x_discrete(
-		name = NULL
-	)
-	+ scale_y_continuous(
-		name = "MSE % Difference",
-	)
-	+ guides(fill = FALSE)
-	+ theme_minimal()
-	+ theme(
-		axis.text.x = element_text(colour = "#000000", angle = 90, hjust = 1, vjust = 0.5),
-		panel.grid.major.x = element_blank()
-	)
-)
-ggsave(
-	file.path(PLOT_DIR, "random.mse.percent-change.png"),
-	gg,
-	width = 20,
-	height = 12,
-	units = "cm"
-)
-
-gg <- (
 	ggplot(
 		data = mse_long[Method != "Balanced"],
 		aes(
