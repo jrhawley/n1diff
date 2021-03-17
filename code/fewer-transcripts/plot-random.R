@@ -43,6 +43,7 @@ mse <- comp[,
 	),
 	by = c("Iteration", "Total")
 ]
+mse[, Frac_Delta := (Unbalanced_JS - Unbalanced_OLS) / Unbalanced_OLS]
 
 # convert to long format
 mse_long <- melt(
@@ -122,6 +123,92 @@ ggsave(
 	height = 12,
 	units = "cm"
 )
+
+gg <- (
+	ggplot(data = mse)
+	+ geom_point(aes(x = Unbalanced_OLS, y = Unbalanced_JS))
+	+ geom_abline(slope = 1, intercept = 0, linetype = "dashed")
+	+ scale_x_continuous(
+		name = "Mean Square Error (OLS)"
+	)
+	+ scale_y_continuous(
+		name = "Mean Square Error (JS)"
+	)
+	+ facet_wrap(~ Total, scales = "free", labeller = as_labeller(appender))
+	+ theme_minimal()
+)
+ggsave(
+	file.path(PLOT_DIR, "random.unbalanced-comparison.png"),
+	gg,
+	width = 20,
+	height = 12,
+	units = "cm"
+)
+
+gg <- (
+	ggplot()
+	+ geom_point(
+		data = mse,
+		mapping = aes(
+			x = as.factor(Total),
+			y = 100 * Frac_Delta,
+			colour = as.factor(Total)
+		),
+		alpha = 0.4,
+		position = position_jitter(
+			width = 0.2,
+			height = 0
+		)
+	)
+	+ geom_boxplot(
+		data = mse,
+		mapping = aes(
+			x = as.factor(Total),
+			y = 100 * Frac_Delta,
+			colour = as.factor(Total)
+		),
+		fill = NA,
+		outlier.shape = NA
+	)
+	+ geom_text(
+		data = mse[, mean(Frac_Delta), by = "Total"],
+		mapping = aes(
+			x = as.factor(Total),
+			y = 100,
+			label = paste0(format(round(100 * V1, 2), nsmall = 2), "%")
+		),
+		vjust = -1
+	)
+	+ scale_x_discrete(
+		name = "Number of Transcripts"
+	)
+	+ scale_y_continuous(
+		name = "Mean Square Error\n(% Difference)",
+		breaks = c(-100, -50, 0, 50, 100, 150),
+		labels = paste(c(-100, -50, 0, 50, 100, 150), "%")
+	)
+	+ scale_colour_viridis_d()
+	+ guides(colour = FALSE)
+	+ theme_minimal()
+	+ theme(
+		legend.position = "top",
+		axis.text.x = element_text(
+			colour = "#000000",
+			angle = 90,
+			hjust = 1,
+			vjust = 0.5
+		),
+		panel.grid.major.x = element_blank()
+	)
+)
+ggsave(
+	file.path(PLOT_DIR, "random.mse.frac-delta.png"),
+	gg,
+	width = 20,
+	height = 12,
+	units = "cm"
+)
+
 
 gg <- (
 	ggplot(
