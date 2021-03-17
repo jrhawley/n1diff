@@ -20,6 +20,9 @@ source(file.path("..", "jse-shrinkage", "jse.R"))
 RESULT_DIR <- file.path("..", "..", "results", "2021-03-10_t2e")
 KALLISTO_DIR <- file.path("..", "..", "data", "CPC-GENE")
 
+if (!dir.exists(RESULT_DIR)) {
+	dir.create(RESULT_DIR, recursive = TRUE)
+}
 
 # ==============================================================================
 # Functions
@@ -50,17 +53,20 @@ diff_ge <- function(small_meta) {
 	so <- sleuth_wt(so, "conditionYes")
 
 	# extract results
-	so_genes <- as.data.table(sleuth_results(
+	so_tx <- as.data.table(sleuth_results(
 		so,
 		"conditionYes",
 		"wt",
 		show_all = FALSE
 	))
+	
+	# add transcript_id column that excludes `.#` at the end for easier merging
+	so_tx$transcript_id <- so_tx[, tstrsplit(target_id, "\\.")]$V1
 
 	# return this set of items
 	return(list(
 		"object" = so,
-		"results" = so_genes,
+		"results" = so_tx,
 		"design" = small_meta
 	))
 }
@@ -75,6 +81,9 @@ perform_jse <- function(so, small_meta, single_sample, subset_tx = NULL) {
 		s_targets = subset_tx
 	)
 	so_jse_results <- jse_wald_test(so_jse)
+
+	# add transcript_id column that excludes `.#` at the end for easier merging
+	so_jse_results$transcript_id <- so_jse_results[, tstrsplit(target_id, "\\.")]$V1
 
 	# return this set of items
 	return(list(
@@ -182,11 +191,20 @@ t2e_tx <- hg38_tx[(chr == 21) & (start >= 38380027) & (end <= 41531116)]
 loginfo("Performing calculations full calculation")
 
 full_dge <- diff_ge(design)
-agg_res <- list(
-	full_dge$results[
-		target_id %in% t2e_tx$transcript_id,
-		.(target_id, b, se_b, pval, qval, Set = "Full", Single_Sample = NA)
-	]
+
+res <- full_dge$results[
+	transcript_id %in% t2e_tx$transcript_id,
+	.(target_id, b, se_b, pval, qval, Set = "Full", Single_Sample = NA)
+]
+
+t2e_tx_ids <- res$target_id
+
+# save full scale results
+fwrite(
+	res,
+	file.path(RESULT_DIR, "results.full.tsv"),
+	sep = "\t",
+	col.names = TRUE
 )
 
 # redo the same analyses with 1 T2E+ sample and 6 T2E- samples
@@ -200,11 +218,32 @@ for (i in 1:6) {
 		design[-t2e_idx]
 	))
 	small_dge <- diff_ge(small_meta)
-	small_jse <- perform_jse(small_dge$object, small_meta, single_sample, t2e_tx)
-	agg_res[[length(agg_res) + 1]] <- small_dge$results[
-		target_id %in% t2e_tx$transcript_id,
+	
+	# save unbalanced OLS results
+	res_ols <- small_dge$results[
+		transcript_id %in% t2e_tx$transcript_id,
 		.(target_id, b, se_b, pval, qval, Set = "Single_T2E", Single_Sample = single_sample)
 	]
+	fwrite(
+		res_ols,
+		file.path(RESULT_DIR, paste0("results.", single_sample, ".unbalanced-ols.tsv")),
+		sep = "\t",
+		col.names = TRUE
+	)
+
+	# perform James-Stein shrinkage
+	small_jse <- perform_jse(small_dge$object, small_meta, single_sample, t2e_tx_ids)
+	# save unbalanced JSE results
+	res_js <- small_jse$results[
+		transcript_id %in% t2e_tx$transcript_id,
+		.(target_id, b, se_b, pval, qval, Set = "Single_T2E", Single_Sample = single_sample)
+	]
+	fwrite(
+		res_js,
+		file.path(RESULT_DIR, paste0("results.", single_sample, ".unbalanced-js.tsv")),
+		sep = "\t",
+		col.names = TRUE
+	)
 }
 
 # redo the same analyses with 6 T2E+ sample and 1 T2E- samples
@@ -218,14 +257,29 @@ for (i in 1:6) {
 		design[-t2e_idx]
 	))
 	small_dge <- diff_ge(small_meta)
-	agg_res[[length(agg_res) + 1]] <- small_dge$results[
-		target_id %in% t2e_tx$transcript_id,
-		.(target_id, b, se_b, pval, qval, Set = "Single_nonT2E", Single_Sample = single_sample)
+	# save unbalanced OLS results
+	res_ols <- small_dge$results[
+		transcript_id %in% t2e_tx$transcript_id,
+		.(target_id, b, se_b, pval, qval, Set = "Single_T2E", Single_Sample = single_sample)
 	]
-}
+	fwrite(
+		res_ols,
+		file.path(RESULT_DIR, paste0("results.", single_sample, ".unbalanced-ols.tsv")),
+		sep = "\t",
+		col.names = TRUE
+	)
 
-if (!dir.exists(RESULT_DIR)) {
-	dir.create(RESULT_DIR, recursive = TRUE)
+	# perform James-Stein shrinkage
+	small_jse <- perform_jse(small_dge$object, small_meta, single_sample, t2e_tx_ids)
+	# save unbalanced JSE results
+	res_js <- small_jse$results[
+		transcript_id %in% t2e_tx$transcript_id,
+		.(target_id, b, se_b, pval, qval, Set = "Single_T2E", Single_Sample = single_sample)
+	]
+	fwrite(
+		res_js,
+		file.path(RESULT_DIR, paste0("results.", single_sample, ".unbalanced-js.tsv")),
+		sep = "\t",
+		col.names = TRUE
+	)
 }
-saveRDS(agg_res, file.path(RESULT_DIR, "agg-res.rds"))
-
