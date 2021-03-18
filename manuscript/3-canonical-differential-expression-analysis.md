@@ -62,12 +62,10 @@ $$
 X =
 \begin{bmatrix}
 1 & 1 \\
-\vdots_{n_{mut}} & \vdots_{n_{mut}} \\
-1 & 1 \\
 1 & 0 \\
-\vdots_{n_{nonmut}} & \vdots_{n_{nonmut}} \\
+\vdots & \vdots \\
 1 & 0
-\end{bmatrix}
+\end{bmatrix} \in \mathbb{R}^{(N + 1) \times 2}
 $$
 
 The variance of the OLS estimator is then
