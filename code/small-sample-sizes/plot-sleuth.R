@@ -91,7 +91,7 @@ stat_better_direction <- data.table(
 # Plots
 # ==============================================================================
 loginfo("Plotting figures")
-for (s in colnames(rates)[8:length(colnames(rates))]) {
+for (s in stat_better_direction$Stat) {
 	loginfo(s)
 
 	better_dir <- stat_better_direction[Stat == s, Direction]
