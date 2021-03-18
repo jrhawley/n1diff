@@ -22,6 +22,7 @@ rule all:
 		# randomly selected transcripts
 		path.join(RESULT_DIR, "Comparison", "random", "err.tsv"),
 		path.join(RESULT_DIR, "Comparison", "random", "simulations.tsv"),
+		path.join(RESULT_DIR, "Comparison", "random", "pairwise-tests.tsv"),
 		path.join(PLOT_DIR, "random.unbalanced-comparison.png"),
 		path.join(PLOT_DIR, "random.mse.frac-delta.png"),
 		path.join(PLOT_DIR, "random.mse.all.png"),
@@ -123,6 +124,7 @@ rule plot_random:
 		err = path.join(RESULT_DIR, "Comparison", "random", "err.tsv"),
 		sim = path.join(RESULT_DIR, "Comparison", "random", "simulations.tsv"),
 	output:
+		path.join(RESULT_DIR, "Comparison", "random", "pairwise-tests.tsv"),
 		path.join(PLOT_DIR, "random.unbalanced-comparison.png"),
 		path.join(PLOT_DIR, "random.mse.frac-delta.png"),
 		path.join(PLOT_DIR, "random.mse.all.png"),

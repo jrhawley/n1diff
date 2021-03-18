@@ -15,6 +15,7 @@ loginfo("Loading packages")
 
 suppressWarnings(library("data.table"))
 suppressWarnings(library("ggplot2"))
+suppressWarnings(library("scales"))
 
 RESULT_DIR <- file.path("..", "..", "results", "fewer-transcripts")
 PLOT_DIR <- file.path(RESULT_DIR, "Plots")
@@ -67,25 +68,28 @@ mse_long <- merge(
 )
 mse_long[, Rel_MSE := MSE / Mean_Balanced]
 
-# perform ANOVA test to estimate coefficients for each factor
-htest <- aov(Rel_MSE ~ Total + Method + Iteration, data = mse_long[Method != "Balanced"])
+htest_summ <- rbindlist(lapply(
+	c(3, 10, 25, 50, 100, 250, 500),
+	function(i) {
+		htest <- t.test(
+			x = mse_long[(Total == i) & (Method == "Unbalanced_OLS"), Rel_MSE],
+			y = mse_long[(Total == i) & (Method == "Unbalanced_JS"), Rel_MSE],
+			alternative = "greater",
+			paired = TRUE
+		)
+		return(data.table(
+			"Total" = i,
+			"t" = htest$statistic,
+			"p" = htest$p.value,
+			"shift" = htest$estimate
+		))
+	}
+))
+htest_summ[, q := p.adjust(p, method = "fdr")]
 
-# save coefficients
-htest_summ <- as.data.table(
-	unclass(summary(htest))[[1]],
-	keep.rownames = TRUE
-)
-colnames(htest_summ) <- c(
-	"Statistic",
-	"df",
-	"sum_sq",
-	"mean_sq",
-	"F",
-	"pval"
-)
 fwrite(
 	htest_summ,
-	file.path(RESULT_DIR, "Comparison", "random", "anova.tsv"),
+	file.path(RESULT_DIR, "Comparison", "random", "pairwise-tests.tsv"),
 	sep = "\t",
 	col.names = TRUE
 )
@@ -103,9 +107,16 @@ appender <- function(s) {
 	paste(s, "Transcripts")
 }
 
-gg <- (
-	ggplot(data = mse)
-	+ geom_point(aes(x = Unbalanced_OLS, y = Unbalanced_JS))
+gg_comp <- (
+	ggplot(
+		data = mse,
+		mapping = aes(
+			x = Unbalanced_OLS,
+			y = Unbalanced_JS,
+			colour = as.factor(Total)
+		)
+	)
+	+ geom_point()
 	+ geom_abline(slope = 1, intercept = 0, linetype = "dashed")
 	+ scale_x_continuous(
 		name = "Mean Square Error (OLS)"
@@ -113,39 +124,20 @@ gg <- (
 	+ scale_y_continuous(
 		name = "Mean Square Error (JS)"
 	)
+	+ scale_colour_viridis_d()
+	+ guides(colour = FALSE)
 	+ facet_wrap(~ Total, scales = "free", labeller = as_labeller(appender))
 	+ theme_minimal()
 )
 ggsave(
 	file.path(PLOT_DIR, "random.unbalanced-comparison.png"),
-	gg,
+	gg_comp,
 	width = 20,
 	height = 12,
 	units = "cm"
 )
 
-gg <- (
-	ggplot(data = mse)
-	+ geom_point(aes(x = Unbalanced_OLS, y = Unbalanced_JS))
-	+ geom_abline(slope = 1, intercept = 0, linetype = "dashed")
-	+ scale_x_continuous(
-		name = "Mean Square Error (OLS)"
-	)
-	+ scale_y_continuous(
-		name = "Mean Square Error (JS)"
-	)
-	+ facet_wrap(~ Total, scales = "free", labeller = as_labeller(appender))
-	+ theme_minimal()
-)
-ggsave(
-	file.path(PLOT_DIR, "random.unbalanced-comparison.png"),
-	gg,
-	width = 20,
-	height = 12,
-	units = "cm"
-)
-
-gg <- (
+gg_diff <- (
 	ggplot()
 	+ geom_point(
 		data = mse,
@@ -171,13 +163,16 @@ gg <- (
 		outlier.shape = NA
 	)
 	+ geom_text(
-		data = mse[, mean(Frac_Delta), by = "Total"],
+		data = htest_summ,
 		mapping = aes(
 			x = as.factor(Total),
 			y = 100,
-			label = paste0(format(round(100 * V1, 2), nsmall = 2), "%")
+			label = paste0(
+				format(round(100 * shift, 2), nsmall = 2), "%",
+				"\nq = ", scientific(p)
+			)
 		),
-		vjust = -1
+		vjust = -0.5
 	)
 	+ scale_x_discrete(
 		name = "Number of Transcripts"
@@ -203,7 +198,7 @@ gg <- (
 )
 ggsave(
 	file.path(PLOT_DIR, "random.mse.frac-delta.png"),
-	gg,
+	gg_diff,
 	width = 20,
 	height = 12,
 	units = "cm"
