@@ -15,6 +15,7 @@ suppressMessages(library("logging"))
 loginfo("Loading packages")
 suppressMessages(library("data.table"))
 suppressMessages(library("ggplot2"))
+suppressMessages(library("ggrepel"))
 
 # ==============================================================================
 # Data
@@ -32,6 +33,13 @@ qval_thresh <- 0.01
 equiv_pval_thresh <- so_genes[qval > qval_thresh, min(pval)]
 log2fc_thresh <- 1
 
+# load gene annotation
+tx <- fread(
+    "S-cerevisiae.transcripts.tsv",
+    sep = "\t",
+    header = TRUE
+)
+
 # ==============================================================================
 # Analysis
 # ==============================================================================
@@ -45,6 +53,14 @@ so_genes[, Colour := ifelse(
         "Up in WT"
     )
 )]
+
+# merge annotation information
+so_genes <- merge(
+    x = so_genes,
+    y = tx,
+    by.x = "target_id",
+    by.y = "transcript_id"
+)
 
 
 # ==============================================================================
@@ -66,17 +82,35 @@ gg_pval <- (
     )
     + theme_minimal()
 )
-ggsave("Plots/p-values.genes.png", gg_pval, height = 8, width = 12, units = "cm")
+ggsave(
+    "Plots/p-values.genes.png",
+    gg_pval,
+    height = 8,
+    width = 12,
+    units = "cm"
+)
 
 # volcano plot of transcript fold changes
+labelled_genes <- c("SNF2", "PHO12", "TYE7", "TIS11")
 gg_vol <- (
-    ggplot(data = so_genes)
+    ggplot(
+        data = so_genes,
+        mapping = aes(
+            x = log2b,
+            y = -log10(pval),
+            colour = Colour,
+            label = gene_name
+        )
+    )
     + geom_point(
-        aes(x = log2b, y = -log10(pval), colour = Colour),
         alpha = 0.2
     )
+    + geom_label_repel(
+        data = so_genes[gene_name %in% labelled_genes],
+        min.segment.length = 0
+    )
     + scale_x_continuous(
-        name = bquote(log[2] * "(" * Delta * "snf2 / WT" * ")")
+        name = bquote(log[2] * "(" * Delta * "Snf2 / WT" * ")")
     )
     + scale_colour_manual(
         name = "Fold Change",
@@ -87,7 +121,7 @@ gg_vol <- (
         ),
         labels = c(
             "N.S. or |log2(FC)| < 1",
-            bquote("Up in " * Delta * "snf2"),
+            bquote("Up in " * Delta * "Snf2"),
             "Up in WT"
         ),
         values = c(
@@ -97,5 +131,21 @@ gg_vol <- (
         )
     )
     + theme_minimal()
+    + theme(
+        legend.position = "bottom"
+    )
 )
-ggsave("Plots/volcano.png", gg_vol, height = 8, width = 12, units = "cm")
+ggsave(
+    "Plots/volcano.png",
+    gg_vol,
+    height = 12,
+    width = 16,
+    units = "cm"
+)
+ggsave(
+    "Plots/volcano.pdf",
+    gg_vol,
+    height = 12,
+    width = 16,
+    units = "cm"
+)
