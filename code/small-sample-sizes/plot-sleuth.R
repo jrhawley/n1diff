@@ -89,7 +89,7 @@ stat_better_direction <- data.table(
 )
 
 # ==============================================================================
-# Adjustments
+# Analysis
 # ==============================================================================
 
 # convert confusion Result to a factor for cleaner plotting
@@ -204,13 +204,13 @@ gg_conf <- (
 	+ scale_colour_manual(
 		name = "Design",
 		breaks = c("Balanced", "Unbalanced OLS", "Unbalanced JS"),
-		labels = c("Even split", "1-vs-N", "1-vs-N James-Stein"),
+		labels = c("Even split", "1 vs (N - 1)", "1 vs (N - 1)\nJames-Stein"),
 		values = c("#4B4B4B", "#DA8FD6", "#FA8072")
 	)
 	+ scale_fill_manual(
 		name = "Design",
 		breaks = c("Balanced", "Unbalanced OLS", "Unbalanced JS"),
-		labels = c("Even split", "1-vs-N", "1-vs-N James-Stein"),
+		labels = c("Even split", "1 vs (N - 1)", "1 vs (N - 1)\nJames-Stein"),
 		values = c("#4B4B4B", "#DA8FD6", "#FA8072")
 	)
 	+ facet_wrap(~ Result, scales = "free_y")
@@ -230,15 +230,15 @@ gg_conf <- (
 ggsave(
 	file.path(PLOT_DIR, "confusion.png"),
 	gg_conf,
-	width = 12,
-	height = 8,
+	width = 16,
+	height = 14,
 	units = "cm"
 )
 ggsave(
 	file.path(PLOT_DIR, "confusion.pdf"),
 	gg_conf,
-	width = 12,
-	height = 8,
+	width = 16,
+	height = 14,
 	units = "cm"
 )
 
