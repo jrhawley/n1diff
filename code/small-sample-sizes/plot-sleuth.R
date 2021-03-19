@@ -18,6 +18,8 @@ suppressMessages(library("ggplot2"))
 DATA_DIR <- file.path("..", "..", "data", "Gierlinski_2015", "Sleuth")
 RESULT_DIR <- file.path("..", "..", "results", "small-sample-sizes")
 PLOT_DIR <- file.path(RESULT_DIR, "Plots")
+
+
 # ==============================================================================
 # Data
 # ==============================================================================
@@ -86,6 +88,19 @@ stat_better_direction <- data.table(
 	)
 )
 
+# ==============================================================================
+# Adjustments
+# ==============================================================================
+
+# convert confusion Result to a factor for cleaner plotting
+confusion[,
+	Result := factor(
+		Result,
+		levels = c("TP", "FP", "TN", "FN"),
+		ordered = TRUE
+	)
+]
+
 
 # ==============================================================================
 # Plots
@@ -96,7 +111,7 @@ for (s in stat_better_direction$Stat) {
 
 	better_dir <- stat_better_direction[Stat == s, Direction]
 
-	gg <- (
+	gg_stat <- (
 		ggplot(
 			data = rates,
 			aes(x = Total, y = get(s), colour = Test_Condition)
@@ -147,6 +162,14 @@ for (s in stat_better_direction$Stat) {
 	)
 	ggsave(
 		file.path(PLOT_DIR, paste0(s, ".png")),
+		gg_stat,
+		width = 12,
+		height = 8,
+		units = "cm"
+	)
+	ggsave(
+		file.path(PLOT_DIR, paste0(s, ".pdf")),
+		gg_stat,
 		width = 12,
 		height = 8,
 		units = "cm"
@@ -154,7 +177,7 @@ for (s in stat_better_direction$Stat) {
 }
 
 loginfo("Confusion matrix")
-gg <- (
+gg_conf <- (
 	ggplot(
 		data = confusion,
 		aes(x = Total, y = N, colour = Test_Condition)
@@ -206,6 +229,14 @@ gg <- (
 )
 ggsave(
 	file.path(PLOT_DIR, "confusion.png"),
+	gg_conf,
+	width = 12,
+	height = 8,
+	units = "cm"
+)
+ggsave(
+	file.path(PLOT_DIR, "confusion.pdf"),
+	gg_conf,
 	width = 12,
 	height = 8,
 	units = "cm"
@@ -338,4 +369,3 @@ ggsave(
 	height = 12,
 	units = "cm"
 )
-

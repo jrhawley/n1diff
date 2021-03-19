@@ -23,6 +23,8 @@ RESULT_DIR <- file.path(
 	"results",
 	"small-sample-sizes"
 )
+
+
 # ==============================================================================
 # Functions
 # ==============================================================================
@@ -145,7 +147,7 @@ assess_jse <- function(dt, qval_thresh = 0.01) {
 			MSE = mean(Sq_Err),
 			SE_SD = sd(Sq_Err)
 		),
-		by = c("target_id", "Test_Condition")
+		by = "Test_Condition"
 	]
 	mse_all <- dt[,
 		.(
