@@ -69,7 +69,7 @@ mse_long <- merge(
 mse_long[, Rel_MSE := MSE / Mean_Balanced]
 
 htest_summ <- rbindlist(lapply(
-	c(3, 10, 25, 50, 100, 250, 500),
+	c(3, 10, 25, 50, 100, 250),
 	function(i) {
 		htest <- t.test(
 			x = mse_long[(Total == i) & (Method == "Unbalanced_OLS"), Rel_MSE],
@@ -109,7 +109,7 @@ appender <- function(s) {
 
 gg_comp <- (
 	ggplot(
-		data = mse,
+		data = mse[Total < 500],
 		mapping = aes(
 			x = Unbalanced_OLS,
 			y = Unbalanced_JS,
@@ -119,33 +119,48 @@ gg_comp <- (
 	+ geom_point()
 	+ geom_abline(slope = 1, intercept = 0, linetype = "dashed")
 	+ scale_x_continuous(
-		name = "Mean Square Error (OLS)"
+		name = "Mean Square Error (OLS)",
+		limits = function(x) c(0, max(0.1, x))
 	)
 	+ scale_y_continuous(
-		name = "Mean Square Error (JS)"
+		name = "Mean Square Error (JS)",
+		limits = function(x) c(0, max(0.1, x))
 	)
 	+ scale_colour_viridis_d()
 	+ guides(colour = FALSE)
-	+ facet_wrap(~ Total, scales = "free", labeller = as_labeller(appender))
+	+ facet_wrap(
+		~ Total,
+		scales = "free",
+		labeller = as_labeller(appender),
+		ncol = 2
+	)
 	+ theme_minimal()
 )
 ggsave(
 	file.path(PLOT_DIR, "random.unbalanced-comparison.png"),
 	gg_comp,
-	width = 20,
+	width = 8,
+	height = 12,
+	units = "cm"
+)
+ggsave(
+	file.path(PLOT_DIR, "random.unbalanced-comparison.pdf"),
+	gg_comp,
+	width = 8,
 	height = 12,
 	units = "cm"
 )
 
 gg_diff <- (
-	ggplot()
-	+ geom_point(
-		data = mse,
+	ggplot(
+		data = mse[Total < 500],
 		mapping = aes(
 			x = as.factor(Total),
 			y = 100 * Frac_Delta,
 			colour = as.factor(Total)
-		),
+		)
+	)
+	+ geom_point(
 		alpha = 0.4,
 		position = position_jitter(
 			width = 0.2,
@@ -153,12 +168,6 @@ gg_diff <- (
 		)
 	)
 	+ geom_boxplot(
-		data = mse,
-		mapping = aes(
-			x = as.factor(Total),
-			y = 100 * Frac_Delta,
-			colour = as.factor(Total)
-		),
 		fill = NA,
 		outlier.shape = NA
 	)
@@ -198,6 +207,13 @@ gg_diff <- (
 )
 ggsave(
 	file.path(PLOT_DIR, "random.mse.frac-delta.png"),
+	gg_diff,
+	width = 20,
+	height = 12,
+	units = "cm"
+)
+ggsave(
+	file.path(PLOT_DIR, "random.mse.frac-delta.pdf"),
 	gg_diff,
 	width = 20,
 	height = 12,
@@ -247,6 +263,13 @@ gg <- (
 )
 ggsave(
 	file.path(PLOT_DIR, "random.mse.all.png"),
+	gg,
+	width = 20,
+	height = 12,
+	units = "cm"
+)
+ggsave(
+	file.path(PLOT_DIR, "random.mse.all.pdf"),
 	gg,
 	width = 20,
 	height = 12,
