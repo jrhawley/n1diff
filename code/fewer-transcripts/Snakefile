@@ -15,11 +15,6 @@ N_TXS = [3, 10, 25, 50, 100, 250, 500]
 # ==============================================================================
 rule all:
 	input:
-		# SWI/SNF complex subunits
-		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"),
-		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
-		path.join(PLOT_DIR, "swi-snf.unbalanced-comparison.png"),
-		# randomly selected transcripts
 		path.join(RESULT_DIR, "Comparison", "random", "err.tsv"),
 		path.join(RESULT_DIR, "Comparison", "random", "simulations.tsv"),
 		path.join(RESULT_DIR, "Comparison", "random", "pairwise-tests.tsv"),
@@ -30,54 +25,6 @@ rule all:
 # ==============================================================================
 # Rules
 # ==============================================================================
-rule sleuth_small_swi_snf:
-	input:
-		script = "calc-swi-snf-sleuth.R",
-	output:
-		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "iter_{i}.balanced.{ext}"),
-			i=range(1, N_ITERS + 1),
-			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
-		),
-		expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "iter_{i}.unbalanced-{method}.{ext}"),
-			i=range(1, N_ITERS + 1),
-			method=["ols", "jse"],
-			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
-		),
-	shell:
-		"Rscript {input.script}"
-
-rule compare_swi_snf:
-	input:
-		script = "compare-swi-snf.R",
-		data_bal = expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "iter_{i}.balanced.{ext}"),
-			i=range(1, N_ITERS + 1),
-			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
-		),
-		data_unbal = expand(
-			path.join(RESULT_DIR, "Iterations", "SWI-SNF", "iter_{i}.unbalanced-{method}.{ext}"),
-			i=range(1, N_ITERS + 1),
-			method=["ols", "jse"],
-			ext=["genes.tsv", "sleuth-object.rds", "design.tsv"],
-		),
-	output:
-		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"),
-		path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
-	shell:
-		"Rscript {input.script}"
-
-rule plot_swi_snf:
-	input:
-		script = "plot-swi-snf.R",
-		err = path.join(RESULT_DIR, "Comparison", "SWI-SNF", "err.tsv"),
-		sim = path.join(RESULT_DIR, "Comparison", "SWI-SNF", "simulations.tsv"),
-	output:
-		path.join(PLOT_DIR, "swi-snf.unbalanced-comparison.png"),
-	shell:
-		"Rscript {input.script}"
-
 rule sleuth_small_random:
 	input:
 		script = "calc-random-sleuth.R",
