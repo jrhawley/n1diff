@@ -324,6 +324,23 @@ prc <- rbindlist(lapply(
 	}
 ))
 
+# Compare methods at the typical q = 0.01 threshold
+df <- iterations[2]$confusion
+df[(Result == "TP") | (Result == "FP"), Call := "Positive"]
+df[(Result == "TN") | (Result == "FN"), Call := "Negative"]
+df[(Result == "TP") | (Result == "FN"), Truth := "Positive"]
+df[(Result == "TN") | (Result == "FP"), Call := "Negative"]
+
+# fit a GLM to the data, where the coefficients of interest are
+# those concerning the effect of statistical method (`Test_Condition`)
+# on the type of call being made (TP/FP/TN/FN encoded in `Truth:Call`)
+model <- glm(
+    N ~ 1 + Iteration + Total + Test_Condition:Truth:Call,
+    data = df[Test_Condition != "Balanced"],
+    family = poisson()
+)
+summary(model)
+
 # ==============================================================================
 # Save data
 # ==============================================================================

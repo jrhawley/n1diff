@@ -3,5 +3,12 @@
     "python.linting.mypyEnabled": true,
     "python.linting.enabled": true,
     "python.pythonPath": "D:\\Scoop\\apps\\miniconda3\\current\\python.exe",
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "cSpell.words": [
+        "FASTQs",
+        "Rscript",
+        "fastqc",
+        "multiqc",
+        "tolist"
+    ]
 }
