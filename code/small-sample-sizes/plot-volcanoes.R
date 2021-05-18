@@ -223,7 +223,7 @@ gg_vol <- (
     )
     + facet_wrap(
         ~ Comparison,
-        scales = "free"
+        scales = "free_y"
     )
     + theme_minimal()
     + theme(
