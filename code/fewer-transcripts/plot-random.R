@@ -88,6 +88,12 @@ htest_summ <- rbindlist(lapply(
 htest_summ[, q := p.adjust(p, method = "fdr")]
 
 fwrite(
+	mse_long,
+	file.path(RESULT_DIR, "Comparison", "random", "simulation-mse.tsv"),
+	sep = "\t",
+	col.names = TRUE
+)
+fwrite(
 	htest_summ,
 	file.path(RESULT_DIR, "Comparison", "random", "pairwise-tests.tsv"),
 	sep = "\t",
